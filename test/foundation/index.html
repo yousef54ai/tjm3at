@@ -14,10 +14,14 @@
         }
         h1 {
             color: #333;
+            opacity: 0;
+            transition: opacity 0.3s ease-in;
         }
         #items-list {
             list-style: none;
             padding: 0;
+            opacity: 0;
+            transition: opacity 0.3s ease-in;
         }
         #items-list li {
             background: white;
@@ -26,17 +30,14 @@
             border-radius: 5px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        .loading {
-            color: #666;
-            font-style: italic;
+        .loaded {
+            opacity: 1;
         }
     </style>
 </head>
 <body>
-    <h1 id="title">Loading...</h1>
-    <ul id="items-list" class="loading">
-        <li>Loading data from JSON file...</li>
-    </ul>
+    <h1 id="title"></h1>
+    <ul id="items-list"></ul>
 
     <script>
         // Fetch the JSON data
@@ -44,14 +45,11 @@
             .then(response => response.json())
             .then(data => {
                 // Update the title
-                document.getElementById('title').textContent = data.title;
+                const titleElement = document.getElementById('title');
+                titleElement.textContent = data.title;
 
                 // Get the list element
                 const listElement = document.getElementById('items-list');
-                listElement.classList.remove('loading');
-
-                // Clear loading message
-                listElement.innerHTML = '';
 
                 // Add each item to the list
                 data.items.forEach(item => {
@@ -59,11 +57,17 @@
                     li.textContent = item;
                     listElement.appendChild(li);
                 });
+
+                // Fade in the content
+                titleElement.classList.add('loaded');
+                listElement.classList.add('loaded');
             })
             .catch(error => {
                 console.error('Error loading JSON:', error);
-                document.getElementById('items-list').innerHTML =
+                const listElement = document.getElementById('items-list');
+                listElement.innerHTML =
                     '<li>Error loading data. Please make sure you\'re running this through a web server.</li>';
+                listElement.classList.add('loaded');
             });
     </script>
 </body>
