@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #333;
+        }
+        #items-list {
+            list-style: none;
+            padding: 0;
+        }
+        #items-list li {
+            background: white;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .loading {
+            color: #666;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title">Loading...</h1>
+    <ul id="items-list" class="loading">
+        <li>Loading data from JSON file...</li>
+    </ul>
+
+    <script>
+        // Fetch the JSON data
+        fetch('data.json')
+            .then(response => response.json())
+            .then(data => {
+                // Update the title
+                document.getElementById('title').textContent = data.title;
+
+                // Get the list element
+                const listElement = document.getElementById('items-list');
+                listElement.classList.remove('loading');
+
+                // Clear loading message
+                listElement.innerHTML = '';
+
+                // Add each item to the list
+                data.items.forEach(item => {
+                    const li = document.createElement('li');
+                    li.textContent = item;
+                    listElement.appendChild(li);
+                });
+            })
+            .catch(error => {
+                console.error('Error loading JSON:', error);
+                document.getElementById('items-list').innerHTML =
+                    '<li>Error loading data. Please make sure you\'re running this through a web server.</li>';
+            });
+    </script>
+</body>
+</html>
