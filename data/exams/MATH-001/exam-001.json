@@ -1,0 +1,396 @@
+{
+  "language": "en",
+  "id": "exam-001",
+  "classId": "MATH-001",
+  "title": "Essential Skills Practice",
+  "subtitle": "Chapters 1 & 2: Foundation Skills Used Throughout Algebra",
+  "description": "Master the fundamental skills for algebra success",
+  "skills": [
+    "Signed Numbers",
+    "Distributive Property",
+    "Equations",
+    "Inequalities"
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple-choice",
+      "question": "Evaluate: (−15) + 8",
+      "options": [
+        "−7",
+        "7",
+        "−23",
+        "23"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! When adding numbers with different signs, subtract the smaller absolute value from the larger (15 − 8 = 7) and keep the sign of the larger absolute value. Since |−15| > |8|, the answer is negative: −7. This skill is used constantly when simplifying algebraic expressions.",
+      "review": {
+        "chapter": "Chapter 1: Introduction to Algebra",
+        "section": "1.2 Operations with Signed Numbers",
+        "page": "12",
+        "info": "Review addition rules for numbers with different signs"
+      }
+    },
+    {
+      "id": 2,
+      "type": "multiple-choice",
+      "question": "Evaluate: 6 − (−9)",
+      "options": [
+        "−3",
+        "3",
+        "15",
+        "−15"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Correct! Subtracting a negative is the same as adding a positive: 6 − (−9) = 6 + 9 = 15. This 'subtract equals add the opposite' rule is essential throughout all of algebra, especially when working with polynomials and rational expressions.",
+      "review": {
+        "chapter": "Chapter 1: Introduction to Algebra",
+        "section": "1.2 Operations with Signed Numbers",
+        "page": "14",
+        "info": "Review subtraction with negative numbers"
+      }
+    },
+    {
+      "id": 3,
+      "type": "multiple-choice",
+      "question": "Evaluate: (−6)(−5)",
+      "options": [
+        "−30",
+        "30",
+        "−11",
+        "11"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Correct! When multiplying two numbers with the SAME sign, the result is positive. (−6)(−5) = 30. Remember: same signs → positive, different signs → negative. This rule is critical for factoring, expanding expressions, and solving equations.",
+      "review": {
+        "chapter": "Chapter 1: Introduction to Algebra",
+        "section": "1.3 Multiplication and Division",
+        "page": "18",
+        "info": "Review multiplication sign rules"
+      }
+    },
+    {
+      "id": 4,
+      "type": "multiple-choice",
+      "question": "Evaluate: −48 ÷ (−6)",
+      "options": [
+        "−8",
+        "8",
+        "−54",
+        "54"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Correct! Same signs give a positive result: −48 ÷ (−6) = 8. Division follows the same sign rules as multiplication. This is crucial when simplifying rational expressions and solving equations in later chapters.",
+      "review": {
+        "chapter": "Chapter 1: Introduction to Algebra",
+        "section": "1.3 Multiplication and Division",
+        "page": "19",
+        "info": "Review division sign rules"
+      }
+    },
+    {
+      "id": 5,
+      "type": "multiple-choice",
+      "question": "Simplify: 5(2x − 3)",
+      "options": [
+        "10x − 3",
+        "7x − 8",
+        "10x − 15",
+        "10x + 15"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Correct! Using a(b − c) = ab − ac: 5(2x − 3) = 5(2x) − 5(3) = 10x − 15. The distributive property is THE most important skill in algebra—used in solving equations, factoring, multiplying polynomials, and simplifying rational expressions.",
+      "review": {
+        "chapter": "Chapter 1: Introduction to Algebra",
+        "section": "1.4 Simplifying Expressions",
+        "page": "24",
+        "info": "Review distributive property basics"
+      }
+    },
+    {
+      "id": 6,
+      "type": "multiple-choice",
+      "question": "Simplify: −3(4x + 7)",
+      "options": [
+        "−12x + 21",
+        "−12x − 21",
+        "12x − 21",
+        "−12x + 7"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Correct! Distribute the −3 to both terms: −3(4x) + (−3)(7) = −12x − 21. When distributing a negative, both terms inside change signs. This appears constantly when solving equations and factoring.",
+      "review": {
+        "chapter": "Chapter 1: Introduction to Algebra",
+        "section": "1.4 Simplifying Expressions",
+        "page": "25",
+        "info": "Review distributive property with negative numbers"
+      }
+    },
+    {
+      "id": 7,
+      "type": "multiple-choice",
+      "question": "Simplify: 8x − 5x + 3x",
+      "options": [
+        "6x",
+        "16x",
+        "0",
+        "−6x"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! Combine the coefficients: 8 − 5 + 3 = 6, so the answer is 6x. Like terms must have identical variables with identical exponents. This is essential for simplifying expressions throughout the course.",
+      "review": {
+        "chapter": "Chapter 1: Introduction to Algebra",
+        "section": "1.5 Combining Like Terms",
+        "page": "28",
+        "info": "Review combining like terms"
+      }
+    },
+    {
+      "id": 8,
+      "type": "multiple-choice",
+      "question": "Simplify: 7x² + 3x − 2x² + 5x",
+      "options": [
+        "5x² + 8x",
+        "13x²",
+        "5x³",
+        "9x² + 8x"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! Combine like terms separately: (7x² − 2x²) + (3x + 5x) = 5x² + 8x. You cannot combine x² terms with x terms—they're unlike terms. This skill is critical for polynomial operations in Chapters 4 and 5.",
+      "review": {
+        "chapter": "Chapter 1: Introduction to Algebra",
+        "section": "1.5 Combining Like Terms",
+        "page": "30",
+        "info": "Review identifying and combining unlike terms"
+      }
+    },
+    {
+      "id": 9,
+      "type": "multiple-choice",
+      "question": "Simplify: −(3x − 8)",
+      "options": [
+        "−3x − 8",
+        "−3x + 8",
+        "3x − 8",
+        "3x + 8"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Correct! The negative sign in front acts like −1: −1(3x − 8) = −3x + 8. All signs inside change. This appears constantly when solving equations, simplifying expressions, and working with polynomials.",
+      "review": {
+        "chapter": "Chapter 1: Introduction to Algebra",
+        "section": "1.4 Simplifying Expressions",
+        "page": "26",
+        "info": "Review removing parentheses with negative signs"
+      }
+    },
+    {
+      "id": 10,
+      "type": "multiple-choice",
+      "question": "Evaluate: 20 − 3 × 4 + 2",
+      "options": [
+        "70",
+        "10",
+        "66",
+        "6"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Correct! Follow PEMDAS: multiply first (3 × 4 = 12), then left to right: 20 − 12 + 2 = 8 + 2 = 10. Order of operations is fundamental to all algebraic simplification.",
+      "review": {
+        "chapter": "Chapter 1: Introduction to Algebra",
+        "section": "1.6 Order of Operations",
+        "page": "34",
+        "info": "Review PEMDAS order of operations"
+      }
+    },
+    {
+      "id": 11,
+      "type": "multiple-choice",
+      "question": "Solve: x + 12 = 35",
+      "options": [
+        "x = 47",
+        "x = 23",
+        "x = −23",
+        "x = 420"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Correct! Subtract 12 from both sides: x = 35 − 12 = 23. This addition principle (adding or subtracting the same value from both sides) is the foundation for solving ALL equations throughout the course.",
+      "review": {
+        "chapter": "Chapter 2: Solving Equations",
+        "section": "2.1 One-Step Equations",
+        "page": "42",
+        "info": "Review addition/subtraction property of equality"
+      }
+    },
+    {
+      "id": 12,
+      "type": "multiple-choice",
+      "question": "Solve: 7x = −42",
+      "options": [
+        "x = 6",
+        "x = −6",
+        "x = 294",
+        "x = −294"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Correct! Divide both sides by 7: x = −42/7 = −6. The multiplication principle (multiply or divide both sides by the same non-zero value) is used in virtually every equation you'll solve.",
+      "review": {
+        "chapter": "Chapter 2: Solving Equations",
+        "section": "2.1 One-Step Equations",
+        "page": "43",
+        "info": "Review multiplication/division property of equality"
+      }
+    },
+    {
+      "id": 13,
+      "type": "multiple-choice",
+      "question": "Solve: 3x + 8 = 26",
+      "options": [
+        "x = 6",
+        "x = 18",
+        "x = 34/3",
+        "x = 102"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! Step 1: Subtract 8 from both sides → 3x = 18. Step 2: Divide by 3 → x = 6. Two-step equations are the most common type you'll encounter. Always isolate the variable term first, then divide.",
+      "review": {
+        "chapter": "Chapter 2: Solving Equations",
+        "section": "2.2 Two-Step Equations",
+        "page": "48",
+        "info": "Review two-step equation solving process"
+      }
+    },
+    {
+      "id": 14,
+      "type": "multiple-choice",
+      "question": "Solve: 5x − 3 = 2x + 12",
+      "options": [
+        "x = 3",
+        "x = 5",
+        "x = 9",
+        "x = 15"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Correct! Subtract 2x from both sides: 3x − 3 = 12. Add 3: 3x = 15. Divide by 3: x = 5. This skill (getting variables on one side, constants on the other) is essential for all equation-solving.",
+      "review": {
+        "chapter": "Chapter 2: Solving Equations",
+        "section": "2.3 Multi-Step Equations",
+        "page": "52",
+        "info": "Review solving equations with variables on both sides"
+      }
+    },
+    {
+      "id": 15,
+      "type": "multiple-choice",
+      "question": "Solve: 4(x − 2) = 20",
+      "options": [
+        "x = 7",
+        "x = 5",
+        "x = 3",
+        "x = 9"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! Distribute: 4x − 8 = 20. Add 8: 4x = 28. Divide by 4: x = 7. Alternatively, you could divide both sides by 4 first: x − 2 = 5, then x = 7. Equations with parentheses appear frequently, especially in word problems.",
+      "review": {
+        "chapter": "Chapter 2: Solving Equations",
+        "section": "2.4 Equations with Parentheses",
+        "page": "56",
+        "info": "Review solving equations with parentheses"
+      }
+    },
+    {
+      "id": 16,
+      "type": "multiple-choice",
+      "question": "Solve for w: P = 2l + 2w",
+      "options": [
+        "w = (P − 2l)/2",
+        "w = P − 2l",
+        "w = P/2 − l",
+        "Both A and C"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Correct! Both answers are equivalent! Method 1: P = 2l + 2w → P − 2l = 2w → w = (P − 2l)/2. Method 2: P = 2(l + w) → P/2 = l + w → w = P/2 − l. Solving formulas is crucial for geometry, physics, and advanced algebra.",
+      "review": {
+        "chapter": "Chapter 2: Solving Equations",
+        "section": "2.5 Solving Formulas",
+        "page": "62",
+        "info": "Review rearranging formulas to isolate variables"
+      }
+    },
+    {
+      "id": 17,
+      "type": "multiple-choice",
+      "question": "Solve: x + 7 < 15",
+      "options": [
+        "x < 8",
+        "x > 8",
+        "x < 22",
+        "x > 22"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! Subtract 7 from both sides: x < 8. When adding or subtracting, the inequality symbol STAYS THE SAME. Inequalities are used extensively in real-world applications and optimization problems.",
+      "review": {
+        "chapter": "Chapter 2: Solving Equations",
+        "section": "2.6 Solving Inequalities",
+        "page": "68",
+        "info": "Review basic inequality solving"
+      }
+    },
+    {
+      "id": 18,
+      "type": "multiple-choice",
+      "question": "Solve: −5x ≥ 20",
+      "options": [
+        "x ≥ −4",
+        "x ≤ −4",
+        "x ≥ 4",
+        "x ≤ 4"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Correct! Divide both sides by −5 and FLIP the inequality sign: x ≤ −4. This is the most important rule for inequalities: when multiplying or dividing by a NEGATIVE number, REVERSE the inequality symbol. Missing this causes major errors!",
+      "review": {
+        "chapter": "Chapter 2: Solving Equations",
+        "section": "2.6 Solving Inequalities",
+        "page": "70",
+        "info": "Review inequality sign flip rule with negative numbers"
+      }
+    },
+    {
+      "id": 19,
+      "type": "multiple-choice",
+      "question": "Solve: 3x − 7 ≤ 8",
+      "options": [
+        "x ≤ 5",
+        "x ≥ 5",
+        "x ≤ 1/3",
+        "x ≥ 1/3"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! Add 7 to both sides: 3x ≤ 15. Divide by 3 (positive, so sign stays): x ≤ 5. Multi-step inequalities follow the same process as equations, but remember to flip the sign when dividing by negatives.",
+      "review": {
+        "chapter": "Chapter 2: Solving Equations",
+        "section": "2.6 Solving Inequalities",
+        "page": "72",
+        "info": "Review multi-step inequalities"
+      }
+    },
+    {
+      "id": 20,
+      "type": "multiple-choice",
+      "question": "What is 40% of 85?",
+      "options": [
+        "34",
+        "45",
+        "3.4",
+        "212.5"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! Convert to decimal and multiply: 0.40 × 85 = 34. Remember 'of' means multiply, and 'is' means equals. Percent problems appear in finance, statistics, science, and everyday applications throughout mathematics.",
+      "review": {
+        "chapter": "Chapter 2: Solving Equations",
+        "section": "2.7 Applications and Problem Solving",
+        "page": "78",
+        "info": "Review percent calculations and word problems"
+      }
+    }
+  ]
+}

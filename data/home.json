@@ -1,0 +1,35 @@
+{
+  "language": "ar",
+  "title": "تجمعات",
+  "description": "مجموعة من الامتحانات التعليمية",
+  "classes": [
+    {
+      "id": "MATH-001",
+      "name": "أساسيات الرياضيات",
+      "code": "MATH-001",
+      "description": "Fundamentals of Math",
+      "icon": "📐"
+    },
+    {
+      "id": "CS-001",
+      "name": "مقدمة في الذكاء الاصطناعي والحوسبة",
+      "code": "CS-001",
+      "description": "Introduction to AI & Computing",
+      "icon": "💻"
+    },
+    {
+      "id": "COMM-001",
+      "name": "مهارات الاتصال",
+      "code": "COMM-001",
+      "description": "Communication Skills",
+      "icon": "💬"
+    },
+    {
+      "id": "CI-001",
+      "name": "المهارات الأكاديمية",
+      "code": "CI-001",
+      "description": "Academic Skills",
+      "icon": "📚"
+    }
+  ]
+}

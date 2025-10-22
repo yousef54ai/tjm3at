@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Mixed Operations Speed Practice - MATH001</title>
+    <style>
+        /* Solarized Dark Theme */
+        :root {
+            --base03: #002b36;
+            --base02: #073642;
+            --base01: #586e75;
+            --base00: #657b83;
+            --base0: #839496;
+            --base1: #93a1a1;
+            --base2: #eee8d5;
+            --base3: #fdf6e3;
+            --yellow: #b58900;
+            --orange: #cb4b16;
+            --red: #dc322f;
+            --magenta: #d33682;
+            --violet: #6c71c4;
+            --blue: #268bd2;
+            --cyan: #2aa198;
+            --green: #859900;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--base03);
+            color: var(--base0);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px 0;
+            border-bottom: 3px solid var(--cyan);
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: var(--cyan);
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: var(--base1);
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+
+        .operations-badges {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .op-badge {
+            background-color: var(--base02);
+            color: var(--cyan);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            border: 2px solid var(--cyan);
+        }
+
+        .timer-section {
+            background-color: var(--base02);
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            text-align: center;
+            border: 3px solid var(--orange);
+        }
+
+        .timer-display {
+            font-size: 4em;
+            color: var(--cyan);
+            font-weight: bold;
+            font-family: 'Courier New', monospace;
+            margin: 20px 0;
+        }
+
+        .timer-display.warning {
+            color: var(--orange);
+            animation: pulse 1s infinite;
+        }
+
+        .timer-display.danger {
+            color: var(--red);
+            animation: pulse 0.5s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+
+        .start-button, .restart-button {
+            background-color: var(--green);
+            color: var(--base03);
+            border: none;
+            padding: 20px 50px;
+            border-radius: 8px;
+            font-size: 1.5em;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            margin: 10px;
+        }
+
+        .start-button:hover, .restart-button:hover {
+            background-color: var(--cyan);
+            transform: scale(1.05);
+        }
+
+        .start-button:disabled {
+            background-color: var(--base01);
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: var(--base02);
+            border-radius: 10px;
+            border-left: 4px solid var(--blue);
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-label {
+            color: var(--base01);
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .stat-value {
+            color: var(--cyan);
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        .quiz-container {
+            display: none;
+        }
+
+        .quiz-container.active {
+            display: block;
+        }
+
+        .question-card {
+            background-color: var(--base02);
+            border-radius: 12px;
+            padding: 40px;
+            margin-bottom: 20px;
+            border-left: 5px solid var(--violet);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .question-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .question-number {
+            background-color: var(--violet);
+            color: var(--base03);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9em;
+            display: inline-block;
+        }
+
+        .operation-badge {
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9em;
+            display: inline-block;
+            border: 2px solid;
+        }
+
+        .operation-badge.addition {
+            background-color: var(--base03);
+            color: var(--green);
+            border-color: var(--green);
+        }
+
+        .operation-badge.subtraction {
+            background-color: var(--base03);
+            color: var(--orange);
+            border-color: var(--orange);
+        }
+
+        .operation-badge.multiplication {
+            background-color: var(--base03);
+            color: var(--magenta);
+            border-color: var(--magenta);
+        }
+
+        .operation-badge.division {
+            background-color: var(--base03);
+            color: var(--cyan);
+            border-color: var(--cyan);
+        }
+
+        .math-problem {
+            font-size: 3em;
+            color: var(--base2);
+            text-align: center;
+            margin: 30px 0;
+            font-weight: bold;
+            font-family: 'Courier New', monospace;
+        }
+
+        .answer-input {
+            width: 100%;
+            padding: 20px;
+            font-size: 2em;
+            background-color: var(--base03);
+            border: 3px solid var(--base01);
+            border-radius: 8px;
+            color: var(--base2);
+            text-align: center;
+            font-family: 'Courier New', monospace;
+            transition: all 0.3s ease;
+        }
+
+        .answer-input:focus {
+            outline: none;
+            border-color: var(--cyan);
+            background-color: var(--base02);
+        }
+
+        .answer-input.correct {
+            border-color: var(--green);
+            background-color: rgba(133, 153, 0, 0.2);
+        }
+
+        .answer-input.incorrect {
+            border-color: var(--red);
+            background-color: rgba(220, 50, 47, 0.2);
+        }
+
+        .submit-button {
+            width: 100%;
+            padding: 18px;
+            font-size: 1.3em;
+            background-color: var(--cyan);
+            color: var(--base03);
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .submit-button:hover:not(:disabled) {
+            background-color: var(--blue);
+            transform: translateY(-2px);
+        }
+
+        .submit-button:disabled {
+            background-color: var(--base01);
+            cursor: not-allowed;
+        }
+
+        .feedback {
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 1.2em;
+            display: none;
+        }
+
+        .feedback.show {
+            display: block;
+            animation: slideDown 0.3s ease;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .feedback.correct {
+            background-color: rgba(133, 153, 0, 0.15);
+            border-left: 4px solid var(--green);
+            color: var(--green);
+        }
+
+        .feedback.incorrect {
+            background-color: rgba(220, 50, 47, 0.15);
+            border-left: 4px solid var(--red);
+            color: var(--red);
+        }
+
+        .results {
+            display: none;
+            text-align: center;
+            padding: 40px;
+            background-color: var(--base02);
+            border-radius: 12px;
+            border: 3px solid var(--cyan);
+        }
+
+        .results.show {
+            display: block;
+        }
+
+        .results h2 {
+            color: var(--cyan);
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .score-display {
+            font-size: 4em;
+            color: var(--green);
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .time-taken {
+            font-size: 1.5em;
+            color: var(--base1);
+            margin-bottom: 20px;
+        }
+
+        .results-message {
+            font-size: 1.3em;
+            color: var(--base1);
+            margin-bottom: 30px;
+        }
+
+        .stats-breakdown {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+            padding: 20px;
+            background-color: var(--base03);
+            border-radius: 8px;
+        }
+
+        .breakdown-item {
+            text-align: center;
+            padding: 10px;
+        }
+
+        .breakdown-label {
+            color: var(--base01);
+            font-size: 0.9em;
+        }
+
+        .breakdown-value {
+            color: var(--cyan);
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .problem-review {
+            background-color: var(--base03);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            text-align: left;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .review-item {
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .review-item.correct {
+            background-color: rgba(133, 153, 0, 0.1);
+            border-left: 3px solid var(--green);
+        }
+
+        .review-item.incorrect {
+            background-color: rgba(220, 50, 47, 0.1);
+            border-left: 3px solid var(--red);
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background-color: var(--base02);
+            border-radius: 4px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--cyan), var(--green));
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            
+            .math-problem {
+                font-size: 2em;
+            }
+            
+            .answer-input {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎯 Ultimate Mixed Operations</h1>
+            <p class="subtitle">Master All Four Operations - 20 Random Problems in 2 Minutes!</p>
+            <div class="operations-badges">
+                <span class="op-badge">➕ Addition</span>
+                <span class="op-badge">➖ Subtraction</span>
+                <span class="op-badge">✖️ Multiplication</span>
+                <span class="op-badge">➗ Division</span>
+            </div>
+        </header>
+
+        <div class="timer-section">
+            <div class="stat-label">TIME REMAINING</div>
+            <div class="timer-display" id="timer">2:00</div>
+            <button class="start-button" id="startButton" onclick="startQuiz()">🚀 Start Ultimate Challenge</button>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressBar"></div>
+        </div>
+
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-label">Question</div>
+                <div class="stat-value"><span id="currentQuestion">0</span>/20</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-label">Correct</div>
+                <div class="stat-value" id="correctCount">0</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-label">Accuracy</div>
+                <div class="stat-value"><span id="accuracy">0</span>%</div>
+            </div>
+        </div>
+
+        <div class="quiz-container" id="quizContainer">
+            <div class="question-card">
+                <div class="question-header">
+                    <span class="question-number" id="questionNumber">Question 1</span>
+                    <span class="operation-badge" id="operationBadge">Addition</span>
+                </div>
+                <div class="math-problem" id="problem">? + ?</div>
+                <input type="number" 
+                       class="answer-input" 
+                       id="answerInput" 
+                       placeholder="Enter answer..."
+                       autocomplete="off">
+                <button class="submit-button" id="submitButton" onclick="checkAnswer()">Submit Answer</button>
+                <div class="feedback" id="feedback"></div>
+            </div>
+        </div>
+
+        <div class="results" id="results">
+            <h2 id="resultsTitle">⏱️ Time's Up!</h2>
+            <div class="score-display" id="finalScore">0/20</div>
+            <div class="time-taken" id="timeTaken"></div>
+            <div class="results-message" id="resultsMessage"></div>
+            
+            <div class="stats-breakdown" id="statsBreakdown">
+                <div class="breakdown-item">
+                    <div class="breakdown-label">➕ Addition</div>
+                    <div class="breakdown-value" id="additionStats">0/0</div>
+                </div>
+                <div class="breakdown-item">
+                    <div class="breakdown-label">➖ Subtraction</div>
+                    <div class="breakdown-value" id="subtractionStats">0/0</div>
+                </div>
+                <div class="breakdown-item">
+                    <div class="breakdown-label">✖️ Multiplication</div>
+                    <div class="breakdown-value" id="multiplicationStats">0/0</div>
+                </div>
+                <div class="breakdown-item">
+                    <div class="breakdown-label">➗ Division</div>
+                    <div class="breakdown-value" id="divisionStats">0/0</div>
+                </div>
+            </div>
+            
+            <div class="problem-review" id="problemReview">
+                <h3 style="color: var(--cyan); margin-bottom: 15px;">📊 Problem Review</h3>
+                <div id="reviewList"></div>
+            </div>
+            
+            <button class="restart-button" onclick="resetQuiz()">Try Again</button>
+        </div>
+    </div>
+
+    <script>
+        let currentQuestionIndex = 0;
+        let correctAnswers = 0;
+        let problems = [];
+        let userAnswers = [];
+        let timeRemaining = 120; // 2 minutes in seconds
+        let timerInterval;
+        let quizStartTime;
+        let quizActive = false;
+
+        function generateProblems() {
+            problems = [];
+            const operations = ['addition', 'subtraction', 'multiplication', 'division'];
+            
+            for (let i = 0; i < 20; i++) {
+                const operation = operations[Math.floor(Math.random() * operations.length)];
+                let num1, num2, answer, operationSymbol, operationType, operationClass;
+                
+                switch(operation) {
+                    case 'addition':
+                        // One small (2-9) and one large (10-99) number
+                        const smallAdd = Math.floor(Math.random() * 8) + 2;
+                        const largeAdd = Math.floor(Math.random() * 90) + 10;
+                        
+                        // Random order
+                        if (Math.random() < 0.5) {
+                            num1 = largeAdd;
+                            num2 = smallAdd;
+                        } else {
+                            num1 = smallAdd;
+                            num2 = largeAdd;
+                        }
+                        answer = num1 + num2;
+                        operationSymbol = '+';
+                        operationType = 'Addition';
+                        operationClass = 'addition';
+                        break;
+                        
+                    case 'subtraction':
+                        // Large - small to ensure positive result
+                        const smallSub = Math.floor(Math.random() * 8) + 2;
+                        const largeSub = Math.floor(Math.random() * 90) + 10;
+                        num1 = largeSub;
+                        num2 = smallSub;
+                        answer = num1 - num2;
+                        operationSymbol = '−';
+                        operationType = 'Subtraction';
+                        operationClass = 'subtraction';
+                        break;
+                        
+                    case 'multiplication':
+                        // Both small numbers (2-9) for mental math
+                        num1 = Math.floor(Math.random() * 8) + 2;
+                        num2 = Math.floor(Math.random() * 8) + 2;
+                        answer = num1 * num2;
+                        operationSymbol = '×';
+                        operationType = 'Multiplication';
+                        operationClass = 'multiplication';
+                        break;
+                        
+                    case 'division':
+                        // Both small numbers (2-9), ensure even division
+                        num2 = Math.floor(Math.random() * 8) + 2; // divisor
+                        const quotient = Math.floor(Math.random() * 8) + 2; // result
+                        num1 = num2 * quotient; // dividend (will be 4-81)
+                        answer = quotient;
+                        operationSymbol = '÷';
+                        operationType = 'Division';
+                        operationClass = 'division';
+                        break;
+                }
+                
+                problems.push({
+                    num1: num1,
+                    num2: num2,
+                    answer: answer,
+                    operation: operationSymbol,
+                    type: operationType,
+                    class: operationClass
+                });
+            }
+        }
+
+        function startQuiz() {
+            generateProblems();
+            currentQuestionIndex = 0;
+            correctAnswers = 0;
+            userAnswers = [];
+            timeRemaining = 120;
+            quizActive = true;
+            quizStartTime = Date.now();
+            
+            document.getElementById('startButton').disabled = true;
+            document.getElementById('quizContainer').classList.add('active');
+            document.getElementById('results').classList.remove('show');
+            
+            displayQuestion();
+            startTimer();
+            updateStats();
+            
+            // Focus on input
+            document.getElementById('answerInput').focus();
+        }
+
+        function startTimer() {
+            const timerDisplay = document.getElementById('timer');
+            
+            timerInterval = setInterval(() => {
+                timeRemaining--;
+                
+                const minutes = Math.floor(timeRemaining / 60);
+                const seconds = timeRemaining % 60;
+                timerDisplay.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+                
+                // Change color based on time remaining
+                timerDisplay.classList.remove('warning', 'danger');
+                if (timeRemaining <= 30 && timeRemaining > 10) {
+                    timerDisplay.classList.add('warning');
+                } else if (timeRemaining <= 10) {
+                    timerDisplay.classList.add('danger');
+                }
+                
+                if (timeRemaining <= 0) {
+                    endQuiz(false);
+                }
+            }, 1000);
+        }
+
+        function displayQuestion() {
+            const problem = problems[currentQuestionIndex];
+            document.getElementById('questionNumber').textContent = `Question ${currentQuestionIndex + 1}`;
+            
+            const badge = document.getElementById('operationBadge');
+            badge.textContent = problem.type;
+            badge.className = `operation-badge ${problem.class}`;
+            
+            document.getElementById('problem').textContent = `${problem.num1} ${problem.operation} ${problem.num2}`;
+            
+            const input = document.getElementById('answerInput');
+            input.value = '';
+            input.classList.remove('correct', 'incorrect');
+            input.disabled = false;
+            input.focus();
+            
+            document.getElementById('submitButton').disabled = false;
+            document.getElementById('feedback').classList.remove('show', 'correct', 'incorrect');
+            
+            // Allow Enter key to submit
+            input.onkeypress = function(e) {
+                if (e.key === 'Enter' && !document.getElementById('submitButton').disabled) {
+                    checkAnswer();
+                }
+            };
+        }
+
+        function checkAnswer() {
+            if (!quizActive) return;
+            
+            const problem = problems[currentQuestionIndex];
+            const userAnswer = parseInt(document.getElementById('answerInput').value);
+            const input = document.getElementById('answerInput');
+            const feedback = document.getElementById('feedback');
+            const submitButton = document.getElementById('submitButton');
+            
+            // Disable input and button
+            input.disabled = true;
+            submitButton.disabled = true;
+            
+            const isCorrect = userAnswer === problem.answer;
+            
+            // Store user answer
+            userAnswers.push({
+                problem: `${problem.num1} ${problem.operation} ${problem.num2}`,
+                correct: problem.answer,
+                userAnswer: userAnswer,
+                isCorrect: isCorrect,
+                type: problem.type,
+                class: problem.class
+            });
+            
+            if (isCorrect) {
+                correctAnswers++;
+                input.classList.add('correct');
+                feedback.textContent = '✓ Correct!';
+                feedback.classList.add('show', 'correct');
+            } else {
+                input.classList.add('incorrect');
+                feedback.textContent = `✗ Incorrect. The answer is ${problem.answer}`;
+                feedback.classList.add('show', 'incorrect');
+            }
+            
+            updateStats();
+            
+            // Move to next question after short delay
+            setTimeout(() => {
+                currentQuestionIndex++;
+                
+                if (currentQuestionIndex < problems.length) {
+                    displayQuestion();
+                } else {
+                    endQuiz(true);
+                }
+            }, 800);
+        }
+
+        function updateStats() {
+            document.getElementById('currentQuestion').textContent = currentQuestionIndex;
+            document.getElementById('correctCount').textContent = correctAnswers;
+            
+            const accuracy = currentQuestionIndex > 0 
+                ? Math.round((correctAnswers / currentQuestionIndex) * 100) 
+                : 0;
+            document.getElementById('accuracy').textContent = accuracy;
+            
+            const progress = (currentQuestionIndex / problems.length) * 100;
+            document.getElementById('progressBar').style.width = progress + '%';
+        }
+
+        function endQuiz(completed) {
+            quizActive = false;
+            clearInterval(timerInterval);
+            
+            const elapsedTime = Math.floor((Date.now() - quizStartTime) / 1000);
+            const minutes = Math.floor(elapsedTime / 60);
+            const seconds = elapsedTime % 60;
+            
+            document.getElementById('quizContainer').classList.remove('active');
+            
+            // Set results
+            const resultsTitle = document.getElementById('resultsTitle');
+            if (completed) {
+                resultsTitle.textContent = '🎉 Ultimate Challenge Complete!';
+            } else {
+                resultsTitle.textContent = '⏱️ Time\'s Up!';
+            }
+            
+            document.getElementById('finalScore').textContent = `${correctAnswers}/20`;
+            document.getElementById('timeTaken').textContent = 
+                `Time: ${minutes}:${seconds.toString().padStart(2, '0')}`;
+            
+            const accuracy = Math.round((correctAnswers / currentQuestionIndex) * 100);
+            let message = '';
+            
+            if (accuracy >= 95 && completed) {
+                message = '🌟 LEGENDARY! You\'ve mastered all four operations at lightning speed!';
+            } else if (accuracy >= 90) {
+                message = '🔥 Outstanding! Your mental math skills are exceptional!';
+            } else if (accuracy >= 80) {
+                message = '👏 Excellent work! You\'re well on your way to mastery!';
+            } else if (accuracy >= 70) {
+                message = '👍 Good job! Keep practicing to sharpen your skills!';
+            } else {
+                message = '💪 Keep training! Focus on one operation at a time to build mastery!';
+            }
+            
+            document.getElementById('resultsMessage').textContent = message;
+            
+            // Calculate breakdown by operation
+            calculateOperationStats();
+            
+            // Display problem review
+            displayReview();
+            
+            document.getElementById('results').classList.add('show');
+            document.getElementById('results').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function calculateOperationStats() {
+            const stats = {
+                'Addition': { correct: 0, total: 0 },
+                'Subtraction': { correct: 0, total: 0 },
+                'Multiplication': { correct: 0, total: 0 },
+                'Division': { correct: 0, total: 0 }
+            };
+            
+            userAnswers.forEach(item => {
+                stats[item.type].total++;
+                if (item.isCorrect) {
+                    stats[item.type].correct++;
+                }
+            });
+            
+            document.getElementById('additionStats').textContent = 
+                `${stats['Addition'].correct}/${stats['Addition'].total}`;
+            document.getElementById('subtractionStats').textContent = 
+                `${stats['Subtraction'].correct}/${stats['Subtraction'].total}`;
+            document.getElementById('multiplicationStats').textContent = 
+                `${stats['Multiplication'].correct}/${stats['Multiplication'].total}`;
+            document.getElementById('divisionStats').textContent = 
+                `${stats['Division'].correct}/${stats['Division'].total}`;
+        }
+
+        function displayReview() {
+            const reviewList = document.getElementById('reviewList');
+            reviewList.innerHTML = '';
+            
+            userAnswers.forEach((item, index) => {
+                const reviewItem = document.createElement('div');
+                reviewItem.className = `review-item ${item.isCorrect ? 'correct' : 'incorrect'}`;
+                
+                const problemText = document.createElement('span');
+                problemText.textContent = `${index + 1}. ${item.problem} = ${item.correct}`;
+                
+                const answerText = document.createElement('span');
+                if (item.isCorrect) {
+                    answerText.textContent = '✓';
+                    answerText.style.color = 'var(--green)';
+                } else {
+                    answerText.textContent = `Your answer: ${item.userAnswer || '(no answer)'}`;
+                    answerText.style.color = 'var(--red)';
+                }
+                
+                reviewItem.appendChild(problemText);
+                reviewItem.appendChild(answerText);
+                reviewList.appendChild(reviewItem);
+            });
+        }
+
+        function resetQuiz() {
+            currentQuestionIndex = 0;
+            correctAnswers = 0;
+            userAnswers = [];
+            timeRemaining = 120;
+            quizActive = false;
+            
+            clearInterval(timerInterval);
+            
+            document.getElementById('timer').textContent = '2:00';
+            document.getElementById('timer').classList.remove('warning', 'danger');
+            document.getElementById('startButton').disabled = false;
+            document.getElementById('quizContainer').classList.remove('active');
+            document.getElementById('results').classList.remove('show');
+            document.getElementById('progressBar').style.width = '0%';
+            
+            updateStats();
+            
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Initialize on page load
+        window.onload = function() {
+            updateStats();
+        };
+    </script>
+</body>
+</html>

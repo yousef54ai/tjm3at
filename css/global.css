@@ -1,0 +1,87 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&family=Noto+Sans:wght@300;400;500;600;700&display=swap');
+
+/* Solarized Dark Color Palette + Custom */
+:root {
+    --bg-primary: #002b36;
+    --bg-secondary: #073642;
+    --text-primary: #839496;
+    --text-emphasized: #93a1a1;
+    --text-bright: #eee8d5;
+    --cyan: #2aa198;
+    --purple: #6c71c4;
+    --magenta: #d33682;
+    --green: #859900;
+    --yellow: #b58900;
+    --orange: #cb4b16;
+    --red: #dc322f;
+
+    /* Responsive font sizes */
+    --fs-base: clamp(0.875rem, 0.8rem + 0.4vw, 1rem);
+    --fs-sm: clamp(0.75rem, 0.7rem + 0.3vw, 0.875rem);
+    --fs-lg: clamp(1rem, 0.9rem + 0.5vw, 1.25rem);
+    --fs-xl: clamp(1.25rem, 1rem + 1vw, 1.5rem);
+    --fs-2xl: clamp(1.5rem, 1.2rem + 1.5vw, 2rem);
+    --fs-3xl: clamp(2rem, 1.5rem + 2vw, 3rem);
+
+    /* Spacing */
+    --spacing-xs: clamp(0.25rem, 0.2rem + 0.25vw, 0.5rem);
+    --spacing-sm: clamp(0.5rem, 0.4rem + 0.5vw, 1rem);
+    --spacing-md: clamp(1rem, 0.8rem + 1vw, 1.5rem);
+    --spacing-lg: clamp(1.5rem, 1.2rem + 1.5vw, 2rem);
+    --spacing-xl: clamp(2rem, 1.5rem + 2vw, 3rem);
+}
+
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rubik', 'Noto Sans', sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-size: var(--fs-base);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* Arabic font for RTL */
+[dir="rtl"] body {
+    font-family: 'Rubik', sans-serif;
+}
+
+/* English font for LTR */
+[dir="ltr"] body {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Utility Classes */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: var(--spacing-md);
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding: var(--spacing-lg);
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.4s ease-in;
+}
+
+.fade-in.loaded {
+    opacity: 1;
+}

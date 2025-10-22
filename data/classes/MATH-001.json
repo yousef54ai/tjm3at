@@ -1,0 +1,14 @@
+{
+  "language": "ar",
+  "id": "MATH-001",
+  "name": "أساسيات الرياضيات",
+  "code": "MATH-001",
+  "description": "Fundamentals of Math",
+  "exams": [
+    {
+      "id": "exam-001",
+      "title": "المهارات الأساسية",
+      "description": "Essential Skills Practice - Chapters 1 & 2"
+    }
+  ]
+}

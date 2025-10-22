@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapters 1 & 2 Essential Skills - MATH001</title>
+    <style>
+        /* Solarized Dark Theme */
+        :root {
+            --base03: #002b36;
+            --base02: #073642;
+            --base01: #586e75;
+            --base00: #657b83;
+            --base0: #839496;
+            --base1: #93a1a1;
+            --base2: #eee8d5;
+            --base3: #fdf6e3;
+            --yellow: #b58900;
+            --orange: #cb4b16;
+            --red: #dc322f;
+            --magenta: #d33682;
+            --violet: #6c71c4;
+            --blue: #268bd2;
+            --cyan: #2aa198;
+            --green: #859900;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--base03);
+            color: var(--base0);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px 0;
+            border-bottom: 3px solid var(--cyan);
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: var(--cyan);
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: var(--base1);
+            font-size: 1.2em;
+        }
+
+        .skill-badge {
+            display: inline-block;
+            background-color: var(--violet);
+            color: var(--base03);
+            padding: 5px 15px;
+            border-radius: 15px;
+            margin: 5px;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background-color: var(--base02);
+            border-radius: 4px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--cyan), var(--green));
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: var(--base02);
+            border-radius: 10px;
+            border-left: 4px solid var(--blue);
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-label {
+            color: var(--base01);
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .stat-value {
+            color: var(--cyan);
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        .question-card {
+            background-color: var(--base02);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-left: 5px solid var(--violet);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .question-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .question-number {
+            background-color: var(--violet);
+            color: var(--base03);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+
+        .skill-tag {
+            background-color: var(--base03);
+            color: var(--orange);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            border: 1px solid var(--orange);
+        }
+
+        .question-text {
+            color: var(--base2);
+            font-size: 1.3em;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .option {
+            background-color: var(--base03);
+            border: 2px solid var(--base01);
+            padding: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.1em;
+            display: flex;
+            align-items: center;
+        }
+
+        .option:hover:not(.correct):not(.incorrect):not(.disabled) {
+            background-color: var(--base02);
+            border-color: var(--blue);
+            transform: translateX(5px);
+        }
+
+        .option.correct {
+            background-color: rgba(133, 153, 0, 0.2);
+            border-color: var(--green);
+            color: var(--green);
+            cursor: default;
+        }
+
+        .option.incorrect {
+            background-color: rgba(220, 50, 47, 0.2);
+            border-color: var(--red);
+            color: var(--red);
+            cursor: default;
+        }
+
+        .option.disabled {
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .option-letter {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            background-color: var(--base01);
+            color: var(--base03);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 35px;
+            font-weight: bold;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .option.correct .option-letter {
+            background-color: var(--green);
+        }
+
+        .option.incorrect .option-letter {
+            background-color: var(--red);
+        }
+
+        .feedback {
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            display: none;
+            animation: slideDown 0.3s ease;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .feedback.show {
+            display: block;
+        }
+
+        .feedback.correct {
+            background-color: rgba(133, 153, 0, 0.15);
+            border-left: 4px solid var(--green);
+            color: var(--base1);
+        }
+
+        .feedback.incorrect {
+            background-color: rgba(220, 50, 47, 0.15);
+            border-left: 4px solid var(--red);
+            color: var(--base1);
+        }
+
+        .feedback-title {
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 8px;
+        }
+
+        .feedback.correct .feedback-title {
+            color: var(--green);
+        }
+
+        .feedback.incorrect .feedback-title {
+            color: var(--red);
+        }
+
+        .results {
+            display: none;
+            text-align: center;
+            padding: 40px;
+            background-color: var(--base02);
+            border-radius: 12px;
+            border: 3px solid var(--cyan);
+        }
+
+        .results.show {
+            display: block;
+        }
+
+        .results h2 {
+            color: var(--cyan);
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .score-display {
+            font-size: 4em;
+            color: var(--green);
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .results-message {
+            font-size: 1.3em;
+            color: var(--base1);
+            margin-bottom: 30px;
+        }
+
+        .reset-button {
+            background-color: var(--cyan);
+            color: var(--base03);
+            border: none;
+            padding: 15px 40px;
+            border-radius: 8px;
+            font-size: 1.2em;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .reset-button:hover {
+            background-color: var(--blue);
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            
+            .question-text {
+                font-size: 1.1em;
+            }
+            
+            .option {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⚡ Essential Skills Practice</h1>
+            <p class="subtitle">Chapters 1 & 2: Foundation Skills Used Throughout Algebra</p>
+            <div style="margin-top: 15px;">
+                <span class="skill-badge">Signed Numbers</span>
+                <span class="skill-badge">Distributive Property</span>
+                <span class="skill-badge">Equations</span>
+                <span class="skill-badge">Inequalities</span>
+            </div>
+        </header>
+
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressBar"></div>
+        </div>
+
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-label">Questions</div>
+                <div class="stat-value"><span id="currentQuestion">0</span>/20</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-label">Correct</div>
+                <div class="stat-value" id="correctCount">0</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-label">Score</div>
+                <div class="stat-value"><span id="scorePercent">0</span>%</div>
+            </div>
+        </div>
+
+        <div id="questionsContainer"></div>
+
+        <div class="results" id="results">
+            <h2>🎉 Quiz Complete!</h2>
+            <div class="score-display" id="finalScore">0%</div>
+            <div class="results-message" id="resultsMessage"></div>
+            <button class="reset-button" onclick="resetQuiz()">Try Again</button>
+        </div>
+    </div>
+
+    <script>
+        const questions = [
+            {
+                skill: "Addition with Negatives",
+                question: "Evaluate: (−15) + 8",
+                options: [
+                    "−7",
+                    "7",
+                    "−23",
+                    "23"
+                ],
+                correct: 0,
+                explanation: "Correct! When adding numbers with different signs, subtract the smaller absolute value from the larger (15 − 8 = 7) and keep the sign of the larger absolute value. Since |−15| > |8|, the answer is negative: −7. This skill is used constantly when simplifying algebraic expressions."
+            },
+            {
+                skill: "Subtraction with Negatives",
+                question: "Evaluate: 6 − (−9)",
+                options: [
+                    "−3",
+                    "3",
+                    "15",
+                    "−15"
+                ],
+                correct: 2,
+                explanation: "Correct! Subtracting a negative is the same as adding a positive: 6 − (−9) = 6 + 9 = 15. This 'subtract equals add the opposite' rule is essential throughout all of algebra, especially when working with polynomials and rational expressions."
+            },
+            {
+                skill: "Multiplication Signs",
+                question: "Evaluate: (−6)(−5)",
+                options: [
+                    "−30",
+                    "30",
+                    "−11",
+                    "11"
+                ],
+                correct: 1,
+                explanation: "Correct! When multiplying two numbers with the SAME sign, the result is positive. (−6)(−5) = 30. Remember: same signs → positive, different signs → negative. This rule is critical for factoring, expanding expressions, and solving equations."
+            },
+            {
+                skill: "Division Signs",
+                question: "Evaluate: −48 ÷ (−6)",
+                options: [
+                    "−8",
+                    "8",
+                    "−54",
+                    "54"
+                ],
+                correct: 1,
+                explanation: "Correct! Same signs give a positive result: −48 ÷ (−6) = 8. Division follows the same sign rules as multiplication. This is crucial when simplifying rational expressions and solving equations in later chapters."
+            },
+            {
+                skill: "Distributive Property",
+                question: "Simplify: 5(2x − 3)",
+                options: [
+                    "10x − 3",
+                    "7x − 8",
+                    "10x − 15",
+                    "10x + 15"
+                ],
+                correct: 2,
+                explanation: "Correct! Using a(b − c) = ab − ac: 5(2x − 3) = 5(2x) − 5(3) = 10x − 15. The distributive property is THE most important skill in algebra—used in solving equations, factoring, multiplying polynomials, and simplifying rational expressions."
+            },
+            {
+                skill: "Distributive with Negative",
+                question: "Simplify: −3(4x + 7)",
+                options: [
+                    "−12x + 21",
+                    "−12x − 21",
+                    "12x − 21",
+                    "−12x + 7"
+                ],
+                correct: 1,
+                explanation: "Correct! Distribute the −3 to both terms: −3(4x) + (−3)(7) = −12x − 21. When distributing a negative, both terms inside change signs. This appears constantly when solving equations and factoring."
+            },
+            {
+                skill: "Combining Like Terms",
+                question: "Simplify: 8x − 5x + 3x",
+                options: [
+                    "6x",
+                    "16x",
+                    "0",
+                    "−6x"
+                ],
+                correct: 0,
+                explanation: "Correct! Combine the coefficients: 8 − 5 + 3 = 6, so the answer is 6x. Like terms must have identical variables with identical exponents. This is essential for simplifying expressions throughout the course."
+            },
+            {
+                skill: "Combining Unlike Terms",
+                question: "Simplify: 7x² + 3x − 2x² + 5x",
+                options: [
+                    "5x² + 8x",
+                    "13x²",
+                    "5x³",
+                    "9x² + 8x"
+                ],
+                correct: 0,
+                explanation: "Correct! Combine like terms separately: (7x² − 2x²) + (3x + 5x) = 5x² + 8x. You cannot combine x² terms with x terms—they're unlike terms. This skill is critical for polynomial operations in Chapters 4 and 5."
+            },
+            {
+                skill: "Removing Parentheses",
+                question: "Simplify: −(3x − 8)",
+                options: [
+                    "−3x − 8",
+                    "−3x + 8",
+                    "3x − 8",
+                    "3x + 8"
+                ],
+                correct: 1,
+                explanation: "Correct! The negative sign in front acts like −1: −1(3x − 8) = −3x + 8. All signs inside change. This appears constantly when solving equations, simplifying expressions, and working with polynomials."
+            },
+            {
+                skill: "Order of Operations",
+                question: "Evaluate: 20 − 3 × 4 + 2",
+                options: [
+                    "70",
+                    "10",
+                    "66",
+                    "6"
+                ],
+                correct: 1,
+                explanation: "Correct! Follow PEMDAS: multiply first (3 × 4 = 12), then left to right: 20 − 12 + 2 = 8 + 2 = 10. Order of operations is fundamental to all algebraic simplification."
+            },
+            {
+                skill: "One-Step Equations",
+                question: "Solve: x + 12 = 35",
+                options: [
+                    "x = 47",
+                    "x = 23",
+                    "x = −23",
+                    "x = 420"
+                ],
+                correct: 1,
+                explanation: "Correct! Subtract 12 from both sides: x = 35 − 12 = 23. This addition principle (adding or subtracting the same value from both sides) is the foundation for solving ALL equations throughout the course."
+            },
+            {
+                skill: "One-Step Equations",
+                question: "Solve: 7x = −42",
+                options: [
+                    "x = 6",
+                    "x = −6",
+                    "x = 294",
+                    "x = −294"
+                ],
+                correct: 1,
+                explanation: "Correct! Divide both sides by 7: x = −42/7 = −6. The multiplication principle (multiply or divide both sides by the same non-zero value) is used in virtually every equation you'll solve."
+            },
+            {
+                skill: "Two-Step Equations",
+                question: "Solve: 3x + 8 = 26",
+                options: [
+                    "x = 6",
+                    "x = 18",
+                    "x = 34/3",
+                    "x = 102"
+                ],
+                correct: 0,
+                explanation: "Correct! Step 1: Subtract 8 from both sides → 3x = 18. Step 2: Divide by 3 → x = 6. Two-step equations are the most common type you'll encounter. Always isolate the variable term first, then divide."
+            },
+            {
+                skill: "Multi-Step Equations",
+                question: "Solve: 5x − 3 = 2x + 12",
+                options: [
+                    "x = 3",
+                    "x = 5",
+                    "x = 9",
+                    "x = 15"
+                ],
+                correct: 1,
+                explanation: "Correct! Subtract 2x from both sides: 3x − 3 = 12. Add 3: 3x = 15. Divide by 3: x = 5. This skill (getting variables on one side, constants on the other) is essential for all equation-solving."
+            },
+            {
+                skill: "Equations with Parentheses",
+                question: "Solve: 4(x − 2) = 20",
+                options: [
+                    "x = 7",
+                    "x = 5",
+                    "x = 3",
+                    "x = 9"
+                ],
+                correct: 0,
+                explanation: "Correct! Distribute: 4x − 8 = 20. Add 8: 4x = 28. Divide by 4: x = 7. Alternatively, you could divide both sides by 4 first: x − 2 = 5, then x = 7. Equations with parentheses appear frequently, especially in word problems."
+            },
+            {
+                skill: "Solving Formulas",
+                question: "Solve for w: P = 2l + 2w",
+                options: [
+                    "w = (P − 2l)/2",
+                    "w = P − 2l",
+                    "w = P/2 − l",
+                    "Both A and C"
+                ],
+                correct: 3,
+                explanation: "Correct! Both answers are equivalent! Method 1: P = 2l + 2w → P − 2l = 2w → w = (P − 2l)/2. Method 2: P = 2(l + w) → P/2 = l + w → w = P/2 − l. Solving formulas is crucial for geometry, physics, and advanced algebra."
+            },
+            {
+                skill: "Basic Inequalities",
+                question: "Solve: x + 7 < 15",
+                options: [
+                    "x < 8",
+                    "x > 8",
+                    "x < 22",
+                    "x > 22"
+                ],
+                correct: 0,
+                explanation: "Correct! Subtract 7 from both sides: x < 8. When adding or subtracting, the inequality symbol STAYS THE SAME. Inequalities are used extensively in real-world applications and optimization problems."
+            },
+            {
+                skill: "Inequalities - Sign Flip",
+                question: "Solve: −5x ≥ 20",
+                options: [
+                    "x ≥ −4",
+                    "x ≤ −4",
+                    "x ≥ 4",
+                    "x ≤ 4"
+                ],
+                correct: 1,
+                explanation: "Correct! Divide both sides by −5 and FLIP the inequality sign: x ≤ −4. This is the most important rule for inequalities: when multiplying or dividing by a NEGATIVE number, REVERSE the inequality symbol. Missing this causes major errors!"
+            },
+            {
+                skill: "Multi-Step Inequalities",
+                question: "Solve: 3x − 7 ≤ 8",
+                options: [
+                    "x ≤ 5",
+                    "x ≥ 5",
+                    "x ≤ 1/3",
+                    "x ≥ 1/3"
+                ],
+                correct: 0,
+                explanation: "Correct! Add 7 to both sides: 3x ≤ 15. Divide by 3 (positive, so sign stays): x ≤ 5. Multi-step inequalities follow the same process as equations, but remember to flip the sign when dividing by negatives."
+            },
+            {
+                skill: "Percent Applications",
+                question: "What is 40% of 85?",
+                options: [
+                    "34",
+                    "45",
+                    "3.4",
+                    "212.5"
+                ],
+                correct: 0,
+                explanation: "Correct! Convert to decimal and multiply: 0.40 × 85 = 34. Remember 'of' means multiply, and 'is' means equals. Percent problems appear in finance, statistics, science, and everyday applications throughout mathematics."
+            }
+        ];
+
+        let correctAnswers = 0;
+        let answeredQuestions = 0;
+
+        function initQuiz() {
+            const container = document.getElementById('questionsContainer');
+            
+            questions.forEach((q, index) => {
+                const questionCard = document.createElement('div');
+                questionCard.className = 'question-card';
+                questionCard.innerHTML = `
+                    <div class="question-header">
+                        <span class="question-number">Question ${index + 1}</span>
+                        <span class="skill-tag">🎯 ${q.skill}</span>
+                    </div>
+                    <div class="question-text">${q.question}</div>
+                    <div class="options">
+                        ${q.options.map((option, i) => `
+                            <div class="option" onclick="selectAnswer(${index}, ${i})">
+                                <span class="option-letter">${String.fromCharCode(65 + i)}</span>
+                                <span>${option}</span>
+                            </div>
+                        `).join('')}
+                    </div>
+                    <div class="feedback" id="feedback-${index}">
+                        <div class="feedback-title"></div>
+                        <div class="feedback-text"></div>
+                    </div>
+                `;
+                container.appendChild(questionCard);
+            });
+        }
+
+        function selectAnswer(questionIndex, selectedOption) {
+            const question = questions[questionIndex];
+            const options = document.querySelectorAll(`.question-card:nth-child(${questionIndex + 1}) .option`);
+            const feedback = document.getElementById(`feedback-${questionIndex}`);
+            
+            // Check if already answered
+            if (options[0].classList.contains('disabled')) return;
+            
+            // Disable all options
+            options.forEach(opt => opt.classList.add('disabled'));
+            
+            // Mark correct and incorrect
+            const isCorrect = selectedOption === question.correct;
+            options[selectedOption].classList.add(isCorrect ? 'correct' : 'incorrect');
+            options[question.correct].classList.add('correct');
+            
+            // Show feedback
+            feedback.classList.add('show', isCorrect ? 'correct' : 'incorrect');
+            feedback.querySelector('.feedback-title').textContent = isCorrect ? '✓ Correct!' : '✗ Incorrect';
+            feedback.querySelector('.feedback-text').textContent = question.explanation;
+            
+            // Update stats
+            answeredQuestions++;
+            if (isCorrect) correctAnswers++;
+            
+            updateStats();
+            
+            // Check if quiz is complete
+            if (answeredQuestions === questions.length) {
+                setTimeout(showResults, 1000);
+            }
+        }
+
+        function updateStats() {
+            document.getElementById('currentQuestion').textContent = answeredQuestions;
+            document.getElementById('correctCount').textContent = correctAnswers;
+            const percentage = answeredQuestions > 0 ? Math.round((correctAnswers / answeredQuestions) * 100) : 0;
+            document.getElementById('scorePercent').textContent = percentage;
+            
+            const progress = (answeredQuestions / questions.length) * 100;
+            document.getElementById('progressBar').style.width = progress + '%';
+        }
+
+        function showResults() {
+            const percentage = Math.round((correctAnswers / questions.length) * 100);
+            document.getElementById('finalScore').textContent = percentage + '%';
+            
+            let message = '';
+            if (percentage >= 90) {
+                message = '🌟 Outstanding! You\'ve mastered the essential skills. You\'re ready for advanced topics!';
+            } else if (percentage >= 80) {
+                message = '👏 Excellent! Your foundation is solid. Review any missed skills to perfect your understanding.';
+            } else if (percentage >= 70) {
+                message = '👍 Good work! Focus on the skills you missed—they\'re crucial for success in later chapters.';
+            } else if (percentage >= 60) {
+                message = '📚 Keep practicing! These fundamental skills need strengthening before moving forward.';
+            } else {
+                message = '💪 These skills are the foundation of ALL algebra. Review the chapters and practice daily until mastered!';
+            }
+            
+            document.getElementById('resultsMessage').textContent = message;
+            document.getElementById('results').classList.add('show');
+            document.getElementById('results').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function resetQuiz() {
+            correctAnswers = 0;
+            answeredQuestions = 0;
+            
+            // Clear all questions
+            document.getElementById('questionsContainer').innerHTML = '';
+            document.getElementById('results').classList.remove('show');
+            
+            // Reinitialize
+            initQuiz();
+            updateStats();
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Initialize quiz on page load
+        window.onload = initQuiz;
+    </script>
+</body>
+</html>

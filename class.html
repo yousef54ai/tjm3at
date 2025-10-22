@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تجمعات - الصف</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/class.css">
+</head>
+<body>
+    <div class="container fade-in">
+        <div class="breadcrumb">
+            <a href="index.html">الرئيسية</a>
+            <span>/</span>
+            <span id="breadcrumb-class"></span>
+        </div>
+
+        <header class="class-header">
+            <h1 id="class-name"></h1>
+            <span class="class-code" id="class-code"></span>
+            <p class="class-description" id="class-description"></p>
+        </header>
+
+        <div id="exams-grid" class="exams-grid"></div>
+    </div>
+
+    <script>
+        // Get class ID from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const classId = urlParams.get('id');
+
+        if (!classId) {
+            window.location.href = 'index.html';
+        }
+
+        // Load class data
+        fetch(`data/classes/${classId}.json`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Class not found');
+                }
+                return response.json();
+            })
+            .then(data => {
+                // Set page direction based on language
+                document.documentElement.dir = data.language === 'ar' ? 'rtl' : 'ltr';
+                document.documentElement.lang = data.language;
+
+                // Update page title
+                document.title = `تجمعات - ${data.name}`;
+
+                // Update breadcrumb
+                document.getElementById('breadcrumb-class').textContent = data.code;
+
+                // Update header
+                document.getElementById('class-name').textContent = `تجميعات ${data.name}`;
+                document.getElementById('class-code').textContent = data.code;
+                document.getElementById('class-description').textContent = data.description;
+
+                // Create exam cards
+                const grid = document.getElementById('exams-grid');
+                data.exams.forEach(exam => {
+                    const card = document.createElement('a');
+                    card.className = 'exam-card';
+                    card.href = `exam.html?class=${classId}&exam=${exam.id}`;
+
+                    card.innerHTML = `
+                        <div class="exam-title">${exam.title}</div>
+                        <div class="exam-description">${exam.description}</div>
+                    `;
+
+                    grid.appendChild(card);
+                });
+
+                // Fade in
+                document.querySelector('.container').classList.add('loaded');
+            })
+            .catch(error => {
+                console.error('Error loading class:', error);
+                alert('فشل تحميل بيانات الصف');
+                window.location.href = 'index.html';
+            });
+    </script>
+</body>
+</html>

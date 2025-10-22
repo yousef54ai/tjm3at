@@ -1,0 +1,87 @@
+/* Home Page Styles */
+
+header {
+    text-align: center;
+    padding: var(--spacing-xl) var(--spacing-md) var(--spacing-lg);
+}
+
+header h1 {
+    font-size: var(--fs-3xl);
+    font-weight: 700;
+    color: var(--cyan);
+    margin-bottom: var(--spacing-sm);
+}
+
+header p {
+    font-size: var(--fs-lg);
+    color: var(--text-emphasized);
+}
+
+/* Classes Grid */
+.classes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr));
+    gap: var(--spacing-md);
+    padding: var(--spacing-md) 0;
+}
+
+@media (min-width: 640px) {
+    .classes-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+}
+
+@media (min-width: 1024px) {
+    .classes-grid {
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: var(--spacing-lg);
+    }
+}
+
+/* Class Card */
+.class-card {
+    background-color: var(--bg-secondary);
+    border-radius: 12px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    border-left: 5px solid var(--purple);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    height: 100%;
+}
+
+.class-content {
+    padding: var(--spacing-lg);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.class-icon {
+    font-size: clamp(2.5rem, 2rem + 2vw, 3.5rem);
+    display: block;
+    margin-bottom: var(--spacing-md);
+}
+
+.class-name {
+    font-size: var(--fs-xl);
+    font-weight: 600;
+    color: var(--text-bright);
+    margin-bottom: var(--spacing-xs);
+    line-height: 1.3;
+    min-height: 2.6em;
+}
+
+.class-code {
+    font-size: var(--fs-sm);
+    color: var(--purple);
+    font-weight: 500;
+    margin-bottom: var(--spacing-sm);
+    display: block;
+}
+
+.class-description {
+    font-size: var(--fs-base);
+    color: var(--text-emphasized);
+    font-style: italic;
+}

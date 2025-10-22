@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تجمعات - امتحان</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/exam.css">
+</head>
+<body>
+    <div class="container fade-in">
+        <header class="exam-header">
+            <h1 id="exam-title"></h1>
+        </header>
+
+        <div class="progress-section">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressBar"></div>
+            </div>
+            <div class="progress-text" id="progressText">0 / 0</div>
+        </div>
+
+        <div id="exam-content"></div>
+
+        <div class="navigation">
+            <button class="nav-button" id="backButton" onclick="previousQuestion()"></button>
+            <button class="nav-button" id="nextButton" onclick="nextQuestion()"></button>
+            <button class="nav-button finish" id="finishButton" onclick="finishExam()" style="display: none;"></button>
+        </div>
+
+        <div class="results" id="results"></div>
+    </div>
+
+    <div class="fireworks" id="fireworks"></div>
+
+    <script>
+        let examData = null;
+        let currentQuestionIndex = 0;
+        let userAnswers = [];
+        let text = {};
+
+        // Language-specific text
+        const translations = {
+            ar: {
+                question: 'السؤال',
+                of: 'من',
+                back: 'السابق',
+                next: 'التالي',
+                finish: 'إنهاء',
+                correct: '✓ إجابة صحيحة!',
+                incorrect: '✗ إجابة خاطئة',
+                perfectTitle: '🎉 إنجاز مثالي!',
+                perfectMessage: 'رائع! لقد أجبت على جميع الأسئلة بشكل صحيح!<br>أنت مستعد تماماً للانتقال إلى المستوى التالي.<br>استمر في هذا الأداء الممتاز! 🌟',
+                resultsTitle: '📊 النتيجة النهائية',
+                youAnswered: 'أجبت على',
+                outOf: 'من',
+                questionsCorrectly: 'أسئلة بشكل صحيح',
+                messageGood: 'أداء جيد! راجع المواضيع التي أخطأت فيها لتحسين فهمك.',
+                messageNeedsWork: 'تحتاج إلى مزيد من الممارسة. راجع المواضيع التالية بعناية.',
+                messageBasics: 'يجب عليك مراجعة الأساسيات. خذ وقتك في دراسة المواضيع التالية.',
+                reviewTopics: 'المواضيع المطلوب مراجعتها:',
+                page: 'صفحة',
+                tryAgain: 'إعادة المحاولة'
+            },
+            en: {
+                question: 'Question',
+                of: 'of',
+                back: 'Back',
+                next: 'Next',
+                finish: 'Finish',
+                correct: '✓ Correct!',
+                incorrect: '✗ Incorrect',
+                perfectTitle: '🎉 Perfect Score!',
+                perfectMessage: 'Amazing! You answered all questions correctly!<br>You\'re ready to move to the next level.<br>Keep up the excellent work! 🌟',
+                resultsTitle: '📊 Final Results',
+                youAnswered: 'You answered',
+                outOf: 'out of',
+                questionsCorrectly: 'questions correctly',
+                messageGood: 'Good job! Review the topics you missed to improve your understanding.',
+                messageNeedsWork: 'You need more practice. Review the following topics carefully.',
+                messageBasics: 'You should review the basics. Take your time studying the following topics.',
+                reviewTopics: 'Topics to Review:',
+                page: 'Page',
+                tryAgain: 'Try Again'
+            }
+        };
+
+        // Get exam info from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const classId = urlParams.get('class');
+        const examId = urlParams.get('exam');
+
+        if (!classId || !examId) {
+            alert('معلومات الامتحان غير موجودة');
+            window.location.href = 'index.html';
+        }
+
+        // Load exam data
+        fetch(`data/exams/${classId}/${examId}.json`)
+            .then(response => {
+                if (!response.ok) throw new Error('Exam not found');
+                return response.json();
+            })
+            .then(data => {
+                examData = data;
+                initializeExam();
+            })
+            .catch(error => {
+                console.error('Error loading exam:', error);
+                alert('فشل تحميل بيانات الامتحان');
+                window.location.href = 'index.html';
+            });
+
+        function initializeExam() {
+            // Set page direction and language
+            document.documentElement.dir = examData.language === 'ar' ? 'rtl' : 'ltr';
+            document.documentElement.lang = examData.language;
+
+            // Set language-specific text
+            text = translations[examData.language] || translations.ar;
+
+            // Update header
+            document.getElementById('exam-title').textContent = examData.title;
+
+            // Update navigation buttons
+            document.getElementById('backButton').textContent = text.back;
+            document.getElementById('nextButton').textContent = text.next;
+            document.getElementById('finishButton').textContent = text.finish;
+
+            // Initialize user answers array
+            userAnswers = new Array(examData.questions.length).fill(null);
+
+            // Render all questions
+            renderQuestions();
+
+            // Show first question
+            showQuestion(0);
+
+            // Fade in
+            document.querySelector('.container').classList.add('loaded');
+        }
+
+        function renderQuestions() {
+            const container = document.getElementById('exam-content');
+
+            examData.questions.forEach((q, index) => {
+                const questionDiv = document.createElement('div');
+                questionDiv.className = 'question-container';
+                questionDiv.id = `question-${index}`;
+
+                questionDiv.innerHTML = `
+                    <div class="question-card">
+                        <div class="question-text">${q.question}</div>
+                        <div class="options">
+                            ${q.options.map((option, i) => `
+                                <div class="option" onclick="selectAnswer(${index}, ${i})">
+                                    <span class="option-letter">${String.fromCharCode(65 + i)}</span>
+                                    <span>${option}</span>
+                                </div>
+                            `).join('')}
+                        </div>
+                        <div class="feedback" id="feedback-${index}">
+                            <div class="feedback-title"></div>
+                            <div class="feedback-text"></div>
+                        </div>
+                    </div>
+                `;
+
+                container.appendChild(questionDiv);
+            });
+        }
+
+        function showQuestion(index) {
+            // Hide all questions
+            document.querySelectorAll('.question-container').forEach(q => {
+                q.classList.remove('active');
+            });
+
+            // Show current question
+            document.getElementById(`question-${index}`).classList.add('active');
+
+            // Update progress
+            updateProgress();
+
+            // Update navigation buttons
+            updateNavigation();
+        }
+
+        function selectAnswer(questionIndex, optionIndex) {
+            const question = examData.questions[questionIndex];
+            const questionCard = document.getElementById(`question-${questionIndex}`);
+            const options = questionCard.querySelectorAll('.option');
+            const feedback = document.getElementById(`feedback-${questionIndex}`);
+
+            // Check if already answered
+            if (userAnswers[questionIndex] !== null) return;
+
+            // Save answer
+            userAnswers[questionIndex] = {
+                selected: optionIndex,
+                correct: question.correctAnswer,
+                isCorrect: optionIndex === question.correctAnswer
+            };
+
+            // Disable all options
+            options.forEach(opt => opt.classList.add('disabled'));
+
+            // Mark selected option
+            const isCorrect = optionIndex === question.correctAnswer;
+            options[optionIndex].classList.add(isCorrect ? 'correct' : 'incorrect');
+
+            // Always show correct answer
+            if (!isCorrect) {
+                options[question.correctAnswer].classList.add('correct');
+            }
+
+            // Show feedback
+            feedback.classList.add('show', isCorrect ? 'correct' : 'incorrect');
+            feedback.querySelector('.feedback-title').textContent = isCorrect ? text.correct : text.incorrect;
+            feedback.querySelector('.feedback-text').textContent = question.explanation;
+
+            // Update progress
+            updateProgress();
+
+            // Update navigation
+            updateNavigation();
+        }
+
+        function updateProgress() {
+            const answeredCount = userAnswers.filter(a => a !== null).length;
+            const totalCount = examData.questions.length;
+            const percentage = (answeredCount / totalCount) * 100;
+
+            document.getElementById('progressBar').style.width = percentage + '%';
+            document.getElementById('progressText').textContent = `${answeredCount} / ${totalCount}`;
+        }
+
+        function updateNavigation() {
+            const backButton = document.getElementById('backButton');
+            const nextButton = document.getElementById('nextButton');
+            const finishButton = document.getElementById('finishButton');
+
+            // Back button
+            backButton.disabled = currentQuestionIndex === 0;
+
+            // Check if on last question
+            const isLastQuestion = currentQuestionIndex === examData.questions.length - 1;
+
+            if (isLastQuestion) {
+                nextButton.style.display = 'none';
+                finishButton.style.display = 'block';
+
+                // Enable finish only if all answered
+                const allAnswered = userAnswers.every(a => a !== null);
+                finishButton.disabled = !allAnswered;
+            } else {
+                nextButton.style.display = 'block';
+                finishButton.style.display = 'none';
+            }
+        }
+
+        function nextQuestion() {
+            if (currentQuestionIndex < examData.questions.length - 1) {
+                currentQuestionIndex++;
+                showQuestion(currentQuestionIndex);
+            }
+        }
+
+        function previousQuestion() {
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                showQuestion(currentQuestionIndex);
+            }
+        }
+
+        function finishExam() {
+            // Hide exam content
+            document.getElementById('exam-content').style.display = 'none';
+            document.querySelector('.navigation').style.display = 'none';
+            document.querySelector('.progress-section').style.display = 'none';
+
+            // Calculate results
+            const correctCount = userAnswers.filter(a => a && a.isCorrect).length;
+            const totalCount = examData.questions.length;
+            const percentage = Math.round((correctCount / totalCount) * 100);
+
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.classList.add('show');
+
+            if (correctCount === totalCount) {
+                // Perfect score - show fireworks and celebration
+                showPerfectScore(resultsDiv);
+            } else {
+                // Show review for mistakes
+                showReview(resultsDiv, correctCount, totalCount, percentage);
+            }
+
+            resultsDiv.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function showPerfectScore(container) {
+            container.innerHTML = `
+                <h2>${text.perfectTitle}</h2>
+                <div class="score-display perfect">100%</div>
+                <div class="results-message">
+                    ${text.perfectMessage}
+                </div>
+                <button class="restart-button" onclick="restartExam()">${text.tryAgain}</button>
+            `;
+
+            // Launch fireworks
+            launchFireworks();
+        }
+
+        function showReview(container, correctCount, totalCount, percentage) {
+            let scoreClass = 'needs-work';
+            let message = '';
+
+            if (percentage >= 80) {
+                scoreClass = 'good';
+                message = text.messageGood;
+            } else if (percentage >= 60) {
+                scoreClass = 'needs-work';
+                message = text.messageNeedsWork;
+            } else {
+                scoreClass = 'needs-work';
+                message = text.messageBasics;
+            }
+
+            // Get wrong answers
+            const mistakes = [];
+            userAnswers.forEach((answer, index) => {
+                if (answer && !answer.isCorrect) {
+                    mistakes.push({
+                        questionNum: index + 1,
+                        review: examData.questions[index].review
+                    });
+                }
+            });
+
+            // Build review HTML
+            let reviewHTML = `<div class="review-section"><h3>${text.reviewTopics}</h3>`;
+
+            mistakes.forEach(mistake => {
+                const r = mistake.review;
+                reviewHTML += `
+                    <div class="review-item">
+                        <div class="review-chapter">📖 ${r.chapter}</div>
+                        <div class="review-section-text">📍 ${r.section}</div>
+                        <div class="review-page">📄 ${text.page} ${r.page}</div>
+                        <div class="review-info">💡 ${r.info}</div>
+                    </div>
+                `;
+            });
+
+            reviewHTML += '</div>';
+
+            container.innerHTML = `
+                <h2>${text.resultsTitle}</h2>
+                <div class="score-display ${scoreClass}">${percentage}%</div>
+                <div class="results-message">
+                    ${text.youAnswered} ${correctCount} ${text.outOf} ${totalCount} ${text.questionsCorrectly}<br>
+                    ${message}
+                </div>
+                ${reviewHTML}
+                <button class="restart-button" onclick="restartExam()">${text.tryAgain}</button>
+            `;
+        }
+
+        function launchFireworks() {
+            const fireworksContainer = document.getElementById('fireworks');
+            const colors = ['#2aa198', '#6c71c4', '#859900', '#b58900', '#d33682'];
+
+            for (let i = 0; i < 50; i++) {
+                setTimeout(() => {
+                    createFirework(fireworksContainer, colors);
+                }, i * 100);
+            }
+        }
+
+        function createFirework(container, colors) {
+            const x = Math.random() * window.innerWidth;
+            const y = Math.random() * window.innerHeight * 0.5;
+
+            for (let i = 0; i < 30; i++) {
+                const firework = document.createElement('div');
+                firework.className = 'firework';
+                firework.style.left = x + 'px';
+                firework.style.top = y + 'px';
+                firework.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+
+                const angle = (Math.PI * 2 * i) / 30;
+                const velocity = 50 + Math.random() * 100;
+                const xVel = Math.cos(angle) * velocity;
+                const yVel = Math.sin(angle) * velocity;
+
+                firework.style.setProperty('--x', xVel + 'px');
+                firework.style.setProperty('--y', yVel + 'px');
+
+                container.appendChild(firework);
+
+                setTimeout(() => firework.remove(), 1000);
+            }
+        }
+
+        function restartExam() {
+            window.location.reload();
+        }
+    </script>
+</body>
+</html>
