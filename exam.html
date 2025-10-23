@@ -60,7 +60,8 @@
                 messageBasics: 'يجب عليك مراجعة الأساسيات. خذ وقتك في دراسة المواضيع التالية.',
                 reviewTopics: 'المواضيع المطلوب مراجعتها:',
                 page: 'صفحة',
-                tryAgain: 'إعادة المحاولة'
+                tryAgain: 'إعادة المحاولة',
+                backToHome: 'العودة للرئيسية'
             },
             en: {
                 question: 'Question',
@@ -81,7 +82,8 @@
                 messageBasics: 'You should review the basics. Take your time studying the following topics.',
                 reviewTopics: 'Topics to Review:',
                 page: 'Page',
-                tryAgain: 'Try Again'
+                tryAgain: 'Try Again',
+                backToHome: 'Back to Home'
             }
         };
 
@@ -138,6 +140,53 @@
 
             // Fade in
             document.querySelector('.container').classList.add('loaded');
+
+            // Add keyboard navigation
+            setupKeyboardNavigation();
+        }
+
+        function setupKeyboardNavigation() {
+            document.addEventListener('keydown', (event) => {
+                // Don't navigate if results are showing
+                if (document.getElementById('results').classList.contains('show')) {
+                    return;
+                }
+
+                const isRTL = document.documentElement.dir === 'rtl';
+                const backButton = document.getElementById('backButton');
+                const nextButton = document.getElementById('nextButton');
+                const finishButton = document.getElementById('finishButton');
+
+                // Handle arrow keys
+                if (event.key === 'ArrowLeft') {
+                    // In RTL: left arrow = next, In LTR: left arrow = back
+                    if (isRTL) {
+                        if (nextButton.style.display !== 'none' && !nextButton.disabled) {
+                            nextQuestion();
+                        }
+                    } else {
+                        if (!backButton.disabled) {
+                            previousQuestion();
+                        }
+                    }
+                } else if (event.key === 'ArrowRight') {
+                    // In RTL: right arrow = back, In LTR: right arrow = next
+                    if (isRTL) {
+                        if (!backButton.disabled) {
+                            previousQuestion();
+                        }
+                    } else {
+                        if (nextButton.style.display !== 'none' && !nextButton.disabled) {
+                            nextQuestion();
+                        }
+                    }
+                } else if (event.key === 'Enter') {
+                    // Enter key to finish exam
+                    if (finishButton.style.display !== 'none' && !finishButton.disabled) {
+                        finishExam();
+                    }
+                }
+            });
         }
 
         function renderQuestions() {
@@ -305,7 +354,10 @@
                 <div class="results-message">
                     ${text.perfectMessage}
                 </div>
-                <button class="restart-button" onclick="restartExam()">${text.tryAgain}</button>
+                <div class="results-buttons">
+                    <button class="restart-button" onclick="goToHome()">${text.backToHome}</button>
+                    <button class="restart-button" onclick="restartExam()">${text.tryAgain}</button>
+                </div>
             `;
 
             // Launch fireworks
@@ -363,7 +415,10 @@
                     ${message}
                 </div>
                 ${reviewHTML}
-                <button class="restart-button" onclick="restartExam()">${text.tryAgain}</button>
+                <div class="results-buttons">
+                    <button class="restart-button" onclick="goToHome()">${text.backToHome}</button>
+                    <button class="restart-button" onclick="restartExam()">${text.tryAgain}</button>
+                </div>
             `;
         }
 
@@ -405,6 +460,10 @@
 
         function restartExam() {
             window.location.reload();
+        }
+
+        function goToHome() {
+            window.location.href = 'index.html';
         }
     </script>
 </body>

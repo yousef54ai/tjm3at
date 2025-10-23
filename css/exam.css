@@ -350,6 +350,14 @@
     }
 }
 
+.results-buttons {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: var(--spacing-lg);
+}
+
 .restart-button {
     background-color: var(--cyan);
     color: var(--bg-primary);
@@ -359,6 +367,6 @@
     font-size: var(--fs-lg);
     font-weight: 600;
     cursor: pointer;
-    margin-top: var(--spacing-lg);
     font-family: inherit;
+    margin: 0;
 }
