@@ -42,6 +42,20 @@
     font-style: italic;
 }
 
+/* Section Styling */
+.section {
+    margin-bottom: var(--spacing-xl);
+}
+
+.section-title {
+    font-size: var(--fs-2xl);
+    font-weight: 700;
+    color: var(--text-bright);
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 2px solid var(--purple);
+}
+
 /* Exams Grid */
 .exams-grid {
     display: grid;
@@ -87,4 +101,14 @@
     font-size: var(--fs-base);
     color: var(--text-emphasized);
     font-style: italic;
+}
+
+/* Challenge Cards - Different styling */
+.challenge-card {
+    border-left-color: var(--cyan);
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, rgba(42, 161, 152, 0.05) 100%);
+}
+
+.challenge-card .exam-title {
+    color: var(--cyan);
 }

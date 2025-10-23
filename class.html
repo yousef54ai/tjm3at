@@ -21,7 +21,15 @@
             <p class="class-description" id="class-description"></p>
         </header>
 
-        <div id="exams-grid" class="exams-grid"></div>
+        <section id="exams-section" class="section" style="display: none;">
+            <h2 class="section-title" id="exams-title">الامتحانات</h2>
+            <div id="exams-grid" class="exams-grid"></div>
+        </section>
+
+        <section id="challenges-section" class="section" style="display: none;">
+            <h2 class="section-title" id="challenges-title">التحديات السريعة</h2>
+            <div id="challenges-grid" class="exams-grid"></div>
+        </section>
     </div>
 
     <script>
@@ -57,26 +65,52 @@
                 document.getElementById('class-code').textContent = data.code;
                 document.getElementById('class-description').textContent = data.description;
 
-                // Create exam cards
-                const grid = document.getElementById('exams-grid');
-                data.exams.forEach(exam => {
-                    const card = document.createElement('a');
-                    card.className = 'exam-card';
+                // Set section titles based on language
+                const isArabic = data.language === 'ar';
+                document.getElementById('exams-title').textContent = isArabic ? 'الامتحانات' : 'Exams';
+                document.getElementById('challenges-title').textContent = isArabic ? 'التحديات السريعة' : 'Speed Challenges';
 
-                    // Check if standalone exam or regular JSON exam
-                    if (exam.type === 'standalone') {
-                        card.href = exam.url;
-                    } else {
+                // Separate exams and challenges
+                const regularExams = data.exams.filter(exam => exam.type !== 'standalone');
+                const challenges = data.exams.filter(exam => exam.type === 'standalone');
+
+                // Create regular exam cards
+                if (regularExams.length > 0) {
+                    const examsGrid = document.getElementById('exams-grid');
+                    document.getElementById('exams-section').style.display = 'block';
+
+                    regularExams.forEach(exam => {
+                        const card = document.createElement('a');
+                        card.className = 'exam-card';
                         card.href = `exam.html?class=${classId}&exam=${exam.id}`;
-                    }
 
-                    card.innerHTML = `
-                        <div class="exam-title">${exam.title}</div>
-                        <div class="exam-description">${exam.description}</div>
-                    `;
+                        card.innerHTML = `
+                            <div class="exam-title">${exam.title}</div>
+                            <div class="exam-description">${exam.description}</div>
+                        `;
 
-                    grid.appendChild(card);
-                });
+                        examsGrid.appendChild(card);
+                    });
+                }
+
+                // Create challenge cards
+                if (challenges.length > 0) {
+                    const challengesGrid = document.getElementById('challenges-grid');
+                    document.getElementById('challenges-section').style.display = 'block';
+
+                    challenges.forEach(exam => {
+                        const card = document.createElement('a');
+                        card.className = 'exam-card challenge-card';
+                        card.href = exam.url;
+
+                        card.innerHTML = `
+                            <div class="exam-title">${exam.title}</div>
+                            <div class="exam-description">${exam.description}</div>
+                        `;
+
+                        challengesGrid.appendChild(card);
+                    });
+                }
 
                 // Fade in
                 document.querySelector('.container').classList.add('loaded');
