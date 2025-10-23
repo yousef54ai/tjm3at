@@ -21,6 +21,13 @@
       "description": "35 focused questions drilling all critical exponent rules - Product, Quotient, Power, Negative Exponents, and Scientific Notation"
     },
     {
+      "id": "exponent-rules-challenge",
+      "title": "⚡ تحدي قواعد الأسس",
+      "description": "Speed Challenge: 20 random exponent problems in 2 minutes - Multiple choice, all rules from Ch4!",
+      "type": "standalone",
+      "url": "challenges/exponent_rules_challenge.html"
+    },
+    {
       "id": "multiplication-speed",
       "title": "⚡ تدريب سرعة الضرب",
       "description": "Speed Challenge: Master multiplication tables - 30 problems, race against time!",
