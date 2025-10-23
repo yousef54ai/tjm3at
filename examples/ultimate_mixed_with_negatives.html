@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Mixed Operations with Negatives - MATH001</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #002b36;
+            color: #839496;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px 0;
+            border-bottom: 3px solid #2aa198;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #2aa198;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #93a1a1;
+            font-size: 1.2em;
+        }
+
+        .timer-section {
+            background-color: #073642;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .timer-display {
+            font-size: 4em;
+            color: #2aa198;
+            font-weight: bold;
+            font-family: 'Courier New', monospace;
+            margin: 20px 0;
+        }
+
+        .timer-display.danger {
+            color: #dc322f;
+            animation: pulse 0.5s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+
+        button {
+            background-color: #2aa198;
+            color: #002b36;
+            border: none;
+            padding: 20px 50px;
+            border-radius: 8px;
+            font-size: 1.5em;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            margin: 10px;
+        }
+
+        button:hover:not(:disabled) {
+            opacity: 0.8;
+            transform: scale(1.05);
+        }
+
+        button:disabled {
+            background-color: #586e75;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #073642;
+            border-radius: 10px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-label {
+            color: #586e75;
+            font-size: 0.9em;
+            text-transform: uppercase;
+        }
+
+        .stat-value {
+            color: #2aa198;
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        .quiz-container {
+            display: none;
+        }
+
+        .quiz-container.active {
+            display: block;
+        }
+
+        .question-card {
+            background-color: #073642;
+            border-radius: 12px;
+            padding: 40px;
+            margin-bottom: 20px;
+            border-left: 5px solid #6c71c4;
+        }
+
+        .question-number {
+            background-color: #6c71c4;
+            color: #002b36;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .math-problem {
+            font-size: 3em;
+            color: #eee8d5;
+            text-align: center;
+            margin: 30px 0;
+            font-weight: bold;
+            font-family: 'Courier New', monospace;
+        }
+
+        .answer-input {
+            width: 100%;
+            padding: 20px;
+            font-size: 2em;
+            background-color: #002b36;
+            border: 3px solid #586e75;
+            border-radius: 8px;
+            color: #eee8d5;
+            text-align: center;
+            font-family: 'Courier New', monospace;
+        }
+
+        .answer-input:focus {
+            outline: none;
+            border-color: #2aa198;
+        }
+
+        .answer-input.correct {
+            border-color: #859900;
+            background-color: rgba(133, 153, 0, 0.2);
+        }
+
+        .answer-input.incorrect {
+            border-color: #dc322f;
+            background-color: rgba(220, 50, 47, 0.2);
+        }
+
+        .submit-button {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .feedback {
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 1.2em;
+            display: none;
+        }
+
+        .feedback.show {
+            display: block;
+        }
+
+        .feedback.correct {
+            background-color: rgba(133, 153, 0, 0.15);
+            border-left: 4px solid #859900;
+            color: #859900;
+        }
+
+        .feedback.incorrect {
+            background-color: rgba(220, 50, 47, 0.15);
+            border-left: 4px solid #dc322f;
+            color: #dc322f;
+        }
+
+        .results {
+            display: none;
+            text-align: center;
+            padding: 40px;
+            background-color: #073642;
+            border-radius: 12px;
+            border: 3px solid #2aa198;
+        }
+
+        .results.show {
+            display: block;
+        }
+
+        .results h2 {
+            color: #2aa198;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .score-display {
+            font-size: 4em;
+            color: #2aa198;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .time-taken {
+            font-size: 1.5em;
+            color: #93a1a1;
+            margin-bottom: 20px;
+        }
+
+        .results-message {
+            font-size: 1.3em;
+            color: #93a1a1;
+            margin-bottom: 30px;
+        }
+
+        .problem-review {
+            background-color: #002b36;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            text-align: left;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .review-item {
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .review-item.correct {
+            background-color: rgba(133, 153, 0, 0.1);
+            border-left: 3px solid #859900;
+        }
+
+        .review-item.incorrect {
+            background-color: rgba(220, 50, 47, 0.1);
+            border-left: 3px solid #dc322f;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background-color: #073642;
+            border-radius: 4px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #2aa198, #6c71c4);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            
+            .math-problem {
+                font-size: 2em;
+            }
+            
+            .answer-input {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎯 Ultimate Mixed Operations</h1>
+            <p class="subtitle">All Operations + Negative Numbers - 20 Problems in 2 Minutes!</p>
+        </header>
+
+        <div class="timer-section">
+            <div class="stat-label">TIME REMAINING</div>
+            <div class="timer-display" id="timer">2:00</div>
+            <button id="startButton" onclick="startQuiz()">🚀 Start Challenge</button>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressBar"></div>
+        </div>
+
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-label">Question</div>
+                <div class="stat-value"><span id="currentQuestion">0</span>/20</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-label">Correct</div>
+                <div class="stat-value" id="correctCount">0</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-label">Accuracy</div>
+                <div class="stat-value"><span id="accuracy">0</span>%</div>
+            </div>
+        </div>
+
+        <div class="quiz-container" id="quizContainer">
+            <div class="question-card">
+                <span class="question-number" id="questionNumber">Question 1</span>
+                <div class="math-problem" id="problem">? + ?</div>
+                <input type="number" 
+                       class="answer-input" 
+                       id="answerInput" 
+                       placeholder="Enter answer..."
+                       autocomplete="off">
+                <button class="submit-button" id="submitButton" onclick="checkAnswer()">Submit Answer</button>
+                <div class="feedback" id="feedback"></div>
+            </div>
+        </div>
+
+        <div class="results" id="results">
+            <h2 id="resultsTitle">⏱️ Time's Up!</h2>
+            <div class="score-display" id="finalScore">0/20</div>
+            <div class="time-taken" id="timeTaken"></div>
+            <div class="results-message" id="resultsMessage"></div>
+            
+            <div class="problem-review" id="problemReview">
+                <h3 style="color: #2aa198; margin-bottom: 15px;">📊 Problem Review</h3>
+                <div id="reviewList"></div>
+            </div>
+            
+            <button onclick="resetQuiz()">Try Again</button>
+        </div>
+    </div>
+
+    <script>
+        let currentQuestionIndex = 0;
+        let correctAnswers = 0;
+        let problems = [];
+        let userAnswers = [];
+        let timeRemaining = 120;
+        let timerInterval;
+        let quizStartTime;
+        let quizActive = false;
+
+        function makeNegative(num) {
+            // 40% chance to be negative
+            return Math.random() < 0.4 ? -num : num;
+        }
+
+        function generateProblems() {
+            problems = [];
+            const operations = ['addition', 'subtraction', 'multiplication', 'division'];
+            
+            for (let i = 0; i < 20; i++) {
+                const operation = operations[Math.floor(Math.random() * operations.length)];
+                let num1, num2, answer, operationSymbol;
+                
+                switch(operation) {
+                    case 'addition':
+                        const smallAdd = Math.floor(Math.random() * 8) + 2;
+                        const largeAdd = Math.floor(Math.random() * 90) + 10;
+                        
+                        // Apply negative randomly
+                        num1 = makeNegative(Math.random() < 0.5 ? largeAdd : smallAdd);
+                        num2 = makeNegative(Math.random() < 0.5 ? largeAdd : smallAdd);
+                        
+                        answer = num1 + num2;
+                        operationSymbol = '+';
+                        break;
+                        
+                    case 'subtraction':
+                        const smallSub = Math.floor(Math.random() * 8) + 2;
+                        const largeSub = Math.floor(Math.random() * 90) + 10;
+                        
+                        num1 = makeNegative(largeSub);
+                        num2 = makeNegative(smallSub);
+                        
+                        answer = num1 - num2;
+                        operationSymbol = '−';
+                        break;
+                        
+                    case 'multiplication':
+                        num1 = makeNegative(Math.floor(Math.random() * 8) + 2);
+                        num2 = makeNegative(Math.floor(Math.random() * 8) + 2);
+                        answer = num1 * num2;
+                        operationSymbol = '×';
+                        break;
+                        
+                    case 'division':
+                        num2 = makeNegative(Math.floor(Math.random() * 8) + 2);
+                        const quotient = makeNegative(Math.floor(Math.random() * 8) + 2);
+                        num1 = num2 * quotient;
+                        answer = quotient;
+                        operationSymbol = '÷';
+                        break;
+                }
+                
+                problems.push({
+                    num1: num1,
+                    num2: num2,
+                    answer: answer,
+                    operation: operationSymbol
+                });
+            }
+        }
+
+        function startQuiz() {
+            generateProblems();
+            currentQuestionIndex = 0;
+            correctAnswers = 0;
+            userAnswers = [];
+            timeRemaining = 120;
+            quizActive = true;
+            quizStartTime = Date.now();
+            
+            document.getElementById('startButton').disabled = true;
+            document.getElementById('quizContainer').classList.add('active');
+            document.getElementById('results').classList.remove('show');
+            
+            displayQuestion();
+            startTimer();
+            updateStats();
+            
+            document.getElementById('answerInput').focus();
+        }
+
+        function startTimer() {
+            const timerDisplay = document.getElementById('timer');
+            
+            timerInterval = setInterval(() => {
+                timeRemaining--;
+                
+                const minutes = Math.floor(timeRemaining / 60);
+                const seconds = timeRemaining % 60;
+                timerDisplay.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+                
+                timerDisplay.classList.remove('danger');
+                if (timeRemaining <= 10) {
+                    timerDisplay.classList.add('danger');
+                }
+                
+                if (timeRemaining <= 0) {
+                    endQuiz(false);
+                }
+            }, 1000);
+        }
+
+        function displayQuestion() {
+            const problem = problems[currentQuestionIndex];
+            document.getElementById('questionNumber').textContent = `Question ${currentQuestionIndex + 1}`;
+            
+            // Format numbers with parentheses for negatives in display
+            const num1Display = problem.num1 < 0 ? `(${problem.num1})` : problem.num1;
+            const num2Display = problem.num2 < 0 ? `(${problem.num2})` : problem.num2;
+            
+            document.getElementById('problem').textContent = `${num1Display} ${problem.operation} ${num2Display}`;
+            
+            const input = document.getElementById('answerInput');
+            input.value = '';
+            input.classList.remove('correct', 'incorrect');
+            input.disabled = false;
+            input.focus();
+            
+            document.getElementById('submitButton').disabled = false;
+            document.getElementById('feedback').classList.remove('show', 'correct', 'incorrect');
+            
+            input.onkeypress = function(e) {
+                if (e.key === 'Enter' && !document.getElementById('submitButton').disabled) {
+                    checkAnswer();
+                }
+            };
+        }
+
+        function checkAnswer() {
+            if (!quizActive) return;
+            
+            const problem = problems[currentQuestionIndex];
+            const userAnswer = parseInt(document.getElementById('answerInput').value);
+            const input = document.getElementById('answerInput');
+            const feedback = document.getElementById('feedback');
+            const submitButton = document.getElementById('submitButton');
+            
+            input.disabled = true;
+            submitButton.disabled = true;
+            
+            const isCorrect = userAnswer === problem.answer;
+            
+            const num1Display = problem.num1 < 0 ? `(${problem.num1})` : problem.num1;
+            const num2Display = problem.num2 < 0 ? `(${problem.num2})` : problem.num2;
+            
+            userAnswers.push({
+                problem: `${num1Display} ${problem.operation} ${num2Display}`,
+                correct: problem.answer,
+                userAnswer: userAnswer,
+                isCorrect: isCorrect
+            });
+            
+            if (isCorrect) {
+                correctAnswers++;
+                input.classList.add('correct');
+                feedback.textContent = '✓ Correct!';
+                feedback.classList.add('show', 'correct');
+            } else {
+                input.classList.add('incorrect');
+                feedback.textContent = `✗ Incorrect. The answer is ${problem.answer}`;
+                feedback.classList.add('show', 'incorrect');
+            }
+            
+            updateStats();
+            
+            setTimeout(() => {
+                currentQuestionIndex++;
+                
+                if (currentQuestionIndex < problems.length) {
+                    displayQuestion();
+                } else {
+                    endQuiz(true);
+                }
+            }, 800);
+        }
+
+        function updateStats() {
+            document.getElementById('currentQuestion').textContent = currentQuestionIndex;
+            document.getElementById('correctCount').textContent = correctAnswers;
+            
+            const accuracy = currentQuestionIndex > 0 
+                ? Math.round((correctAnswers / currentQuestionIndex) * 100) 
+                : 0;
+            document.getElementById('accuracy').textContent = accuracy;
+            
+            const progress = (currentQuestionIndex / problems.length) * 100;
+            document.getElementById('progressBar').style.width = progress + '%';
+        }
+
+        function endQuiz(completed) {
+            quizActive = false;
+            clearInterval(timerInterval);
+            
+            const elapsedTime = Math.floor((Date.now() - quizStartTime) / 1000);
+            const minutes = Math.floor(elapsedTime / 60);
+            const seconds = elapsedTime % 60;
+            
+            document.getElementById('quizContainer').classList.remove('active');
+            
+            const resultsTitle = document.getElementById('resultsTitle');
+            if (completed) {
+                resultsTitle.textContent = '🎉 Challenge Complete!';
+            } else {
+                resultsTitle.textContent = '⏱️ Time\'s Up!';
+            }
+            
+            document.getElementById('finalScore').textContent = `${correctAnswers}/20`;
+            document.getElementById('timeTaken').textContent = 
+                `Time: ${minutes}:${seconds.toString().padStart(2, '0')}`;
+            
+            const accuracy = Math.round((correctAnswers / currentQuestionIndex) * 100);
+            let message = '';
+            
+            if (accuracy >= 95 && completed) {
+                message = '🌟 LEGENDARY! Perfect mastery with negative numbers!';
+            } else if (accuracy >= 90) {
+                message = '🔥 Outstanding! You\'ve mastered signed number operations!';
+            } else if (accuracy >= 80) {
+                message = '👏 Excellent! Keep practicing with negatives!';
+            } else if (accuracy >= 70) {
+                message = '👍 Good job! Focus on sign rules for improvement!';
+            } else {
+                message = '💪 Keep training! Remember: same signs = positive, different signs = negative!';
+            }
+            
+            document.getElementById('resultsMessage').textContent = message;
+            
+            displayReview();
+            
+            document.getElementById('results').classList.add('show');
+            document.getElementById('results').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function displayReview() {
+            const reviewList = document.getElementById('reviewList');
+            reviewList.innerHTML = '';
+            
+            userAnswers.forEach((item, index) => {
+                const reviewItem = document.createElement('div');
+                reviewItem.className = `review-item ${item.isCorrect ? 'correct' : 'incorrect'}`;
+                
+                const problemText = document.createElement('span');
+                problemText.textContent = `${index + 1}. ${item.problem} = ${item.correct}`;
+                
+                const answerText = document.createElement('span');
+                if (item.isCorrect) {
+                    answerText.textContent = '✓';
+                    answerText.style.color = '#859900';
+                } else {
+                    answerText.textContent = `Your answer: ${item.userAnswer || '(no answer)'}`;
+                    answerText.style.color = '#dc322f';
+                }
+                
+                reviewItem.appendChild(problemText);
+                reviewItem.appendChild(answerText);
+                reviewList.appendChild(reviewItem);
+            });
+        }
+
+        function resetQuiz() {
+            currentQuestionIndex = 0;
+            correctAnswers = 0;
+            userAnswers = [];
+            timeRemaining = 120;
+            quizActive = false;
+            
+            clearInterval(timerInterval);
+            
+            document.getElementById('timer').textContent = '2:00';
+            document.getElementById('timer').classList.remove('danger');
+            document.getElementById('startButton').disabled = false;
+            document.getElementById('quizContainer').classList.remove('active');
+            document.getElementById('results').classList.remove('show');
+            document.getElementById('progressBar').style.width = '0%';
+            
+            updateStats();
+            
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        window.onload = function() {
+            updateStats();
+        };
+    </script>
+</body>
+</html>

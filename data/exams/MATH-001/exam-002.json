@@ -1,0 +1,368 @@
+{
+  "language": "en",
+  "id": "exam-002",
+  "classId": "MATH-001",
+  "title": "Chapters 3 & 4: Graphing and Exponents",
+  "subtitle": "Essential Skills Practice",
+  "description": "20 questions covering the most commonly used skills from linear equations and exponent rules",
+  "skills": [
+    "Finding slope from two points",
+    "Identifying x and y intercepts",
+    "Quadrant identification",
+    "Exponent rules (product, quotient, power)",
+    "Negative exponents",
+    "Scientific notation"
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple-choice",
+      "question": "In which quadrant is the point (−5, 7) located?",
+      "options": [
+        "Quadrant I",
+        "Quadrant II",
+        "Quadrant III",
+        "Quadrant IV"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Correct! The point (−5, 7) has a negative x-coordinate and positive y-coordinate, which places it in Quadrant II.",
+      "review": {
+        "chapter": "Chapter 3",
+        "section": "3.1 Introduction to Graphing",
+        "page": "61-62",
+        "info": "Remember: QI (+,+), QII (−,+), QIII (−,−), QIV (+,−)"
+      }
+    },
+    {
+      "id": 2,
+      "type": "multiple-choice",
+      "question": "Find the slope of the line containing the points (3, −2) and (−1, 6).",
+      "options": [
+        "−2",
+        "2",
+        "1/2",
+        "−1/2"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! Using the slope formula: m = (y₂ − y₁)/(x₂ − x₁) = (6 − (−2))/(−1 − 3) = 8/(−4) = −2",
+      "review": {
+        "chapter": "Chapter 3",
+        "section": "3.4 Slope and Applications",
+        "page": "332-333",
+        "info": "Slope formula: m = (y₂ − y₁)/(x₂ − x₁)"
+      }
+    },
+    {
+      "id": 3,
+      "type": "multiple-choice",
+      "question": "Find the x-intercept of the line 3x + 2y = 12.",
+      "options": [
+        "(4, 0)",
+        "(0, 6)",
+        "(6, 0)",
+        "(0, 4)"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! To find x-intercept, set y = 0: 3x + 2(0) = 12 → 3x = 12 → x = 4. The x-intercept is (4, 0).",
+      "review": {
+        "chapter": "Chapter 3",
+        "section": "3.3 More with Graphing and Intercepts",
+        "page": "199-202",
+        "info": "X-intercept: set y = 0 and solve for x"
+      }
+    },
+    {
+      "id": 4,
+      "type": "true-false",
+      "question": "The ordered pair (2, 4) is a solution of the equation 3x + 2y = 14.",
+      "options": ["True", "False"],
+      "correctAnswer": 0,
+      "explanation": "True! Substituting: 3(2) + 2(4) = 6 + 8 = 14 ✓",
+      "review": {
+        "chapter": "Chapter 3",
+        "section": "3.1 Introduction to Graphing",
+        "page": "105-106",
+        "info": "To check if a point is a solution, substitute and verify the equation is true"
+      }
+    },
+    {
+      "id": 5,
+      "type": "multiple-choice",
+      "question": "What is the slope of the line y = −4x + 7?",
+      "options": [
+        "7",
+        "−4",
+        "4",
+        "−7"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Correct! In the form y = mx + b, the coefficient m is the slope. Here m = −4.",
+      "review": {
+        "chapter": "Chapter 3",
+        "section": "3.4 Slope and Applications",
+        "page": "348-350",
+        "info": "In y = mx + b, m is the slope and b is the y-intercept"
+      }
+    },
+    {
+      "id": 6,
+      "type": "true-false",
+      "question": "The slope of the horizontal line y = 5 is zero.",
+      "options": ["True", "False"],
+      "correctAnswer": 0,
+      "explanation": "True! All horizontal lines have slope = 0 because there is no vertical change (rise = 0).",
+      "review": {
+        "chapter": "Chapter 3",
+        "section": "3.4 Slope and Applications",
+        "page": "375-380",
+        "info": "Horizontal lines: slope = 0; Vertical lines: slope is undefined"
+      }
+    },
+    {
+      "id": 7,
+      "type": "true-false",
+      "question": "The slope of the vertical line x = −3 is undefined.",
+      "options": ["True", "False"],
+      "correctAnswer": 0,
+      "explanation": "True! Vertical lines have undefined slope because the denominator (x₂ − x₁) equals zero, and division by zero is undefined.",
+      "review": {
+        "chapter": "Chapter 3",
+        "section": "3.4 Slope and Applications",
+        "page": "384-390",
+        "info": "Vertical lines have the form x = a and their slope is always undefined"
+      }
+    },
+    {
+      "id": 8,
+      "type": "multiple-choice",
+      "question": "Find the y-intercept of the line 4x − 5y = 20.",
+      "options": [
+        "(0, −4)",
+        "(0, 4)",
+        "(5, 0)",
+        "(−5, 0)"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! To find y-intercept, set x = 0: 4(0) − 5y = 20 → −5y = 20 → y = −4. The y-intercept is (0, −4).",
+      "review": {
+        "chapter": "Chapter 3",
+        "section": "3.3 More with Graphing and Intercepts",
+        "page": "199-202",
+        "info": "Y-intercept: set x = 0 and solve for y"
+      }
+    },
+    {
+      "id": 9,
+      "type": "multiple-choice",
+      "question": "Find the slope of the line 2x + 3y = 9.",
+      "options": [
+        "2/3",
+        "−2/3",
+        "3/2",
+        "−3/2"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Correct! Solve for y: 3y = −2x + 9 → y = −(2/3)x + 3. The slope is m = −2/3.",
+      "review": {
+        "chapter": "Chapter 3",
+        "section": "3.4 Slope and Applications",
+        "page": "364-371",
+        "info": "Convert to y = mx + b form to find the slope"
+      }
+    },
+    {
+      "id": 10,
+      "type": "true-false",
+      "question": "A line with positive slope slants upward from left to right.",
+      "options": ["True", "False"],
+      "correctAnswer": 0,
+      "explanation": "True! Positive slope means the line rises as you move from left to right. Negative slope means it falls.",
+      "review": {
+        "chapter": "Chapter 3",
+        "section": "3.4 Slope and Applications",
+        "page": "339-343",
+        "info": "Positive slope = upward slant; Negative slope = downward slant"
+      }
+    },
+    {
+      "id": 11,
+      "type": "multiple-choice",
+      "question": "Simplify using the product rule: x⁵ · x³",
+      "options": [
+        "x¹⁵",
+        "x⁸",
+        "x²",
+        "x¹⁵"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Correct! Using the product rule aᵐ · aⁿ = aᵐ⁺ⁿ, we get x⁵ · x³ = x⁵⁺³ = x⁸.",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.1 Integers as Exponents",
+        "page": "480-481",
+        "info": "Product Rule: aᵐ · aⁿ = aᵐ⁺ⁿ (add exponents when bases are the same)"
+      }
+    },
+    {
+      "id": 12,
+      "type": "multiple-choice",
+      "question": "Simplify using the quotient rule: m⁷/m³",
+      "options": [
+        "m¹⁰",
+        "m⁴",
+        "m²¹",
+        "m⁻⁴"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Correct! Using the quotient rule aᵐ/aⁿ = aᵐ⁻ⁿ, we get m⁷/m³ = m⁷⁻³ = m⁴.",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.1 Integers as Exponents",
+        "page": "481-482",
+        "info": "Quotient Rule: aᵐ/aⁿ = aᵐ⁻ⁿ (subtract exponents when dividing like bases)"
+      }
+    },
+    {
+      "id": 13,
+      "type": "multiple-choice",
+      "question": "Rewrite using positive exponents: 5⁻³",
+      "options": [
+        "−125",
+        "1/125",
+        "−15",
+        "1/15"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Correct! Using the negative exponent rule a⁻ⁿ = 1/aⁿ, we get 5⁻³ = 1/5³ = 1/125.",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.1 Integers as Exponents",
+        "page": "477-479",
+        "info": "Negative exponents: a⁻ⁿ = 1/aⁿ (move to denominator and make positive)"
+      }
+    },
+    {
+      "id": 14,
+      "type": "true-false",
+      "question": "Any nonzero number raised to the power of 0 equals 1.",
+      "options": ["True", "False"],
+      "correctAnswer": 0,
+      "explanation": "True! By definition, a⁰ = 1 for any a ≠ 0. For example: 7⁰ = 1, (−3)⁰ = 1, (1000)⁰ = 1.",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.1 Integers as Exponents",
+        "page": "476",
+        "info": "Zero exponent rule: a⁰ = 1 (for a ≠ 0)"
+      }
+    },
+    {
+      "id": 15,
+      "type": "multiple-choice",
+      "question": "Simplify using the power rule: (y⁴)⁵",
+      "options": [
+        "y⁹",
+        "y²⁰",
+        "y¹",
+        "y⁴⁵"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Correct! Using the power rule (aᵐ)ⁿ = aᵐⁿ, we get (y⁴)⁵ = y⁴·⁵ = y²⁰.",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.2 Exponents and Scientific Notation",
+        "page": "569-576",
+        "info": "Power Rule: (aᵐ)ⁿ = aᵐⁿ (multiply exponents)"
+      }
+    },
+    {
+      "id": 16,
+      "type": "multiple-choice",
+      "question": "Simplify: (2a³b²)⁴",
+      "options": [
+        "2a⁷b⁶",
+        "8a¹²b⁸",
+        "16a¹²b⁸",
+        "16a⁷b⁶"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Correct! Using (ab)ⁿ = aⁿbⁿ: (2a³b²)⁴ = 2⁴ · (a³)⁴ · (b²)⁴ = 16a¹²b⁸.",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.2 Exponents and Scientific Notation",
+        "page": "578-579",
+        "info": "Raising a product to a power: (ab)ⁿ = aⁿbⁿ"
+      }
+    },
+    {
+      "id": 17,
+      "type": "multiple-choice",
+      "question": "Convert to scientific notation: 45,000",
+      "options": [
+        "4.5 × 10⁴",
+        "45 × 10³",
+        "4.5 × 10⁵",
+        "0.45 × 10⁵"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! Move the decimal 4 places left: 45,000 = 4.5 × 10⁴. Large numbers have positive exponents.",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.2 Exponents and Scientific Notation",
+        "page": "612-620",
+        "info": "Scientific notation: M × 10ⁿ where 1 ≤ M < 10"
+      }
+    },
+    {
+      "id": 18,
+      "type": "multiple-choice",
+      "question": "Convert to scientific notation: 0.00032",
+      "options": [
+        "3.2 × 10⁻⁴",
+        "3.2 × 10⁴",
+        "32 × 10⁻⁵",
+        "3.2 × 10⁻⁵"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! Move the decimal 4 places right: 0.00032 = 3.2 × 10⁻⁴. Small numbers have negative exponents.",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.2 Exponents and Scientific Notation",
+        "page": "622-626",
+        "info": "For small numbers (between 0 and 1), use negative exponents"
+      }
+    },
+    {
+      "id": 19,
+      "type": "multiple-choice",
+      "question": "Multiply and write in scientific notation: (3 × 10⁵)(2 × 10⁴)",
+      "options": [
+        "6 × 10⁹",
+        "6 × 10²⁰",
+        "5 × 10⁹",
+        "6 × 10¹"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! Multiply coefficients and add exponents: (3 × 2) × 10⁵⁺⁴ = 6 × 10⁹.",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.2 Exponents and Scientific Notation",
+        "page": "692-697",
+        "info": "To multiply in scientific notation: multiply M values and add exponents"
+      }
+    },
+    {
+      "id": 20,
+      "type": "true-false",
+      "question": "The expression 2⁻⁴ equals −16.",
+      "options": ["True", "False"],
+      "correctAnswer": 1,
+      "explanation": "False! 2⁻⁴ = 1/2⁴ = 1/16 (positive). A negative exponent means reciprocal, not a negative number.",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.1 Integers as Exponents",
+        "page": "497-500",
+        "info": "Negative exponents create fractions, not negative numbers"
+      }
+    }
+  ]
+}

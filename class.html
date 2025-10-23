@@ -62,7 +62,13 @@
                 data.exams.forEach(exam => {
                     const card = document.createElement('a');
                     card.className = 'exam-card';
-                    card.href = `exam.html?class=${classId}&exam=${exam.id}`;
+
+                    // Check if standalone exam or regular JSON exam
+                    if (exam.type === 'standalone') {
+                        card.href = exam.url;
+                    } else {
+                        card.href = `exam.html?class=${classId}&exam=${exam.id}`;
+                    }
 
                     card.innerHTML = `
                         <div class="exam-title">${exam.title}</div>
