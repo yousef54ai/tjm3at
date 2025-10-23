@@ -1,0 +1,650 @@
+{
+  "language": "en",
+  "id": "exam-003",
+  "classId": "MATH-001",
+  "title": "Exponent Rules Mastery",
+  "subtitle": "Chapter 4: Focus on Essential Exponent Skills",
+  "description": "35 comprehensive questions drilling all critical exponent rules and operations - master the foundation of algebra",
+  "skills": [
+    "Product Rule: a^m · a^n = a^(m+n)",
+    "Quotient Rule: a^m / a^n = a^(m-n)",
+    "Negative Exponents: a^(-n) = 1/a^n",
+    "Zero and One Exponents",
+    "Power Rule: (a^m)^n = a^mn",
+    "Raising Products to Powers",
+    "Raising Quotients to Powers",
+    "Scientific Notation"
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple-choice",
+      "question": "Simplify using the product rule: m⁵ · m²",
+      "options": [
+        "m⁷",
+        "m¹⁰",
+        "m³",
+        "2m⁷"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! Using the product rule a^m · a^n = a^(m+n), we get m⁵ · m² = m^(5+2) = m⁷.",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.1 Integers as Exponents - Product Rule",
+        "page": "502-504",
+        "info": "Product Rule: When multiplying powers with the same base, ADD the exponents"
+      }
+    },
+    {
+      "id": 2,
+      "type": "multiple-choice",
+      "question": "Simplify using the product rule: x⁻³ · x⁵",
+      "options": [
+        "x²",
+        "x⁸",
+        "x⁻¹⁵",
+        "x⁻²"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! Using the product rule: x⁻³ · x⁵ = x^(-3+5) = x². Remember to add exponents even when they're negative!",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.1 Integers as Exponents - Product Rule with Negatives",
+        "page": "505",
+        "info": "The product rule works with negative exponents too: just add algebraically"
+      }
+    },
+    {
+      "id": 3,
+      "type": "multiple-choice",
+      "question": "Evaluate: 2³ · 2²",
+      "options": [
+        "32",
+        "64",
+        "16",
+        "128"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! Using the product rule: 2³ · 2² = 2^(3+2) = 2⁵ = 32.",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.1 Integers as Exponents",
+        "page": "506",
+        "info": "Apply the product rule first, then evaluate the resulting power"
+      }
+    },
+    {
+      "id": 4,
+      "type": "true-false",
+      "question": "Using the product rule: a⁴ · a⁶ = a²⁴",
+      "options": ["True", "False"],
+      "correctAnswer": 1,
+      "explanation": "False! The product rule says to ADD exponents, not multiply them. a⁴ · a⁶ = a^(4+6) = a¹⁰, not a²⁴.",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.1 Integers as Exponents",
+        "page": "480",
+        "info": "Common mistake: multiplying exponents instead of adding them in the product rule"
+      }
+    },
+    {
+      "id": 5,
+      "type": "multiple-choice",
+      "question": "Simplify using the quotient rule: m⁵/m²",
+      "options": [
+        "m³",
+        "m⁷",
+        "m¹⁰",
+        "m⁵⁄²"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! Using the quotient rule a^m/a^n = a^(m-n), we get m⁵/m² = m^(5-2) = m³.",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.1 Integers as Exponents - Quotient Rule",
+        "page": "508-511",
+        "info": "Quotient Rule: When dividing powers with the same base, SUBTRACT the exponents"
+      }
+    },
+    {
+      "id": 6,
+      "type": "multiple-choice",
+      "question": "Simplify using the quotient rule: m⁴/m⁶",
+      "options": [
+        "1/m²",
+        "m²",
+        "m¹⁰",
+        "m⁻¹⁰"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! m⁴/m⁶ = m^(4-6) = m⁻² = 1/m². When the result has a negative exponent, rewrite with positive exponent.",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.1 Integers as Exponents - Quotient Rule",
+        "page": "510",
+        "info": "If quotient rule gives negative exponent, convert to fraction form"
+      }
+    },
+    {
+      "id": 7,
+      "type": "multiple-choice",
+      "question": "Simplify using the quotient rule: y⁶/y⁻³",
+      "options": [
+        "y⁹",
+        "y³",
+        "y⁻⁹",
+        "y²"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! y⁶/y⁻³ = y^(6-(-3)) = y^(6+3) = y⁹. Remember: subtracting a negative is the same as adding!",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.1 Integers as Exponents",
+        "page": "512",
+        "info": "When subtracting negative exponents: 6 - (-3) = 6 + 3 = 9"
+      }
+    },
+    {
+      "id": 8,
+      "type": "true-false",
+      "question": "Using the quotient rule: x⁸/x² = x⁴",
+      "options": ["True", "False"],
+      "correctAnswer": 1,
+      "explanation": "False! x⁸/x² = x^(8-2) = x⁶, not x⁴. Subtract the exponents: 8 - 2 = 6.",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.1 Integers as Exponents",
+        "page": "481",
+        "info": "Common error: dividing exponents instead of subtracting them"
+      }
+    },
+    {
+      "id": 9,
+      "type": "multiple-choice",
+      "question": "Rewrite using positive exponents: 3⁻⁴",
+      "options": [
+        "1/81",
+        "-81",
+        "1/12",
+        "-12"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! Using a^(-n) = 1/a^n, we get 3⁻⁴ = 1/3⁴ = 1/81. Negative exponent means reciprocal.",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.1 Integers as Exponents - Negative Exponents",
+        "page": "497-499",
+        "info": "Negative exponent rule: a^(-n) = 1/a^n (move to denominator)"
+      }
+    },
+    {
+      "id": 10,
+      "type": "multiple-choice",
+      "question": "Rewrite using positive exponents: 1/2⁻³",
+      "options": [
+        "8",
+        "1/8",
+        "-8",
+        "1/6"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! Using 1/a^(-n) = a^n, we get 1/2⁻³ = 2³ = 8. Moving from denominator to numerator changes sign of exponent.",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.1 Integers as Exponents",
+        "page": "500",
+        "info": "When negative exponent is in denominator: 1/a^(-n) = a^n"
+      }
+    },
+    {
+      "id": 11,
+      "type": "multiple-choice",
+      "question": "Simplify: 5⁻²",
+      "options": [
+        "1/25",
+        "-25",
+        "1/10",
+        "25"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! 5⁻² = 1/5² = 1/25. A negative exponent creates a fraction, not a negative number!",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.1 Integers as Exponents",
+        "page": "477-479",
+        "info": "Negative exponent ≠ negative number. It means reciprocal."
+      }
+    },
+    {
+      "id": 12,
+      "type": "true-false",
+      "question": "The expression 4⁻² equals -16.",
+      "options": ["True", "False"],
+      "correctAnswer": 1,
+      "explanation": "False! 4⁻² = 1/4² = 1/16 (positive). Negative exponents create fractions, not negative numbers.",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.1 Integers as Exponents",
+        "page": "497",
+        "info": "Critical: negative exponent means reciprocal, NOT negative value"
+      }
+    },
+    {
+      "id": 13,
+      "type": "multiple-choice",
+      "question": "Evaluate: 2¹",
+      "options": [
+        "2",
+        "1",
+        "0",
+        "undefined"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! By definition, a¹ = a. Any number to the first power equals itself.",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.1 Integers as Exponents",
+        "page": "475-487",
+        "info": "Exponent of 1 rule: a¹ = a (the number itself)"
+      }
+    },
+    {
+      "id": 14,
+      "type": "multiple-choice",
+      "question": "Evaluate: (-58)⁰",
+      "options": [
+        "1",
+        "0",
+        "-58",
+        "undefined"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! By definition, a⁰ = 1 for any a ≠ 0. Any nonzero number to the zero power equals 1.",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.1 Integers as Exponents",
+        "page": "476-491",
+        "info": "Zero exponent rule: a⁰ = 1 (for a ≠ 0)"
+      }
+    },
+    {
+      "id": 15,
+      "type": "true-false",
+      "question": "Any nonzero number raised to the power of 0 equals 0.",
+      "options": ["True", "False"],
+      "correctAnswer": 1,
+      "explanation": "False! Any nonzero number raised to the power of 0 equals 1, not 0. For example: 5⁰ = 1, 1000⁰ = 1.",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.1 Integers as Exponents",
+        "page": "476",
+        "info": "Zero exponent always gives 1 (except for 0⁰ which is undefined)"
+      }
+    },
+    {
+      "id": 16,
+      "type": "multiple-choice",
+      "question": "What is 0⁰?",
+      "options": [
+        "undefined",
+        "0",
+        "1",
+        "infinity"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! 0⁰ is undefined. The zero exponent rule a⁰ = 1 only applies when a ≠ 0.",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.1 Integers as Exponents",
+        "page": "495",
+        "info": "Special case: 0⁰ is undefined (the only exception to the zero exponent rule)"
+      }
+    },
+    {
+      "id": 17,
+      "type": "multiple-choice",
+      "question": "Simplify using the power rule: (y⁴)⁵",
+      "options": [
+        "y²⁰",
+        "y⁹",
+        "y",
+        "y⁴⁵"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! Using the power rule (a^m)^n = a^(mn), we get (y⁴)⁵ = y^(4·5) = y²⁰.",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.2 Exponents and Scientific Notation - Power Rule",
+        "page": "569-576",
+        "info": "Power Rule: (a^m)^n = a^mn (multiply the exponents)"
+      }
+    },
+    {
+      "id": 18,
+      "type": "multiple-choice",
+      "question": "Simplify using the power rule: (m⁶)³",
+      "options": [
+        "m¹⁸",
+        "m⁹",
+        "m²",
+        "m⁶³"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! (m⁶)³ = m^(6·3) = m¹⁸. Multiply the exponents when raising a power to a power.",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.2 Exponents and Scientific Notation",
+        "page": "590",
+        "info": "From the book examples: (m⁶)³ = m¹⁸"
+      }
+    },
+    {
+      "id": 19,
+      "type": "multiple-choice",
+      "question": "Evaluate: (2²)³",
+      "options": [
+        "64",
+        "32",
+        "8",
+        "12"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! (2²)³ = 2^(2·3) = 2⁶ = 64. You can also think of it as (4)³ = 64.",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.2 Exponents and Scientific Notation",
+        "page": "591",
+        "info": "From book examples: (2²)³ = 2⁶ = 64"
+      }
+    },
+    {
+      "id": 20,
+      "type": "multiple-choice",
+      "question": "Simplify: (z⁻⁴)³",
+      "options": [
+        "z⁻¹²",
+        "z⁻¹",
+        "z¹²",
+        "z⁻⁷"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! (z⁻⁴)³ = z^(-4·3) = z⁻¹². The power rule works with negative exponents too!",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.2 Exponents and Scientific Notation",
+        "page": "592",
+        "info": "Power rule with negative exponents: multiply the exponents algebraically"
+      }
+    },
+    {
+      "id": 21,
+      "type": "multiple-choice",
+      "question": "Simplify: (3x²y⁴)²",
+      "options": [
+        "9x⁴y⁸",
+        "3x⁴y⁸",
+        "9x²y⁴",
+        "6x⁴y⁸"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! Using (ab)^n = a^n b^n: (3x²y⁴)² = 3² · (x²)² · (y⁴)² = 9x⁴y⁸.",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.2 Exponents and Scientific Notation",
+        "page": "578-579",
+        "info": "Raising a product to a power: raise each factor to that power"
+      }
+    },
+    {
+      "id": 22,
+      "type": "multiple-choice",
+      "question": "Simplify: (2a³b²)⁴",
+      "options": [
+        "16a¹²b⁸",
+        "8a¹²b⁸",
+        "16a⁷b⁶",
+        "2a¹²b⁸"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! (2a³b²)⁴ = 2⁴ · (a³)⁴ · (b²)⁴ = 16 · a¹² · b⁸ = 16a¹²b⁸.",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.2 Exponents and Scientific Notation",
+        "page": "578-579",
+        "info": "Apply the exponent to each factor: coefficient and all variables"
+      }
+    },
+    {
+      "id": 23,
+      "type": "true-false",
+      "question": "(ab)³ = a³b³",
+      "options": ["True", "False"],
+      "correctAnswer": 0,
+      "explanation": "True! When raising a product to a power, raise each factor to that power: (ab)^n = a^n b^n.",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.2 Exponents and Scientific Notation",
+        "page": "579",
+        "info": "Product to a power rule: distribute the exponent to all factors"
+      }
+    },
+    {
+      "id": 24,
+      "type": "multiple-choice",
+      "question": "Simplify: (x/y)⁴",
+      "options": [
+        "x⁴/y⁴",
+        "x/y⁴",
+        "x⁴/y",
+        "4x/4y"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! Using (a/b)^n = a^n/b^n, we get (x/y)⁴ = x⁴/y⁴. Raise both numerator and denominator to the power.",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.2 Exponents and Scientific Notation",
+        "page": "581-596",
+        "info": "Quotient to a power: (a/b)^n = a^n/b^n"
+      }
+    },
+    {
+      "id": 25,
+      "type": "multiple-choice",
+      "question": "Simplify: (a²b/cd³)⁻³",
+      "options": [
+        "c³d⁹/a⁶b³",
+        "a⁶b³/c³d⁹",
+        "-a⁶b³/c³d⁹",
+        "a⁻⁶b⁻³/c⁻³d⁻⁹"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! (a²b/cd³)⁻³ = (cd³/a²b)³ = c³d⁹/a⁶b³. Negative exponent flips the fraction, then cube each factor.",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.2 Exponents and Scientific Notation",
+        "page": "597",
+        "info": "(a/b)^(-n) = (b/a)^n (flip the fraction and make exponent positive)"
+      }
+    },
+    {
+      "id": 26,
+      "type": "multiple-choice",
+      "question": "Simplify: 4⁻²/3⁻³",
+      "options": [
+        "27/16",
+        "16/27",
+        "-8/27",
+        "1/12"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! 4⁻²/3⁻³ = (1/4²)/(1/3³) = (1/16)/(1/27) = 27/16. Or: 4⁻²/3⁻³ = 3³/4² = 27/16.",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.2 Exponents and Scientific Notation",
+        "page": "598",
+        "info": "When dividing with negative exponents, convert each or flip and change signs"
+      }
+    },
+    {
+      "id": 27,
+      "type": "multiple-choice",
+      "question": "Convert to scientific notation: 680,000",
+      "options": [
+        "6.8 × 10⁵",
+        "68 × 10⁴",
+        "6.8 × 10⁶",
+        "0.68 × 10⁶"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! Move the decimal 5 places left: 680,000 = 6.8 × 10⁵. Large numbers have positive exponents.",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.2 Exponents and Scientific Notation",
+        "page": "612-620",
+        "info": "For large numbers, count how many places to move decimal left"
+      }
+    },
+    {
+      "id": 28,
+      "type": "multiple-choice",
+      "question": "Convert to scientific notation: 0.000567",
+      "options": [
+        "5.67 × 10⁻⁴",
+        "5.67 × 10⁴",
+        "56.7 × 10⁻⁵",
+        "5.67 × 10⁻⁵"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! Move the decimal 4 places right: 0.000567 = 5.67 × 10⁻⁴. Small numbers (between 0 and 1) have negative exponents.",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.2 Exponents and Scientific Notation",
+        "page": "622-626",
+        "info": "For small numbers (0 to 1), count places to move decimal right (negative exponent)"
+      }
+    },
+    {
+      "id": 29,
+      "type": "true-false",
+      "question": "In scientific notation, 4.5 × 10⁶ represents a large number (≥ 10).",
+      "options": ["True", "False"],
+      "correctAnswer": 0,
+      "explanation": "True! A positive exponent in scientific notation indicates a large number. 4.5 × 10⁶ = 4,500,000.",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.2 Exponents and Scientific Notation",
+        "page": "608",
+        "info": "Positive exponent = large number (≥10); Negative exponent = small number (0 to 1)"
+      }
+    },
+    {
+      "id": 30,
+      "type": "multiple-choice",
+      "question": "Convert to decimal notation: 4 × 10³",
+      "options": [
+        "4000",
+        "400",
+        "40,000",
+        "0.004"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! 4 × 10³ = 4 × 1000 = 4000. Move the decimal 3 places to the right.",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.2 Exponents and Scientific Notation",
+        "page": "632",
+        "info": "Positive exponent: move decimal right that many places"
+      }
+    },
+    {
+      "id": 31,
+      "type": "multiple-choice",
+      "question": "Convert to decimal notation: 5.2 × 10⁻³",
+      "options": [
+        "0.0052",
+        "5200",
+        "0.00052",
+        "520"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! 5.2 × 10⁻³ = 0.0052. Negative exponent means move decimal 3 places to the left.",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.2 Exponents and Scientific Notation",
+        "page": "635",
+        "info": "Negative exponent: move decimal left that many places"
+      }
+    },
+    {
+      "id": 32,
+      "type": "multiple-choice",
+      "question": "Multiply and write in scientific notation: (2.5 × 10⁻⁶)(3.2 × 10⁻⁴)",
+      "options": [
+        "8 × 10⁻¹⁰",
+        "8 × 10⁻²⁴",
+        "5.7 × 10⁻¹⁰",
+        "8 × 10²⁴"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! Multiply coefficients and add exponents: (2.5 × 3.2) × 10^(-6+(-4)) = 8 × 10⁻¹⁰.",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.2 Exponents and Scientific Notation",
+        "page": "692-697",
+        "info": "To multiply: multiply M values and add exponents (use product rule)"
+      }
+    },
+    {
+      "id": 33,
+      "type": "multiple-choice",
+      "question": "Evaluate (6x)³ when x = -3.",
+      "options": [
+        "-5832",
+        "5832",
+        "-162",
+        "162"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! (6x)³ = [6(-3)]³ = [-18]³ = (-18)(-18)(-18) = -5832. Parentheses mean multiply first, then cube.",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.1 Integers as Exponents",
+        "page": "516-522",
+        "info": "With parentheses (6x)³: multiply first, then raise to power"
+      }
+    },
+    {
+      "id": 34,
+      "type": "multiple-choice",
+      "question": "Evaluate 6x³ when x = -3.",
+      "options": [
+        "-162",
+        "162",
+        "-5832",
+        "5832"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! 6x³ = 6(-3)³ = 6(-27) = -162. Without parentheses, only x is cubed, then multiply by 6.",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.1 Integers as Exponents",
+        "page": "526-532",
+        "info": "Without parentheses 6x³: raise x to power first, then multiply by 6"
+      }
+    },
+    {
+      "id": 35,
+      "type": "true-false",
+      "question": "The expressions (6x)³ and 6x³ give the same result when x = -3.",
+      "options": ["True", "False"],
+      "correctAnswer": 1,
+      "explanation": "False! (6x)³ = -5832, but 6x³ = -162 when x = -3. Parentheses change the order of operations!",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.1 Integers as Exponents",
+        "page": "516-532",
+        "info": "Parentheses matter! (6x)³ ≠ 6x³. This is a critical distinction."
+      }
+    }
+  ]
+}
