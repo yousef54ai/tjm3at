@@ -17,15 +17,15 @@
     {
       "id": 1,
       "type": "multiple-choice",
-      "question": "Multiply: (3x² - 5y³)²",
+      "question": "Multiply: (3$x^2$ - 5y^3$)²",
       "options": [
-        "9x⁴ - 15x²y³ + 25y⁶",
-        "9x⁴ - 30x²y³ - 25y⁶",
-        "9x⁴ + 25y⁶",
-        "9x⁴ - 30x²y³ + 25y⁶"
+        "9$x^4$ - 15x^2y^3$ + 25y^6$",
+        "9$x^4$ - 30x^2y^3$ - 25y^6$",
+        "9$x^4$ + 25y^6$",
+        "9$x^4$ - 30x^2y^3$ + 25y^6$"
       ],
       "correctAnswer": 3,
-      "explanation": "Correct! Using (A - B)² = A² - 2AB + B²: (3x²)² - 2(3x²)(5y³) + (5y³)² = 9x⁴ - 30x²y³ + 25y⁶.",
+      "explanation": "Correct! Using (A - B)² = $A^2$ - 2AB + B^2$: (3x^2$)² - 2(3x^2$)(5y^3$) + (5y^3$)² = 9x^4$ - 30x^2y^3$ + 25y^6$.",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.6 Special Products",
@@ -36,15 +36,15 @@
     {
       "id": 2,
       "type": "multiple-choice",
-      "question": "Multiply: (4a²b³ + 7c⁴)(4a²b³ - 7c⁴)",
+      "question": "Multiply: (4$a^2b^3$ + 7c^4$)(4a^2b^3$ - 7c^4$)",
       "options": [
-        "16a⁴b⁶ + 49c⁸",
-        "16a²b³ - 49c⁴",
-        "16a⁴b⁶ - 49c⁸",
-        "8a²b³ - 49c⁸"
+        "16$a^4b^6$ + 49c^8$",
+        "16$a^2b^3$ - 49c^4$",
+        "16$a^4b^6$ - 49c^8$",
+        "8$a^2b^3$ - 49c^8$"
       ],
       "correctAnswer": 2,
-      "explanation": "Correct! Using (A + B)(A - B) = A² - B²: (4a²b³)² - (7c⁴)² = 16a⁴b⁶ - 49c⁸. Remember to square all exponents!",
+      "explanation": "Correct! Using (A + B)(A - B) = $A^2$ - B^2$: (4a^2b^3$)² - (7c^4$)² = 16a^4b^6$ - 49c^8$. Remember to square all exponents!",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.6 Special Products",
@@ -55,15 +55,15 @@
     {
       "id": 3,
       "type": "multiple-choice",
-      "question": "Multiply: (2x³y² - 3xy⁴)²",
+      "question": "Multiply: (2$x^3y^2$ - 3xy^4$)²",
       "options": [
-        "4x⁶y⁴ - 12x⁴y⁶ + 9x²y⁸",
-        "4x⁶y⁴ - 6x⁴y⁶ + 9x²y⁸",
-        "4x⁹y⁶ - 12x⁴y⁶ + 9x³y¹²",
-        "4x⁶y⁴ + 9x²y⁸"
+        "4$x^6y^4$ - 12x^4y^6$ + 9x^2y^8$",
+        "4$x^6y^4$ - 6x^4y^6$ + 9x^2y^8$",
+        "4$x^9y^6$ - 12x^4y^6$ + 9x^3y^1$²",
+        "4$x^6y^4$ + 9x^2y^8$"
       ],
       "correctAnswer": 0,
-      "explanation": "Correct! (A - B)² = A² - 2AB + B²: (2x³y²)² - 2(2x³y²)(3xy⁴) + (3xy⁴)² = 4x⁶y⁴ - 12x⁴y⁶ + 9x²y⁸.",
+      "explanation": "Correct! (A - B)² = $A^2$ - 2AB + B^2$: (2x^3y^2$)² - 2(2x^3y^2$)(3xy^4$) + (3xy^4$)² = 4x^6y^4$ - 12x^4y^6$ + 9x^2y^8$.",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.6 Special Products",
@@ -74,15 +74,15 @@
     {
       "id": 4,
       "type": "multiple-choice",
-      "question": "Multiply: (5m²n + 6p³)(5m²n - 6p³)",
+      "question": "Multiply: (5$m^2n + 6p^3$)(5m^2n - 6p^3$)",
       "options": [
-        "10m²n - 36p⁶",
-        "25m⁴n² - 36p⁶",
-        "25m⁴n - 36p⁶",
-        "25m⁴n² + 36p⁶"
+        "10$m^2n - 36p^6$",
+        "25$m^4n^2$ - 36p^6$",
+        "25$m^4n - 36p^6$",
+        "25$m^4n^2$ + 36p^6$"
       ],
       "correctAnswer": 1,
-      "explanation": "Correct! (A + B)(A - B) = A² - B²: (5m²n)² - (6p³)² = 25m⁴n² - 36p⁶.",
+      "explanation": "Correct! (A + B)(A - B) = $A^2$ - B^2$: (5m^2n)² - (6p^3$)² = 25m^4n^2$ - 36p^6$.",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.6 Special Products",
@@ -95,13 +95,13 @@
       "type": "multiple-choice",
       "question": "Expand: [(x + 2) - 3y]²",
       "options": [
-        "x² - 6xy + 9y²",
-        "x² + 4 + 9y²",
-        "x² + 4x - 6xy + 4 - 12y + 9y²",
-        "x² + 4x + 4 - 6xy - 12y + 9y²"
+        "$x^2$ - 6xy + 9y^2$",
+        "$x^2$ + 4 + 9y^2$",
+        "$x^2$ + 4x - 6xy + 4 - 12y + 9y^2$",
+        "$x^2$ + 4x + 4 - 6xy - 12y + 9y^2$"
       ],
       "correctAnswer": 3,
-      "explanation": "Correct! Let A = (x + 2) and B = 3y. Then (A - B)² = A² - 2AB + B² = (x + 2)² - 2(x + 2)(3y) + (3y)². Expand each: x² + 4x + 4 - 6xy - 12y + 9y².",
+      "explanation": "Correct! Let A = (x + 2) and B = 3y. Then (A - B)² = $A^2$ - 2AB + B^2$ = (x + 2)² - 2(x + 2)(3y) + (3y)². Expand each: x^2$ + 4x + 4 - 6xy - 12y + 9y^2$.",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.6 Special Products",
@@ -112,15 +112,15 @@
     {
       "id": 6,
       "type": "multiple-choice",
-      "question": "Multiply: (a³ + b²)²",
+      "question": "Multiply: ($a^3$ + b^2$)²",
       "options": [
-        "a⁶ + a³b² + b⁴",
-        "a⁹ + 2a³b² + b⁴",
-        "a⁶ + b⁴",
-        "a⁶ + 2a³b² + b⁴"
+        "$a^6$ + a^3b^2$ + b^4$",
+        "$a^9$ + 2a^3b^2$ + b^4$",
+        "$a^6$ + b^4$",
+        "$a^6$ + 2a^3b^2$ + b^4$"
       ],
       "correctAnswer": 3,
-      "explanation": "Correct! (A + B)² = A² + 2AB + B²: (a³)² + 2(a³)(b²) + (b²)² = a⁶ + 2a³b² + b⁴.",
+      "explanation": "Correct! (A + B)² = $A^2$ + 2AB + B^2$: (a^3$)² + 2(a^3$)(b^2$) + (b^2$)² = a^6$ + 2a^3b^2$ + b^4$.",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.6 Special Products",
@@ -131,15 +131,15 @@
     {
       "id": 7,
       "type": "multiple-choice",
-      "question": "Multiply: (7xy² - 2z³)(7xy² + 2z³)",
+      "question": "Multiply: (7xy^2$ - 2z^3$)(7xy^2$ + 2z^3$)",
       "options": [
-        "14xy² - 4z⁶",
-        "49xy² - 4z³",
-        "49x²y⁴ - 4z⁶",
-        "49x²y⁴ + 4z⁶"
+        "14xy^2$ - 4z^6$",
+        "49xy^2$ - 4z^3$",
+        "49$x^2y^4$ - 4z^6$",
+        "49$x^2y^4$ + 4z^6$"
       ],
       "correctAnswer": 2,
-      "explanation": "Correct! (A - B)(A + B) = A² - B²: (7xy²)² - (2z³)² = 49x²y⁴ - 4z⁶.",
+      "explanation": "Correct! (A - B)(A + B) = $A^2$ - B^2$: (7xy^2$)² - (2z^3$)² = 49x^2y^4$ - 4z^6$.",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.6 Special Products",
@@ -150,15 +150,15 @@
     {
       "id": 8,
       "type": "multiple-choice",
-      "question": "Expand: (x²y - z)²",
+      "question": "Expand: ($x^2y - z)²",
       "options": [
-        "x²y² - 2x²yz + z",
-        "x⁴y² - 2x²yz + z²",
-        "x⁴y² + z²",
-        "x⁴y - 2x²yz + z²"
+        "$x^2y^2$ - 2x^2yz + z",
+        "$x^4y^2$ - 2x^2yz + z^2$",
+        "$x^4y^2$ + z^2$",
+        "$x^4y - 2x^2yz + z^2$"
       ],
       "correctAnswer": 1,
-      "explanation": "Correct! (A - B)² = A² - 2AB + B²: (x²y)² - 2(x²y)(z) + z² = x⁴y² - 2x²yz + z².",
+      "explanation": "Correct! (A - B)² = $A^2$ - 2AB + B^2$: (x^2y)² - 2(x^2y)(z) + z^2$ = x^4y^2$ - 2x^2yz + z^2$.",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.6 Special Products",
@@ -169,15 +169,15 @@
     {
       "id": 9,
       "type": "multiple-choice",
-      "question": "Multiply: (3a + 4b²)(3a - 4b²)",
+      "question": "Multiply: (3a + 4$b^2$)(3a - 4b^2$)",
       "options": [
-        "9a² - 16b⁴",
-        "6a - 16b⁴",
-        "9a² + 16b⁴",
-        "9a - 16b²"
+        "9$a^2$ - 16b^4$",
+        "6a - 16$b^4$",
+        "9$a^2$ + 16b^4$",
+        "9a - 16$b^2$"
       ],
       "correctAnswer": 0,
-      "explanation": "Correct! (A + B)(A - B) = A² - B²: (3a)² - (4b²)² = 9a² - 16b⁴.",
+      "explanation": "Correct! (A + B)(A - B) = $A^2$ - B^2$: (3a)² - (4b^2$)² = 9a^2$ - 16b^4$.",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.6 Special Products",
@@ -188,15 +188,15 @@
     {
       "id": 10,
       "type": "multiple-choice",
-      "question": "Expand: (5x³ - y²)²",
+      "question": "Expand: (5$x^3$ - y^2$)²",
       "options": [
-        "25x⁶ + y⁴",
-        "25x⁹ - 10x³y² + y⁴",
-        "25x⁶ - 5x³y² + y⁴",
-        "25x⁶ - 10x³y² + y⁴"
+        "25$x^6$ + y^4$",
+        "25$x^9$ - 10x^3y^2$ + y^4$",
+        "25$x^6$ - 5x^3y^2$ + y^4$",
+        "25$x^6$ - 10x^3y^2$ + y^4$"
       ],
       "correctAnswer": 3,
-      "explanation": "Correct! (A - B)² = A² - 2AB + B²: (5x³)² - 2(5x³)(y²) + (y²)² = 25x⁶ - 10x³y² + y⁴.",
+      "explanation": "Correct! (A - B)² = $A^2$ - 2AB + B^2$: (5x^3$)² - 2(5x^3$)(y^2$) + (y^2$)² = 25x^6$ - 10x^3y^2$ + y^4$.",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.6 Special Products",
@@ -207,15 +207,15 @@
     {
       "id": 11,
       "type": "multiple-choice",
-      "question": "Multiply: (2m³n² + 5)(2m³n² - 5)",
+      "question": "Multiply: (2$m^3n^2$ + 5)(2m^3n^2$ - 5)",
       "options": [
-        "4m⁶n⁴ + 25",
-        "4m³n² - 25",
-        "4m⁶n⁴ - 25",
-        "2m³n² - 25"
+        "4$m^6n^4$ + 25",
+        "4$m^3n^2$ - 25",
+        "4$m^6n^4$ - 25",
+        "2$m^3n^2$ - 25"
       ],
       "correctAnswer": 2,
-      "explanation": "Correct! (A + B)(A - B) = A² - B²: (2m³n²)² - 5² = 4m⁶n⁴ - 25.",
+      "explanation": "Correct! (A + B)(A - B) = $A^2$ - B^2$: (2m^3n^2$)² - 5² = 4m^6n^4$ - 25.",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.6 Special Products",
@@ -226,15 +226,15 @@
     {
       "id": 12,
       "type": "multiple-choice",
-      "question": "Expand: (6ab² - c³d)²",
+      "question": "Expand: (6ab^2$ - c^3d)²",
       "options": [
-        "36ab² - 12ab²c³d + c³d",
-        "36a²b⁴ - 12ab²c³d + c⁶d²",
-        "36a²b⁴ + c⁶d²",
-        "36a²b⁴ - 6ab²c³d + c⁶d²"
+        "36ab^2$ - 12ab^2c^3d + c^3d",
+        "36$a^2b^4$ - 12ab^2c^3d + c^6d^2$",
+        "36$a^2b^4$ + c^6d^2$",
+        "36$a^2b^4$ - 6ab^2c^3d + c^6d^2$"
       ],
       "correctAnswer": 1,
-      "explanation": "Correct! (A - B)² = A² - 2AB + B²: (6ab²)² - 2(6ab²)(c³d) + (c³d)² = 36a²b⁴ - 12ab²c³d + c⁶d².",
+      "explanation": "Correct! (A - B)² = $A^2$ - 2AB + B^2$: (6ab^2$)² - 2(6ab^2$)(c^3d) + (c^3d)² = 36a^2b^4$ - 12ab^2c^3d + c^6d^2$.",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.6 Special Products",
@@ -247,13 +247,13 @@
       "type": "multiple-choice",
       "question": "Simplify: (2x + 3)(x - 5) + (x - 1)²",
       "options": [
-        "3x² - 9x + 16",
-        "2x² - 9x + 16",
-        "3x² - 9x - 14",
-        "3x² - 7x - 14"
+        "3$x^2$ - 9x + 16",
+        "2$x^2$ - 9x + 16",
+        "3$x^2$ - 9x - 14",
+        "3$x^2$ - 7x - 14"
       ],
       "correctAnswer": 0,
-      "explanation": "Correct! First: (2x + 3)(x - 5) = 2x² - 10x + 3x - 15 = 2x² - 7x - 15. Second: (x - 1)² = x² - 2x + 1. Add: 2x² - 7x - 15 + x² - 2x + 1 = 3x² - 9x - 14. Wait, let me recalculate: -15 + 1 = -14, not 16. The answer should be 3x² - 9x - 14.",
+      "explanation": "Correct! First: (2x + 3)(x - 5) = 2$x^2$ - 10x + 3x - 15 = 2x^2$ - 7x - 15. Second: (x - 1)² = x^2$ - 2x + 1. Add: 2x^2$ - 7x - 15 + x^2$ - 2x + 1 = 3x^2$ - 9x - 14. Wait, let me recalculate: -15 + 1 = -14, not 16. The answer should be 3x^2$ - 9x - 14.",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.5, 4.6 Combined Operations",
@@ -267,12 +267,12 @@
       "question": "Expand and simplify: (x + 2)² - (x - 3)(x + 3)",
       "options": [
         "13",
-        "2x² + 4x + 13",
+        "2$x^2$ + 4x + 13",
         "4x + 13",
         "4x - 5"
       ],
       "correctAnswer": 2,
-      "explanation": "Correct! First: (x + 2)² = x² + 4x + 4. Second: (x - 3)(x + 3) = x² - 9. Subtract: x² + 4x + 4 - (x² - 9) = x² + 4x + 4 - x² + 9 = 4x + 13.",
+      "explanation": "Correct! First: (x + 2)² = $x^2$ + 4x + 4. Second: (x - 3)(x + 3) = x^2$ - 9. Subtract: x^2$ + 4x + 4 - (x^2$ - 9) = x^2$ + 4x + 4 - x^2$ + 9 = 4x + 13.",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.4, 4.6 Combined Operations",
@@ -285,13 +285,13 @@
       "type": "multiple-choice",
       "question": "Multiply: (x + 1)(x - 1)(x + 2)",
       "options": [
-        "x³ - x - 2",
-        "x³ + 2x² - x - 2",
-        "x³ + x² - x - 2",
-        "x³ + 2x² + x - 2"
+        "$x^3$ - x - 2",
+        "$x^3$ + 2x^2$ - x - 2",
+        "$x^3$ + x^2$ - x - 2",
+        "$x^3$ + 2x^2$ + x - 2"
       ],
       "correctAnswer": 1,
-      "explanation": "Correct! First multiply (x + 1)(x - 1) = x² - 1. Then multiply (x² - 1)(x + 2) = x³ + 2x² - x - 2.",
+      "explanation": "Correct! First multiply (x + 1)(x - 1) = $x^2$ - 1. Then multiply (x^2$ - 1)(x + 2) = x^3$ + 2x^2$ - x - 2.",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.5, 4.6 Multiplication",
@@ -302,15 +302,15 @@
     {
       "id": 16,
       "type": "multiple-choice",
-      "question": "Expand: (a + b)(a - b)(a² + b²)",
+      "question": "Expand: (a + b)(a - b)($a^2$ + b^2$)",
       "options": [
-        "a⁴ - b⁴",
-        "a⁴ + b⁴",
-        "a² - b²",
-        "a⁴ + a²b² - b⁴"
+        "$a^4$ - b^4$",
+        "$a^4$ + b^4$",
+        "$a^2$ - b^2$",
+        "$a^4$ + a^2b^2$ - b^4$"
       ],
       "correctAnswer": 0,
-      "explanation": "Correct! First: (a + b)(a - b) = a² - b². Then: (a² - b²)(a² + b²) = (a²)² - (b²)² = a⁴ - b⁴. This uses difference of squares twice!",
+      "explanation": "Correct! First: (a + b)(a - b) = $a^2$ - b^2$. Then: (a^2$ - b^2$)(a^2$ + b^2$) = (a^2$)² - (b^2$)² = a^4$ - b^4$. This uses difference of squares twice!",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.6 Special Products",
@@ -323,13 +323,13 @@
       "type": "multiple-choice",
       "question": "Simplify: 3(x + 2)² - 2(x - 1)²",
       "options": [
-        "5x² + 8x + 10",
-        "x² + 16x + 14",
-        "3x² + 12x + 12 - 2x² + 4x - 2",
-        "x² + 16x + 10"
+        "5$x^2$ + 8x + 10",
+        "$x^2$ + 16x + 14",
+        "3$x^2$ + 12x + 12 - 2x^2$ + 4x - 2",
+        "$x^2$ + 16x + 10"
       ],
       "correctAnswer": 3,
-      "explanation": "Correct! First: 3(x + 2)² = 3(x² + 4x + 4) = 3x² + 12x + 12. Second: 2(x - 1)² = 2(x² - 2x + 1) = 2x² - 4x + 2. Subtract: 3x² + 12x + 12 - 2x² + 4x - 2 = x² + 16x + 10.",
+      "explanation": "Correct! First: 3(x + 2)² = 3($x^2$ + 4x + 4) = 3x^2$ + 12x + 12. Second: 2(x - 1)² = 2(x^2$ - 2x + 1) = 2x^2$ - 4x + 2. Subtract: 3x^2$ + 12x + 12 - 2x^2$ + 4x - 2 = x^2$ + 16x + 10.",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.5, 4.6 Combined Operations",
@@ -342,13 +342,13 @@
       "type": "multiple-choice",
       "question": "Multiply: (½x + ⅔y)²",
       "options": [
-        "½x² + ⅔xy + ⅔y²",
-        "¼x² + ⅔xy + 4/9·y²",
-        "¼x² + ⅓xy + 4/9·y²",
-        "¼x² + 4/9·y²"
+        "½$x^2$ + ⅔xy + ⅔y^2$",
+        "¼$x^2$ + ⅔xy + $\\frac{4}{9}y^2$",
+        "¼$x^2$ + ⅓xy + $\\frac{4}{9}y^2$",
+        "¼$x^2$ + $\\frac{4}{9}y^2$"
       ],
       "correctAnswer": 1,
-      "explanation": "Correct! (A + B)² = A² + 2AB + B²: (½x)² + 2(½x)(⅔y) + (⅔y)² = ¼x² + ⅔xy + 4/9·y².",
+      "explanation": "Correct! (A + B)² = $A^2$ + 2AB + B^2$: (½x)² + 2(½x)(⅔y) + (⅔y)² = ¼x^2$ + ⅔xy + $\\frac{4}{9}y^2$.",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.6 Special Products",
@@ -361,13 +361,13 @@
       "type": "multiple-choice",
       "question": "Multiply: (0.5a - 0.3b)(0.2a + 0.4b)",
       "options": [
-        "0.1a² - 0.14ab - 0.12b²",
-        "0.1a² + 0.2ab - 0.12b²",
-        "0.7a² + 0.14ab - 0.7b²",
-        "0.1a² + 0.14ab - 0.12b²"
+        "0.1$a^2$ - 0.14ab - 0.12b^2$",
+        "0.1$a^2$ + 0.2ab - 0.12b^2$",
+        "0.7$a^2$ + 0.14ab - 0.7b^2$",
+        "0.1$a^2$ + 0.14ab - 0.12b^2$"
       ],
       "correctAnswer": 3,
-      "explanation": "Correct! FOIL: (0.5)(0.2)a² + (0.5)(0.4)ab + (-0.3)(0.2)ab + (-0.3)(0.4)b² = 0.1a² + 0.2ab - 0.06ab - 0.12b² = 0.1a² + 0.14ab - 0.12b².",
+      "explanation": "Correct! FOIL: (0.5)(0.2)$a^2$ + (0.5)(0.4)ab + (-0.3)(0.2)ab + (-0.3)(0.4)b^2$ = 0.1a^2$ + 0.2ab - 0.06ab - 0.12b^2$ = 0.1a^2$ + 0.14ab - 0.12b^2$.",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.5, 4.6 Multiplication",
@@ -378,15 +378,15 @@
     {
       "id": 20,
       "type": "multiple-choice",
-      "question": "Expand: (¾x² - ⅓y)²",
+      "question": "Expand: (¾$x^2$ - ⅓y)²",
       "options": [
-        "9/16·x⁴ - ¼x²y + 1/9·y²",
-        "9/16·x⁴ - ½x²y + 1/9·y²",
-        "9/16·x⁴ + 1/9·y²",
-        "¾x⁴ - ⅓x²y + ⅓y²"
+        "$\\frac{9}{16}x^4$ - ¼x^2y + $\\frac{1}{9}y^2$",
+        "$\\frac{9}{16}x^4$ - ½x^2y + $\\frac{1}{9}y^2$",
+        "$\\frac{9}{16}x^4$ + $\\frac{1}{9}y^2$",
+        "¾$x^4$ - ⅓x^2y + ⅓y^2$"
       ],
       "correctAnswer": 1,
-      "explanation": "Correct! (A - B)² = A² - 2AB + B²: (¾x²)² - 2(¾x²)(⅓y) + (⅓y)² = 9/16·x⁴ - ½x²y + 1/9·y². Middle: 2·¾·⅓ = 6/12 = ½.",
+      "explanation": "Correct! (A - B)² = $A^2$ - 2AB + B^2$: (¾x^2$)² - 2(¾x^2$)(⅓y) + (⅓y)² = $\\frac{9}{16}x^4$ - ½x^2y + $\\frac{1}{9}y^2$. Middle: 2·¾·⅓ = $\\frac{6}{12}$ = ½.",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.6 Special Products",
@@ -397,15 +397,15 @@
     {
       "id": 21,
       "type": "multiple-choice",
-      "question": "Multiply: (-3x² - 4xy)(- 2x + 5y)",
+      "question": "Multiply: (-3$x^2$ - 4xy)(- 2x + 5y)",
       "options": [
-        "6x³ + 23x²y - 20xy²",
-        "6x³ - 7x²y - 20xy²",
-        "6x³ - 15x²y + 8x²y - 20xy²",
-        "-6x³ + 7x²y + 20xy²"
+        "6$x^3$ + 23x^2y - 20xy^2$",
+        "6$x^3$ - 7x^2y - 20xy^2$",
+        "6$x^3$ - 15x^2y + 8x^2y - 20xy^2$",
+        "-6$x^3$ + 7x^2y + 20xy^2$"
       ],
       "correctAnswer": 1,
-      "explanation": "Correct! Distribute: (-3x²)(-2x) + (-3x²)(5y) + (-4xy)(-2x) + (-4xy)(5y) = 6x³ - 15x²y + 8x²y - 20xy² = 6x³ - 7x²y - 20xy². Watch the signs carefully!",
+      "explanation": "Correct! Distribute: (-3$x^2$)(-2x) + (-3x^2$)(5y) + (-4xy)(-2x) + (-4xy)(5y) = 6x^3$ - 15x^2y + 8x^2y - 20xy^2$ = 6x^3$ - 7x^2y - 20xy^2$. Watch the signs carefully!",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.5 Multiplication",
@@ -418,13 +418,13 @@
       "type": "multiple-choice",
       "question": "Multiply: (-½a + ⅔b)(-½a - ⅔b)",
       "options": [
-        "¼a² - ⅔ab - 4/9·b²",
-        "-¼a² - 4/9·b²",
-        "¼a² + 4/9·b²",
-        "¼a² - 4/9·b²"
+        "¼$a^2$ - ⅔ab - $\\frac{4}{9}b^2$",
+        "-¼$a^2$ - $\\frac{4}{9}b^2$",
+        "¼$a^2$ + $\\frac{4}{9}b^2$",
+        "¼$a^2$ - $\\frac{4}{9}b^2$"
       ],
       "correctAnswer": 3,
-      "explanation": "Correct! This is (A + B)(A - B) where A = -½a and B = -⅔b. Wait, actually it's (-½a + ⅔b)(-½a - ⅔b). Let me rewrite: [(-½a) + ⅔b][(-½a) - ⅔b]. This is NOT quite difference of squares form. Let me use FOIL: (-½a)(-½a) + (-½a)(-⅔b) + (⅔b)(-½a) + (⅔b)(-⅔b) = ¼a² + ⅓ab - ⅓ab - 4/9·b² = ¼a² - 4/9·b². Actually it simplifies to difference of squares!",
+      "explanation": "Correct! This is (A + B)(A - B) where A = -½a and B = -⅔b. Wait, actually it's (-½a + ⅔b)(-½a - ⅔b). Let me rewrite: [(-½a) + ⅔b][(-½a) - ⅔b]. This is NOT quite difference of squares form. Let me use FOIL: (-½a)(-½a) + (-½a)(-⅔b) + (⅔b)(-½a) + (⅔b)(-⅔b) = ¼$a^2$ + ⅓ab - ⅓ab - $\\frac{4}{9}b^2$ = ¼a^2$ - $\\frac{4}{9}b^2$. Actually it simplifies to difference of squares!",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.6 Special Products",
@@ -435,15 +435,15 @@
     {
       "id": 23,
       "type": "multiple-choice",
-      "question": "Expand: (2x²y - 3xy² + z)(xy - 2z)",
+      "question": "Expand: (2$x^2y - 3xy^2$ + z)(xy - 2z)",
       "options": [
-        "2x³y² - 3x²y³ + xyz - 2z²",
-        "2x³y² - 7x²yz - 3x²y³ + xyz - 2z²",
-        "2x³y² - 4x²yz - 3x²y³ + 6xy²z - 2z²",
-        "2x³y² - 4x²yz - 3x²y³ + 6xy²z + xyz - 2z²"
+        "2$x^3y^2$ - 3x^2y^3$ + xyz - 2z^2$",
+        "2$x^3y^2$ - 7x^2yz - 3x^2y^3$ + xyz - 2z^2$",
+        "2$x^3y^2$ - 4x^2yz - 3x^2y^3$ + 6xy^2z - 2z^2$",
+        "2$x^3y^2$ - 4x^2yz - 3x^2y^3$ + 6xy^2z + xyz - 2z^2$"
       ],
       "correctAnswer": 3,
-      "explanation": "Correct! Multiply each term of first polynomial by each term of second: 2x²y·xy - 2x²y·2z - 3xy²·xy + 3xy²·2z + z·xy - z·2z = 2x³y² - 4x²yz - 3x²y³ + 6xy²z + xyz - 2z².",
+      "explanation": "Correct! Multiply each term of first polynomial by each term of second: 2$x^2y·xy - 2x^2y·2z - 3xy^2$·xy + 3xy^2$·2z + z·xy - z·2z = 2x^3y^2$ - 4x^2yz - 3x^2y^3$ + 6xy^2z + xyz - 2z^2$.",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.5 Multiplication of Polynomials",
@@ -454,15 +454,15 @@
     {
       "id": 24,
       "type": "multiple-choice",
-      "question": "Multiply: (4x²y - 3xy + 4y)(xy + 3y)",
+      "question": "Multiply: (4$x^2y - 3xy + 4y)(xy + 3y)",
       "options": [
-        "4x³y² + 9x²y² - 5xy² + 12y²",
-        "4x³y² - 3x²y² + 4xy² + 12y²",
-        "4x³y² + 9x²y² + xy² + 12y²",
-        "4x³y² + 12x²y² - 3x²y² - 9xy + 4xy² + 12y²"
+        "4$x^3y^2$ + 9x^2y^2$ - 5xy^2$ + 12y^2$",
+        "4$x^3y^2$ - 3x^2y^2$ + 4xy^2$ + 12y^2$",
+        "4$x^3y^2$ + 9x^2y^2$ + xy^2$ + 12y^2$",
+        "4$x^3y^2$ + 12x^2y^2$ - 3x^2y^2$ - 9xy + 4xy^2$ + 12y^2$"
       ],
       "correctAnswer": 0,
-      "explanation": "Correct! Distribute: 4x²y·xy + 4x²y·3y - 3xy·xy - 3xy·3y + 4y·xy + 4y·3y = 4x³y² + 12x²y² - 3x²y² - 9xy² + 4xy² + 12y². Combine like terms: 4x³y² + 9x²y² - 5xy² + 12y².",
+      "explanation": "Correct! Distribute: 4$x^2y·xy + 4x^2y·3y - 3xy·xy - 3xy·3y + 4y·xy + 4y·3y = 4x^3y^2$ + 12x^2y^2$ - 3x^2y^2$ - 9xy^2$ + 4xy^2$ + 12y^2$. Combine like terms: 4x^3y^2$ + 9x^2y^2$ - 5xy^2$ + 12y^2$.",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.5 Multiplication",
@@ -475,13 +475,13 @@
       "type": "multiple-choice",
       "question": "Which is the correct expansion of (3a - 2b)²?",
       "options": [
-        "9a² - 12ab + 4b²",
-        "9a² - 6ab + 4b²",
-        "9a² + 12ab + 4b²",
-        "9a² + 4b²"
+        "9$a^2$ - 12ab + 4b^2$",
+        "9$a^2$ - 6ab + 4b^2$",
+        "9$a^2$ + 12ab + 4b^2$",
+        "9$a^2$ + 4b^2$"
       ],
       "correctAnswer": 0,
-      "explanation": "Correct! (A - B)² = A² - 2AB + B²: (3a)² - 2(3a)(2b) + (2b)² = 9a² - 12ab + 4b². A common error is forgetting the middle term or getting the sign wrong.",
+      "explanation": "Correct! (A - B)² = $A^2$ - 2AB + B^2$: (3a)² - 2(3a)(2b) + (2b)² = 9a^2$ - 12ab + 4b^2$. A common error is forgetting the middle term or getting the sign wrong.",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.6 Special Products",
@@ -492,15 +492,15 @@
     {
       "id": 26,
       "type": "multiple-choice",
-      "question": "A student claims (x + 5)² = x² + 25. What is the correct answer and error?",
+      "question": "A student claims (x + 5)² = $x^2$ + 25. What is the correct answer and error?",
       "options": [
-        "Correct answer is x² + 10x + 10; error: wrong last term",
-        "Correct answer is x² + 10x + 25; error: forgot middle term 2AB",
-        "Correct answer is x² + 5x + 25; error: wrong middle term",
-        "x² + 25 is correct"
+        "Correct answer is $x^2$ + 10x + 10; error: wrong last term",
+        "Correct answer is $x^2$ + 10x + 25; error: forgot middle term 2AB",
+        "Correct answer is $x^2$ + 5x + 25; error: wrong middle term",
+        "$x^2$ + 25 is correct"
       ],
       "correctAnswer": 1,
-      "explanation": "Correct! (x + 5)² = x² + 2(x)(5) + 25 = x² + 10x + 25. The most common error is forgetting the middle term (2AB). The student incorrectly thought (A + B)² = A² + B².",
+      "explanation": "Correct! (x + 5)² = $x^2$ + 2(x)(5) + 25 = x^2$ + 10x + 25. The most common error is forgetting the middle term (2AB). The student incorrectly thought (A + B)² = A^2$ + B^2$.",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.6 Special Products",
@@ -511,15 +511,15 @@
     {
       "id": 27,
       "type": "multiple-choice",
-      "question": "Identify the error: (2x - 3y)² = 4x² - 9y². What should it be?",
+      "question": "Identify the error: (2x - 3y)² = 4$x^2$ - 9y^2$. What should it be?",
       "options": [
-        "2x² - 6xy + 3y²",
-        "4x² - 6xy + 9y²",
-        "4x² + 12xy + 9y²",
-        "4x² - 12xy + 9y²"
+        "2$x^2$ - 6xy + 3y^2$",
+        "4$x^2$ - 6xy + 9y^2$",
+        "4$x^2$ + 12xy + 9y^2$",
+        "4$x^2$ - 12xy + 9y^2$"
       ],
       "correctAnswer": 3,
-      "explanation": "Correct! The student incorrectly used difference of squares formula instead of square of binomial. (2x - 3y)² = (2x)² - 2(2x)(3y) + (3y)² = 4x² - 12xy + 9y².",
+      "explanation": "Correct! The student incorrectly used difference of squares formula instead of square of binomial. (2x - 3y)² = (2x)² - 2(2x)(3y) + (3y)² = 4$x^2$ - 12xy + 9y^2$.",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.6 Special Products",
@@ -530,15 +530,15 @@
     {
       "id": 28,
       "type": "multiple-choice",
-      "question": "Multiply: (5x³ + 4x)(2x² - 1)",
+      "question": "Multiply: (5$x^3$ + 4x)(2x^2$ - 1)",
       "options": [
-        "10x⁵ + 8x³ - 5x³ - 4x",
-        "10x⁵ + 3x³ - 4x",
-        "10x⁶ + 8x³ - 5x³ - 4x",
-        "10x⁵ - 5x³ + 8x³ - 4x"
+        "10$x^5$ + 8x^3$ - 5x^3$ - 4x",
+        "10$x^5$ + 3x^3$ - 4x",
+        "10$x^6$ + 8x^3$ - 5x^3$ - 4x",
+        "10$x^5$ - 5x^3$ + 8x^3$ - 4x"
       ],
       "correctAnswer": 1,
-      "explanation": "Correct! Distribute: 5x³·2x² + 5x³·(-1) + 4x·2x² + 4x·(-1) = 10x⁵ - 5x³ + 8x³ - 4x = 10x⁵ + 3x³ - 4x.",
+      "explanation": "Correct! Distribute: 5$x^3$·2x^2$ + 5x^3$·(-1) + 4x·2x^2$ + 4x·(-1) = 10x^5$ - 5x^3$ + 8x^3$ - 4x = 10x^5$ + 3x^3$ - 4x.",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.6 Mixed Products",

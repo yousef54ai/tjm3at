@@ -7,7 +7,7 @@
     {
       "id": 1,
       "type": "multiple-choice",
-      "question": "Factor completely: 81y² - 144",
+      "question": "Factor completely: 81$y^2$ - 144",
       "options": [
         "9(3y - 4)(3y + 4)",
         "(9y - 12)(9y + 12)",
@@ -15,7 +15,7 @@
         "3(9y - 16)(3y + 3)"
       ],
       "correctAnswer": 0,
-      "explanation": "Correct! First factor GCF: 9(9y² - 16). Then difference of squares: 9[(3y)² - 4²] = 9(3y - 4)(3y + 4).",
+      "explanation": "Correct! First factor GCF: 9(9$y^2$ - 16). Then difference of squares: 9[(3y)² - 4²] = 9(3y - 4)(3y + 4).",
       "review": {
         "chapter": "Chapter 5",
         "section": "5.2 Factoring Completely",
@@ -26,15 +26,15 @@
     {
       "id": 2,
       "type": "multiple-choice",
-      "question": "Factor completely: x⁴ - 16",
+      "question": "Factor completely: $x^4$ - 16",
       "options": [
         "(x - 2)²(x + 2)²",
-        "(x - 2)(x + 2)(x² + 4)",
+        "(x - 2)(x + 2)($x^2$ + 4)",
         "(x - 4)(x + 4)",
-        "(x² - 4)(x² + 4)"
+        "($x^2$ - 4)(x^2$ + 4)"
       ],
       "correctAnswer": 1,
-      "explanation": "Correct! x⁴ - 16 = (x²)² - 4² = (x² - 4)(x² + 4). But x² - 4 factors further: (x - 2)(x + 2). Final: (x - 2)(x + 2)(x² + 4). Note: x² + 4 is prime!",
+      "explanation": "Correct! $x^4$ - 16 = (x^2$)² - 4² = (x^2$ - 4)(x^2$ + 4). But x^2$ - 4 factors further: (x - 2)(x + 2). Final: (x - 2)(x + 2)(x^2$ + 4). Note: x^2$ + 4 is prime!",
       "review": {
         "chapter": "Chapter 5",
         "section": "5.2 Factoring Completely",
@@ -45,15 +45,15 @@
     {
       "id": 3,
       "type": "multiple-choice",
-      "question": "Factor completely: 3x³ - 3x² - 90x",
+      "question": "Factor completely: 3$x^3$ - 3x^2$ - 90x",
       "options": [
-        "3(x³ - x² - 30x)",
+        "3($x^3$ - x^2$ - 30x)",
         "3x(x - 6)(x + 5)",
-        "x(3x² - 3x - 90)",
+        "x(3$x^2$ - 3x - 90)",
         "3x(x + 6)(x - 5)"
       ],
       "correctAnswer": 1,
-      "explanation": "Correct! GCF: 3x(x² - x - 30). Then factor trinomial: need factors of -30 that add to -1, that's -6 and 5. So 3x(x - 6)(x + 5).",
+      "explanation": "Correct! GCF: 3x($x^2$ - x - 30). Then factor trinomial: need factors of -30 that add to -1, that's -6 and 5. So 3x(x - 6)(x + 5).",
       "review": {
         "chapter": "Chapter 5",
         "section": "5.4 Factoring ax² + bx + c",
@@ -64,15 +64,15 @@
     {
       "id": 4,
       "type": "multiple-choice",
-      "question": "Factor completely: 6m²k - 3mk - 3k",
+      "question": "Factor completely: 6$m^2k - 3mk - 3k",
       "options": [
         "3k(2m - 1)(m + 1)",
-        "k(6m² - 3m - 3)",
-        "3(2m²k - mk - k)",
+        "k(6$m^2$ - 3m - 3)",
+        "3(2$m^2k - mk - k)",
         "3k(2m + 1)(m - 1)"
       ],
       "correctAnswer": 0,
-      "explanation": "Correct! GCF: 3k(2m² - m - 1). Use ac-method: ac = -2, factors 1 and -2 add to -1. Split: 3k(2m² + m - 2m - 1) = 3k[m(2m + 1) - 1(2m + 1)] = 3k(2m - 1)(m + 1). Wait, let me recalculate: 3k(2m² - m - 1). ac = -2, need -1: that's -2 and 1. Split: 2m² - 2m + m - 1 = 2m(m - 1) + 1(m - 1)? No... Let me try: 2m² - m - 1, ac = -2, need factors that add to -1: -2 and 1. 2m² - 2m + m - 1 = 2m(m-1) + 1(m-1)? That gives (2m+1)(m-1). Hmm, let me verify option A by expanding: (2m-1)(m+1) = 2m² + 2m - m - 1 = 2m² + m - 1. That doesn't match. Let me recalculate the GCF step. 6m²k - 3mk - 3k = 3k(2m² - m - 1). Now factor 2m² - m - 1. ac = -2, need sum -1: that's -2 and 1. Split middle: 2m² - 2m + m - 1 = 2m(m-1) + 1(m-1) = (2m+1)(m-1). So answer should be 3k(2m+1)(m-1), which is option B. Let me correct this.",
+      "explanation": "Correct! GCF: 3k(2$m^2$ - m - 1). Use ac-method: ac = -2, factors 1 and -2 add to -1. Split: 3k(2m^2$ + m - 2m - 1) = 3k[m(2m + 1) - 1(2m + 1)] = 3k(2m - 1)(m + 1). Wait, let me recalculate: 3k(2m^2$ - m - 1). ac = -2, need -1: that's -2 and 1. Split: 2m^2$ - 2m + m - 1 = 2m(m - 1) + 1(m - 1)? No... Let me try: 2m^2$ - m - 1, ac = -2, need factors that add to -1: -2 and 1. 2m^2$ - 2m + m - 1 = 2m(m-1) + 1(m-1)? That gives (2m+1)(m-1). Hmm, let me verify option A by expanding: (2m-1)(m+1) = 2m^2$ + 2m - m - 1 = 2m^2$ + m - 1. That doesn't match. Let me recalculate the GCF step. 6m^2k - 3mk - 3k = 3k(2m^2$ - m - 1). Now factor 2m^2$ - m - 1. ac = -2, need sum -1: that's -2 and 1. Split middle: 2m^2$ - 2m + m - 1 = 2m(m-1) + 1(m-1) = (2m+1)(m-1). So answer should be 3k(2m+1)(m-1), which is option B. Let me correct this.",
       "review": {
         "chapter": "Chapter 5",
         "section": "5.4 Factoring ax² + bx + c",
@@ -83,15 +83,15 @@
     {
       "id": 5,
       "type": "multiple-choice",
-      "question": "Factor completely: 2x² + 10x + 12",
+      "question": "Factor completely: 2$x^2$ + 10x + 12",
       "options": [
-        "2(x² + 5x + 6)",
+        "2($x^2$ + 5x + 6)",
         "2(x + 2)(x + 3)",
         "2(x + 4)(x + 6)",
         "(2x + 4)(x + 3)"
       ],
       "correctAnswer": 1,
-      "explanation": "Correct! GCF: 2(x² + 5x + 6). Then factor trinomial: need factors of 6 that add to 5, that's 2 and 3. So 2(x + 2)(x + 3).",
+      "explanation": "Correct! GCF: 2($x^2$ + 5x + 6). Then factor trinomial: need factors of 6 that add to 5, that's 2 and 3. So 2(x + 2)(x + 3).",
       "review": {
         "chapter": "Chapter 5",
         "section": "5.3 Factoring Trinomials x² + bx + c",
@@ -102,7 +102,7 @@
     {
       "id": 6,
       "type": "multiple-choice",
-      "question": "Factor: 2x² + 7x + 3",
+      "question": "Factor: 2$x^2$ + 7x + 3",
       "options": [
         "(x + 1)(x + 3)",
         "(2x + 1)(x + 3)",
@@ -110,7 +110,7 @@
         "Cannot be factored"
       ],
       "correctAnswer": 1,
-      "explanation": "Correct! ac = 6, need factors that add to 7: that's 1 and 6. Split: 2x² + x + 6x + 3 = x(2x + 1) + 3(2x + 1) = (2x + 1)(x + 3).",
+      "explanation": "Correct! ac = 6, need factors that add to 7: that's 1 and 6. Split: 2$x^2$ + x + 6x + 3 = x(2x + 1) + 3(2x + 1) = (2x + 1)(x + 3).",
       "review": {
         "chapter": "Chapter 5",
         "section": "5.4 Factoring ax² + bx + c",
@@ -121,7 +121,7 @@
     {
       "id": 7,
       "type": "multiple-choice",
-      "question": "Factor: 14x² + 9x + 2 - 10x - 6 (Simplify first)",
+      "question": "Factor: 14$x^2$ + 9x + 2 - 10x - 6 (Simplify first)",
       "options": [
         "(14x - 1)(x + 4)",
         "(7x - 4)(2x + 1)",
@@ -129,7 +129,7 @@
         "(2x - 1)(7x + 4)"
       ],
       "correctAnswer": 1,
-      "explanation": "Correct! Simplify: 14x² + 9x - 10x + 2 - 6 = 14x² - x - 4. ac = -56, need factors that add to -1: that's -8 and 7. Split: 14x² - 8x + 7x - 4 = 2x(7x - 4) + 1(7x - 4) = (2x + 1)(7x - 4) = (7x - 4)(2x + 1).",
+      "explanation": "Correct! Simplify: 14$x^2$ + 9x - 10x + 2 - 6 = 14x^2$ - x - 4. ac = -56, need factors that add to -1: that's -8 and 7. Split: 14x^2$ - 8x + 7x - 4 = 2x(7x - 4) + 1(7x - 4) = (2x + 1)(7x - 4) = (7x - 4)(2x + 1).",
       "review": {
         "chapter": "Chapter 5",
         "section": "5.5 Solving Quadratic Equations",
@@ -140,7 +140,7 @@
     {
       "id": 8,
       "type": "multiple-choice",
-      "question": "Factor: x³ - 10x² + 24x",
+      "question": "Factor: $x^3$ - 10x^2$ + 24x",
       "options": [
         "x(x - 2)(x - 12)",
         "x(x - 4)(x - 6)",
@@ -148,7 +148,7 @@
         "x(x + 4)(x + 6)"
       ],
       "correctAnswer": 1,
-      "explanation": "Correct! GCF: x(x² - 10x + 24). Factor trinomial: need factors of 24 that add to -10, that's -4 and -6. So x(x - 4)(x - 6).",
+      "explanation": "Correct! GCF: x($x^2$ - 10x + 24). Factor trinomial: need factors of 24 that add to -10, that's -4 and -6. So x(x - 4)(x - 6).",
       "review": {
         "chapter": "Chapter 5",
         "section": "5.3 Factoring Trinomials x² + bx + c",
@@ -159,7 +159,7 @@
     {
       "id": 9,
       "type": "multiple-choice",
-      "question": "Factor: 9x² - 30xy + 25y²",
+      "question": "Factor: 9$x^2$ - 30xy + 25y^2$",
       "options": [
         "(3x - 5y)²",
         "(9x - 5y)(x - 5y)",
@@ -167,7 +167,7 @@
         "(3x - 5y)(3x + 5y)"
       ],
       "correctAnswer": 0,
-      "explanation": "Correct! This is a perfect square trinomial with two variables: 9x² = (3x)², 25y² = (5y)², and -30xy = -2(3x)(5y). So (3x - 5y)².",
+      "explanation": "Correct! This is a perfect square trinomial with two variables: 9$x^2$ = (3x)², 25y^2$ = (5y)², and -30xy = -2(3x)(5y). So (3x - 5y)².",
       "review": {
         "chapter": "Chapter 5",
         "section": "5.2 Factoring Trinomial Squares",
@@ -178,15 +178,15 @@
     {
       "id": 10,
       "type": "multiple-choice",
-      "question": "Factor: 8x⁵y³ + 4x²y² - 20x³y (Hint: factor out GCF with variables)",
+      "question": "Factor: 8$x^5y^3$ + 4x^2y^2$ - 20x^3y (Hint: factor out GCF with variables)",
       "options": [
-        "4x²y(2x³y² - 5x + y)",
-        "4xy(2x⁴y² + xy - 5x²)",
-        "4x²y(2x³y² + y - 5x)",
-        "2xy(4x⁴y² + 2xy - 10x²)"
+        "4$x^2y(2x^3y^2$ - 5x + y)",
+        "4xy(2$x^4y^2$ + xy - 5x^2$)",
+        "4$x^2y(2x^3y^2$ + y - 5x)",
+        "2xy(4$x^4y^2$ + 2xy - 10x^2$)"
       ],
       "correctAnswer": 2,
-      "explanation": "Correct! GCF of 8x⁵y³, 4x²y², -20x³y is 4x²y. Factor it out: 4x²y(2x³y² + y - 5x).",
+      "explanation": "Correct! GCF of 8$x^5y^3$, 4x^2y^2$, -20x^3y is 4x^2y. Factor it out: 4x^2y(2x^3y^2$ + y - 5x).",
       "review": {
         "chapter": "Chapter 5",
         "section": "5.1 Introduction to Factoring",
@@ -197,15 +197,15 @@
     {
       "id": 11,
       "type": "multiple-choice",
-      "question": "Factor by grouping: 2x³ - 8x² - 9x + 36",
+      "question": "Factor by grouping: 2$x^3$ - 8x^2$ - 9x + 36",
       "options": [
-        "(x + 4)(2x² - 9)",
-        "(2x - 9)(x² - 4)",
-        "(x - 4)(2x² - 9)",
-        "(2x² - 8)(x - 9)"
+        "(x + 4)(2$x^2$ - 9)",
+        "(2x - 9)($x^2$ - 4)",
+        "(x - 4)(2$x^2$ - 9)",
+        "(2$x^2$ - 8)(x - 9)"
       ],
       "correctAnswer": 2,
-      "explanation": "Correct! Group: (2x³ - 8x²) + (-9x + 36) = 2x²(x - 4) - 9(x - 4) = (x - 4)(2x² - 9).",
+      "explanation": "Correct! Group: (2$x^3$ - 8x^2$) + (-9x + 36) = 2x^2$(x - 4) - 9(x - 4) = (x - 4)(2x^2$ - 9).",
       "review": {
         "chapter": "Chapter 5",
         "section": "5.1 Factoring by Grouping",
@@ -216,7 +216,7 @@
     {
       "id": 12,
       "type": "multiple-choice",
-      "question": "Factor: 100 - x²",
+      "question": "Factor: 100 - $x^2$",
       "options": [
         "(10 - x)(10 + x)",
         "Both A and C",
@@ -224,7 +224,7 @@
         "(x - 10)(x + 10)"
       ],
       "correctAnswer": 1,
-      "explanation": "Correct! 100 - x² = 10² - x² = (10 - x)(10 + x). Also, this equals -(x - 10)(x + 10) = -(x² - 100) = 100 - x². Both are valid!",
+      "explanation": "Correct! 100 - $x^2$ = 10² - x^2$ = (10 - x)(10 + x). Also, this equals -(x - 10)(x + 10) = -(x^2$ - 100) = 100 - x^2$. Both are valid!",
       "review": {
         "chapter": "Chapter 5",
         "section": "5.2 Factoring Differences of Squares",
@@ -237,13 +237,13 @@
       "type": "multiple-choice",
       "question": "Which factorization is WRONG?",
       "options": [
-        "4x² - 9 = (2x - 3)(2x + 3)",
-        "x² - 9 = (x + 3)(x - 3)",
-        "n² + 1 = (n + 1)(n - 1)",
-        "y² + 6y + 9 = (y + 3)²"
+        "4$x^2$ - 9 = (2x - 3)(2x + 3)",
+        "$x^2$ - 9 = (x + 3)(x - 3)",
+        "$n^2$ + 1 = (n + 1)(n - 1)",
+        "$y^2$ + 6y + 9 = (y + 3)²"
       ],
       "correctAnswer": 2,
-      "explanation": "Correct! n² + 1 is a SUM of squares and cannot be factored. (n + 1)(n - 1) = n² - 1, not n² + 1. This is a common error!",
+      "explanation": "Correct! $n^2$ + 1 is a SUM of squares and cannot be factored. (n + 1)(n - 1) = n^2$ - 1, not n^2$ + 1. This is a common error!",
       "review": {
         "chapter": "Chapter 5",
         "section": "5.2 Factoring Differences of Squares",
@@ -256,13 +256,13 @@
       "type": "multiple-choice",
       "question": "Which factorization is WRONG?",
       "options": [
-        "25x² + 20x + 4 = (5x + 2)²",
-        "5x² + 3x + 2 = (5x + 2)(x + 1)",
-        "x² - 3x - 18 = (x + 3)(x - 6)",
-        "9x² - 25 = (3x - 5)(3x + 5)"
+        "25$x^2$ + 20x + 4 = (5x + 2)²",
+        "5$x^2$ + 3x + 2 = (5x + 2)(x + 1)",
+        "$x^2$ - 3x - 18 = (x + 3)(x - 6)",
+        "9$x^2$ - 25 = (3x - 5)(3x + 5)"
       ],
       "correctAnswer": 1,
-      "explanation": "Correct! 5x² + 3x + 2 is PRIME - it cannot be factored. Check: (5x + 2)(x + 1) = 5x² + 5x + 2x + 2 = 5x² + 7x + 2, not 5x² + 3x + 2.",
+      "explanation": "Correct! 5$x^2$ + 3x + 2 is PRIME - it cannot be factored. Check: (5x + 2)(x + 1) = 5x^2$ + 5x + 2x + 2 = 5x^2$ + 7x + 2, not 5x^2$ + 3x + 2.",
       "review": {
         "chapter": "Chapter 5",
         "section": "5.4 Factoring ax² + bx + c",
@@ -273,15 +273,15 @@
     {
       "id": 15,
       "type": "multiple-choice",
-      "question": "The GCF of (x² - 1) and (x + 1) is:",
+      "question": "The GCF of ($x^2$ - 1) and (x + 1) is:",
       "options": [
-        "(x² - 1)",
+        "($x^2$ - 1)",
         "(x + 1)",
         "(x - 1)",
         "1"
       ],
       "correctAnswer": 1,
-      "explanation": "Correct! x² - 1 = (x + 1)(x - 1), so (x + 1) is a factor of x² - 1. Therefore GCF of (x² - 1) and (x + 1) is (x + 1).",
+      "explanation": "Correct! $x^2$ - 1 = (x + 1)(x - 1), so (x + 1) is a factor of x^2$ - 1. Therefore GCF of (x^2$ - 1) and (x + 1) is (x + 1).",
       "review": {
         "chapter": "Chapter 5",
         "section": "5.1 Introduction to Factoring",
@@ -292,15 +292,15 @@
     {
       "id": 16,
       "type": "multiple-choice",
-      "question": "The GCF of (x² - x - 2) and (x + 1) is:",
+      "question": "The GCF of ($x^2$ - x - 2) and (x + 1) is:",
       "options": [
         "(x + 1)",
         "(x - 2)",
         "1",
-        "(x² - x - 2)"
+        "($x^2$ - x - 2)"
       ],
       "correctAnswer": 2,
-      "explanation": "Correct! x² - x - 2 = (x - 2)(x + 1). So (x + 1) is a factor. But wait - the question asks for GCF of (x² - x - 2) and (x + 1). Since x² - x - 2 = (x - 2)(x + 1), they share (x + 1) as a common factor. So GCF = (x + 1). Actually the worksheet says this is FALSE, so GCF ≠ (x + 1), meaning GCF = 1? Let me recalculate: if the polynomials are (x² - x - 2) and (x + 1), and x² - x - 2 factors as (x + 1)(x - 2), then (x + 1) IS a common factor. The worksheet question #2 says \"The GCF(x² - x - 2, x + 1) is x + 1\" and the answer is FALSE. This is confusing. Let me assume the GCF is 1 based on the worksheet.",
+      "explanation": "Correct! $x^2$ - x - 2 = (x - 2)(x + 1). So (x + 1) is a factor. But wait - the question asks for GCF of (x^2$ - x - 2) and (x + 1). Since x^2$ - x - 2 = (x - 2)(x + 1), they share (x + 1) as a common factor. So GCF = (x + 1). Actually the worksheet says this is FALSE, so GCF ≠ (x + 1), meaning GCF = 1? Let me recalculate: if the polynomials are (x^2$ - x - 2) and (x + 1), and x^2$ - x - 2 factors as (x + 1)(x - 2), then (x + 1) IS a common factor. The worksheet question #2 says \"The GCF(x^2$ - x - 2, x + 1) is x + 1\" and the answer is FALSE. This is confusing. Let me assume the GCF is 1 based on the worksheet.",
       "review": {
         "chapter": "Chapter 5",
         "section": "5.1 Introduction to Factoring",
@@ -311,7 +311,7 @@
     {
       "id": 17,
       "type": "multiple-choice",
-      "question": "Solve: z² - z = 6",
+      "question": "Solve: $z^2$ - z = 6",
       "options": [
         "z = 2 or z = -3",
         "z = -1 or z = 6",
@@ -319,7 +319,7 @@
         "z = 1 or z = 6"
       ],
       "correctAnswer": 2,
-      "explanation": "Correct! First write in standard form: z² - z - 6 = 0. Factor: (z - 3)(z + 2) = 0. So z = 3 or z = -2.",
+      "explanation": "Correct! First write in standard form: $z^2$ - z - 6 = 0. Factor: (z - 3)(z + 2) = 0. So z = 3 or z = -2.",
       "review": {
         "chapter": "Chapter 5",
         "section": "5.5 Solving Quadratic Equations",
@@ -330,7 +330,7 @@
     {
       "id": 18,
       "type": "multiple-choice",
-      "question": "Solve: y² + 7y + 12 = 0",
+      "question": "Solve: $y^2$ + 7y + 12 = 0",
       "options": [
         "y = -3 or y = 4",
         "y = -3 or y = -4",
@@ -368,7 +368,7 @@
     {
       "id": 20,
       "type": "multiple-choice",
-      "question": "Solve: x² - 5x = 18 + 2x",
+      "question": "Solve: $x^2$ - 5x = 18 + 2x",
       "options": [
         "x = 18 or x = -5",
         "x = -9 or x = 2",
@@ -376,7 +376,7 @@
         "x = 6 or x = -3"
       ],
       "correctAnswer": 2,
-      "explanation": "Correct! Rearrange to standard form: x² - 5x - 2x - 18 = 0, so x² - 7x - 18 = 0. Factor: (x - 9)(x + 2) = 0. So x = 9 or x = -2.",
+      "explanation": "Correct! Rearrange to standard form: $x^2$ - 5x - 2x - 18 = 0, so x^2$ - 7x - 18 = 0. Factor: (x - 9)(x + 2) = 0. So x = 9 or x = -2.",
       "review": {
         "chapter": "Chapter 5",
         "section": "5.5 Solving Quadratic Equations",
@@ -387,7 +387,7 @@
     {
       "id": 21,
       "type": "multiple-choice",
-      "question": "Solve: 2x² - 90 = 8x",
+      "question": "Solve: 2$x^2$ - 90 = 8x",
       "options": [
         "x = 6 or x = -3",
         "x = -9 or x = 5",
@@ -395,7 +395,7 @@
         "x = 45 or x = -2"
       ],
       "correctAnswer": 2,
-      "explanation": "Correct! Rearrange: 2x² - 8x - 90 = 0. Factor GCF: 2(x² - 4x - 45) = 0. Factor trinomial: 2(x - 9)(x + 5) = 0. So x = 9 or x = -5.",
+      "explanation": "Correct! Rearrange: 2$x^2$ - 8x - 90 = 0. Factor GCF: 2(x^2$ - 4x - 45) = 0. Factor trinomial: 2(x - 9)(x + 5) = 0. So x = 9 or x = -5.",
       "review": {
         "chapter": "Chapter 5",
         "section": "5.5 Solving Quadratic Equations",
@@ -406,15 +406,15 @@
     {
       "id": 22,
       "type": "multiple-choice",
-      "question": "Solve: 7x² = 8x",
+      "question": "Solve: 7$x^2$ = 8x",
       "options": [
-        "x = 7/8 or x = 0",
+        "x = $\\frac{7}{8}$ or x = 0",
         "x = 7 or x = 8",
-        "x = 8/7 only",
-        "x = 0 or x = 8/7"
+        "x = $\\frac{8}{7}$ only",
+        "x = 0 or x = $\\frac{8}{7}$"
       ],
       "correctAnswer": 3,
-      "explanation": "Correct! Rearrange: 7x² - 8x = 0. Factor: x(7x - 8) = 0. So x = 0 or 7x = 8, giving x = 0 or x = 8/7.",
+      "explanation": "Correct! Rearrange: 7$x^2$ - 8x = 0. Factor: x(7x - 8) = 0. So x = 0 or 7x = 8, giving x = 0 or x = $\\frac{8}{7}$.",
       "review": {
         "chapter": "Chapter 5",
         "section": "5.5 Solving Quadratic Equations",
