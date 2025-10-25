@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحدي التعابير النسبية - Ch6 Rational Expressions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/exam.css">
+
+    <!-- MathJax for LaTeX rendering -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$']],
+                displayMath: [['$$', '$$']],
+                processEscapes: true,
+                processEnvironments: true
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+            }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" id="MathJax-script" async></script>
+
+    <style>
+        .timer {
+            position: fixed;
+            top: var(--spacing-md);
+            left: var(--spacing-md);
+            background: var(--bg-secondary);
+            padding: var(--spacing-sm) var(--spacing-md);
+            border-radius: 8px;
+            border: 2px solid var(--purple);
+            font-size: var(--fs-xl);
+            font-weight: 700;
+            z-index: 1000;
+        }
+
+        .timer.warning {
+            border-color: var(--orange);
+            color: var(--orange);
+        }
+
+        .timer.danger {
+            border-color: var(--red);
+            color: var(--red);
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .problem-type {
+            display: inline-block;
+            background: rgba(108, 113, 196, 0.2);
+            color: var(--purple);
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border-radius: 4px;
+            font-size: var(--fs-sm);
+            margin-bottom: var(--spacing-sm);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="timer" id="timer">5:00</div>
+
+        <div id="exam-content">
+            <header>
+                <h1>⚡ تحدي التعابير النسبية السريع</h1>
+                <p class="exam-description">15 مسألة في 5 دقائق - اختبر سرعتك في التعامل مع التعابير النسبية!</p>
+            </header>
+
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-bar"></div>
+                </div>
+                <div class="progress-text" id="progress-text">0 / 15</div>
+            </div>
+
+            <div class="question-card" id="question-container"></div>
+
+            <div class="nav-buttons">
+                <button id="back-btn" class="nav-btn secondary-btn" disabled>السابق</button>
+                <button id="next-btn" class="nav-btn primary-btn" disabled>التالي</button>
+            </div>
+        </div>
+
+        <div id="results" style="display: none;">
+            <h1 id="results-title"></h1>
+            <div class="score-display">
+                <div class="score-number" id="score-number"></div>
+                <div class="score-label">النتيجة</div>
+            </div>
+
+            <div id="celebration-message"></div>
+
+            <div id="review-section" style="display: none;">
+                <h2>مراجعة المسائل</h2>
+                <div id="review-list"></div>
+            </div>
+
+            <button onclick="location.reload()" class="nav-btn primary-btn" style="margin-top: var(--spacing-lg);">حاول مرة أخرى</button>
+        </div>
+    </div>
+
+    <canvas id="fireworks-canvas"></canvas>
+
+    <script>
+        let problems = [];
+        let currentProblem = 0;
+        let userAnswers = [];
+        let timeLeft = 300; // 5 minutes in seconds
+        let timerInterval;
+        let answerSelected = false;
+
+        // Utility functions
+        function randomInt(min, max, exclude = []) {
+            let num;
+            do {
+                num = Math.floor(Math.random() * (max - min + 1)) + min;
+            } while (exclude.includes(num));
+            return num;
+        }
+
+        function randomChoice(arr) {
+            return arr[Math.floor(Math.random() * arr.length)];
+        }
+
+        function shuffle(array) {
+            const arr = [...array];
+            for (let i = arr.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [arr[i], arr[j]] = [arr[j], arr[i]];
+            }
+            return arr;
+        }
+
+        // Problem generators
+        function generateExcludedValues() {
+            const r = randomInt(-7, 7, [0]);
+            const s = randomInt(-7, 7, [0, r]);
+
+            // (x-r)(x-s) = x² - (r+s)x + rs
+            const b = -(r + s);
+            const c = r * s;
+
+            const bStr = b >= 0 ? '+' + b : b;
+            const cStr = c >= 0 ? '+' + c : c;
+
+            const problem = `أوجد القيم المستبعدة لـ $\\frac{x+${randomInt(1,5)}}{x^2${bStr}x${cStr}}$`;
+
+            const sol1 = Math.min(r, s);
+            const sol2 = Math.max(r, s);
+            const correctAnswer = `$x = ${sol1}$ أو $x = ${sol2}$`;
+
+            const wrong1 = `$x = ${-sol1}$ أو $x = ${-sol2}$`;
+            const wrong2 = `$x = ${sol1}$ فقط`;
+            const wrong3 = 'لا توجد قيود';
+
+            return {
+                problem,
+                correctAnswer,
+                wrongAnswers: [wrong1, wrong2, wrong3],
+                type: 'Excluded Values'
+            };
+        }
+
+        function generateSimplify() {
+            const p = randomInt(1, 6);
+            const q = randomInt(-6, 6, [0, p]);
+            const r = randomInt(1, 5);
+            const s = randomInt(-5, 5, [0]);
+
+            // Numerator: (px+q)(rx+s)
+            const a_num = p * r;
+            const b_num = p * s + q * r;
+            const c_num = q * s;
+
+            // Denominator: share factor (rx+s)
+            const a_den = r;
+            const b_den = randomInt(1, 4) * (randomChoice([1, -1]));
+            const c_den = b_den * s / r;
+
+            const numB = b_num >= 0 ? '+' + b_num : b_num;
+            const numC = c_num >= 0 ? '+' + c_num : c_num;
+            const denB = b_den >= 0 ? '+' + b_den : b_den;
+            const denC = c_den >= 0 ? '+' + c_den : c_den;
+
+            const problem = `بسط: $\\frac{${a_num}x^2${numB}x${numC}}{${r}x${denB}}$`;
+
+            const qSign = q >= 0 ? '+' : '';
+            const correctAnswer = `$\\frac{${p}x${qSign}${q}}{1}$`;
+
+            const wrong1 = `$\\frac{${a_num}x${numB}}{${r}}$`;
+            const wrong2 = `$${p}x${qSign}${q}$`;
+            const wrong3 = `$\\frac{x${numB}}{${denB}}$`;
+
+            return {
+                problem,
+                correctAnswer,
+                wrongAnswers: [wrong1, wrong2, wrong3],
+                type: 'Simplifying'
+            };
+        }
+
+        function generateMultiply() {
+            const a = randomInt(2, 5);
+            const b = randomInt(1, 4);
+            const c = randomInt(2, 4);
+            const d = randomInt(1, 3);
+
+            const problem = `اضرب: $\\frac{${a}x}{${c}y} \\cdot \\frac{${c}y^2}{${b}x^2}$`;
+
+            const correctAnswer = `$\\frac{${a}y}{${b}x}$`;
+
+            const wrong1 = `$\\frac{${a}xy}{${b}x^2y^2}$`;
+            const wrong2 = `$\\frac{${a*c}xy^2}{${b*c}x^2y}$`;
+            const wrong3 = `$\\frac{${a}x^2}{${b}y}$`;
+
+            return {
+                problem,
+                correctAnswer,
+                wrongAnswers: [wrong1, wrong2, wrong3],
+                type: 'Multiplying'
+            };
+        }
+
+        function generateDivide() {
+            const a = randomInt(1, 4);
+            const b = randomInt(2, 5);
+            const c = randomInt(1, 3);
+
+            const problem = `اقسم: $\\frac{${a}x^2}{${b}y} \\div \\frac{${c}x}{y^2}$`;
+
+            const correctAnswer = `$\\frac{${a}xy}{${b*c}}$`;
+
+            const wrong1 = `$\\frac{${a*c}x^3}{${b}y^3}$`;
+            const wrong2 = `$\\frac{${a}x}{${b*c}y}$`;
+            const wrong3 = `$\\frac{${a}y^2}{${b*c}x}$`;
+
+            return {
+                problem,
+                correctAnswer,
+                wrongAnswers: [wrong1, wrong2, wrong3],
+                type: 'Dividing'
+            };
+        }
+
+        function generateAddSame() {
+            const a = randomInt(1, 5);
+            const b = randomInt(1, 5, [a]);
+            const d = randomInt(2, 6);
+
+            const sum = a + b;
+
+            const problem = `اجمع: $\\frac{${a}}{${d}} + \\frac{${b}}{${d}}$`;
+
+            const correctAnswer = `$\\frac{${sum}}{${d}}$`;
+
+            const wrong1 = `$\\frac{${a}+${b}}{${d+d}}$`;
+            const wrong2 = `$\\frac{${sum}}{${d*d}}$`;
+            const wrong3 = `$\\frac{${a*b}}{${d}}$`;
+
+            return {
+                problem,
+                correctAnswer,
+                wrongAnswers: [wrong1, wrong2, wrong3],
+                type: 'Adding (Same Denominator)'
+            };
+        }
+
+        function generateSubtract() {
+            const a = randomInt(3, 8);
+            const b = randomInt(1, a-1);
+            const d = randomInt(2, 5);
+
+            const diff = a - b;
+
+            const problem = `اطرح: $\\frac{${a}x}{${d}y} - \\frac{${b}x}{${d}y}$`;
+
+            const correctAnswer = `$\\frac{${diff}x}{${d}y}$`;
+
+            const wrong1 = `$\\frac{${a-b}}{${d}y}$`;
+            const wrong2 = `$\\frac{x}{${d}y}$`;
+            const wrong3 = `$\\frac{${diff}x}{${d*d}y}$`;
+
+            return {
+                problem,
+                correctAnswer,
+                wrongAnswers: [wrong1, wrong2, wrong3],
+                type: 'Subtracting'
+            };
+        }
+
+        function generateLCD() {
+            const a = randomInt(2, 5);
+            const b = randomInt(a+1, 8);
+
+            const lcm = a * b; // Since we pick different numbers
+
+            const problem = `أوجد المضاعف المشترك الأصغر (LCD) لـ $\\frac{1}{${a}x}$ و $\\frac{1}{${b}x}$`;
+
+            const correctAnswer = `$${lcm}x$`;
+
+            const wrong1 = `$${a+b}x$`;
+            const wrong2 = `$${a*b}x^2$`;
+            const wrong3 = `$${Math.max(a,b)}x$`;
+
+            return {
+                problem,
+                correctAnswer,
+                wrongAnswers: [wrong1, wrong2, wrong3],
+                type: 'Finding LCD'
+            };
+        }
+
+        // Generate all problems
+        function generateProblems() {
+            const generators = [
+                { fn: generateExcludedValues, count: 3 },
+                { fn: generateSimplify, count: 3 },
+                { fn: generateMultiply, count: 2 },
+                { fn: generateDivide, count: 2 },
+                { fn: generateAddSame, count: 2 },
+                { fn: generateSubtract, count: 2 },
+                { fn: generateLCD, count: 1 }
+            ];
+
+            generators.forEach(({ fn, count }) => {
+                for (let i = 0; i < count; i++) {
+                    const problem = fn();
+                    const allAnswers = shuffle([problem.correctAnswer, ...problem.wrongAnswers]);
+                    const correctIndex = allAnswers.indexOf(problem.correctAnswer);
+
+                    problems.push({
+                        question: problem.problem,
+                        options: allAnswers,
+                        correctAnswer: correctIndex,
+                        type: problem.type,
+                        userAnswer: null
+                    });
+                }
+            });
+
+            problems = shuffle(problems);
+        }
+
+        // Timer
+        function startTimer() {
+            updateTimerDisplay();
+            timerInterval = setInterval(() => {
+                timeLeft--;
+                updateTimerDisplay();
+
+                if (timeLeft <= 60) {
+                    document.getElementById('timer').classList.add('danger');
+                } else if (timeLeft <= 120) {
+                    document.getElementById('timer').classList.add('warning');
+                }
+
+                if (timeLeft <= 0) {
+                    clearInterval(timerInterval);
+                    finishExam();
+                }
+            }, 1000);
+        }
+
+        function updateTimerDisplay() {
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+            document.getElementById('timer').textContent =
+                minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
+        }
+
+        // Display problem
+        function displayProblem() {
+            const problem = problems[currentProblem];
+            const container = document.getElementById('question-container');
+
+            container.innerHTML = '<div class="problem-type">' + problem.type + '</div>' +
+                '<div class="question-text">' + problem.question + '</div>' +
+                '<div class="options-container">' +
+                problem.options.map((option, index) =>
+                    '<button class="option-btn" onclick="selectAnswer(' + index + ')">' +
+                        '<span class="option-letter">' + String.fromCharCode(65 + index) + '</span>' +
+                        '<span class="option-text">' + option + '</span>' +
+                    '</button>'
+                ).join('') +
+                '</div>';
+
+            // Render LaTeX
+            if (window.MathJax && window.MathJax.typesetPromise) {
+                MathJax.typesetPromise([container]).catch((err) => console.log('MathJax typeset failed: ' + err.message));
+            } else if (window.MathJax) {
+                setTimeout(() => {
+                    if (window.MathJax && window.MathJax.typesetPromise) {
+                        MathJax.typesetPromise([container]).catch((err) => console.log('MathJax typeset failed: ' + err.message));
+                    }
+                }, 500);
+            }
+
+            updateProgress();
+            updateNavButtons();
+            answerSelected = false;
+        }
+
+        // Select answer
+        function selectAnswer(index) {
+            if (answerSelected) return;
+
+            answerSelected = true;
+            const problem = problems[currentProblem];
+            problem.userAnswer = index;
+
+            const buttons = document.querySelectorAll('.option-btn');
+            buttons.forEach((btn, i) => {
+                btn.disabled = true;
+                if (i === problem.correctAnswer) {
+                    btn.classList.add('correct');
+                }
+                if (i === index && i !== problem.correctAnswer) {
+                    btn.classList.add('incorrect');
+                }
+            });
+
+            // Auto-advance after 1.2 seconds
+            setTimeout(() => {
+                if (currentProblem < problems.length - 1) {
+                    currentProblem++;
+                    displayProblem();
+                } else {
+                    finishExam();
+                }
+            }, 1200);
+        }
+
+        // Navigation
+        function updateNavButtons() {
+            document.getElementById('back-btn').disabled = currentProblem === 0;
+            const answered = problems[currentProblem].userAnswer !== null;
+            document.getElementById('next-btn').disabled = !answered;
+        }
+
+        function goBack() {
+            if (currentProblem > 0) {
+                currentProblem--;
+                displayProblem();
+            }
+        }
+
+        function goNext() {
+            if (currentProblem < problems.length - 1 && problems[currentProblem].userAnswer !== null) {
+                currentProblem++;
+                displayProblem();
+            }
+        }
+
+        // Progress
+        function updateProgress() {
+            const answered = problems.filter(p => p.userAnswer !== null).length;
+            const percent = (answered / problems.length) * 100;
+            document.getElementById('progress-bar').style.width = percent + '%';
+            document.getElementById('progress-text').textContent = answered + ' / ' + problems.length;
+        }
+
+        // Finish exam
+        function finishExam() {
+            clearInterval(timerInterval);
+
+            const correctCount = problems.filter(p => p.userAnswer === p.correctAnswer).length;
+            const score = Math.round((correctCount / problems.length) * 100);
+
+            document.getElementById('exam-content').style.display = 'none';
+            document.getElementById('results').style.display = 'block';
+            document.getElementById('timer').style.display = 'none';
+
+            const scoreElement = document.getElementById('score-number');
+            scoreElement.textContent = score + '%';
+
+            if (score === 100) {
+                document.getElementById('results-title').textContent = '🎉 ممتاز! نتيجة كاملة!';
+                scoreElement.style.color = 'var(--green)';
+                document.getElementById('celebration-message').innerHTML =
+                    '<p style="font-size: var(--fs-lg); color: var(--text-emphasized);">أحسنت! لقد أجبت على جميع الأسئلة بشكل صحيح!</p>';
+                launchFireworks();
+            } else {
+                document.getElementById('results-title').textContent = 'انتهى الوقت!';
+                scoreElement.style.color = score >= 80 ? 'var(--cyan)' : 'var(--orange)';
+
+                const reviewSection = document.getElementById('review-section');
+                reviewSection.style.display = 'block';
+
+                const reviewList = document.getElementById('review-list');
+                const mistakes = problems.filter(p => p.userAnswer !== p.correctAnswer);
+
+                reviewList.innerHTML = mistakes.map((p, i) =>
+                    '<div class="review-item">' +
+                        '<div class="review-header">' + (i + 1) + '. ' + p.type + '</div>' +
+                        '<div class="review-question">' + p.question + '</div>' +
+                        '<div class="review-answer">الإجابة الصحيحة: ' + p.options[p.correctAnswer] + '</div>' +
+                    '</div>'
+                ).join('');
+
+                // Render LaTeX in review
+                if (window.MathJax && window.MathJax.typesetPromise) {
+                    MathJax.typesetPromise([reviewList]).catch((err) => console.log('MathJax typeset failed: ' + err.message));
+                }
+            }
+        }
+
+        // Fireworks
+        function launchFireworks() {
+            const canvas = document.getElementById('fireworks-canvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            canvas.style.display = 'block';
+
+            const fireworks = [];
+            const particles = [];
+
+            class Firework {
+                constructor() {
+                    this.x = Math.random() * canvas.width;
+                    this.y = canvas.height;
+                    this.targetY = Math.random() * canvas.height * 0.5;
+                    this.speed = Math.random() * 3 + 2;
+                    this.color = 'hsl(' + Math.floor(Math.random() * 360) + ', 100%, 50%)';
+                }
+
+                update() {
+                    this.y -= this.speed;
+                    if (this.y <= this.targetY) {
+                        this.explode();
+                        return false;
+                    }
+                    return true;
+                }
+
+                draw() {
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, 2, 0, Math.PI * 2);
+                    ctx.fillStyle = this.color;
+                    ctx.fill();
+                }
+
+                explode() {
+                    for (let i = 0; i < 30; i++) {
+                        particles.push(new Particle(this.x, this.y, this.color));
+                    }
+                }
+            }
+
+            class Particle {
+                constructor(x, y, color) {
+                    this.x = x;
+                    this.y = y;
+                    this.color = color;
+                    const angle = Math.random() * Math.PI * 2;
+                    const speed = Math.random() * 5 + 1;
+                    this.vx = Math.cos(angle) * speed;
+                    this.vy = Math.sin(angle) * speed;
+                    this.life = 1;
+                    this.decay = Math.random() * 0.02 + 0.01;
+                }
+
+                update() {
+                    this.x += this.vx;
+                    this.y += this.vy;
+                    this.vy += 0.1;
+                    this.life -= this.decay;
+                    return this.life > 0;
+                }
+
+                draw() {
+                    ctx.globalAlpha = this.life;
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, 2, 0, Math.PI * 2);
+                    ctx.fillStyle = this.color;
+                    ctx.fill();
+                    ctx.globalAlpha = 1;
+                }
+            }
+
+            function animate() {
+                ctx.fillStyle = 'rgba(0, 43, 54, 0.1)';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+                if (Math.random() < 0.1) {
+                    fireworks.push(new Firework());
+                }
+
+                for (let i = fireworks.length - 1; i >= 0; i--) {
+                    if (!fireworks[i].update()) {
+                        fireworks.splice(i, 1);
+                    } else {
+                        fireworks[i].draw();
+                    }
+                }
+
+                for (let i = particles.length - 1; i >= 0; i--) {
+                    if (!particles[i].update()) {
+                        particles.splice(i, 1);
+                    } else {
+                        particles[i].draw();
+                    }
+                }
+
+                if (fireworks.length > 0 || particles.length > 0) {
+                    requestAnimationFrame(animate);
+                } else {
+                    setTimeout(() => {
+                        canvas.style.display = 'none';
+                    }, 1000);
+                }
+            }
+
+            animate();
+        }
+
+        // Initialize
+        document.getElementById('back-btn').addEventListener('click', goBack);
+        document.getElementById('next-btn').addEventListener('click', goNext);
+
+        generateProblems();
+        displayProblem();
+        startTimer();
+    </script>
+</body>
+</html>

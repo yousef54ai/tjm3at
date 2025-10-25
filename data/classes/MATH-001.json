@@ -6,79 +6,91 @@
   "description": "Fundamentals of Math",
   "exams": [
     {
-      "id": "exam-test",
-      "title": "🧪 LaTeX Test",
-      "description": "Testing MathJax rendering - 5 questions with rational expressions"
-    },
-    {
       "id": "exam-001",
-      "title": "المهارات الأساسية",
+      "title": "Ch1-2: المهارات الأساسية",
       "description": "Essential Skills Practice - Chapters 1 & 2"
     },
     {
       "id": "exam-002",
-      "title": "Graphing & Exponents",
-      "description": "20 essential questions covering linear equations, slope, intercepts, and exponent rules - Chapters 3 & 4"
+      "title": "Ch3-4: Graphing & Exponents",
+      "description": "20 essential questions covering linear equations, slope, intercepts, and exponent rules"
     },
     {
       "id": "exam-003",
-      "title": "Exponent Rules Mastery",
+      "title": "Ch4: Exponent Rules Mastery",
       "description": "35 focused questions drilling all critical exponent rules - Product, Quotient, Power, Negative Exponents, and Scientific Notation"
     },
     {
       "id": "exam-004",
-      "title": "Ch4 Polynomials - Comprehensive Review",
+      "title": "Ch4: Polynomials - Comprehensive Review",
       "description": "42 questions covering all polynomial topics - identification, operations, and special products"
     },
     {
       "id": "exam-005",
-      "title": "Ch4 Polynomials - Advanced Challenge",
+      "title": "Ch4: Polynomials - Advanced Challenge",
       "description": "28 challenging questions focusing on special products and complex multi-step problems"
     },
     {
       "id": "exam-006",
-      "title": "Ch5 Factoring - Comprehensive Review",
+      "title": "Ch5: Factoring - Comprehensive Review",
       "description": "35 questions covering all factoring methods - GCF, grouping, perfect squares, difference of squares, trinomials, and solving quadratics"
     },
     {
       "id": "exam-007",
-      "title": "Ch5 Factoring - Advanced Challenge",
+      "title": "Ch5: Factoring - Advanced Challenge",
       "description": "22 challenging questions focusing on complex factorization, multi-variable problems, and error identification"
     },
     {
-      "id": "exponent-rules-challenge",
-      "title": "⚡ تحدي قواعد الأسس",
-      "description": "Speed Challenge: 20 random exponent problems in 2 minutes - Multiple choice, all rules from Ch4!",
-      "type": "standalone",
-      "url": "challenges/exponent_rules_challenge.html"
+      "id": "exam-008",
+      "title": "Ch6: Rational Expressions - Comprehensive Review",
+      "description": "35 questions covering excluded values, simplifying, multiplying, dividing, LCD, adding, subtracting, and solving rational equations"
+    },
+    {
+      "id": "exam-009",
+      "title": "Ch6: Rational Expressions - Advanced Challenge",
+      "description": "22 challenging questions focusing on complex operations, multi-variable problems, opposite denominators, and extraneous solutions"
     },
     {
       "id": "multiplication-speed",
-      "title": "⚡ تدريب سرعة الضرب",
+      "title": "⚡ Ch1-2: تدريب سرعة الضرب",
       "description": "Speed Challenge: Master multiplication tables - 30 problems, race against time!",
       "type": "standalone",
       "url": "challenges/multiplication_speed_practice.html"
     },
     {
       "id": "ultimate-mixed-negatives",
-      "title": "🎯 التحدي النهائي: العمليات المختلطة",
+      "title": "⚡ Ch1-2: التحدي النهائي - العمليات المختلطة",
       "description": "Ultimate Challenge: 20 problems in 2 minutes - All operations with negative numbers!",
       "type": "standalone",
       "url": "challenges/ultimate_mixed_with_negatives.html"
     },
     {
+      "id": "exponent-rules-challenge",
+      "title": "⚡ Ch4: تحدي قواعد الأسس",
+      "description": "Speed Challenge: 20 random exponent problems in 2 minutes - Multiple choice, all rules from Ch4!",
+      "type": "standalone",
+      "url": "challenges/exponent_rules_challenge.html"
+    },
+    {
       "id": "polynomial-operations-challenge",
-      "title": "⚡ تحدي عمليات كثيرات الحدود",
+      "title": "⚡ Ch4: تحدي عمليات كثيرات الحدود",
       "description": "Speed Challenge: 20 random polynomial operations in 5 minutes!",
       "type": "standalone",
       "url": "challenges/polynomial_operations_challenge.html"
     },
     {
       "id": "factoring-challenge",
-      "title": "⚡ تحدي التحليل السريع",
+      "title": "⚡ Ch5: تحدي التحليل السريع",
       "description": "Speed Challenge: 15 random factoring problems in 5 minutes!",
       "type": "standalone",
       "url": "challenges/factoring_challenge.html"
+    },
+    {
+      "id": "rational-expressions-challenge",
+      "title": "⚡ Ch6: تحدي التعابير النسبية السريع",
+      "description": "Speed Challenge: 15 random rational expression problems in 5 minutes!",
+      "type": "standalone",
+      "url": "challenges/rational_expressions_challenge.html"
     }
   ]
 }
