@@ -596,7 +596,7 @@
         "$x^2$ + 16x + 64"
       ],
       "correctAnswer": 3,
-      "explanation": "Correct! Using (A + B)² = $A^2$ + 2AB + B^2$: (x + 8)² = $x^2$ + 2·x·8 + 8² = $x^2$ + 16x + 64. Don't forget the middle term!",
+      "explanation": "Correct! Using (A + B)² = $A^2 + 2AB + B^2$: (x + 8)² = $x^2$ + 2·x·8 + 8² = $x^2$ + 16x + 64. Don't forget the middle term!",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.6 Special Products",
@@ -615,7 +615,7 @@
         "$16x^2$ - $12x^6$ + $9x^1$⁰"
       ],
       "correctAnswer": 1,
-      "explanation": "Correct! Using (A - B)² = $A^2$ - 2AB + B^2$: (4x)² - 2·4x·$3x^5$ + ($3x^5$)² = $16x^2$ - $24x^6$ + $9x^1$⁰.",
+      "explanation": "Correct! Using (A - B)² = $A^2 - 2AB + B^2$: (4x)² - 2·4x·$3x^5$ + ($3x^5$)² = $16x^2$ - $24x^6$ + $9x^{10}$.",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.6 Special Products",
@@ -805,7 +805,7 @@
         "$36t^2$ + 25"
       ],
       "correctAnswer": 2,
-      "explanation": "Correct! Using (A + B)² = $A^2$ + 2AB + B^2$: (6t)² + 2·6t·5 + 5² = $36t^2$ + 60t + 25.",
+      "explanation": "Correct! Using (A + B)² = $A^2 + 2AB + B^2$: (6t)² + 2·6t·5 + 5² = $36t^2$ + 60t + 25.",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.6 Special Products",
