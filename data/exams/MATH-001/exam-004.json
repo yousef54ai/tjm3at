@@ -22,7 +22,7 @@
       "options": [
         "$\\frac{1}{x}$ + 2",
         "$\\frac{2}{3}y^2$ + 2y - 1",
-        "y^(1/2) + 5",
+        "$y^{1/2}$ + 5",
         "$x^{-4}y^2$ + 1"
       ],
       "correctAnswer": 1,
@@ -45,7 +45,7 @@
         "No, because it contains a square root of a variable"
       ],
       "correctAnswer": 3,
-      "explanation": "Correct! √x + 4 is NOT a polynomial because √x = x^(1/2), which is a fractional exponent. Variables under square roots disqualify an expression from being a polynomial.",
+      "explanation": "Correct! √x + 4 is NOT a polynomial because √x = $x^{1/2}$, which is a fractional exponent. Variables under square roots disqualify an expression from being a polynomial.",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.3 Introduction to Polynomials",
@@ -78,12 +78,12 @@
       "question": "Which expression is NOT a polynomial?",
       "options": [
         "8",
-        "5$x^2$",
+        "$5x^2$",
         "0",
-        "$x^{-³"
+        "$x^{-3}$"
       ],
       "correctAnswer": 3,
-      "explanation": "Correct! $x^{-3 is NOT a polynomial because it has a negative exponent. Negative exponents mean division by variables (x^{-³ = 1/x^3$), which violates polynomial rules.",
+      "explanation": "Correct! $x^{-3}$ is NOT a polynomial because it has a negative exponent. Negative exponents mean division by variables ($x^{-3} = 1/x^3$), which violates polynomial rules.",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.3 Introduction to Polynomials",
@@ -98,7 +98,7 @@
       "options": [
         "No, polynomials must have variables",
         "No, it's just a number",
-        "Yes, but only if written as 5$x^0$",
+        "Yes, but only if written as $5x^0$",
         "Yes, it is a constant polynomial (monomial of degree 0)"
       ],
       "correctAnswer": 3,
@@ -132,7 +132,7 @@
     {
       "id": 7,
       "type": "multiple-choice",
-      "question": "Classify the polynomial 5$x^2$ + 8:",
+      "question": "Classify the polynomial $5x^2$ + 8:",
       "options": [
         "Trinomial",
         "None of these",
@@ -140,7 +140,7 @@
         "Monomial"
       ],
       "correctAnswer": 2,
-      "explanation": "Correct! 5$x^2$ + 8 is a binomial because it has exactly two terms: 5x^2$ and 8.",
+      "explanation": "Correct! $5x^2$ + 8 is a binomial because it has exactly two terms: $5x^2$ and 8.",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.3 Introduction to Polynomials",
@@ -151,7 +151,7 @@
     {
       "id": 8,
       "type": "multiple-choice",
-      "question": "Classify: -8$a^2$³b^3$",
+      "question": "Classify: $-8a^{23}b^3$",
       "options": [
         "Monomial",
         "Binomial",
@@ -159,7 +159,7 @@
         "None of these"
       ],
       "correctAnswer": 0,
-      "explanation": "Correct! -8$a^2$³b^3$ is a monomial because it's a single term (one product of variables with coefficients).",
+      "explanation": "Correct! $-8a^{23}b^3$ is a monomial because it's a single term (one product of variables with coefficients).",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.3 Introduction to Polynomials",
@@ -170,7 +170,7 @@
     {
       "id": 9,
       "type": "multiple-choice",
-      "question": "Classify: 6$x^6$ - 4x^5$ + 2x^4$ - x^3$ + 3x - 2",
+      "question": "Classify: $6x^6$ - $4x^5$ + $2x^4$ - $x^3$ + 3x - 2",
       "options": [
         "Monomial",
         "Binomial",
@@ -189,7 +189,7 @@
     {
       "id": 10,
       "type": "multiple-choice",
-      "question": "What is the degree of the term 9$x^5$?",
+      "question": "What is the degree of the term $9x^5$?",
       "options": [
         "9",
         "5",
@@ -197,7 +197,7 @@
         "45"
       ],
       "correctAnswer": 1,
-      "explanation": "Correct! The degree of 9$x^5$ is 5 (the exponent of the variable). The coefficient 9 is not part of the degree.",
+      "explanation": "Correct! The degree of $9x^5$ is 5 (the exponent of the variable). The coefficient 9 is not part of the degree.",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.3 Introduction to Polynomials",
@@ -208,7 +208,7 @@
     {
       "id": 11,
       "type": "multiple-choice",
-      "question": "What is the degree of the term 9$x^3y^5$?",
+      "question": "What is the degree of the term $9x^3y^5$?",
       "options": [
         "8",
         "5",
@@ -227,7 +227,7 @@
     {
       "id": 12,
       "type": "multiple-choice",
-      "question": "What is the degree of the term wz^2y^3$?",
+      "question": "What is the degree of the term $wz^2y^3$?",
       "options": [
         "2",
         "5",
@@ -235,7 +235,7 @@
         "3"
       ],
       "correctAnswer": 2,
-      "explanation": "Correct! wz^2y^3$ = w^1z^2y^3$, so the degree is 1 + 2 + 3 = 6. Remember: a variable with no visible exponent has exponent 1.",
+      "explanation": "Correct! $wz^2y^3$ = w^1z^$2y^3$, so the degree is 1 + 2 + 3 = 6. Remember: a variable with no visible exponent has exponent 1.",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.3 Introduction to Polynomials",
@@ -254,7 +254,7 @@
         "0"
       ],
       "correctAnswer": 3,
-      "explanation": "Correct! Constants have degree 0. We can think of 8 as 8$x^0$, which has exponent 0.",
+      "explanation": "Correct! Constants have degree 0. We can think of 8 as $8x^0$, which has exponent 0.",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.3 Introduction to Polynomials",
@@ -265,7 +265,7 @@
     {
       "id": 14,
       "type": "multiple-choice",
-      "question": "What is the degree of the polynomial 4$x^2$ - 9x^3$ + 6x^4$ + 8x - 7?",
+      "question": "What is the degree of the polynomial $4x^2$ - $9x^3$ + $6x^4$ + 8x - 7?",
       "options": [
         "7",
         "4",
@@ -273,7 +273,7 @@
         "2"
       ],
       "correctAnswer": 1,
-      "explanation": "Correct! The degree of a polynomial is the largest exponent. Here, the largest exponent is 4 (from the term 6$x^4$).",
+      "explanation": "Correct! The degree of a polynomial is the largest exponent. Here, the largest exponent is 4 (from the term $6x^4$).",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.3 Introduction to Polynomials",
@@ -284,12 +284,12 @@
     {
       "id": 15,
       "type": "multiple-choice",
-      "question": "What is the coefficient of the term -8$x^2y in the polynomial?",
+      "question": "What is the coefficient of the term $-8x^2y$ in the polynomial?",
       "options": [
         "8",
-        "-8$x^2$",
+        "-$8x^2$",
         "-8",
-        "$x^2y"
+        "$x^2y$"
       ],
       "correctAnswer": 2,
       "explanation": "Correct! The coefficient is -8 (including the negative sign). The coefficient is the constant factor of the term.",
@@ -303,7 +303,7 @@
     {
       "id": 16,
       "type": "multiple-choice",
-      "question": "What is the coefficient of y in the polynomial 5$x^4$ - 8x^2y + y - 9?",
+      "question": "What is the coefficient of y in the polynomial $5x^4$ - 8x^2y + y - 9?",
       "options": [
         "-1",
         "1",
@@ -322,15 +322,15 @@
     {
       "id": 17,
       "type": "multiple-choice",
-      "question": "Combine like terms: 7$x^5$ + 9 + 3x^2$ + 6x^2$ - 13 - 6x^5$",
+      "question": "Combine like terms: $7x^5$ + 9 + $3x^2$ + $6x^2$ - 13 - $6x^5$",
       "options": [
-        "$x^5$ + 3x^2$ - 4",
-        "7$x^5$ + 9x^2$ + 9",
-        "$x^5$ + 9x^2$ - 4",
-        "13$x^5$ + 9x^2$ - 4"
+        "$x^5$ + $3x^2$ - 4",
+        "$7x^5$ + $9x^2$ + 9",
+        "$x^5$ + $9x^2$ - 4",
+        "$13x^5$ + $9x^2$ - 4"
       ],
       "correctAnswer": 2,
-      "explanation": "Correct! Combine like terms: (7$x^5$ - 6x^5$) + (3x^2$ + 6x^2$) + (9 - 13) = x^5$ + 9x^2$ - 4.",
+      "explanation": "Correct! Combine like terms: ($7x^5$ - $6x^5$) + ($3x^2$ + $6x^2$) + (9 - 13) = $x^5$ + $9x^2$ - 4.",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.3 Introduction to Polynomials",
@@ -341,15 +341,15 @@
     {
       "id": 18,
       "type": "multiple-choice",
-      "question": "Arrange in descending order: 7$x^5$ + 5x^7$ + x^2$ + 3x^3$",
+      "question": "Arrange in descending order: $7x^5$ + $5x^7$ + $x^2$ + $3x^3$",
       "options": [
-        "5$x^7$ + 7x^5$ + 3x^3$ + x^2$",
-        "$x^2$ + 3x^3$ + 7x^5$ + 5x^7$",
-        "5$x^7$ + 3x^3$ + 7x^5$ + x^2$",
-        "7$x^5$ + 5x^7$ + x^2$ + 3x^3$"
+        "$5x^7$ + $7x^5$ + $3x^3$ + $x^2$",
+        "$x^2$ + $3x^3$ + $7x^5$ + $5x^7$",
+        "$5x^7$ + $3x^3$ + $7x^5$ + $x^2$",
+        "$7x^5$ + $5x^7$ + $x^2$ + $3x^3$"
       ],
       "correctAnswer": 0,
-      "explanation": "Correct! Descending order means from largest exponent to smallest: 5$x^7$ + 7x^5$ + 3x^3$ + x^2$.",
+      "explanation": "Correct! Descending order means from largest exponent to smallest: $5x^7$ + $7x^5$ + $3x^3$ + $x^2$.",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.3 Introduction to Polynomials",
@@ -360,15 +360,15 @@
     {
       "id": 19,
       "type": "multiple-choice",
-      "question": "Add: (-6$x^3$ + 7x - 2) + (5x^3$ + 4x^2$ + 3)",
+      "question": "Add: ($-6x^3$ + 7x - 2) + ($5x^3$ + $4x^2$ + 3)",
       "options": [
-        "-$x^3$ + 4x^2$ + 7x - 5",
-        "-11$x^3$ + 4x^2$ + 7x + 1",
-        "-$x^3$ + 4x^2$ + 7x + 1",
-        "$x^3$ + 4x^2$ + 7x + 1"
+        "-$x^3$ + $4x^2$ + 7x - 5",
+        "-$11x^3$ + $4x^2$ + 7x + 1",
+        "-$x^3$ + $4x^2$ + 7x + 1",
+        "$x^3$ + $4x^2$ + 7x + 1"
       ],
       "correctAnswer": 2,
-      "explanation": "Correct! Combine like terms: (-6 + 5)$x^3$ + 4x^2$ + 7x + (-2 + 3) = -x^3$ + 4x^2$ + 7x + 1.",
+      "explanation": "Correct! Combine like terms: (-6 + 5)$x^3$ + $4x^2$ + 7x + (-2 + 3) = -$x^3$ + $4x^2$ + 7x + 1.",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.4 Addition and Subtraction of Polynomials",
@@ -379,15 +379,15 @@
     {
       "id": 20,
       "type": "multiple-choice",
-      "question": "Add: (-6$x^3$ + 4xy - 6y^2$) + (7x^3$ + 5x^2y + 8y^2$)",
+      "question": "Add: ($-6x^3$ + 4xy - $6y^2$) + ($7x^3$ + 5x^2y + $8y^2$)",
       "options": [
-        "$x^3$ + 5x^2y + 4xy + 2y^2$",
-        "13$x^3$ + 5x^2y + 4xy + 14y^2$",
-        "-13$x^3$ + 5x^2y + 4xy - 14y^2$",
-        "$x^3$ + 4xy + 2y^2$"
+        "$x^3$ + 5x^2y + 4xy + $2y^2$",
+        "$13x^3$ + 5x^2y + 4xy + $14y^2$",
+        "-$13x^3$ + 5x^2y + 4xy - $14y^2$",
+        "$x^3$ + 4xy + $2y^2$"
       ],
       "correctAnswer": 0,
-      "explanation": "Correct! Combine like terms: (-6 + 7)$x^3$ + 5x^2y + 4xy + (-6 + 8)y^2$ = x^3$ + 5x^2y + 4xy + 2y^2$.",
+      "explanation": "Correct! Combine like terms: (-6 + 7)$x^3$ + 5x^2y + 4xy + (-6 + 8)$y^2$ = $x^3$ + 5x^2y + 4xy + $2y^2$.",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.4 Addition and Subtraction of Polynomials",
@@ -398,15 +398,15 @@
     {
       "id": 21,
       "type": "multiple-choice",
-      "question": "Simplify the opposite: -(-8$x^4$ - ½x^3$ + 9x^2$ - 2x + 72)",
+      "question": "Simplify the opposite: -($-8x^4$ - ½$x^3$ + $9x^2$ - 2x + 72)",
       "options": [
-        "8$x^4$ + ½x^3$ - 9x^2$ + 2x - 72",
-        "8$x^4$ - ½x^3$ + 9x^2$ - 2x + 72",
-        "8$x^4$ + ½x^3$ + 9x^2$ + 2x + 72",
-        "-8$x^4$ - ½x^3$ + 9x^2$ - 2x + 72"
+        "$8x^4$ + ½$x^3$ - $9x^2$ + 2x - 72",
+        "$8x^4$ - ½$x^3$ + $9x^2$ - 2x + 72",
+        "$8x^4$ + ½$x^3$ + $9x^2$ + 2x + 72",
+        "-$8x^4$ - ½$x^3$ + $9x^2$ - 2x + 72"
       ],
       "correctAnswer": 0,
-      "explanation": "Correct! Distribute the negative sign to each term: 8$x^4$ + ½x^3$ - 9x^2$ + 2x - 72. Every sign changes!",
+      "explanation": "Correct! Distribute the negative sign to each term: $8x^4$ + ½$x^3$ - $9x^2$ + 2x - 72. Every sign changes!",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.4 Addition and Subtraction of Polynomials",
@@ -417,15 +417,15 @@
     {
       "id": 22,
       "type": "multiple-choice",
-      "question": "Subtract: (10$x^5$ + 2x^3$ - 3x^2$ + 5) - (-3x^5$ + 2x^4$ - 5x^3$ - 4x^2$)",
+      "question": "Subtract: ($10x^5$ + $2x^3$ - $3x^2$ + 5) - ($-3x^5$ + $2x^4$ - $5x^3$ - $4x^2$)",
       "options": [
-        "13$x^5$ - 2x^4$ + 7x^3$ + x^2$ + 5",
-        "10$x^5$ - 2x^4$ + 2x^3$ - 3x^2$ + 5",
-        "7$x^5$ - 2x^4$ - 3x^3$ - 7x^2$ + 5",
-        "13$x^5$ + 2x^4$ + 7x^3$ + x^2$ + 5"
+        "$13x^5$ - $2x^4$ + $7x^3$ + $x^2$ + 5",
+        "$10x^5$ - $2x^4$ + $2x^3$ - $3x^2$ + 5",
+        "$7x^5$ - $2x^4$ - $3x^3$ - $7x^2$ + 5",
+        "$13x^5$ + $2x^4$ + $7x^3$ + $x^2$ + 5"
       ],
       "correctAnswer": 0,
-      "explanation": "Correct! Change subtraction to adding the opposite: 10$x^5$ + 2x^3$ - 3x^2$ + 5 + 3x^5$ - 2x^4$ + 5x^3$ + 4x^2$. Combine: 13x^5$ - 2x^4$ + 7x^3$ + x^2$ + 5.",
+      "explanation": "Correct! Change subtraction to adding the opposite: $10x^5$ + $2x^3$ - $3x^2$ + 5 + $3x^5$ - $2x^4$ + $5x^3$ + $4x^2$. Combine: $13x^5$ - $2x^4$ + $7x^3$ + $x^2$ + 5.",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.4 Addition and Subtraction of Polynomials",
@@ -438,13 +438,13 @@
       "type": "multiple-choice",
       "question": "Multiply monomials: (6x)(7x)",
       "options": [
-        "42$x^2$",
-        "13$x^2$",
+        "$42x^2$",
+        "$13x^2$",
         "13x",
         "42x"
       ],
       "correctAnswer": 0,
-      "explanation": "Correct! (6x)(7x) = (6·7)(x·x) = 42$x^2$. Multiply coefficients and add exponents.",
+      "explanation": "Correct! (6x)(7x) = (6·7)(x·x) = $42x^2$. Multiply coefficients and add exponents.",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.5 Multiplication of Polynomials",
@@ -457,13 +457,13 @@
       "type": "multiple-choice",
       "question": "Multiply: (5a)(-a)",
       "options": [
-        "-5$a^2$",
+        "-$5a^2$",
         "-5a",
         "4a",
-        "5$a^2$"
+        "$5a^2$"
       ],
       "correctAnswer": 0,
-      "explanation": "Correct! (5a)(-a) = (5a)(-1a) = (5)(-1)(a·a) = -5$a^2$. Remember: -a means -1·a.",
+      "explanation": "Correct! (5a)(-a) = (5a)(-1a) = (5)(-1)(a·a) = -$5a^2$. Remember: -a means -1·a.",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.5 Multiplication of Polynomials",
@@ -474,15 +474,15 @@
     {
       "id": 25,
       "type": "multiple-choice",
-      "question": "Multiply: (-8$x^6$)(3x^4$)",
+      "question": "Multiply: ($-8x^6$)($3x^4$)",
       "options": [
-        "-24$x^2$⁴",
-        "-11$x^1$⁰",
-        "24$x^1$⁰",
-        "-24$x^1$⁰"
+        "-$24x^2$⁴",
+        "-$11x^1$⁰",
+        "$24x^1$⁰",
+        "-$24x^1$⁰"
       ],
       "correctAnswer": 3,
-      "explanation": "Correct! (-8$x^6$)(3x^4$) = (-8·3)(x^6x^4$) = -24x^1$⁰. Multiply coefficients and add exponents.",
+      "explanation": "Correct! ($-8x^6$)($3x^4$) = (-8·3)(x^$6x^4$) = -$24x^1$⁰. Multiply coefficients and add exponents.",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.5 Multiplication of Polynomials",
@@ -493,15 +493,15 @@
     {
       "id": 26,
       "type": "multiple-choice",
-      "question": "Multiply monomial by polynomial: 5$x^2$(x^3$ - 4x^2$ + 3x - 5)",
+      "question": "Multiply monomial by polynomial: $5x^2$($x^3$ - $4x^2$ + 3x - 5)",
       "options": [
-        "5$x^5$ - 20x^4$ + 15x^3$ - 5",
-        "5$x^6$ - 20x^4$ + 15x^3$ - 25x^2$",
-        "5$x^5$ - 20x^4$ + 15x^3$ - 25x^2$",
-        "5$x^5$ - 4x^4$ + 3x^3$ - 5x^2$"
+        "$5x^5$ - $20x^4$ + $15x^3$ - 5",
+        "$5x^6$ - $20x^4$ + $15x^3$ - $25x^2$",
+        "$5x^5$ - $20x^4$ + $15x^3$ - $25x^2$",
+        "$5x^5$ - $4x^4$ + $3x^3$ - $5x^2$"
       ],
       "correctAnswer": 2,
-      "explanation": "Correct! Multiply each term: 5$x^2x^3$ - 5x^2$·4x^2$ + 5x^2$·3x - 5x^2$·5 = 5x^5$ - 20x^4$ + 15x^3$ - 25x^2$.",
+      "explanation": "Correct! Multiply each term: $5x^2x^3$ - $5x^2$·$4x^2$ + $5x^2$·3x - $5x^2$·5 = $5x^5$ - $20x^4$ + $15x^3$ - $25x^2$.",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.5 Multiplication of Polynomials",
@@ -514,13 +514,13 @@
       "type": "multiple-choice",
       "question": "Multiply using FOIL: (3x - 2)(x - 1)",
       "options": [
-        "3$x^2$ - 3x + 2",
-        "3$x^2$ - 5x + 2",
-        "3$x^2$ - 5x - 2",
-        "3$x^2$ + x + 2"
+        "$3x^2$ - 3x + 2",
+        "$3x^2$ - 5x + 2",
+        "$3x^2$ - 5x - 2",
+        "$3x^2$ + x + 2"
       ],
       "correctAnswer": 1,
-      "explanation": "Correct! First: 3x·x = 3$x^2$, Outer: 3x·(-1) = -3x, Inner: -2·x = -2x, Last: -2·(-1) = 2. Combine: 3x^2$ - 3x - 2x + 2 = 3x^2$ - 5x + 2.",
+      "explanation": "Correct! First: 3x·x = $3x^2$, Outer: 3x·(-1) = -3x, Inner: -2·x = -2x, Last: -2·(-1) = 2. Combine: $3x^2$ - 3x - 2x + 2 = $3x^2$ - 5x + 2.",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.6 Special Products - FOIL",
@@ -534,12 +534,12 @@
       "question": "Multiply: (x + 4)($x^2$ + 3)",
       "options": [
         "$x^2$ + 7x + 12",
-        "$x^3$ + 4x^2$ + 3x + 12",
+        "$x^3$ + $4x^2$ + 3x + 12",
         "$x^3$ + 7x + 12",
         "$x^3$ + 3x + 12"
       ],
       "correctAnswer": 1,
-      "explanation": "Correct! Using FOIL: x·$x^2$ + x·3 + 4·x^2$ + 4·3 = x^3$ + 3x + 4x^2$ + 12. Rearrange in descending order: x^3$ + 4x^2$ + 3x + 12.",
+      "explanation": "Correct! Using FOIL: x·$x^2$ + x·3 + 4·$x^2$ + 4·3 = $x^3$ + 3x + $4x^2$ + 12. Rearrange in descending order: $x^3$ + $4x^2$ + 3x + 12.",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.6 Special Products",
@@ -558,7 +558,7 @@
         "$x^2$ + 64"
       ],
       "correctAnswer": 2,
-      "explanation": "Correct! Using (A + B)(A - B) = $A^2$ - B^2$: (x + 8)(x - 8) = x^2$ - 8² = x^2$ - 64.",
+      "explanation": "Correct! Using (A + B)(A - B) = $A^2 - B^2$: (x + 8)(x - 8) = $x^2$ - 8² = $x^2$ - 64.",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.6 Special Products",
@@ -569,15 +569,15 @@
     {
       "id": 30,
       "type": "multiple-choice",
-      "question": "Multiply: (4$t^3y - 3)(4t^3y + 3)",
+      "question": "Multiply: ($4t^3y$ - 3)(4t^3y + 3)",
       "options": [
-        "16$t^6y - 9",
-        "16$t^3y^2$ - 9",
-        "16$t^6y^2$ - 9",
-        "16$t^6y^2$ + 9"
+        "$16t^6y$ - 9",
+        "$16t^3y^2$ - 9",
+        "$16t^6y^2$ - 9",
+        "$16t^6y^2$ + 9"
       ],
       "correctAnswer": 2,
-      "explanation": "Correct! Using (A - B)(A + B) = $A^2$ - B^2$: (4t^3y)² - 3² = 16t^6y^2$ - 9. Remember to square both the coefficient and variables.",
+      "explanation": "Correct! Using (A - B)(A + B) = $A^2 - B^2$: (4t^3y)² - 3² = 16t^$6y^2$ - 9. Remember to square both the coefficient and variables.",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.6 Special Products",
@@ -596,7 +596,7 @@
         "$x^2$ + 16x + 64"
       ],
       "correctAnswer": 3,
-      "explanation": "Correct! Using (A + B)² = $A^2$ + 2AB + B^2$: (x + 8)² = x^2$ + 2·x·8 + 8² = x^2$ + 16x + 64. Don't forget the middle term!",
+      "explanation": "Correct! Using (A + B)² = $A^2$ + 2AB + B^2$: (x + 8)² = $x^2$ + 2·x·8 + 8² = $x^2$ + 16x + 64. Don't forget the middle term!",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.6 Special Products",
@@ -607,15 +607,15 @@
     {
       "id": 32,
       "type": "multiple-choice",
-      "question": "Square the binomial: (4x - 3$x^5$)²",
+      "question": "Square the binomial: (4x - $3x^5$)²",
       "options": [
-        "16x - 24$x^5$ + 9x^1$⁰",
-        "16$x^2$ - 24x^6$ + 9x^1$⁰",
-        "16$x^2$ + 9x^1$⁰",
-        "16$x^2$ - 12x^6$ + 9x^1$⁰"
+        "16x - $24x^5$ + $9x^1$⁰",
+        "$16x^2$ - $24x^6$ + $9x^1$⁰",
+        "$16x^2$ + $9x^1$⁰",
+        "$16x^2$ - $12x^6$ + $9x^1$⁰"
       ],
       "correctAnswer": 1,
-      "explanation": "Correct! Using (A - B)² = $A^2$ - 2AB + B^2$: (4x)² - 2·4x·3x^5$ + (3x^5$)² = 16x^2$ - 24x^6$ + 9x^1$⁰.",
+      "explanation": "Correct! Using (A - B)² = $A^2$ - 2AB + B^2$: (4x)² - 2·4x·$3x^5$ + ($3x^5$)² = $16x^2$ - $24x^6$ + $9x^1$⁰.",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.6 Special Products",
@@ -626,15 +626,15 @@
     {
       "id": 33,
       "type": "multiple-choice",
-      "question": "Divide: 10$x^8$ / 2x^3$",
+      "question": "Divide: $10x^8$ / $2x^3$",
       "options": [
-        "5$x^5$",
-        "5$x^2$⁴",
-        "5$x^{11}$",
-        "8$x^5$"
+        "$5x^5$",
+        "$5x^2$⁴",
+        "$5x^{11}$",
+        "$8x^5$"
       ],
       "correctAnswer": 0,
-      "explanation": "Correct! 10$x^8$ / 2x^3$ = (10/2)·(x^8$/x^3$) = 5x^8$⁻³ = 5x^5$. Divide coefficients and subtract exponents.",
+      "explanation": "Correct! $10x^8$ / $2x^3$ = (10/2)·($x^8$/$x^3$) = $5x^8$⁻^{23} = $5x^5$. Divide coefficients and subtract exponents.",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.7 Division of Polynomials",
@@ -645,15 +645,15 @@
     {
       "id": 34,
       "type": "multiple-choice",
-      "question": "Divide: 60$a^7b^5$ / 15a^2b",
+      "question": "Divide: $60a^7b^5$ / 15a^2b",
       "options": [
-        "4$a^9b^6$",
-        "4$a^5b^5$",
-        "4$a^5b^4$",
-        "45$a^5b^4$"
+        "$4a^9b^6$",
+        "$4a^5b^5$",
+        "$4a^5b^4$",
+        "$45a^5b^4$"
       ],
       "correctAnswer": 2,
-      "explanation": "Correct! 60$a^7b^5$ / 15a^2b = (60/15)·a^7$⁻²·b^5$⁻¹ = 4a^5b^4$.",
+      "explanation": "Correct! $60a^7b^5$ / 15a^2b = (60/15)·$a^7$⁻²·$b^5$⁻¹ = 4a^$5b^4$.",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.7 Division of Polynomials",
@@ -664,15 +664,15 @@
     {
       "id": 35,
       "type": "multiple-choice",
-      "question": "Divide: 16$x^1$² / (-4x^9$)",
+      "question": "Divide: $16x^1$² / ($-4x^9$)",
       "options": [
-        "-4$x^2$¹",
-        "4$x^3$",
-        "-12$x^3$",
-        "-4$x^3$"
+        "-$4x^2$¹",
+        "$4x^3$",
+        "-$12x^3$",
+        "-$4x^3$"
       ],
       "correctAnswer": 3,
-      "explanation": "Correct! 16$x^1$² / (-4x^9$) = (16/-4)·x^1$²⁻⁹ = -4x^3$. Don't forget the negative sign!",
+      "explanation": "Correct! $16x^1$² / ($-4x^9$) = (16/-4)·$x^1$²⁻⁹ = -$4x^3$. Don't forget the negative sign!",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.7 Division of Polynomials",
@@ -683,15 +683,15 @@
     {
       "id": 36,
       "type": "multiple-choice",
-      "question": "Divide polynomial by monomial: (12$x^5$ - 15x^2$ + 21x) ÷ (-3x)",
+      "question": "Divide polynomial by monomial: ($12x^5$ - $15x^2$ + 21x) ÷ (-3x)",
       "options": [
-        "-4$x^4$ + 5x - 7",
-        "4$x^4$ - 5x + 7",
-        "-4$x^4$ - 5x - 7",
-        "-4$x^4$ + 5x + 7"
+        "-$4x^4$ + 5x - 7",
+        "$4x^4$ - 5x + 7",
+        "-$4x^4$ - 5x - 7",
+        "-$4x^4$ + 5x + 7"
       ],
       "correctAnswer": 0,
-      "explanation": "Correct! Divide each term: 12$x^5$/(-3x) - 15x^2$/(-3x) + 21x/(-3x) = -4x^4$ + 5x - 7.",
+      "explanation": "Correct! Divide each term: $12x^5$/(-3x) - $15x^2$/(-3x) + 21x/(-3x) = -$4x^4$ + 5x - 7.",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.7 Division of Polynomials",
@@ -702,7 +702,7 @@
     {
       "id": 37,
       "type": "multiple-choice",
-      "question": "What is the degree of the polynomial 8$x^4$ - 3x^3$ + 16x^6$ - 4?",
+      "question": "What is the degree of the polynomial $8x^4$ - $3x^3$ + $16x^6$ - 4?",
       "options": [
         "16",
         "8",
@@ -710,7 +710,7 @@
         "6"
       ],
       "correctAnswer": 3,
-      "explanation": "Correct! The degree is 6, from the term 16$x^6$ (the highest exponent).",
+      "explanation": "Correct! The degree is 6, from the term $16x^6$ (the highest exponent).",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.3 Introduction to Polynomials",
@@ -721,7 +721,7 @@
     {
       "id": 38,
       "type": "multiple-choice",
-      "question": "True or False: 9$x^3$ + 19x^4$ represents a trinomial polynomial.",
+      "question": "True or False: $9x^3$ + $19x^4$ represents a trinomial polynomial.",
       "options": [
         "True - it has 3 variables",
         "False - it's a binomial (2 terms)",
@@ -729,7 +729,7 @@
         "False - it's a monomial"
       ],
       "correctAnswer": 1,
-      "explanation": "False! 9$x^3$ + 19x^4$ is a binomial because it has exactly 2 terms. Trinomials must have exactly 3 terms.",
+      "explanation": "False! $9x^3$ + $19x^4$ is a binomial because it has exactly 2 terms. Trinomials must have exactly 3 terms.",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.3 Introduction to Polynomials",
@@ -740,7 +740,7 @@
     {
       "id": 39,
       "type": "multiple-choice",
-      "question": "Evaluate the polynomial -2$x^4$ + 3x^3$ - x for x = -1.",
+      "question": "Evaluate the polynomial -$2x^4$ + $3x^3$ - x for x = -1.",
       "options": [
         "-6",
         "0",
@@ -748,7 +748,7 @@
         "-4"
       ],
       "correctAnswer": 1,
-      "explanation": "Correct! Substitute x = -1: -2(-1)⁴ + 3(-1)³ - (-1) = -2(1) + 3(-1) + 1 = -2 - 3 + 1 = -4. Wait, let me recalculate: -2(1) + 3(-1) - (-1) = -2 - 3 + 1 = -4. Actually: -2$x^4$ + 3x^3$ - x, so -2(1) + 3(-1) - (-1) = -2 - 3 + 1 = -4. Hmm, the answer should be 0: -2(1) + 3(-1) + 1 = -2 - 3 + 1 = -4. Let me check: if x = -1, then -x = -(-1) = 1. So: -2(1) + 3(-1) + 1 = -2 - 3 + 1 = -4. But worksheet says 0...",
+      "explanation": "Correct! Substitute x = -1: -2(-1)⁴ + 3(-1)^{23} - (-1) = -2(1) + 3(-1) + 1 = -2 - 3 + 1 = -4. Wait, let me recalculate: -2(1) + 3(-1) - (-1) = -2 - 3 + 1 = -4. Actually: -$2x^4$ + $3x^3$ - x, so -2(1) + 3(-1) - (-1) = -2 - 3 + 1 = -4. Hmm, the answer should be 0: -2(1) + 3(-1) + 1 = -2 - 3 + 1 = -4. Let me check: if x = -1, then -x = -(-1) = 1. So: -2(1) + 3(-1) + 1 = -2 - 3 + 1 = -4. But worksheet says 0...",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.3 Introduction to Polynomials",
@@ -759,15 +759,15 @@
     {
       "id": 40,
       "type": "multiple-choice",
-      "question": "Subtract: (3$x^3$ + 5x^2$ + 1.5x) - (x^3$ - 5x^2$ + 0.5x - 3)",
+      "question": "Subtract: ($3x^3$ + $5x^2$ + 1.5x) - ($x^3$ - $5x^2$ + 0.5x - 3)",
       "options": [
-        "4$x^3$ + 10x^2$ + 2x + 3",
-        "2$x^3$ + 10x^2$ + x + 3",
-        "2$x^3$ + 10x^2$ + x - 3",
-        "2$x^3$ + x + 3"
+        "$4x^3$ + $10x^2$ + 2x + 3",
+        "$2x^3$ + $10x^2$ + x + 3",
+        "$2x^3$ + $10x^2$ + x - 3",
+        "$2x^3$ + x + 3"
       ],
       "correctAnswer": 1,
-      "explanation": "Correct! Change to adding opposite: 3$x^3$ + 5x^2$ + 1.5x - x^3$ + 5x^2$ - 0.5x + 3. Combine: (3-1)x^3$ + (5+5)x^2$ + (1.5-0.5)x + 3 = 2x^3$ + 10x^2$ + x + 3.",
+      "explanation": "Correct! Change to adding opposite: $3x^3$ + $5x^2$ + 1.5x - $x^3$ + $5x^2$ - 0.5x + 3. Combine: (3-1)$x^3$ + (5+5)$x^2$ + (1.5-0.5)x + 3 = $2x^3$ + $10x^2$ + x + 3.",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.4 Addition and Subtraction",
@@ -780,13 +780,13 @@
       "type": "multiple-choice",
       "question": "Multiply: (2a + 5)(3a - 2)",
       "options": [
-        "6$a^2$ + 11a - 10",
-        "6$a^2$ + 11a + 10",
-        "6$a^2$ + 19a - 10",
-        "6$a^2$ - 10"
+        "$6a^2$ + 11a - 10",
+        "$6a^2$ + 11a + 10",
+        "$6a^2$ + 19a - 10",
+        "$6a^2$ - 10"
       ],
       "correctAnswer": 0,
-      "explanation": "Correct! Using FOIL: 2a·3a + 2a·(-2) + 5·3a + 5·(-2) = 6$a^2$ - 4a + 15a - 10 = 6a^2$ + 11a - 10.",
+      "explanation": "Correct! Using FOIL: 2a·3a + 2a·(-2) + 5·3a + 5·(-2) = $6a^2$ - 4a + 15a - 10 = $6a^2$ + 11a - 10.",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.6 Special Products",
@@ -799,13 +799,13 @@
       "type": "multiple-choice",
       "question": "Multiply: (6t + 5)²",
       "options": [
-        "36$t^2$ - 25",
-        "36$t^2$ + 30t + 25",
-        "36$t^2$ + 60t + 25",
-        "36$t^2$ + 25"
+        "$36t^2$ - 25",
+        "$36t^2$ + 30t + 25",
+        "$36t^2$ + 60t + 25",
+        "$36t^2$ + 25"
       ],
       "correctAnswer": 2,
-      "explanation": "Correct! Using (A + B)² = $A^2$ + 2AB + B^2$: (6t)² + 2·6t·5 + 5² = 36t^2$ + 60t + 25.",
+      "explanation": "Correct! Using (A + B)² = $A^2$ + 2AB + B^2$: (6t)² + 2·6t·5 + 5² = $36t^2$ + 60t + 25.",
       "review": {
         "chapter": "Chapter 4",
         "section": "4.6 Special Products",
