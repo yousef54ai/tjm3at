@@ -145,12 +145,12 @@
 </head>
 <body>
     <div class="container">
-        <div class="timer" id="timer">3:00</div>
+        <div class="timer" id="timer">5:00</div>
 
         <div id="exam-content">
             <header>
                 <h1>⚡ تحدي التعابير النسبية السريع</h1>
-                <p class="exam-description">10 مسائل في 3 دقائق - اختبر سرعتك في التعامل مع التعابير النسبية!</p>
+                <p class="exam-description">10 مسائل في 5 دقائق - اختبر سرعتك في التعامل مع التعابير النسبية!</p>
             </header>
 
             <div class="progress-container">
@@ -192,7 +192,7 @@
         let problems = [];
         let currentProblem = 0;
         let userAnswers = [];
-        let timeLeft = 180; // 3 minutes in seconds
+        let timeLeft = 300; // 5 minutes in seconds
         let timerInterval;
         let answerSelected = false;
 
@@ -574,15 +574,21 @@
                 reviewSection.style.display = 'block';
 
                 const reviewList = document.getElementById('review-list');
-                const mistakes = problems.filter(p => p.userAnswer !== p.correctAnswer);
 
-                reviewList.innerHTML = mistakes.map((p, i) =>
-                    '<div class="review-item">' +
-                        '<div class="review-header">' + (i + 1) + '. ' + p.type + '</div>' +
+                reviewList.innerHTML = problems.map((p, i) => {
+                    const isCorrect = p.userAnswer === p.correctAnswer;
+                    const statusIcon = isCorrect ? '✓' : '✗';
+                    const statusColor = isCorrect ? 'var(--green)' : 'var(--red)';
+
+                    return '<div class="review-item">' +
+                        '<div class="review-header" style="color: ' + statusColor + '">' +
+                        statusIcon + ' السؤال ' + (i + 1) + ': ' + p.type + '</div>' +
                         '<div class="review-question">' + p.question + '</div>' +
-                        '<div class="review-answer">الإجابة الصحيحة: ' + p.options[p.correctAnswer] + '</div>' +
-                    '</div>'
-                ).join('');
+                        '<div class="review-answer" style="color: var(--green);">✓ الإجابة الصحيحة: ' + p.options[p.correctAnswer] + '</div>' +
+                        (p.userAnswer !== null && !isCorrect ?
+                            '<div class="review-answer" style="color: var(--red);">✗ إجابتك: ' + p.options[p.userAnswer] + '</div>' : '') +
+                    '</div>';
+                }).join('');
 
                 // Render LaTeX in review
                 if (window.MathJax && window.MathJax.typesetPromise) {

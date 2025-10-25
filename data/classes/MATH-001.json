@@ -81,14 +81,14 @@
     {
       "id": "factoring-challenge",
       "title": "⚡ Ch5: Factoring Challenge",
-      "description": "Speed Challenge: 10 random factoring problems in 3 minutes!",
+      "description": "Speed Challenge: 10 random factoring problems in 5 minutes!",
       "type": "standalone",
       "url": "challenges/factoring_challenge.html"
     },
     {
       "id": "rational-expressions-challenge",
       "title": "⚡ Ch6: Rational Expressions Challenge",
-      "description": "Speed Challenge: 10 random rational expression problems in 3 minutes!",
+      "description": "Speed Challenge: 10 random rational expression problems in 5 minutes!",
       "type": "standalone",
       "url": "challenges/rational_expressions_challenge.html"
     }
