@@ -7,7 +7,7 @@
   "exams": [
     {
       "id": "exam-001",
-      "title": "Ch1-2: المهارات الأساسية",
+      "title": "Ch1-2: Essential Skills",
       "description": "Essential Skills Practice - Chapters 1 & 2"
     },
     {
@@ -52,42 +52,42 @@
     },
     {
       "id": "multiplication-speed",
-      "title": "⚡ Ch1-2: تدريب سرعة الضرب",
+      "title": "⚡ Ch1-2: Multiplication Speed",
       "description": "Speed Challenge: Master multiplication tables - 30 problems, race against time!",
       "type": "standalone",
       "url": "challenges/multiplication_speed_practice.html"
     },
     {
       "id": "ultimate-mixed-negatives",
-      "title": "⚡ Ch1-2: التحدي النهائي - العمليات المختلطة",
+      "title": "⚡ Ch1-2: Ultimate Mixed Operations",
       "description": "Ultimate Challenge: 20 problems in 2 minutes - All operations with negative numbers!",
       "type": "standalone",
       "url": "challenges/ultimate_mixed_with_negatives.html"
     },
     {
       "id": "exponent-rules-challenge",
-      "title": "⚡ Ch4: تحدي قواعد الأسس",
+      "title": "⚡ Ch4: Exponent Rules Challenge",
       "description": "Speed Challenge: 20 random exponent problems in 2 minutes - Multiple choice, all rules from Ch4!",
       "type": "standalone",
       "url": "challenges/exponent_rules_challenge.html"
     },
     {
       "id": "polynomial-operations-challenge",
-      "title": "⚡ Ch4: تحدي عمليات كثيرات الحدود",
+      "title": "⚡ Ch4: Polynomial Operations Challenge",
       "description": "Speed Challenge: 10 random polynomial operations in 3 minutes!",
       "type": "standalone",
       "url": "challenges/polynomial_operations_challenge.html"
     },
     {
       "id": "factoring-challenge",
-      "title": "⚡ Ch5: تحدي التحليل السريع",
+      "title": "⚡ Ch5: Factoring Challenge",
       "description": "Speed Challenge: 10 random factoring problems in 3 minutes!",
       "type": "standalone",
       "url": "challenges/factoring_challenge.html"
     },
     {
       "id": "rational-expressions-challenge",
-      "title": "⚡ Ch6: تحدي التعابير النسبية السريع",
+      "title": "⚡ Ch6: Rational Expressions Challenge",
       "description": "Speed Challenge: 10 random rational expression problems in 3 minutes!",
       "type": "standalone",
       "url": "challenges/rational_expressions_challenge.html"
