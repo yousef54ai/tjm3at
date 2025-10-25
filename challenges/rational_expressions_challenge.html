@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تحدي التعابير النسبية - Ch6 Rational Expressions</title>
+    <title>Ch6 Rational Expressions Challenge</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet">
@@ -149,8 +149,8 @@
 
         <div id="exam-content">
             <header>
-                <h1>⚡ تحدي التعابير النسبية السريع</h1>
-                <p class="exam-description">10 مسائل في 5 دقائق - اختبر سرعتك في التعامل مع التعابير النسبية!</p>
+                <h1>⚡ Ch6 Rational Expressions Speed Challenge</h1>
+                <p class="exam-description">10 problems in 5 minutes - Test your rational expression skills!</p>
             </header>
 
             <div class="progress-container">
@@ -163,8 +163,8 @@
             <div class="question-card" id="question-container"></div>
 
             <div class="nav-buttons">
-                <button id="back-btn" class="nav-btn secondary-btn" disabled>السابق</button>
-                <button id="next-btn" class="nav-btn primary-btn" disabled>التالي</button>
+                <button id="back-btn" class="nav-btn secondary-btn" disabled>Back</button>
+                <button id="next-btn" class="nav-btn primary-btn" disabled>Next</button>
             </div>
         </div>
 
@@ -172,17 +172,17 @@
             <h1 id="results-title"></h1>
             <div class="score-display">
                 <div class="score-number" id="score-number"></div>
-                <div class="score-label">النتيجة</div>
+                <div class="score-label">Score</div>
             </div>
 
             <div id="celebration-message"></div>
 
             <div id="review-section" style="display: none;">
-                <h2>مراجعة المسائل</h2>
+                <h2>Problem Review</h2>
                 <div id="review-list"></div>
             </div>
 
-            <button onclick="location.reload()" class="nav-btn primary-btn" style="margin-top: var(--spacing-lg);">حاول مرة أخرى</button>
+            <button onclick="location.reload()" class="nav-btn primary-btn" style="margin-top: var(--spacing-lg);">Try Again</button>
         </div>
     </div>
 
@@ -230,15 +230,15 @@
             const bStr = b >= 0 ? '+' + b : b;
             const cStr = c >= 0 ? '+' + c : c;
 
-            const problem = `أوجد القيم المستبعدة لـ $\\frac{x+${randomInt(1,5)}}{x^2${bStr}x${cStr}}$`;
+            const problem = `Find the excluded values of $\\frac{x+${randomInt(1,5)}}{x^2${bStr}x${cStr}}$`;
 
             const sol1 = Math.min(r, s);
             const sol2 = Math.max(r, s);
-            const correctAnswer = `$x = ${sol1}$ أو $x = ${sol2}$`;
+            const correctAnswer = `$x = ${sol1}$ or $x = ${sol2}$`;
 
-            const wrong1 = `$x = ${-sol1}$ أو $x = ${-sol2}$`;
-            const wrong2 = `$x = ${sol1}$ فقط`;
-            const wrong3 = 'لا توجد قيود';
+            const wrong1 = `$x = ${-sol1}$ or $x = ${-sol2}$`;
+            const wrong2 = `$x = ${sol1}$ only`;
+            const wrong3 = 'No restrictions';
 
             return {
                 problem,
@@ -269,7 +269,7 @@
             const denB = b_den >= 0 ? '+' + b_den : b_den;
             const denC = c_den >= 0 ? '+' + c_den : c_den;
 
-            const problem = `بسط: $\\frac{${a_num}x^2${numB}x${numC}}{${r}x${denB}}$`;
+            const problem = `Simplify: $\\frac{${a_num}x^2${numB}x${numC}}{${r}x${denB}}$`;
 
             const qSign = q >= 0 ? '+' : '';
             const correctAnswer = `$\\frac{${p}x${qSign}${q}}{1}$`;
@@ -292,7 +292,7 @@
             const c = randomInt(2, 4);
             const d = randomInt(1, 3);
 
-            const problem = `اضرب: $\\frac{${a}x}{${c}y} \\cdot \\frac{${c}y^2}{${b}x^2}$`;
+            const problem = `Multiply: $\\frac{${a}x}{${c}y} \\cdot \\frac{${c}y^2}{${b}x^2}$`;
 
             const correctAnswer = `$\\frac{${a}y}{${b}x}$`;
 
@@ -313,7 +313,7 @@
             const b = randomInt(2, 5);
             const c = randomInt(1, 3);
 
-            const problem = `اقسم: $\\frac{${a}x^2}{${b}y} \\div \\frac{${c}x}{y^2}$`;
+            const problem = `Divide: $\\frac{${a}x^2}{${b}y} \\div \\frac{${c}x}{y^2}$`;
 
             const correctAnswer = `$\\frac{${a}xy}{${b*c}}$`;
 
@@ -336,7 +336,7 @@
 
             const sum = a + b;
 
-            const problem = `اجمع: $\\frac{${a}}{${d}} + \\frac{${b}}{${d}}$`;
+            const problem = `Add: $\\frac{${a}}{${d}} + \\frac{${b}}{${d}}$`;
 
             const correctAnswer = `$\\frac{${sum}}{${d}}$`;
 
@@ -359,7 +359,7 @@
 
             const diff = a - b;
 
-            const problem = `اطرح: $\\frac{${a}x}{${d}y} - \\frac{${b}x}{${d}y}$`;
+            const problem = `Subtract: $\\frac{${a}x}{${d}y} - \\frac{${b}x}{${d}y}$`;
 
             const correctAnswer = `$\\frac{${diff}x}{${d}y}$`;
 
@@ -381,7 +381,7 @@
 
             const lcm = a * b; // Since we pick different numbers
 
-            const problem = `أوجد المضاعف المشترك الأصغر (LCD) لـ $\\frac{1}{${a}x}$ و $\\frac{1}{${b}x}$`;
+            const problem = `Find the LCD of $\\frac{1}{${a}x}$ and $\\frac{1}{${b}x}$`;
 
             const correctAnswer = `$${lcm}x$`;
 
@@ -561,13 +561,13 @@
             scoreElement.textContent = score + '%';
 
             if (score === 100) {
-                document.getElementById('results-title').textContent = '🎉 ممتاز! نتيجة كاملة!';
+                document.getElementById('results-title').textContent = '🎉 Perfect! 100%!';
                 scoreElement.style.color = 'var(--green)';
                 document.getElementById('celebration-message').innerHTML =
-                    '<p style="font-size: var(--fs-lg); color: var(--text-emphasized);">أحسنت! لقد أجبت على جميع الأسئلة بشكل صحيح!</p>';
+                    '<p style="font-size: var(--fs-lg); color: var(--text-emphasized);">Excellent! You answered all questions correctly!</p>';
                 launchFireworks();
             } else {
-                document.getElementById('results-title').textContent = 'انتهى الوقت!';
+                document.getElementById('results-title').textContent = 'Time\'s Up!';
                 scoreElement.style.color = score >= 80 ? 'var(--cyan)' : 'var(--orange)';
 
                 const reviewSection = document.getElementById('review-section');
@@ -582,11 +582,11 @@
 
                     return '<div class="review-item">' +
                         '<div class="review-header" style="color: ' + statusColor + '">' +
-                        statusIcon + ' السؤال ' + (i + 1) + ': ' + p.type + '</div>' +
+                        statusIcon + ' Question ' + (i + 1) + ': ' + p.type + '</div>' +
                         '<div class="review-question">' + p.question + '</div>' +
-                        '<div class="review-answer" style="color: var(--green);">✓ الإجابة الصحيحة: ' + p.options[p.correctAnswer] + '</div>' +
+                        '<div class="review-answer" style="color: var(--green);">✓ Correct Answer: ' + p.options[p.correctAnswer] + '</div>' +
                         (p.userAnswer !== null && !isCorrect ?
-                            '<div class="review-answer" style="color: var(--red);">✗ إجابتك: ' + p.options[p.userAnswer] + '</div>' : '') +
+                            '<div class="review-answer" style="color: var(--red);">✗ Your Answer: ' + p.options[p.userAnswer] + '</div>' : '') +
                     '</div>';
                 }).join('');
 

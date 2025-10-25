@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تحدي التحليل - Ch5 Factoring</title>
+    <title>Ch5 Factoring Challenge</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet">
@@ -132,8 +132,8 @@
 
         <div id="exam-content">
             <header>
-                <h1>⚡ تحدي التحليل السريع</h1>
-                <p class="exam-description">10 مسائل في 5 دقائق - اختبر سرعتك في تحليل كثيرات الحدود!</p>
+                <h1>⚡ Ch5 Factoring Speed Challenge</h1>
+                <p class="exam-description">10 problems in 5 minutes - Test your factoring speed!</p>
             </header>
 
             <div class="progress-container">
@@ -146,8 +146,8 @@
             <div class="question-card" id="question-container"></div>
 
             <div class="nav-buttons">
-                <button id="back-btn" class="nav-btn secondary-btn" disabled>السابق</button>
-                <button id="next-btn" class="nav-btn primary-btn" disabled>التالي</button>
+                <button id="back-btn" class="nav-btn secondary-btn" disabled>Back</button>
+                <button id="next-btn" class="nav-btn primary-btn" disabled>Next</button>
             </div>
         </div>
 
@@ -155,17 +155,17 @@
             <h1 id="results-title"></h1>
             <div class="score-display">
                 <div class="score-number" id="score-number"></div>
-                <div class="score-label">النتيجة</div>
+                <div class="score-label">Score</div>
             </div>
 
             <div id="celebration-message"></div>
 
             <div id="review-section" style="display: none;">
-                <h2>مراجعة المسائل</h2>
+                <h2>Problem Review</h2>
                 <div id="review-list"></div>
             </div>
 
-            <button onclick="location.reload()" class="nav-btn primary-btn" style="margin-top: var(--spacing-lg);">حاول مرة أخرى</button>
+            <button onclick="location.reload()" class="nav-btn primary-btn" style="margin-top: var(--spacing-lg);">Try Again</button>
         </div>
     </div>
 
@@ -216,7 +216,7 @@
             const wrong3 = gcf + '(' + c1 + 'x<sup>' + exp1 + '</sup> + ' + c2 + 'x<sup>' + exp2 + '</sup>)';
 
             return {
-                problem: 'حلل: ' + problem,
+                problem: 'Factor: ' + problem,
                 correctAnswer,
                 wrongAnswers: [wrong1, wrong2, wrong3],
                 type: 'GCF Factoring'
@@ -235,7 +235,7 @@
             const wrong3 = '(' + (a*a) + 'x - ' + (b*b) + ')(x + 1)';
 
             return {
-                problem: 'حلل: ' + problem,
+                problem: 'Factor: ' + problem,
                 correctAnswer,
                 wrongAnswers: [wrong1, wrong2, wrong3],
                 type: 'Difference of Squares'
@@ -257,7 +257,7 @@
             const wrong3 = a + 'x<sup>2</sup> + ' + b + '<sup>2</sup>';
 
             return {
-                problem: 'حلل: ' + problem,
+                problem: 'Factor: ' + problem,
                 correctAnswer,
                 wrongAnswers: [wrong1, wrong2, wrong3],
                 type: 'Perfect Square Trinomial'
@@ -283,7 +283,7 @@
             const wrong3 = '(x - ' + Math.abs(p) + ')(x - ' + Math.abs(q) + ')';
 
             return {
-                problem: 'حلل: ' + problem,
+                problem: 'Factor: ' + problem,
                 correctAnswer,
                 wrongAnswers: [wrong1, wrong2, wrong3],
                 type: 'Trinomial x² + bx + c'
@@ -303,14 +303,14 @@
 
             const sol1 = Math.min(p, q);
             const sol2 = Math.max(p, q);
-            const correctAnswer = 'x = ' + sol1 + ' أو x = ' + sol2;
+            const correctAnswer = 'x = ' + sol1 + ' or x = ' + sol2;
 
-            const wrong1 = 'x = ' + (-sol1) + ' أو x = ' + (-sol2);
-            const wrong2 = 'x = ' + sol2 + ' فقط';
-            const wrong3 = 'x = ' + b + ' أو x = ' + c;
+            const wrong1 = 'x = ' + (-sol1) + ' or x = ' + (-sol2);
+            const wrong2 = 'x = ' + sol2 + ' only';
+            const wrong3 = 'x = ' + b + ' or x = ' + c;
 
             return {
-                problem: 'حل: ' + problem,
+                problem: 'Solve: ' + problem,
                 correctAnswer,
                 wrongAnswers: [wrong1, wrong2, wrong3],
                 type: 'Solve Quadratic'
@@ -468,13 +468,13 @@
             scoreElement.textContent = score + '%';
 
             if (score === 100) {
-                document.getElementById('results-title').textContent = '🎉 ممتاز! نتيجة كاملة!';
+                document.getElementById('results-title').textContent = '🎉 Perfect! 100%!';
                 scoreElement.style.color = 'var(--green)';
                 document.getElementById('celebration-message').innerHTML =
-                    '<p style="font-size: var(--fs-lg); color: var(--text-emphasized);">أحسنت! لقد أجبت على جميع الأسئلة بشكل صحيح!</p>';
+                    '<p style="font-size: var(--fs-lg); color: var(--text-emphasized);">Excellent! You answered all questions correctly!</p>';
                 launchFireworks();
             } else {
-                document.getElementById('results-title').textContent = 'انتهى الوقت!';
+                document.getElementById('results-title').textContent = 'Time\'s Up!';
                 scoreElement.style.color = score >= 80 ? 'var(--cyan)' : 'var(--orange)';
 
                 const reviewSection = document.getElementById('review-section');
@@ -489,11 +489,11 @@
 
                     return '<div class="review-item">' +
                         '<div class="review-header" style="color: ' + statusColor + '">' +
-                        statusIcon + ' السؤال ' + (i + 1) + ': ' + p.type + '</div>' +
+                        statusIcon + ' Question ' + (i + 1) + ': ' + p.type + '</div>' +
                         '<div class="review-question">' + p.question + '</div>' +
-                        '<div class="review-answer" style="color: var(--green);">✓ الإجابة الصحيحة: ' + p.options[p.correctAnswer] + '</div>' +
+                        '<div class="review-answer" style="color: var(--green);">✓ Correct Answer: ' + p.options[p.correctAnswer] + '</div>' +
                         (p.userAnswer !== null && !isCorrect ?
-                            '<div class="review-answer" style="color: var(--red);">✗ إجابتك: ' + p.options[p.userAnswer] + '</div>' : '') +
+                            '<div class="review-answer" style="color: var(--red);">✗ Your Answer: ' + p.options[p.userAnswer] + '</div>' : '') +
                     '</div>';
                 }).join('');
             }
