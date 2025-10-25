@@ -6,6 +6,21 @@
     <title>تجمعات - امتحان</title>
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/exam.css">
+    <!-- MathJax for LaTeX rendering -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$']],
+                displayMath: [['$$', '$$']],
+                processEscapes: true,
+                processEnvironments: true
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+            }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" id="MathJax-script" async></script>
 </head>
 <body>
     <div class="container fade-in">
@@ -217,6 +232,11 @@
 
                 container.appendChild(questionDiv);
             });
+
+            // Render LaTeX after content is loaded
+            if (window.MathJax) {
+                MathJax.typesetPromise().catch((err) => console.log('MathJax typeset failed: ' + err.message));
+            }
         }
 
         function showQuestion(index) {
@@ -267,6 +287,11 @@
             feedback.classList.add('show', isCorrect ? 'correct' : 'incorrect');
             feedback.querySelector('.feedback-title').textContent = isCorrect ? text.correct : text.incorrect;
             feedback.querySelector('.feedback-text').textContent = question.explanation;
+
+            // Render LaTeX in feedback
+            if (window.MathJax) {
+                MathJax.typesetPromise([feedback]).catch((err) => console.log('MathJax typeset failed: ' + err.message));
+            }
 
             // Update progress
             updateProgress();

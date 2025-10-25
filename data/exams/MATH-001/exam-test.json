@@ -1,0 +1,103 @@
+{
+  "language": "en",
+  "title": "LaTeX Test Exam",
+  "description": "Testing MathJax rendering with rational expressions",
+  "timeLimit": 0,
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple-choice",
+      "question": "Find the excluded values of $\\frac{x+3}{x^2-3x-28}$",
+      "options": [
+        "$x = 7$ or $x = -4$",
+        "$x = 3$ or $x = -28$",
+        "$x = -3$ only",
+        "No restrictions"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! Set denominator equal to zero: $x^2-3x-28=0$. Factor: $(x-7)(x+4)=0$. So $x=7$ or $x=-4$.",
+      "review": {
+        "chapter": "Chapter 6",
+        "section": "6.1 Finding Excluded Values",
+        "page": "113-123",
+        "info": "Set the denominator equal to zero and solve."
+      }
+    },
+    {
+      "id": 2,
+      "type": "multiple-choice",
+      "question": "Simplify: $\\frac{3x-12}{5x-20}$",
+      "options": [
+        "$\\frac{3}{5}$",
+        "$\\frac{x-12}{x-20}$",
+        "$\\frac{3x}{5x}$",
+        "$\\frac{3}{5x}$"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! Factor: $\\frac{3(x-4)}{5(x-4)} = \\frac{3}{5}$",
+      "review": {
+        "chapter": "Chapter 6",
+        "section": "6.1 Simplifying",
+        "page": "161-169",
+        "info": "Factor and cancel common factors."
+      }
+    },
+    {
+      "id": 3,
+      "type": "multiple-choice",
+      "question": "Add: $\\frac{4x}{x-7} + \\frac{3x+2}{x-7}$",
+      "options": [
+        "$\\frac{7x+2}{x-7}$",
+        "$\\frac{7x+2}{2(x-7)}$",
+        "$\\frac{12x^2+8x}{x^2-49}$",
+        "$\\frac{4x+3x+2}{x-7}$"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! Same denominator, add numerators: $\\frac{4x+(3x+2)}{x-7} = \\frac{7x+2}{x-7}$",
+      "review": {
+        "chapter": "Chapter 6",
+        "section": "6.4 Adding",
+        "page": "486-492",
+        "info": "When denominators are the same, add numerators."
+      }
+    },
+    {
+      "id": 4,
+      "type": "multiple-choice",
+      "question": "Subtract: $\\frac{5x}{x+3} - \\frac{x-4}{x+3}$",
+      "options": [
+        "$\\frac{4x+4}{x+3}$",
+        "$\\frac{4x-4}{x+3}$",
+        "$\\frac{6x-4}{x+3}$",
+        "$\\frac{4x}{x+3}$"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! $\\frac{5x-(x-4)}{x+3} = \\frac{5x-x+4}{x+3} = \\frac{4x+4}{x+3}$. Watch the signs!",
+      "review": {
+        "chapter": "Chapter 6",
+        "section": "6.5 Subtracting",
+        "page": "630-641",
+        "info": "Use parentheses when subtracting."
+      }
+    },
+    {
+      "id": 5,
+      "type": "multiple-choice",
+      "question": "Multiply: $\\frac{x^2-9}{x^2} \\cdot \\frac{x}{x+3}$",
+      "options": [
+        "$\\frac{x-3}{x}$",
+        "$\\frac{x^2-9}{x(x+3)}$",
+        "$\\frac{x-3}{x+3}$",
+        "$\\frac{(x-3)(x+3)}{x^2}$"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! Factor: $\\frac{(x-3)(x+3)}{x^2} \\cdot \\frac{x}{x+3} = \\frac{(x-3)(x+3) \\cdot x}{x^2(x+3)} = \\frac{x-3}{x}$",
+      "review": {
+        "chapter": "Chapter 6",
+        "section": "6.1 Multiplying",
+        "page": "236-253",
+        "info": "Factor first, then multiply and cancel."
+      }
+    }
+  ]
+}

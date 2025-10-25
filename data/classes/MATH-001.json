@@ -6,6 +6,11 @@
   "description": "Fundamentals of Math",
   "exams": [
     {
+      "id": "exam-test",
+      "title": "🧪 LaTeX Test",
+      "description": "Testing MathJax rendering - 5 questions with rational expressions"
+    },
+    {
       "id": "exam-001",
       "title": "المهارات الأساسية",
       "description": "Essential Skills Practice - Chapters 1 & 2"
