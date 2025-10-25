@@ -1,0 +1,673 @@
+{
+  "language": "en",
+  "title": "Ch5 Factoring - Comprehensive Review",
+  "description": "35 questions covering all factoring methods and solving quadratic equations",
+  "timeLimit": 0,
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple-choice",
+      "question": "Find the GCF of 18x⁵ and 30x².",
+      "options": [
+        "6x²",
+        "6x⁵",
+        "90x²",
+        "90x⁵"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! The GCF of coefficients is 6 (GCF of 18 and 30). The GCF of variables is x² (smallest exponent). So GCF = 6x².",
+      "review": {
+        "chapter": "Chapter 5",
+        "section": "5.1 Introduction to Factoring",
+        "page": "116-126",
+        "info": "For GCF of monomials: find GCF of coefficients, then take the smallest exponent for each variable."
+      }
+    },
+    {
+      "id": 2,
+      "type": "multiple-choice",
+      "question": "Find the GCF of 16p⁶q⁴ and 28p³q³.",
+      "options": [
+        "4p³q³",
+        "4p⁶q⁴",
+        "112p³q³",
+        "2p³q³"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! GCF of 16 and 28 is 4. Smallest exponent of p is 3, smallest exponent of q is 3. GCF = 4p³q³.",
+      "review": {
+        "chapter": "Chapter 5",
+        "section": "5.1 Introduction to Factoring",
+        "page": "132",
+        "info": "This is Self-Study example #1 from the chapter."
+      }
+    },
+    {
+      "id": 3,
+      "type": "multiple-choice",
+      "question": "Factor: 28x⁶ + 32x³",
+      "options": [
+        "4x³(7x³ + 8)",
+        "4x(7x⁵ + 8x²)",
+        "x³(28x³ + 32)",
+        "4x²(7x⁴ + 8x)"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! The GCF is 4x³. Factor it out: 28x⁶ + 32x³ = 4x³ · 7x³ + 4x³ · 8 = 4x³(7x³ + 8).",
+      "review": {
+        "chapter": "Chapter 5",
+        "section": "5.1 Introduction to Factoring",
+        "page": "148-151",
+        "info": "Always factor out the GCF first before any other factoring method."
+      }
+    },
+    {
+      "id": 4,
+      "type": "multiple-choice",
+      "question": "Factor: 12x⁵ - 21x⁴ + 24x³",
+      "options": [
+        "3x³(4x² - 7x + 8)",
+        "3x(4x⁴ - 7x³ + 8x²)",
+        "x³(12x² - 21x + 24)",
+        "3x²(4x³ - 7x² + 8x)"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! The GCF is 3x³. Factoring out: 12x⁵ - 21x⁴ + 24x³ = 3x³(4x² - 7x + 8).",
+      "review": {
+        "chapter": "Chapter 5",
+        "section": "5.1 Introduction to Factoring",
+        "page": "155-159",
+        "info": "Check your work by distributing the GCF back through the parentheses."
+      }
+    },
+    {
+      "id": 5,
+      "type": "multiple-choice",
+      "question": "Factor by grouping: x² + 2x + 4x + 8",
+      "options": [
+        "(x + 2)(x + 4)",
+        "(x + 4)(x + 2)",
+        "(x² + 4)(x + 2)",
+        "x(x + 2) + 4(x + 2)"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! Group terms: (x² + 2x) + (4x + 8) = x(x + 2) + 4(x + 2) = (x + 2)(x + 4). Note: options A and B are equivalent.",
+      "review": {
+        "chapter": "Chapter 5",
+        "section": "5.1 Introduction to Factoring",
+        "page": "218",
+        "info": "Self-Study problem #1. When factoring by grouping, look for a common binomial factor."
+      }
+    },
+    {
+      "id": 6,
+      "type": "multiple-choice",
+      "question": "Factor by grouping: 3x³ + 9x² + x + 3",
+      "options": [
+        "(3x² + 1)(x + 3)",
+        "(x + 3)(3x² + 1)",
+        "(3x + 1)(x² + 3)",
+        "3x²(x + 3) + 1"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! Group: (3x³ + 9x²) + (x + 3) = 3x²(x + 3) + 1(x + 3) = (3x² + 1)(x + 3). Don't forget the 1!",
+      "review": {
+        "chapter": "Chapter 5",
+        "section": "5.1 Introduction to Factoring",
+        "page": "198-204",
+        "info": "Always include the coefficient 1 when factoring out from terms."
+      }
+    },
+    {
+      "id": 7,
+      "type": "multiple-choice",
+      "question": "Factor by grouping: 2x² + 4x + 5x + 10",
+      "options": [
+        "(2x + 5)(x + 2)",
+        "(x + 2)(2x + 5)",
+        "(2x² + 5)(x + 2)",
+        "(x + 5)(2x + 2)"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! Group: (2x² + 4x) + (5x + 10) = 2x(x + 2) + 5(x + 2) = (2x + 5)(x + 2). Options A and B are equivalent.",
+      "review": {
+        "chapter": "Chapter 5",
+        "section": "5.1 Introduction to Factoring",
+        "page": "220",
+        "info": "Self-Study problem #3."
+      }
+    },
+    {
+      "id": 8,
+      "type": "multiple-choice",
+      "question": "Is x² + 8x + 16 a perfect-square trinomial?",
+      "options": [
+        "Yes, because it equals (x + 4)²",
+        "No, because 8x is not twice the product of x and 4",
+        "No, because 16 is not a perfect square",
+        "Yes, but only if x is positive"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! x² and 16 are perfect squares (x² and 4²). The middle term 8x = 2·x·4, so it's a perfect square trinomial: (x + 4)².",
+      "review": {
+        "chapter": "Chapter 5",
+        "section": "5.2 Factoring Trinomial Squares",
+        "page": "253-260",
+        "info": "Check: (1) First and last terms are squares, (2) No subtraction of squares, (3) Middle = 2·√first·√last"
+      }
+    },
+    {
+      "id": 9,
+      "type": "multiple-choice",
+      "question": "Is 25x² - 20x + 4 a perfect-square trinomial?",
+      "options": [
+        "Yes, it equals (5x - 2)²",
+        "No, the middle term doesn't match",
+        "No, 25x² is not a perfect square",
+        "No, 4 is being subtracted"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! 25x² = (5x)² and 4 = 2². The middle term -20x = -2·5x·2. So it's (5x - 2)².",
+      "review": {
+        "chapter": "Chapter 5",
+        "section": "5.2 Factoring Trinomial Squares",
+        "page": "272-279",
+        "info": "The middle term can be negative. Pattern: A² - 2AB + B² = (A - B)²"
+      }
+    },
+    {
+      "id": 10,
+      "type": "multiple-choice",
+      "question": "Factor: x² + 8x + 16",
+      "options": [
+        "(x + 4)²",
+        "(x + 8)(x + 2)",
+        "(x + 4)(x + 4)",
+        "Both A and C"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Correct! Both A and C are the same: (x + 4)² = (x + 4)(x + 4). This is a perfect square trinomial.",
+      "review": {
+        "chapter": "Chapter 5",
+        "section": "5.2 Factoring Trinomial Squares",
+        "page": "283-286",
+        "info": "Pattern: A² + 2AB + B² = (A + B)²"
+      }
+    },
+    {
+      "id": 11,
+      "type": "multiple-choice",
+      "question": "Factor: 16a² - 24ab + 9b²",
+      "options": [
+        "(4a - 3b)²",
+        "(4a + 3b)²",
+        "(16a - 9b)(a - b)",
+        "(4a - 3b)(4a + 3b)"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! 16a² = (4a)², 9b² = (3b)², and -24ab = -2(4a)(3b). So it's (4a - 3b)².",
+      "review": {
+        "chapter": "Chapter 5",
+        "section": "5.2 Factoring Trinomial Squares",
+        "page": "293-299",
+        "info": "Perfect square trinomials can have multiple variables."
+      }
+    },
+    {
+      "id": 12,
+      "type": "multiple-choice",
+      "question": "Factor: 4x² - 28x + 49",
+      "options": [
+        "(2x - 7)²",
+        "(2x - 7)(2x + 7)",
+        "(4x - 7)(x - 7)",
+        "(2x + 7)²"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! 4x² = (2x)², 49 = 7², and -28x = -2(2x)(7). So it's (2x - 7)².",
+      "review": {
+        "chapter": "Chapter 5",
+        "section": "5.2 Factoring Trinomial Squares",
+        "page": "893-897",
+        "info": "From worksheet question #15."
+      }
+    },
+    {
+      "id": 13,
+      "type": "multiple-choice",
+      "question": "Factor: x² - 9",
+      "options": [
+        "(x + 3)(x - 3)",
+        "(x - 3)²",
+        "(x - 9)(x + 1)",
+        "Cannot be factored (prime)"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! This is a difference of squares: x² - 9 = x² - 3² = (x + 3)(x - 3).",
+      "review": {
+        "chapter": "Chapter 5",
+        "section": "5.2 Factoring Differences of Squares",
+        "page": "316-318",
+        "info": "Pattern: A² - B² = (A + B)(A - B)"
+      }
+    },
+    {
+      "id": 14,
+      "type": "multiple-choice",
+      "question": "Factor: 9x² - 25",
+      "options": [
+        "(3x - 5)(3x + 5)",
+        "(3x - 5)²",
+        "(9x - 5)(x + 5)",
+        "(3x + 5)²"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! 9x² - 25 = (3x)² - 5² = (3x - 5)(3x + 5).",
+      "review": {
+        "chapter": "Chapter 5",
+        "section": "5.2 Factoring Differences of Squares",
+        "page": "869-873",
+        "info": "From worksheet question #11."
+      }
+    },
+    {
+      "id": 15,
+      "type": "multiple-choice",
+      "question": "Factor: y² - 16w²",
+      "options": [
+        "(y + 4w)(y - 4w)",
+        "(y - 4w)²",
+        "(y - 16w)(y + w)",
+        "(y + w)(y - 16w)"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! y² - 16w² = y² - (4w)² = (y + 4w)(y - 4w).",
+      "review": {
+        "chapter": "Chapter 5",
+        "section": "5.2 Factoring Differences of Squares",
+        "page": "316-322",
+        "info": "Difference of squares works with multiple variables."
+      }
+    },
+    {
+      "id": 16,
+      "type": "multiple-choice",
+      "question": "Factor completely: 5x⁴ - 3125",
+      "options": [
+        "5(x - 5)(x + 5)(x² + 25)",
+        "5(x² - 25)(x² + 25)",
+        "5(x - 5)⁴",
+        "(5x² - 125)(x² + 25)"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! First factor GCF: 5(x⁴ - 625). Then difference of squares: 5[(x²)² - 25²] = 5(x² - 25)(x² + 25). Finally: 5(x - 5)(x + 5)(x² + 25).",
+      "review": {
+        "chapter": "Chapter 5",
+        "section": "5.2 Factoring Completely",
+        "page": "329-335",
+        "info": "Complete factorization requires multiple steps. Factor until no factor can be factored further."
+      }
+    },
+    {
+      "id": 17,
+      "type": "multiple-choice",
+      "question": "Which of the following is prime (cannot be factored)?",
+      "options": [
+        "x² + 25",
+        "x² - 25",
+        "x² + 10x + 25",
+        "25 - x²"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! x² + 25 is a SUM of squares, which cannot be factored. Only DIFFERENCE of squares can be factored: A² - B² = (A+B)(A-B).",
+      "review": {
+        "chapter": "Chapter 5",
+        "section": "5.2 Factoring Differences of Squares",
+        "page": "530",
+        "info": "Sum of squares like x² + 25 or 16x² + 9 are PRIME."
+      }
+    },
+    {
+      "id": 18,
+      "type": "multiple-choice",
+      "question": "Factor: y² - 8y + 15",
+      "options": [
+        "(y - 3)(y - 5)",
+        "(y + 3)(y + 5)",
+        "(y - 8)(y + 15)",
+        "(y - 15)(y + 1)"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! We need two negative numbers that multiply to +15 and add to -8. Those are -3 and -5: (y - 3)(y - 5).",
+      "review": {
+        "chapter": "Chapter 5",
+        "section": "5.3 Factoring Trinomials x² + bx + c",
+        "page": "355-366",
+        "info": "When c is positive and b is negative, both factors are negative."
+      }
+    },
+    {
+      "id": 19,
+      "type": "multiple-choice",
+      "question": "Factor: x² - 5x - 24",
+      "options": [
+        "(x + 3)(x - 8)",
+        "(x - 3)(x + 8)",
+        "(x - 5)(x - 24)",
+        "(x + 4)(x - 6)"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! We need one positive and one negative that multiply to -24 and add to -5. That's +3 and -8: (x + 3)(x - 8).",
+      "review": {
+        "chapter": "Chapter 5",
+        "section": "5.3 Factoring Trinomials x² + bx + c",
+        "page": "381-394",
+        "info": "When c is negative, one factor is positive and one is negative. The one with larger absolute value has the same sign as b."
+      }
+    },
+    {
+      "id": 20,
+      "type": "multiple-choice",
+      "question": "Factor: t² + 4t - 32",
+      "options": [
+        "(t + 8)(t - 4)",
+        "(t - 8)(t + 4)",
+        "(t + 4)(t - 32)",
+        "(t - 2)(t + 16)"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! We need factors of -32 that add to +4. That's +8 and -4: (t + 8)(t - 4).",
+      "review": {
+        "chapter": "Chapter 5",
+        "section": "5.3 Factoring Trinomials x² + bx + c",
+        "page": "398-408",
+        "info": "Since the sum is positive (+4), the positive factor must have larger absolute value."
+      }
+    },
+    {
+      "id": 21,
+      "type": "multiple-choice",
+      "question": "Factor: x² - 3x - 18",
+      "options": [
+        "(x + 3)(x - 6)",
+        "(x - 3)(x + 6)",
+        "(x + 6)(x - 3)",
+        "(x - 6)(x + 3)"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Correct! Factors of -18 that add to -3 are +3 and -6. So (x + 3)(x - 6) or (x - 6)(x + 3) - both are correct!",
+      "review": {
+        "chapter": "Chapter 5",
+        "section": "5.3 Factoring Trinomials x² + bx + c",
+        "page": "827",
+        "info": "From worksheet question #3."
+      }
+    },
+    {
+      "id": 22,
+      "type": "multiple-choice",
+      "question": "Factor completely: 2x³ - 24x² + 72x",
+      "options": [
+        "2x(x - 6)²",
+        "2x(x - 6)(x - 6)",
+        "Both A and B",
+        "2x(x² - 12x + 36)"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Correct! First factor GCF: 2x(x² - 12x + 36). Then factor trinomial: 2x(x - 6)(x - 6) = 2x(x - 6)². Both forms are correct!",
+      "review": {
+        "chapter": "Chapter 5",
+        "section": "5.3 Factoring Trinomials x² + bx + c",
+        "page": "419-442",
+        "info": "Always look for GCF first, then continue factoring. This is complete factorization."
+      }
+    },
+    {
+      "id": 23,
+      "type": "multiple-choice",
+      "question": "Which polynomial is prime (cannot be factored)?",
+      "options": [
+        "x² - x + 7",
+        "x² - x - 6",
+        "x² + 6x + 9",
+        "x² - 9"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! x² - x + 7 is prime. There are no two integers that multiply to +7 and add to -1.",
+      "review": {
+        "chapter": "Chapter 5",
+        "section": "5.3 Factoring Trinomials x² + bx + c",
+        "page": "412-417",
+        "info": "A polynomial that cannot be factored is prime."
+      }
+    },
+    {
+      "id": 24,
+      "type": "multiple-choice",
+      "question": "Factor: x³ + 7x² + 12x",
+      "options": [
+        "x(x + 3)(x + 4)",
+        "x(x + 6)(x + 2)",
+        "(x² + 3)(x + 4)",
+        "x(x² + 7x + 12)"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! First factor GCF: x(x² + 7x + 12). Then factor trinomial: x(x + 3)(x + 4).",
+      "review": {
+        "chapter": "Chapter 5",
+        "section": "5.3 Factoring Trinomials x² + bx + c",
+        "page": "500",
+        "info": "Self-Study problem #1. Always factor out GCF first."
+      }
+    },
+    {
+      "id": 25,
+      "type": "multiple-choice",
+      "question": "Using the ac-method, what is ac for 4x² - 5x - 6?",
+      "options": [
+        "-24",
+        "24",
+        "-10",
+        "10"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! a = 4, c = -6, so ac = 4 × (-6) = -24.",
+      "review": {
+        "chapter": "Chapter 5",
+        "section": "5.4 Factoring ax² + bx + c",
+        "page": "465-470",
+        "info": "Step 2 of ac-method: multiply the leading coefficient a and the constant c."
+      }
+    },
+    {
+      "id": 26,
+      "type": "multiple-choice",
+      "question": "Factor using ac-method: 4x² - 5x - 6",
+      "options": [
+        "(x - 2)(4x + 3)",
+        "(4x - 3)(x + 2)",
+        "(2x - 3)(2x + 2)",
+        "(4x - 6)(x + 1)"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! ac = -24, we need factors that multiply to -24 and add to -5: that's 3 and -8. Split: 4x² - 8x + 3x - 6 = 4x(x - 2) + 3(x - 2) = (x - 2)(4x + 3).",
+      "review": {
+        "chapter": "Chapter 5",
+        "section": "5.4 Factoring ax² + bx + c",
+        "page": "465-494",
+        "info": "ac-method: find p and q where pq = ac and p + q = b, then split middle term and factor by grouping."
+      }
+    },
+    {
+      "id": 27,
+      "type": "multiple-choice",
+      "question": "Factor: 2x² - x - 3",
+      "options": [
+        "(2x - 3)(x + 1)",
+        "(2x + 3)(x - 1)",
+        "(2x - 1)(x + 3)",
+        "(x - 3)(2x + 1)"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! ac = -6, need factors that add to -1: that's 2 and -3. Split: 2x² + 2x - 3x - 3 = 2x(x + 1) - 3(x + 1) = (2x - 3)(x + 1).",
+      "review": {
+        "chapter": "Chapter 5",
+        "section": "5.4 Factoring ax² + bx + c",
+        "page": "503",
+        "info": "Self-Study problem #4."
+      }
+    },
+    {
+      "id": 28,
+      "type": "multiple-choice",
+      "question": "Factor: 3x² - 14x - 5",
+      "options": [
+        "(3x + 1)(x - 5)",
+        "(3x - 1)(x + 5)",
+        "(3x - 5)(x + 1)",
+        "(x - 5)(3x + 1)"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Correct! ac = -15, need factors that add to -14: that's 1 and -15. Split: 3x² + x - 15x - 5 = x(3x + 1) - 5(3x + 1) = (x - 5)(3x + 1). Options A and D are equivalent.",
+      "review": {
+        "chapter": "Chapter 5",
+        "section": "5.4 Factoring ax² + bx + c",
+        "page": "505",
+        "info": "Self-Study problem #6."
+      }
+    },
+    {
+      "id": 29,
+      "type": "multiple-choice",
+      "question": "Factor completely: 4t³ - 10t² - 50t",
+      "options": [
+        "2t(2t + 5)(t - 5)",
+        "2t(2t - 5)(t + 5)",
+        "t(4t² - 10t - 50)",
+        "2(2t³ - 5t² - 25t)"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! First GCF: 2t(2t² - 5t - 25). Then ac-method on 2t² - 5t - 25: ac = -50, factors 5 and -10 add to -5. Split: 2t(2t² + 5t - 10t - 25) = 2t[t(2t + 5) - 5(2t + 5)] = 2t(2t + 5)(t - 5).",
+      "review": {
+        "chapter": "Chapter 5",
+        "section": "5.4 Factoring ax² + bx + c",
+        "page": "841-843",
+        "info": "From worksheet question #6. Always factor GCF first!"
+      }
+    },
+    {
+      "id": 30,
+      "type": "multiple-choice",
+      "question": "Solve: (x + 4)(x - 3) = 0",
+      "options": [
+        "x = -4 or x = 3",
+        "x = 4 or x = -3",
+        "x = -4 or x = -3",
+        "x = 4 or x = 3"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! Using the zero product principle: x + 4 = 0 OR x - 3 = 0. So x = -4 or x = 3.",
+      "review": {
+        "chapter": "Chapter 5",
+        "section": "5.5 Solving Quadratic Equations",
+        "page": "601-620",
+        "info": "Zero product principle: if ab = 0, then a = 0 or b = 0."
+      }
+    },
+    {
+      "id": 31,
+      "type": "multiple-choice",
+      "question": "Solve: x² + 9x + 14 = 0",
+      "options": [
+        "x = -7 or x = -2",
+        "x = 7 or x = 2",
+        "x = -7 or x = 2",
+        "x = 7 or x = -2"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! Factor: (x + 7)(x + 2) = 0. Then x + 7 = 0 or x + 2 = 0, so x = -7 or x = -2.",
+      "review": {
+        "chapter": "Chapter 5",
+        "section": "5.5 Solving Quadratic Equations",
+        "page": "667-694",
+        "info": "Steps: (1) Write in standard form, (2) Factor, (3) Apply zero product principle, (4) Solve."
+      }
+    },
+    {
+      "id": 32,
+      "type": "multiple-choice",
+      "question": "Solve: y² + 4y = 0",
+      "options": [
+        "y = 0 or y = -4",
+        "y = 0 or y = 4",
+        "y = -4 only",
+        "y = 4 only"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! Factor: y(y + 4) = 0. Then y = 0 or y + 4 = 0, so y = 0 or y = -4.",
+      "review": {
+        "chapter": "Chapter 5",
+        "section": "5.5 Solving Quadratic Equations",
+        "page": "698-704",
+        "info": "Don't forget 0 can be a solution!"
+      }
+    },
+    {
+      "id": 33,
+      "type": "multiple-choice",
+      "question": "Solve: x² - 12x = -36",
+      "options": [
+        "x = 6",
+        "x = -6",
+        "x = 6 or x = -6",
+        "x = 12 or x = 3"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! First get 0 on one side: x² - 12x + 36 = 0. Factor: (x - 6)(x - 6) = 0. So x = 6 (only one solution).",
+      "review": {
+        "chapter": "Chapter 5",
+        "section": "5.5 Solving Quadratic Equations",
+        "page": "711-718",
+        "info": "CAUTION: Must have 0 on one side before using zero product principle."
+      }
+    },
+    {
+      "id": 34,
+      "type": "multiple-choice",
+      "question": "Solve: 9x² = 49",
+      "options": [
+        "x = 7/3 or x = -7/3",
+        "x = 7/3 only",
+        "x = 49/9 or x = -49/9",
+        "x = 3/7 or x = -3/7"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! Rearrange: 9x² - 49 = 0. Factor difference of squares: (3x - 7)(3x + 7) = 0. So 3x = 7 or 3x = -7, giving x = 7/3 or x = -7/3.",
+      "review": {
+        "chapter": "Chapter 5",
+        "section": "5.5 Solving Quadratic Equations",
+        "page": "722-733",
+        "info": "Get everything on one side first, then factor."
+      }
+    },
+    {
+      "id": 35,
+      "type": "multiple-choice",
+      "question": "Solve: x² + 4x - 5 = 0",
+      "options": [
+        "x = 1 or x = -5",
+        "x = -1 or x = 5",
+        "x = 5 or x = -1",
+        "x = -4 or x = 1"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! Factor: (x + 5)(x - 1) = 0. So x + 5 = 0 or x - 1 = 0, giving x = -5 or x = 1.",
+      "review": {
+        "chapter": "Chapter 5",
+        "section": "5.5 Solving Quadratic Equations",
+        "page": "752",
+        "info": "Self-Study problem #1."
+      }
+    }
+  ]
+}

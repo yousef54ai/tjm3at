@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحدي التحليل - Ch5 Factoring</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/exam.css">
+    <style>
+        .timer {
+            position: fixed;
+            top: var(--spacing-md);
+            left: var(--spacing-md);
+            background: var(--bg-secondary);
+            padding: var(--spacing-sm) var(--spacing-md);
+            border-radius: 8px;
+            border: 2px solid var(--purple);
+            font-size: var(--fs-xl);
+            font-weight: 700;
+            z-index: 1000;
+        }
+
+        .timer.warning {
+            border-color: var(--orange);
+            color: var(--orange);
+        }
+
+        .timer.danger {
+            border-color: var(--red);
+            color: var(--red);
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .problem-type {
+            display: inline-block;
+            background: rgba(108, 113, 196, 0.2);
+            color: var(--purple);
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border-radius: 4px;
+            font-size: var(--fs-sm);
+            margin-bottom: var(--spacing-sm);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="timer" id="timer">5:00</div>
+
+        <div id="exam-content">
+            <header>
+                <h1>⚡ تحدي التحليل السريع</h1>
+                <p class="exam-description">15 مسألة في 5 دقائق - اختبر سرعتك في تحليل كثيرات الحدود!</p>
+            </header>
+
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-bar"></div>
+                </div>
+                <div class="progress-text" id="progress-text">0 / 15</div>
+            </div>
+
+            <div class="question-card" id="question-container"></div>
+
+            <div class="nav-buttons">
+                <button id="back-btn" class="nav-btn secondary-btn" disabled>السابق</button>
+                <button id="next-btn" class="nav-btn primary-btn" disabled>التالي</button>
+            </div>
+        </div>
+
+        <div id="results" style="display: none;">
+            <h1 id="results-title"></h1>
+            <div class="score-display">
+                <div class="score-number" id="score-number"></div>
+                <div class="score-label">النتيجة</div>
+            </div>
+
+            <div id="celebration-message"></div>
+
+            <div id="review-section" style="display: none;">
+                <h2>مراجعة المسائل</h2>
+                <div id="review-list"></div>
+            </div>
+
+            <button onclick="location.reload()" class="nav-btn primary-btn" style="margin-top: var(--spacing-lg);">حاول مرة أخرى</button>
+        </div>
+    </div>
+
+    <canvas id="fireworks-canvas"></canvas>
+
+    <script>
+        let problems = [];
+        let currentProblem = 0;
+        let userAnswers = [];
+        let timeLeft = 300; // 5 minutes in seconds
+        let timerInterval;
+        let answerSelected = false;
+
+        // Utility functions
+        function randomInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        function randomChoice(arr) {
+            return arr[Math.floor(Math.random() * arr.length)];
+        }
+
+        function shuffle(array) {
+            const arr = [...array];
+            for (let i = arr.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [arr[i], arr[j]] = [arr[j], arr[i]];
+            }
+            return arr;
+        }
+
+        // Problem generators
+        function generateGCFFactor() {
+            const gcf = randomInt(2, 6);
+            const c1 = randomInt(2, 8);
+            const c2 = randomInt(2, 8);
+            const exp1 = randomInt(3, 6);
+            const exp2 = randomInt(1, exp1 - 1);
+
+            const term1 = gcf * c1;
+            const term2 = gcf * c2;
+
+            const problem = term1 + 'x<sup>' + exp1 + '</sup> + ' + term2 + 'x<sup>' + exp2 + '</sup>';
+            const correctAnswer = gcf + 'x<sup>' + exp2 + '</sup>(' + c1 + 'x<sup>' + (exp1-exp2) + '</sup> + ' + c2 + ')';
+
+            const wrong1 = gcf + 'x(' + c1 + 'x<sup>' + (exp1-1) + '</sup> + ' + c2 + 'x<sup>' + (exp2-1) + '</sup>)';
+            const wrong2 = 'x<sup>' + exp2 + '</sup>(' + term1 + 'x<sup>' + (exp1-exp2) + '</sup> + ' + term2 + ')';
+            const wrong3 = gcf + '(' + c1 + 'x<sup>' + exp1 + '</sup> + ' + c2 + 'x<sup>' + exp2 + '</sup>)';
+
+            return {
+                problem: 'حلل: ' + problem,
+                correctAnswer,
+                wrongAnswers: [wrong1, wrong2, wrong3],
+                type: 'GCF Factoring'
+            };
+        }
+
+        function generateDifferenceOfSquares() {
+            const a = randomInt(1, 7);
+            const b = randomInt(1, 7);
+
+            const problem = (a*a) + 'x<sup>2</sup> - ' + (b*b);
+            const correctAnswer = '(' + a + 'x - ' + b + ')(' + a + 'x + ' + b + ')';
+
+            const wrong1 = '(' + a + 'x - ' + b + ')<sup>2</sup>';
+            const wrong2 = '(' + a + 'x + ' + b + ')<sup>2</sup>';
+            const wrong3 = '(' + (a*a) + 'x - ' + (b*b) + ')(x + 1)';
+
+            return {
+                problem: 'حلل: ' + problem,
+                correctAnswer,
+                wrongAnswers: [wrong1, wrong2, wrong3],
+                type: 'Difference of Squares'
+            };
+        }
+
+        function generatePerfectSquare() {
+            const a = randomInt(1, 6);
+            const b = randomInt(1, 6);
+            const isPlus = randomChoice([true, false]);
+
+            const sign = isPlus ? '+' : '-';
+            const problem = (a*a) + 'x<sup>2</sup> ' + sign + ' ' + (2*a*b) + 'x + ' + (b*b);
+            const correctAnswer = '(' + a + 'x ' + sign + ' ' + b + ')<sup>2</sup>';
+
+            const oppSign = isPlus ? '-' : '+';
+            const wrong1 = '(' + a + 'x ' + oppSign + ' ' + b + ')<sup>2</sup>';
+            const wrong2 = '(' + a + 'x + ' + b + ')(' + a + 'x - ' + b + ')';
+            const wrong3 = a + 'x<sup>2</sup> + ' + b + '<sup>2</sup>';
+
+            return {
+                problem: 'حلل: ' + problem,
+                correctAnswer,
+                wrongAnswers: [wrong1, wrong2, wrong3],
+                type: 'Perfect Square Trinomial'
+            };
+        }
+
+        function generateSimpleTrinomial() {
+            const p = randomInt(-7, 7, [0]);
+            const q = randomInt(-7, 7, [0]);
+            const b = p + q;
+            const c = p * q;
+
+            const bStr = b >= 0 ? '+ ' + b : '- ' + Math.abs(b);
+            const cStr = c >= 0 ? '+ ' + c : '- ' + Math.abs(c);
+            const problem = 'x<sup>2</sup> ' + bStr + 'x ' + cStr;
+
+            const pSign = p >= 0 ? '+' : '-';
+            const qSign = q >= 0 ? '+' : '-';
+            const correctAnswer = '(x ' + pSign + ' ' + Math.abs(p) + ')(x ' + qSign + ' ' + Math.abs(q) + ')';
+
+            const wrong1 = '(x ' + pSign + ' ' + Math.abs(q) + ')(x ' + qSign + ' ' + Math.abs(p) + ')';
+            const wrong2 = '(x + ' + Math.abs(p) + ')(x + ' + Math.abs(q) + ')';
+            const wrong3 = '(x - ' + Math.abs(p) + ')(x - ' + Math.abs(q) + ')';
+
+            return {
+                problem: 'حلل: ' + problem,
+                correctAnswer,
+                wrongAnswers: [wrong1, wrong2, wrong3],
+                type: 'Trinomial x² + bx + c'
+            };
+        }
+
+        function generateSolveQuadratic() {
+            const p = randomInt(-8, 8, [0]);
+            const q = randomInt(-8, 8, [0, p]);
+
+            const b = -(p + q);
+            const c = p * q;
+
+            const bStr = b >= 0 ? '+ ' + b : '- ' + Math.abs(b);
+            const cStr = c >= 0 ? '+ ' + c : '- ' + Math.abs(c);
+            const problem = 'x<sup>2</sup> ' + bStr + 'x ' + cStr + ' = 0';
+
+            const sol1 = Math.min(p, q);
+            const sol2 = Math.max(p, q);
+            const correctAnswer = 'x = ' + sol1 + ' أو x = ' + sol2;
+
+            const wrong1 = 'x = ' + (-sol1) + ' أو x = ' + (-sol2);
+            const wrong2 = 'x = ' + sol2 + ' فقط';
+            const wrong3 = 'x = ' + b + ' أو x = ' + c;
+
+            return {
+                problem: 'حل: ' + problem,
+                correctAnswer,
+                wrongAnswers: [wrong1, wrong2, wrong3],
+                type: 'Solve Quadratic'
+            };
+        }
+
+        // Generate all problems
+        function generateProblems() {
+            const generators = [
+                { fn: generateGCFFactor, count: 3 },
+                { fn: generateDifferenceOfSquares, count: 2 },
+                { fn: generatePerfectSquare, count: 2 },
+                { fn: generateSimpleTrinomial, count: 4 },
+                { fn: generateSolveQuadratic, count: 4 }
+            ];
+
+            generators.forEach(({ fn, count }) => {
+                for (let i = 0; i < count; i++) {
+                    const problem = fn();
+                    const allAnswers = shuffle([problem.correctAnswer, ...problem.wrongAnswers]);
+                    const correctIndex = allAnswers.indexOf(problem.correctAnswer);
+
+                    problems.push({
+                        question: problem.problem,
+                        options: allAnswers,
+                        correctAnswer: correctIndex,
+                        type: problem.type,
+                        userAnswer: null
+                    });
+                }
+            });
+
+            problems = shuffle(problems);
+        }
+
+        // Timer
+        function startTimer() {
+            updateTimerDisplay();
+            timerInterval = setInterval(() => {
+                timeLeft--;
+                updateTimerDisplay();
+
+                if (timeLeft <= 60) {
+                    document.getElementById('timer').classList.add('danger');
+                } else if (timeLeft <= 120) {
+                    document.getElementById('timer').classList.add('warning');
+                }
+
+                if (timeLeft <= 0) {
+                    clearInterval(timerInterval);
+                    finishExam();
+                }
+            }, 1000);
+        }
+
+        function updateTimerDisplay() {
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+            document.getElementById('timer').textContent =
+                minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
+        }
+
+        // Display problem
+        function displayProblem() {
+            const problem = problems[currentProblem];
+            const container = document.getElementById('question-container');
+
+            container.innerHTML = '<div class="problem-type">' + problem.type + '</div>' +
+                '<div class="question-text">' + problem.question + '</div>' +
+                '<div class="options-container">' +
+                problem.options.map((option, index) =>
+                    '<button class="option-btn" onclick="selectAnswer(' + index + ')">' +
+                        '<span class="option-letter">' + String.fromCharCode(65 + index) + '</span>' +
+                        '<span class="option-text">' + option + '</span>' +
+                    '</button>'
+                ).join('') +
+                '</div>';
+
+            updateProgress();
+            updateNavButtons();
+            answerSelected = false;
+        }
+
+        // Select answer
+        function selectAnswer(index) {
+            if (answerSelected) return;
+
+            answerSelected = true;
+            const problem = problems[currentProblem];
+            problem.userAnswer = index;
+
+            const buttons = document.querySelectorAll('.option-btn');
+            buttons.forEach((btn, i) => {
+                btn.disabled = true;
+                if (i === problem.correctAnswer) {
+                    btn.classList.add('correct');
+                }
+                if (i === index && i !== problem.correctAnswer) {
+                    btn.classList.add('incorrect');
+                }
+            });
+
+            // Auto-advance after 1.2 seconds
+            setTimeout(() => {
+                if (currentProblem < problems.length - 1) {
+                    currentProblem++;
+                    displayProblem();
+                } else {
+                    finishExam();
+                }
+            }, 1200);
+        }
+
+        // Navigation
+        function updateNavButtons() {
+            document.getElementById('back-btn').disabled = currentProblem === 0;
+            const answered = problems[currentProblem].userAnswer !== null;
+            document.getElementById('next-btn').disabled = !answered;
+        }
+
+        function goBack() {
+            if (currentProblem > 0) {
+                currentProblem--;
+                displayProblem();
+            }
+        }
+
+        function goNext() {
+            if (currentProblem < problems.length - 1 && problems[currentProblem].userAnswer !== null) {
+                currentProblem++;
+                displayProblem();
+            }
+        }
+
+        // Progress
+        function updateProgress() {
+            const answered = problems.filter(p => p.userAnswer !== null).length;
+            const percent = (answered / problems.length) * 100;
+            document.getElementById('progress-bar').style.width = percent + '%';
+            document.getElementById('progress-text').textContent = answered + ' / ' + problems.length;
+        }
+
+        // Finish exam
+        function finishExam() {
+            clearInterval(timerInterval);
+
+            const correctCount = problems.filter(p => p.userAnswer === p.correctAnswer).length;
+            const score = Math.round((correctCount / problems.length) * 100);
+
+            document.getElementById('exam-content').style.display = 'none';
+            document.getElementById('results').style.display = 'block';
+            document.getElementById('timer').style.display = 'none';
+
+            const scoreElement = document.getElementById('score-number');
+            scoreElement.textContent = score + '%';
+
+            if (score === 100) {
+                document.getElementById('results-title').textContent = '🎉 ممتاز! نتيجة كاملة!';
+                scoreElement.style.color = 'var(--green)';
+                document.getElementById('celebration-message').innerHTML =
+                    '<p style="font-size: var(--fs-lg); color: var(--text-emphasized);">أحسنت! لقد أجبت على جميع الأسئلة بشكل صحيح!</p>';
+                launchFireworks();
+            } else {
+                document.getElementById('results-title').textContent = 'انتهى الوقت!';
+                scoreElement.style.color = score >= 80 ? 'var(--cyan)' : 'var(--orange)';
+
+                const reviewSection = document.getElementById('review-section');
+                reviewSection.style.display = 'block';
+
+                const reviewList = document.getElementById('review-list');
+                const mistakes = problems.filter(p => p.userAnswer !== p.correctAnswer);
+
+                reviewList.innerHTML = mistakes.map((p, i) =>
+                    '<div class="review-item">' +
+                        '<div class="review-header">' + (i + 1) + '. ' + p.type + '</div>' +
+                        '<div class="review-question">' + p.question + '</div>' +
+                        '<div class="review-answer">الإجابة الصحيحة: ' + p.options[p.correctAnswer] + '</div>' +
+                    '</div>'
+                ).join('');
+            }
+        }
+
+        // Fireworks
+        function launchFireworks() {
+            const canvas = document.getElementById('fireworks-canvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            canvas.style.display = 'block';
+
+            const fireworks = [];
+            const particles = [];
+
+            class Firework {
+                constructor() {
+                    this.x = Math.random() * canvas.width;
+                    this.y = canvas.height;
+                    this.targetY = Math.random() * canvas.height * 0.5;
+                    this.speed = Math.random() * 3 + 2;
+                    this.color = 'hsl(' + Math.floor(Math.random() * 360) + ', 100%, 50%)';
+                }
+
+                update() {
+                    this.y -= this.speed;
+                    if (this.y <= this.targetY) {
+                        this.explode();
+                        return false;
+                    }
+                    return true;
+                }
+
+                draw() {
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, 2, 0, Math.PI * 2);
+                    ctx.fillStyle = this.color;
+                    ctx.fill();
+                }
+
+                explode() {
+                    for (let i = 0; i < 30; i++) {
+                        particles.push(new Particle(this.x, this.y, this.color));
+                    }
+                }
+            }
+
+            class Particle {
+                constructor(x, y, color) {
+                    this.x = x;
+                    this.y = y;
+                    this.color = color;
+                    const angle = Math.random() * Math.PI * 2;
+                    const speed = Math.random() * 5 + 1;
+                    this.vx = Math.cos(angle) * speed;
+                    this.vy = Math.sin(angle) * speed;
+                    this.life = 1;
+                    this.decay = Math.random() * 0.02 + 0.01;
+                }
+
+                update() {
+                    this.x += this.vx;
+                    this.y += this.vy;
+                    this.vy += 0.1;
+                    this.life -= this.decay;
+                    return this.life > 0;
+                }
+
+                draw() {
+                    ctx.globalAlpha = this.life;
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, 2, 0, Math.PI * 2);
+                    ctx.fillStyle = this.color;
+                    ctx.fill();
+                    ctx.globalAlpha = 1;
+                }
+            }
+
+            function animate() {
+                ctx.fillStyle = 'rgba(0, 43, 54, 0.1)';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+                if (Math.random() < 0.1) {
+                    fireworks.push(new Firework());
+                }
+
+                for (let i = fireworks.length - 1; i >= 0; i--) {
+                    if (!fireworks[i].update()) {
+                        fireworks.splice(i, 1);
+                    } else {
+                        fireworks[i].draw();
+                    }
+                }
+
+                for (let i = particles.length - 1; i >= 0; i--) {
+                    if (!particles[i].update()) {
+                        particles.splice(i, 1);
+                    } else {
+                        particles[i].draw();
+                    }
+                }
+
+                if (fireworks.length > 0 || particles.length > 0) {
+                    requestAnimationFrame(animate);
+                } else {
+                    setTimeout(() => {
+                        canvas.style.display = 'none';
+                    }, 1000);
+                }
+            }
+
+            animate();
+        }
+
+        // Initialize
+        document.getElementById('back-btn').addEventListener('click', goBack);
+        document.getElementById('next-btn').addEventListener('click', goNext);
+
+        generateProblems();
+        displayProblem();
+        startTimer();
+    </script>
+</body>
+</html>
