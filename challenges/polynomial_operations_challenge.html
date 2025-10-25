@@ -350,12 +350,12 @@
     <div class="container">
         <header>
             <h1>⚡ Ch4 Polynomial Operations Challenge</h1>
-            <p class="subtitle">Quick Operations - 20 Problems in 5 Minutes!</p>
+            <p class="subtitle">Quick Operations - 10 Problems in 3 Minutes!</p>
         </header>
 
         <div class="timer-section">
             <div class="stat-label">TIME REMAINING</div>
-            <div class="timer-display" id="timer">5:00</div>
+            <div class="timer-display" id="timer">3:00</div>
             <button id="startButton" onclick="startQuiz()">🚀 Start Challenge</button>
         </div>
 
@@ -366,7 +366,7 @@
         <div class="stats">
             <div class="stat-item">
                 <div class="stat-label">Question</div>
-                <div class="stat-value"><span id="currentQuestion">0</span>/20</div>
+                <div class="stat-value"><span id="currentQuestion">0</span>/10</div>
             </div>
             <div class="stat-item">
                 <div class="stat-label">Correct</div>
@@ -389,7 +389,7 @@
 
         <div class="results" id="results">
             <h2 id="resultsTitle">⏱️ Time's Up!</h2>
-            <div class="score-display" id="finalScore">0/20</div>
+            <div class="score-display" id="finalScore">0/10</div>
             <div class="time-taken" id="timeTaken"></div>
             <div class="results-message" id="resultsMessage"></div>
 
@@ -407,7 +407,7 @@
         let correctAnswers = 0;
         let problems = [];
         let userAnswers = [];
-        let timeRemaining = 300; // 5 minutes
+        let timeRemaining = 180; // 3 minutes
         let timerInterval;
         let quizStartTime;
         let quizActive = false;
@@ -561,7 +561,7 @@
             };
         }
 
-        function generateMonom Mult() {
+        function generateMonomMult() {
             const v = randomVar();
             const c1 = randomCoef(2, 6);
             const c2 = randomCoef(2, 7);
@@ -688,39 +688,39 @@
 
         function generateProblems() {
             problems = [];
-            
-            // 5 addition
-            for (let i = 0; i < 5; i++) {
+
+            // 2 addition
+            for (let i = 0; i < 2; i++) {
                 problems.push(generateAddition());
             }
-            
-            // 5 subtraction
-            for (let i = 0; i < 5; i++) {
+
+            // 2 subtraction
+            for (let i = 0; i < 2; i++) {
                 problems.push(generateSubtraction());
             }
-            
-            // 3 monomial multiplication
-            for (let i = 0; i < 3; i++) {
+
+            // 2 monomial multiplication
+            for (let i = 0; i < 2; i++) {
                 problems.push(generateMonomMult());
             }
-            
-            // 2 FOIL
-            for (let i = 0; i < 2; i++) {
+
+            // 1 FOIL
+            for (let i = 0; i < 1; i++) {
                 problems.push(generateFOIL());
             }
-            
-            // 2 perfect squares
-            for (let i = 0; i < 2; i++) {
+
+            // 1 perfect square
+            for (let i = 0; i < 1; i++) {
                 problems.push(generatePerfectSquare());
             }
-            
-            // 2 difference of squares
-            for (let i = 0; i < 2; i++) {
+
+            // 1 difference of squares
+            for (let i = 0; i < 1; i++) {
                 problems.push(generateDifferenceSquares());
             }
-            
-            // 3 division
-            for (let i = 0; i < 3; i++) {
+
+            // 1 division
+            for (let i = 0; i < 1; i++) {
                 problems.push(generateDivision());
             }
             
@@ -746,7 +746,7 @@
             currentQuestionIndex = 0;
             correctAnswers = 0;
             userAnswers = [];
-            timeRemaining = 300;
+            timeRemaining = 180;
             quizActive = true;
             quizStartTime = Date.now();
 
@@ -943,12 +943,12 @@
             currentQuestionIndex = 0;
             correctAnswers = 0;
             userAnswers = [];
-            timeRemaining = 300;
+            timeRemaining = 180;
             quizActive = false;
 
             clearInterval(timerInterval);
 
-            document.getElementById('timer').textContent = '5:00';
+            document.getElementById('timer').textContent = '3:00';
             document.getElementById('timer').classList.remove('danger');
             document.getElementById('startButton').disabled = false;
             document.getElementById('quizContainer').classList.remove('active');

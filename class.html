@@ -23,12 +23,12 @@
 
         <section id="exams-section" class="section" style="display: none;">
             <h2 class="section-title" id="exams-title">الامتحانات</h2>
-            <div id="exams-grid" class="exams-grid"></div>
+            <div id="exams-list" class="exams-list"></div>
         </section>
 
         <section id="challenges-section" class="section" style="display: none;">
             <h2 class="section-title" id="challenges-title">التحديات السريعة</h2>
-            <div id="challenges-grid" class="exams-grid"></div>
+            <div id="challenges-list" class="exams-list"></div>
         </section>
     </div>
 
@@ -74,41 +74,55 @@
                 const regularExams = data.exams.filter(exam => exam.type !== 'standalone');
                 const challenges = data.exams.filter(exam => exam.type === 'standalone');
 
-                // Create regular exam cards
+                // Sort alphabetically by title
+                regularExams.sort((a, b) => a.title.localeCompare(b.title));
+                challenges.sort((a, b) => a.title.localeCompare(b.title));
+
+                // Create regular exam list items
                 if (regularExams.length > 0) {
-                    const examsGrid = document.getElementById('exams-grid');
+                    const examsList = document.getElementById('exams-list');
                     document.getElementById('exams-section').style.display = 'block';
 
                     regularExams.forEach(exam => {
-                        const card = document.createElement('a');
-                        card.className = 'exam-card';
-                        card.href = `exam.html?class=${classId}&exam=${exam.id}`;
+                        const item = document.createElement('a');
+                        item.className = 'exam-item';
+                        item.href = `exam.html?class=${classId}&exam=${exam.id}`;
 
-                        card.innerHTML = `
-                            <div class="exam-title">${exam.title}</div>
-                            <div class="exam-description">${exam.description}</div>
+                        const arrow = data.language === 'ar' ? '←' : '→';
+
+                        item.innerHTML = `
+                            <div class="exam-item-content">
+                                <div class="exam-title">${exam.title}</div>
+                                <div class="exam-description">${exam.description}</div>
+                            </div>
+                            <div class="exam-arrow">${arrow}</div>
                         `;
 
-                        examsGrid.appendChild(card);
+                        examsList.appendChild(item);
                     });
                 }
 
-                // Create challenge cards
+                // Create challenge list items
                 if (challenges.length > 0) {
-                    const challengesGrid = document.getElementById('challenges-grid');
+                    const challengesList = document.getElementById('challenges-list');
                     document.getElementById('challenges-section').style.display = 'block';
 
                     challenges.forEach(exam => {
-                        const card = document.createElement('a');
-                        card.className = 'exam-card challenge-card';
-                        card.href = exam.url;
+                        const item = document.createElement('a');
+                        item.className = 'exam-item challenge-item';
+                        item.href = exam.url;
 
-                        card.innerHTML = `
-                            <div class="exam-title">${exam.title}</div>
-                            <div class="exam-description">${exam.description}</div>
+                        const arrow = data.language === 'ar' ? '←' : '→';
+
+                        item.innerHTML = `
+                            <div class="exam-item-content">
+                                <div class="exam-title">${exam.title}</div>
+                                <div class="exam-description">${exam.description}</div>
+                            </div>
+                            <div class="exam-arrow">${arrow}</div>
                         `;
 
-                        challengesGrid.appendChild(card);
+                        challengesList.appendChild(item);
                     });
                 }
 

@@ -52,19 +52,19 @@
 </head>
 <body>
     <div class="container">
-        <div class="timer" id="timer">5:00</div>
+        <div class="timer" id="timer">3:00</div>
 
         <div id="exam-content">
             <header>
                 <h1>⚡ تحدي التحليل السريع</h1>
-                <p class="exam-description">15 مسألة في 5 دقائق - اختبر سرعتك في تحليل كثيرات الحدود!</p>
+                <p class="exam-description">10 مسائل في 3 دقائق - اختبر سرعتك في تحليل كثيرات الحدود!</p>
             </header>
 
             <div class="progress-container">
                 <div class="progress-bar">
                     <div class="progress-fill" id="progress-bar"></div>
                 </div>
-                <div class="progress-text" id="progress-text">0 / 15</div>
+                <div class="progress-text" id="progress-text">0 / 10</div>
             </div>
 
             <div class="question-card" id="question-container"></div>
@@ -99,7 +99,7 @@
         let problems = [];
         let currentProblem = 0;
         let userAnswers = [];
-        let timeLeft = 300; // 5 minutes in seconds
+        let timeLeft = 180; // 3 minutes in seconds
         let timerInterval;
         let answerSelected = false;
 
@@ -244,11 +244,11 @@
         // Generate all problems
         function generateProblems() {
             const generators = [
-                { fn: generateGCFFactor, count: 3 },
+                { fn: generateGCFFactor, count: 2 },
                 { fn: generateDifferenceOfSquares, count: 2 },
                 { fn: generatePerfectSquare, count: 2 },
-                { fn: generateSimpleTrinomial, count: 4 },
-                { fn: generateSolveQuadratic, count: 4 }
+                { fn: generateSimpleTrinomial, count: 2 },
+                { fn: generateSolveQuadratic, count: 2 }
             ];
 
             generators.forEach(({ fn, count }) => {

@@ -56,59 +56,82 @@
     border-bottom: 2px solid var(--purple);
 }
 
-/* Exams Grid */
-.exams-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
-    gap: var(--spacing-md);
-    padding: var(--spacing-md) 0;
-}
-
-@media (min-width: 640px) {
-    .exams-grid {
-        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    }
-}
-
-@media (min-width: 1024px) {
-    .exams-grid {
-        grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
-        gap: var(--spacing-lg);
-    }
-}
-
-/* Exam Card */
-.exam-card {
-    background-color: var(--bg-secondary);
-    border-radius: 12px;
-    padding: var(--spacing-lg);
-    cursor: pointer;
+/* Exams List */
+.exams-list {
     display: flex;
     flex-direction: column;
-    border-left: 5px solid var(--purple);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    gap: var(--spacing-xs);
+    padding: var(--spacing-sm) 0;
+}
+
+/* Exam List Item */
+.exam-item {
+    background-color: var(--bg-secondary);
+    border-radius: 8px;
+    padding: var(--spacing-md) var(--spacing-lg);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-left: 4px solid var(--purple);
+    transition: all 0.2s ease;
+    text-decoration: none;
+    gap: var(--spacing-md);
+}
+
+.exam-item:hover {
+    background-color: rgba(131, 148, 150, 0.05);
+    transform: translateX(-4px);
+}
+
+[dir="ltr"] .exam-item {
+    border-left: none;
+    border-right: 4px solid var(--purple);
+}
+
+[dir="ltr"] .exam-item:hover {
+    transform: translateX(4px);
+}
+
+.exam-item-content {
+    flex: 1;
+    min-width: 0;
 }
 
 .exam-title {
-    font-size: var(--fs-xl);
+    font-size: var(--fs-lg);
     font-weight: 600;
     color: var(--text-bright);
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-xs);
     line-height: 1.3;
 }
 
 .exam-description {
-    font-size: var(--fs-base);
+    font-size: var(--fs-sm);
     color: var(--text-emphasized);
     font-style: italic;
+    line-height: 1.4;
 }
 
-/* Challenge Cards - Different styling */
-.challenge-card {
+.exam-arrow {
+    color: var(--purple);
+    font-size: var(--fs-xl);
+    flex-shrink: 0;
+}
+
+/* Challenge Items - Different styling */
+.challenge-item {
     border-left-color: var(--cyan);
-    background: linear-gradient(135deg, var(--bg-secondary) 0%, rgba(42, 161, 152, 0.05) 100%);
 }
 
-.challenge-card .exam-title {
+[dir="ltr"] .challenge-item {
+    border-right-color: var(--cyan);
+}
+
+.challenge-item .exam-title {
+    color: var(--cyan);
+}
+
+.challenge-item .exam-arrow {
     color: var(--cyan);
 }

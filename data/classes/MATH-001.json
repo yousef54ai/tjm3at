@@ -74,21 +74,21 @@
     {
       "id": "polynomial-operations-challenge",
       "title": "⚡ Ch4: تحدي عمليات كثيرات الحدود",
-      "description": "Speed Challenge: 20 random polynomial operations in 5 minutes!",
+      "description": "Speed Challenge: 10 random polynomial operations in 3 minutes!",
       "type": "standalone",
       "url": "challenges/polynomial_operations_challenge.html"
     },
     {
       "id": "factoring-challenge",
       "title": "⚡ Ch5: تحدي التحليل السريع",
-      "description": "Speed Challenge: 15 random factoring problems in 5 minutes!",
+      "description": "Speed Challenge: 10 random factoring problems in 3 minutes!",
       "type": "standalone",
       "url": "challenges/factoring_challenge.html"
     },
     {
       "id": "rational-expressions-challenge",
       "title": "⚡ Ch6: تحدي التعابير النسبية السريع",
-      "description": "Speed Challenge: 15 random rational expression problems in 5 minutes!",
+      "description": "Speed Challenge: 10 random rational expression problems in 3 minutes!",
       "type": "standalone",
       "url": "challenges/rational_expressions_challenge.html"
     }
