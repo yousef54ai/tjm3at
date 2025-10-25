@@ -61,8 +61,6 @@
             .then(classData => {
                 document.getElementById('breadcrumb-class').textContent = classData.code;
                 document.getElementById('breadcrumb-class').href = `class.html?id=${classId}`;
-                document.documentElement.lang = classData.language;
-                document.documentElement.dir = classData.language === 'ar' ? 'rtl' : 'ltr';
             });
 
         // Load summary data
@@ -74,6 +72,10 @@
                 return response.json();
             })
             .then(data => {
+                // Set language and direction from summary data
+                document.documentElement.lang = data.language;
+                document.documentElement.dir = data.language === 'ar' ? 'rtl' : 'ltr';
+
                 // Update page title
                 document.title = `${data.chapter} - Summary`;
                 document.getElementById('chapter-title').textContent = data.chapter;
