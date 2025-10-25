@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ch4 Polynomial Operations Speed Challenge - MATH001</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #002b36;
+            color: #839496;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px 0;
+            border-bottom: 3px solid #2aa198;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #2aa198;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #93a1a1;
+            font-size: 1.2em;
+        }
+
+        .timer-section {
+            background-color: #073642;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .timer-display {
+            font-size: 4em;
+            color: #2aa198;
+            font-weight: bold;
+            font-family: 'Courier New', monospace;
+            margin: 20px 0;
+        }
+
+        .timer-display.danger {
+            color: #dc322f;
+            animation: pulse 0.5s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+
+        button {
+            background-color: #2aa198;
+            color: #002b36;
+            border: none;
+            padding: 20px 50px;
+            border-radius: 8px;
+            font-size: 1.5em;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            margin: 10px;
+        }
+
+        button:hover:not(:disabled) {
+            opacity: 0.8;
+            transform: scale(1.05);
+        }
+
+        button:disabled {
+            background-color: #586e75;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #073642;
+            border-radius: 10px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .stat-item {
+            text-align: center;
+            min-width: 120px;
+        }
+
+        .stat-label {
+            color: #586e75;
+            font-size: 0.9em;
+            text-transform: uppercase;
+        }
+
+        .stat-value {
+            color: #2aa198;
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        .quiz-container {
+            display: none;
+        }
+
+        .quiz-container.active {
+            display: block;
+        }
+
+        .question-card {
+            background-color: #073642;
+            border-radius: 12px;
+            padding: 40px;
+            margin-bottom: 20px;
+            border-left: 5px solid #6c71c4;
+        }
+
+        .question-number {
+            background-color: #6c71c4;
+            color: #002b36;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .problem-text {
+            font-size: 1.8em;
+            color: #eee8d5;
+            text-align: center;
+            margin: 30px 0;
+            font-weight: bold;
+            font-family: 'Courier New', monospace;
+            line-height: 1.5;
+        }
+
+        .problem-text sup {
+            font-size: 0.6em;
+            vertical-align: super;
+        }
+
+        .options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .option-btn {
+            background-color: #002b36;
+            border: 3px solid #586e75;
+            color: #eee8d5;
+            padding: 20px;
+            border-radius: 8px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: 'Courier New', monospace;
+            min-height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .option-btn:hover:not(.disabled) {
+            border-color: #2aa198;
+            background-color: #073642;
+        }
+
+        .option-btn.disabled {
+            cursor: not-allowed;
+        }
+
+        .option-btn.correct {
+            border-color: #859900;
+            background-color: rgba(133, 153, 0, 0.2);
+        }
+
+        .option-btn.incorrect {
+            border-color: #dc322f;
+            background-color: rgba(220, 50, 47, 0.2);
+        }
+
+        .feedback {
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 1.2em;
+            display: none;
+        }
+
+        .feedback.show {
+            display: block;
+        }
+
+        .feedback.correct {
+            background-color: rgba(133, 153, 0, 0.15);
+            border-left: 4px solid #859900;
+            color: #859900;
+        }
+
+        .feedback.incorrect {
+            background-color: rgba(220, 50, 47, 0.15);
+            border-left: 4px solid #dc322f;
+            color: #dc322f;
+        }
+
+        .results {
+            display: none;
+            text-align: center;
+            padding: 40px;
+            background-color: #073642;
+            border-radius: 12px;
+            border: 3px solid #2aa198;
+        }
+
+        .results.show {
+            display: block;
+        }
+
+        .results h2 {
+            color: #2aa198;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .score-display {
+            font-size: 4em;
+            color: #2aa198;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .score-display.perfect {
+            color: #859900;
+        }
+
+        .score-display.good {
+            color: #2aa198;
+        }
+
+        .score-display.needs-work {
+            color: #cb4b16;
+        }
+
+        .time-taken {
+            font-size: 1.5em;
+            color: #93a1a1;
+            margin-bottom: 20px;
+        }
+
+        .results-message {
+            font-size: 1.3em;
+            color: #93a1a1;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .problem-review {
+            background-color: #002b36;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            text-align: left;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .review-item {
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+
+        .review-item.correct {
+            background-color: rgba(133, 153, 0, 0.1);
+            border-left: 3px solid #859900;
+        }
+
+        .review-item.incorrect {
+            background-color: rgba(220, 50, 47, 0.1);
+            border-left: 3px solid #dc322f;
+        }
+
+        .review-item sup {
+            font-size: 0.7em;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background-color: #073642;
+            border-radius: 4px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #2aa198, #6c71c4);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .problem-text {
+                font-size: 1.4em;
+            }
+
+            .option-btn {
+                font-size: 1em;
+                padding: 15px;
+            }
+
+            .options {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⚡ Ch4 Polynomial Operations Challenge</h1>
+            <p class="subtitle">Quick Operations - 20 Problems in 5 Minutes!</p>
+        </header>
+
+        <div class="timer-section">
+            <div class="stat-label">TIME REMAINING</div>
+            <div class="timer-display" id="timer">5:00</div>
+            <button id="startButton" onclick="startQuiz()">🚀 Start Challenge</button>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressBar"></div>
+        </div>
+
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-label">Question</div>
+                <div class="stat-value"><span id="currentQuestion">0</span>/20</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-label">Correct</div>
+                <div class="stat-value" id="correctCount">0</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-label">Accuracy</div>
+                <div class="stat-value"><span id="accuracy">0</span>%</div>
+            </div>
+        </div>
+
+        <div class="quiz-container" id="quizContainer">
+            <div class="question-card">
+                <span class="question-number" id="questionNumber">Question 1</span>
+                <div class="problem-text" id="problem"></div>
+                <div class="options" id="options"></div>
+                <div class="feedback" id="feedback"></div>
+            </div>
+        </div>
+
+        <div class="results" id="results">
+            <h2 id="resultsTitle">⏱️ Time's Up!</h2>
+            <div class="score-display" id="finalScore">0/20</div>
+            <div class="time-taken" id="timeTaken"></div>
+            <div class="results-message" id="resultsMessage"></div>
+
+            <div class="problem-review" id="problemReview">
+                <h3 style="color: #2aa198; margin-bottom: 15px;">📊 Problem Review</h3>
+                <div id="reviewList"></div>
+            </div>
+
+            <button onclick="resetQuiz()">Try Again</button>
+        </div>
+    </div>
+
+    <script>
+        let currentQuestionIndex = 0;
+        let correctAnswers = 0;
+        let problems = [];
+        let userAnswers = [];
+        let timeRemaining = 300; // 5 minutes
+        let timerInterval;
+        let quizStartTime;
+        let quizActive = false;
+
+        const variables = ['x', 'y', 'z', 'a', 'b', 'm', 'n'];
+
+        function randomVar() {
+            return variables[Math.floor(Math.random() * variables.length)];
+        }
+
+        function randomCoef(min, max) {
+            let num = Math.floor(Math.random() * (max - min + 1)) + min;
+            return num === 0 ? 1 : num; // avoid 0
+        }
+
+        function randomExp(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        function formatTerm(coef, variable, exp) {
+            let result = '';
+            
+            // Handle coefficient
+            if (coef === 1 && exp > 0) {
+                result = variable;
+            } else if (coef === -1 && exp > 0) {
+                result = '-' + variable;
+            } else {
+                result = coef.toString() + (exp > 0 ? variable : '');
+            }
+            
+            // Handle exponent
+            if (exp > 1) {
+                result += '<sup>' + exp + '</sup>';
+            }
+            
+            return result;
+        }
+
+        function formatPoly(terms) {
+            let result = '';
+            terms.forEach((term, i) => {
+                if (i === 0) {
+                    result += formatTerm(term.coef, term.var, term.exp);
+                } else {
+                    if (term.coef > 0) {
+                        result += ' + ' + formatTerm(term.coef, term.var, term.exp);
+                    } else {
+                        result += ' - ' + formatTerm(Math.abs(term.coef), term.var, term.exp);
+                    }
+                }
+            });
+            return result;
+        }
+
+        function generateAddition() {
+            const v = randomVar();
+            const p1 = [
+                {coef: randomCoef(2, 9), var: v, exp: 2},
+                {coef: randomCoef(-8, 8), var: v, exp: 1},
+                {coef: randomCoef(-9, 9), var: '', exp: 0}
+            ];
+            const p2 = [
+                {coef: randomCoef(-5, 5), var: v, exp: 2},
+                {coef: randomCoef(-8, 8), var: v, exp: 1},
+                {coef: randomCoef(-9, 9), var: '', exp: 0}
+            ];
+
+            const answer = [
+                {coef: p1[0].coef + p2[0].coef, var: v, exp: 2},
+                {coef: p1[1].coef + p2[1].coef, var: v, exp: 1},
+                {coef: p1[2].coef + p2[2].coef, var: '', exp: 0}
+            ];
+
+            const problem = `(${formatPoly(p1)}) + (${formatPoly(p2)})`;
+            const correctAnswer = formatPoly(answer);
+
+            // Wrong answers
+            const wrong1 = formatPoly([
+                {coef: p1[0].coef * p2[0].coef, var: v, exp: 2},
+                {coef: p1[1].coef + p2[1].coef, var: v, exp: 1},
+                {coef: p1[2].coef + p2[2].coef, var: '', exp: 0}
+            ]);
+            
+            const wrong2 = formatPoly([
+                {coef: p1[0].coef + p2[0].coef, var: v, exp: 2},
+                {coef: p1[1].coef - p2[1].coef, var: v, exp: 1},
+                {coef: p1[2].coef + p2[2].coef, var: '', exp: 0}
+            ]);
+            
+            const wrong3 = formatPoly([
+                {coef: p1[0].coef + p2[0].coef + 1, var: v, exp: 2},
+                {coef: p1[1].coef + p2[1].coef, var: v, exp: 1},
+                {coef: p1[2].coef + p2[2].coef, var: '', exp: 0}
+            ]);
+
+            return {
+                problem,
+                correctAnswer,
+                wrongAnswers: [wrong1, wrong2, wrong3],
+                type: 'Addition'
+            };
+        }
+
+        function generateSubtraction() {
+            const v = randomVar();
+            const p1 = [
+                {coef: randomCoef(5, 12), var: v, exp: 3},
+                {coef: randomCoef(-6, 6), var: v, exp: 2},
+                {coef: randomCoef(-9, 9), var: '', exp: 0}
+            ];
+            const p2 = [
+                {coef: randomCoef(1, 5), var: v, exp: 3},
+                {coef: randomCoef(-6, 6), var: v, exp: 2},
+                {coef: randomCoef(-9, 9), var: '', exp: 0}
+            ];
+
+            const answer = [
+                {coef: p1[0].coef - p2[0].coef, var: v, exp: 3},
+                {coef: p1[1].coef - p2[1].coef, var: v, exp: 2},
+                {coef: p1[2].coef - p2[2].coef, var: '', exp: 0}
+            ];
+
+            const problem = `(${formatPoly(p1)}) - (${formatPoly(p2)})`;
+            const correctAnswer = formatPoly(answer);
+
+            // Wrong answers (common mistakes)
+            const wrong1 = formatPoly([
+                {coef: p1[0].coef + p2[0].coef, var: v, exp: 3},
+                {coef: p1[1].coef - p2[1].coef, var: v, exp: 2},
+                {coef: p1[2].coef - p2[2].coef, var: '', exp: 0}
+            ]);
+            
+            const wrong2 = formatPoly([
+                {coef: p1[0].coef - p2[0].coef, var: v, exp: 3},
+                {coef: p1[1].coef + p2[1].coef, var: v, exp: 2},
+                {coef: p1[2].coef - p2[2].coef, var: '', exp: 0}
+            ]);
+            
+            const wrong3 = formatPoly([
+                {coef: p1[0].coef - p2[0].coef, var: v, exp: 3},
+                {coef: p1[1].coef - p2[1].coef, var: v, exp: 2},
+                {coef: p1[2].coef + p2[2].coef, var: '', exp: 0}
+            ]);
+
+            return {
+                problem,
+                correctAnswer,
+                wrongAnswers: [wrong1, wrong2, wrong3],
+                type: 'Subtraction'
+            };
+        }
+
+        function generateMonom Mult() {
+            const v = randomVar();
+            const c1 = randomCoef(2, 6);
+            const c2 = randomCoef(2, 7);
+            const e1 = randomExp(2, 4);
+            const e2 = randomExp(2, 3);
+            
+            const problem = `(${c1}${v}<sup>${e1}</sup>)(${c2}${v}<sup>${e2}</sup>)`;
+            const correctAnswer = `${c1 * c2}${v}<sup>${e1 + e2}</sup>`;
+            
+            const wrong1 = `${c1 * c2}${v}<sup>${e1 * e2}</sup>`;
+            const wrong2 = `${c1 + c2}${v}<sup>${e1 + e2}</sup>`;
+            const wrong3 = `${c1 * c2}${v}<sup>${e1}</sup>`;
+            
+            return {
+                problem,
+                correctAnswer,
+                wrongAnswers: [wrong1, wrong2, wrong3],
+                type: 'Monomial Multiplication'
+            };
+        }
+
+        function generateFOIL() {
+            const v = randomVar();
+            const a = randomCoef(-5, 8);
+            const b = randomCoef(-7, 7);
+            const c = randomCoef(-5, 8);
+            const d = randomCoef(-7, 7);
+            
+            const problem = `(${v} ${b >= 0 ? '+' : ''} ${b})(${v} ${d >= 0 ? '+' : ''} ${d})`;
+            
+            const coef2 = 1;
+            const coef1 = b + d;
+            const coef0 = b * d;
+            
+            const correctAnswer = `${v}<sup>2</sup> ${coef1 >= 0 ? '+' : ''} ${coef1}${v} ${coef0 >= 0 ? '+' : ''} ${coef0}`;
+            
+            const wrong1 = `${v}<sup>2</sup> ${b + d + 1 >= 0 ? '+' : ''} ${b + d + 1}${v} ${b * d >= 0 ? '+' : ''} ${b * d}`;
+            const wrong2 = `${v}<sup>2</sup> ${b * d >= 0 ? '+' : ''} ${b * d}`;
+            const wrong3 = `${v}<sup>2</sup> ${b + d >= 0 ? '+' : ''} ${b + d}${v} ${(b + d) >= 0 ? '+' : ''} ${b + d}`;
+            
+            return {
+                problem,
+                correctAnswer,
+                wrongAnswers: [wrong1, wrong2, wrong3],
+                type: 'FOIL'
+            };
+        }
+
+        function generatePerfectSquare() {
+            const v = randomVar();
+            const a = randomCoef(2, 6);
+            const b = randomCoef(2, 6);
+            const sign = Math.random() < 0.5 ? '+' : '-';
+            
+            const problem = `(${a}${v} ${sign} ${b})<sup>2</sup>`;
+            
+            const a2 = a * a;
+            const ab2 = 2 * a * b;
+            const b2 = b * b;
+            
+            const correctAnswer = sign === '+' 
+                ? `${a2}${v}<sup>2</sup> + ${ab2}${v} + ${b2}`
+                : `${a2}${v}<sup>2</sup> - ${ab2}${v} + ${b2}`;
+            
+            const wrong1 = `${a2}${v}<sup>2</sup> ${sign} ${b2}`;
+            const wrong2 = sign === '+'
+                ? `${a2}${v}<sup>2</sup> + ${a * b}${v} + ${b2}`
+                : `${a2}${v}<sup>2</sup> - ${a * b}${v} + ${b2}`;
+            const wrong3 = sign === '+'
+                ? `${a2}${v}<sup>2</sup> + ${ab2}${v} - ${b2}`
+                : `${a2}${v}<sup>2</sup> + ${ab2}${v} + ${b2}`;
+            
+            return {
+                problem,
+                correctAnswer,
+                wrongAnswers: [wrong1, wrong2, wrong3],
+                type: 'Perfect Square'
+            };
+        }
+
+        function generateDifferenceSquares() {
+            const v = randomVar();
+            const a = randomCoef(2, 7);
+            const b = randomCoef(2, 8);
+            
+            const problem = `(${a}${v} + ${b})(${a}${v} - ${b})`;
+            const correctAnswer = `${a * a}${v}<sup>2</sup> - ${b * b}`;
+            
+            const wrong1 = `${a * a}${v}<sup>2</sup> + ${b * b}`;
+            const wrong2 = `${a}${v}<sup>2</sup> - ${b}`;
+            const wrong3 = `${a * a}${v}<sup>2</sup> - ${2 * a * b}${v} - ${b * b}`;
+            
+            return {
+                problem,
+                correctAnswer,
+                wrongAnswers: [wrong1, wrong2, wrong3],
+                type: 'Difference of Squares'
+            };
+        }
+
+        function generateDivision() {
+            const v = randomVar();
+            const c1 = randomCoef(3, 8);
+            const c2 = randomCoef(2, 5);
+            const e1 = randomExp(5, 8);
+            const e2 = randomExp(2, 4);
+            
+            const dividend = c1 * c2;
+            
+            const problem = `${dividend}${v}<sup>${e1}</sup> ÷ ${c1}${v}<sup>${e2}</sup>`;
+            const correctAnswer = `${c2}${v}<sup>${e1 - e2}</sup>`;
+            
+            const wrong1 = `${c2}${v}<sup>${e1 + e2}</sup>`;
+            const wrong2 = `${dividend / c1}${v}<sup>${e1 * e2}</sup>`;
+            const wrong3 = `${c2}${v}<sup>${e2 - e1}</sup>`;
+            
+            return {
+                problem,
+                correctAnswer,
+                wrongAnswers: [wrong1, wrong2, wrong3],
+                type: 'Division'
+            };
+        }
+
+        function generateProblems() {
+            problems = [];
+            
+            // 5 addition
+            for (let i = 0; i < 5; i++) {
+                problems.push(generateAddition());
+            }
+            
+            // 5 subtraction
+            for (let i = 0; i < 5; i++) {
+                problems.push(generateSubtraction());
+            }
+            
+            // 3 monomial multiplication
+            for (let i = 0; i < 3; i++) {
+                problems.push(generateMonomMult());
+            }
+            
+            // 2 FOIL
+            for (let i = 0; i < 2; i++) {
+                problems.push(generateFOIL());
+            }
+            
+            // 2 perfect squares
+            for (let i = 0; i < 2; i++) {
+                problems.push(generatePerfectSquare());
+            }
+            
+            // 2 difference of squares
+            for (let i = 0; i < 2; i++) {
+                problems.push(generateDifferenceSquares());
+            }
+            
+            // 3 division
+            for (let i = 0; i < 3; i++) {
+                problems.push(generateDivision());
+            }
+            
+            // Shuffle problems
+            for (let i = problems.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [problems[i], problems[j]] = [problems[j], problems[i]];
+            }
+            
+            // Shuffle options for each problem
+            problems.forEach(problem => {
+                const allOptions = [problem.correctAnswer, ...problem.wrongAnswers];
+                for (let i = allOptions.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [allOptions[i], allOptions[j]] = [allOptions[j], allOptions[i]];
+                }
+                problem.options = allOptions;
+            });
+        }
+
+        function startQuiz() {
+            generateProblems();
+            currentQuestionIndex = 0;
+            correctAnswers = 0;
+            userAnswers = [];
+            timeRemaining = 300;
+            quizActive = true;
+            quizStartTime = Date.now();
+
+            document.getElementById('startButton').disabled = true;
+            document.getElementById('quizContainer').classList.add('active');
+            document.getElementById('results').classList.remove('show');
+
+            displayQuestion();
+            startTimer();
+            updateStats();
+        }
+
+        function startTimer() {
+            const timerDisplay = document.getElementById('timer');
+
+            timerInterval = setInterval(() => {
+                timeRemaining--;
+
+                const minutes = Math.floor(timeRemaining / 60);
+                const seconds = timeRemaining % 60;
+                timerDisplay.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+
+                timerDisplay.classList.remove('danger');
+                if (timeRemaining <= 30) {
+                    timerDisplay.classList.add('danger');
+                }
+
+                if (timeRemaining <= 0) {
+                    endQuiz(false);
+                }
+            }, 1000);
+        }
+
+        function displayQuestion() {
+            const problem = problems[currentQuestionIndex];
+            document.getElementById('questionNumber').textContent = `Question ${currentQuestionIndex + 1}`;
+            document.getElementById('problem').innerHTML = problem.problem;
+
+            const optionsContainer = document.getElementById('options');
+            optionsContainer.innerHTML = '';
+
+            problem.options.forEach((option, index) => {
+                const btn = document.createElement('button');
+                btn.className = 'option-btn';
+                btn.innerHTML = option;
+                btn.onclick = () => selectAnswer(index);
+                optionsContainer.appendChild(btn);
+            });
+
+            document.getElementById('feedback').classList.remove('show', 'correct', 'incorrect');
+        }
+
+        function selectAnswer(selectedIndex) {
+            if (!quizActive) return;
+
+            const problem = problems[currentQuestionIndex];
+            const selectedAnswer = problem.options[selectedIndex];
+            const isCorrect = selectedAnswer === problem.correctAnswer;
+
+            const buttons = document.querySelectorAll('.option-btn');
+            buttons.forEach(btn => {
+                btn.classList.add('disabled');
+                btn.onclick = null;
+            });
+
+            buttons[selectedIndex].classList.add(isCorrect ? 'correct' : 'incorrect');
+
+            if (!isCorrect) {
+                buttons.forEach(btn => {
+                    if (btn.innerHTML === problem.correctAnswer) {
+                        btn.classList.add('correct');
+                    }
+                });
+            }
+
+            const feedback = document.getElementById('feedback');
+            feedback.classList.add('show', isCorrect ? 'correct' : 'incorrect');
+            feedback.innerHTML = isCorrect ? '✓ Correct!' : '✗ Incorrect';
+
+            userAnswers.push({
+                problem: problem.problem,
+                correct: problem.correctAnswer,
+                userAnswer: selectedAnswer,
+                isCorrect: isCorrect,
+                type: problem.type
+            });
+
+            if (isCorrect) correctAnswers++;
+
+            updateStats();
+
+            setTimeout(() => {
+                currentQuestionIndex++;
+
+                if (currentQuestionIndex < problems.length) {
+                    displayQuestion();
+                } else {
+                    endQuiz(true);
+                }
+            }, 1200);
+        }
+
+        function updateStats() {
+            document.getElementById('currentQuestion').textContent = userAnswers.length;
+            document.getElementById('correctCount').textContent = correctAnswers;
+
+            const accuracy = userAnswers.length > 0
+                ? Math.round((correctAnswers / userAnswers.length) * 100)
+                : 0;
+            document.getElementById('accuracy').textContent = accuracy;
+
+            const progress = (userAnswers.length / problems.length) * 100;
+            document.getElementById('progressBar').style.width = progress + '%';
+        }
+
+        function endQuiz(completed) {
+            quizActive = false;
+            clearInterval(timerInterval);
+
+            const elapsedTime = Math.floor((Date.now() - quizStartTime) / 1000);
+            const minutes = Math.floor(elapsedTime / 60);
+            const seconds = elapsedTime % 60;
+
+            document.getElementById('quizContainer').classList.remove('active');
+
+            const resultsTitle = document.getElementById('resultsTitle');
+            if (completed) {
+                resultsTitle.textContent = '🎉 Challenge Complete!';
+            } else {
+                resultsTitle.textContent = '⏱️ Time\'s Up!';
+            }
+
+            const attemptedQuestions = userAnswers.length;
+            document.getElementById('finalScore').textContent = `${correctAnswers}/${attemptedQuestions}`;
+            document.getElementById('timeTaken').textContent =
+                `Time: ${minutes}:${seconds.toString().padStart(2, '0')}`;
+
+            const accuracy = attemptedQuestions > 0
+                ? Math.round((correctAnswers / attemptedQuestions) * 100)
+                : 0;
+
+            const scoreDisplay = document.getElementById('finalScore');
+            scoreDisplay.classList.remove('perfect', 'good', 'needs-work');
+
+            let message = '';
+            if (accuracy === 100 && completed) {
+                scoreDisplay.classList.add('perfect');
+                message = '🌟 PERFECT! You\'ve mastered polynomial operations!';
+            } else if (accuracy >= 85) {
+                scoreDisplay.classList.add('good');
+                message = '🔥 Excellent! Your polynomial skills are strong!';
+            } else if (accuracy >= 70) {
+                scoreDisplay.classList.add('good');
+                message = '👏 Good work! Keep practicing to improve speed.';
+            } else if (accuracy >= 50) {
+                scoreDisplay.classList.add('needs-work');
+                message = '💪 Keep practicing! Focus on the operations you missed.';
+            } else {
+                scoreDisplay.classList.add('needs-work');
+                message = '📚 Review Chapter 4 operations. Practice each type separately.';
+            }
+
+            document.getElementById('resultsMessage').textContent = message;
+
+            displayReview();
+
+            document.getElementById('results').classList.add('show');
+            document.getElementById('results').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function displayReview() {
+            const reviewList = document.getElementById('reviewList');
+            reviewList.innerHTML = '';
+
+            userAnswers.forEach((item, index) => {
+                const reviewItem = document.createElement('div');
+                reviewItem.className = `review-item ${item.isCorrect ? 'correct' : 'incorrect'}`;
+
+                const status = item.isCorrect ? '✓' : '✗';
+                const color = item.isCorrect ? '#859900' : '#dc322f';
+
+                reviewItem.innerHTML = `
+                    <strong style="color: ${color}">${status} Q${index + 1}</strong>
+                    <span style="color: #6c71c4">[${item.type}]</span><br>
+                    ${item.problem} = ${item.correct}
+                    ${!item.isCorrect ? `<br><span style="color: #dc322f">Your: ${item.userAnswer}</span>` : ''}
+                `;
+
+                reviewList.appendChild(reviewItem);
+            });
+        }
+
+        function resetQuiz() {
+            currentQuestionIndex = 0;
+            correctAnswers = 0;
+            userAnswers = [];
+            timeRemaining = 300;
+            quizActive = false;
+
+            clearInterval(timerInterval);
+
+            document.getElementById('timer').textContent = '5:00';
+            document.getElementById('timer').classList.remove('danger');
+            document.getElementById('startButton').disabled = false;
+            document.getElementById('quizContainer').classList.remove('active');
+            document.getElementById('results').classList.remove('show');
+            document.getElementById('progressBar').style.width = '0%';
+
+            updateStats();
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        window.onload = function() {
+            updateStats();
+        };
+    </script>
+</body>
+</html>

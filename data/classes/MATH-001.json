@@ -21,6 +21,16 @@
       "description": "35 focused questions drilling all critical exponent rules - Product, Quotient, Power, Negative Exponents, and Scientific Notation"
     },
     {
+      "id": "exam-004",
+      "title": "Ch4 Polynomials - Comprehensive Review",
+      "description": "42 questions covering all polynomial topics - identification, operations, and special products"
+    },
+    {
+      "id": "exam-005",
+      "title": "Ch4 Polynomials - Advanced Challenge",
+      "description": "28 challenging questions focusing on special products and complex multi-step problems"
+    },
+    {
       "id": "exponent-rules-challenge",
       "title": "⚡ تحدي قواعد الأسس",
       "description": "Speed Challenge: 20 random exponent problems in 2 minutes - Multiple choice, all rules from Ch4!",
@@ -40,6 +50,13 @@
       "description": "Ultimate Challenge: 20 problems in 2 minutes - All operations with negative numbers!",
       "type": "standalone",
       "url": "challenges/ultimate_mixed_with_negatives.html"
+    },
+    {
+      "id": "polynomial-operations-challenge",
+      "title": "⚡ تحدي عمليات كثيرات الحدود",
+      "description": "Speed Challenge: 20 random polynomial operations in 5 minutes!",
+      "type": "standalone",
+      "url": "challenges/polynomial_operations_challenge.html"
     }
   ]
 }

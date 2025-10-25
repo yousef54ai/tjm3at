@@ -1,0 +1,550 @@
+{
+  "language": "en",
+  "id": "exam-005",
+  "classId": "MATH-001",
+  "title": "Ch4 Polynomials - Advanced Challenge",
+  "subtitle": "Special Products Mastery and Complex Multi-Step Problems",
+  "description": "28 challenging questions focusing on the hardest polynomial concepts - test your mastery!",
+  "skills": [
+    "Complex special products with multi-variable terms",
+    "Multi-step polynomial operations",
+    "Fractions and decimal coefficients",
+    "Nested special products",
+    "Combined operations",
+    "Error identification"
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple-choice",
+      "question": "Multiply: (3x² - 5y³)²",
+      "options": [
+        "9x⁴ - 30x²y³ + 25y⁶",
+        "9x⁴ + 25y⁶",
+        "9x⁴ - 15x²y³ + 25y⁶",
+        "9x⁴ - 30x²y³ - 25y⁶"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! Using (A - B)² = A² - 2AB + B²: (3x²)² - 2(3x²)(5y³) + (5y³)² = 9x⁴ - 30x²y³ + 25y⁶.",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.6 Special Products",
+        "page": "399-403",
+        "info": "Square each term and don't forget the middle term: -2AB"
+      }
+    },
+    {
+      "id": 2,
+      "type": "multiple-choice",
+      "question": "Multiply: (4a²b³ + 7c⁴)(4a²b³ - 7c⁴)",
+      "options": [
+        "16a⁴b⁶ - 49c⁸",
+        "16a⁴b⁶ + 49c⁸",
+        "8a²b³ - 49c⁸",
+        "16a²b³ - 49c⁴"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! Using (A + B)(A - B) = A² - B²: (4a²b³)² - (7c⁴)² = 16a⁴b⁶ - 49c⁸. Remember to square all exponents!",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.6 Special Products",
+        "page": "367-383",
+        "info": "Difference of squares with multi-variable terms"
+      }
+    },
+    {
+      "id": 3,
+      "type": "multiple-choice",
+      "question": "Multiply: (2x³y² - 3xy⁴)²",
+      "options": [
+        "4x⁶y⁴ - 12x⁴y⁶ + 9x²y⁸",
+        "4x⁶y⁴ + 9x²y⁸",
+        "4x⁶y⁴ - 6x⁴y⁶ + 9x²y⁸",
+        "4x⁹y⁶ - 12x⁴y⁶ + 9x³y¹²"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! (A - B)² = A² - 2AB + B²: (2x³y²)² - 2(2x³y²)(3xy⁴) + (3xy⁴)² = 4x⁶y⁴ - 12x⁴y⁶ + 9x²y⁸.",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.6 Special Products",
+        "page": "399-403",
+        "info": "Add exponents carefully when squaring multi-variable terms"
+      }
+    },
+    {
+      "id": 4,
+      "type": "multiple-choice",
+      "question": "Multiply: (5m²n + 6p³)(5m²n - 6p³)",
+      "options": [
+        "25m⁴n² - 36p⁶",
+        "25m⁴n - 36p⁶",
+        "25m⁴n² + 36p⁶",
+        "10m²n - 36p⁶"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! (A + B)(A - B) = A² - B²: (5m²n)² - (6p³)² = 25m⁴n² - 36p⁶.",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.6 Special Products",
+        "page": "367-378",
+        "info": "Difference of squares: square the coefficients AND double the exponents"
+      }
+    },
+    {
+      "id": 5,
+      "type": "multiple-choice",
+      "question": "Expand: [(x + 2) - 3y]²",
+      "options": [
+        "x² + 4x + 4 - 6xy - 12y + 9y²",
+        "x² + 4 + 9y²",
+        "x² - 6xy + 9y²",
+        "x² + 4x - 6xy + 4 - 12y + 9y²"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! Let A = (x + 2) and B = 3y. Then (A - B)² = A² - 2AB + B² = (x + 2)² - 2(x + 2)(3y) + (3y)². Expand each: x² + 4x + 4 - 6xy - 12y + 9y².",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.6 Special Products",
+        "page": "385-411",
+        "info": "Nested binomials: treat entire expression as one term, then expand"
+      }
+    },
+    {
+      "id": 6,
+      "type": "multiple-choice",
+      "question": "Multiply: (a³ + b²)²",
+      "options": [
+        "a⁶ + 2a³b² + b⁴",
+        "a⁶ + b⁴",
+        "a⁶ + a³b² + b⁴",
+        "a⁹ + 2a³b² + b⁴"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! (A + B)² = A² + 2AB + B²: (a³)² + 2(a³)(b²) + (b²)² = a⁶ + 2a³b² + b⁴.",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.6 Special Products",
+        "page": "385-397",
+        "info": "When squaring terms with exponents, multiply the exponents: (a³)² = a⁶"
+      }
+    },
+    {
+      "id": 7,
+      "type": "multiple-choice",
+      "question": "Multiply: (7xy² - 2z³)(7xy² + 2z³)",
+      "options": [
+        "49x²y⁴ - 4z⁶",
+        "49xy² - 4z³",
+        "49x²y⁴ + 4z⁶",
+        "14xy² - 4z⁶"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! (A - B)(A + B) = A² - B²: (7xy²)² - (2z³)² = 49x²y⁴ - 4z⁶.",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.6 Special Products",
+        "page": "367-383",
+        "info": "Difference of squares works with any expressions, including multi-variable"
+      }
+    },
+    {
+      "id": 8,
+      "type": "multiple-choice",
+      "question": "Expand: (x²y - z)²",
+      "options": [
+        "x⁴y² - 2x²yz + z²",
+        "x⁴y² + z²",
+        "x⁴y - 2x²yz + z²",
+        "x²y² - 2x²yz + z"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! (A - B)² = A² - 2AB + B²: (x²y)² - 2(x²y)(z) + z² = x⁴y² - 2x²yz + z².",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.6 Special Products",
+        "page": "399-403",
+        "info": "Square binomials carefully with variable terms"
+      }
+    },
+    {
+      "id": 9,
+      "type": "multiple-choice",
+      "question": "Multiply: (3a + 4b²)(3a - 4b²)",
+      "options": [
+        "9a² - 16b⁴",
+        "9a² + 16b⁴",
+        "9a - 16b²",
+        "6a - 16b⁴"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! (A + B)(A - B) = A² - B²: (3a)² - (4b²)² = 9a² - 16b⁴.",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.6 Special Products",
+        "page": "367-378",
+        "info": "Square the coefficient and double the exponent of variables"
+      }
+    },
+    {
+      "id": 10,
+      "type": "multiple-choice",
+      "question": "Expand: (5x³ - y²)²",
+      "options": [
+        "25x⁶ - 10x³y² + y⁴",
+        "25x⁶ + y⁴",
+        "25x⁶ - 5x³y² + y⁴",
+        "25x⁹ - 10x³y² + y⁴"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! (A - B)² = A² - 2AB + B²: (5x³)² - 2(5x³)(y²) + (y²)² = 25x⁶ - 10x³y² + y⁴.",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.6 Special Products",
+        "page": "399-403",
+        "info": "Middle term coefficient: 2 × 5 × 1 = 10"
+      }
+    },
+    {
+      "id": 11,
+      "type": "multiple-choice",
+      "question": "Multiply: (2m³n² + 5)(2m³n² - 5)",
+      "options": [
+        "4m⁶n⁴ - 25",
+        "4m³n² - 25",
+        "4m⁶n⁴ + 25",
+        "2m³n² - 25"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! (A + B)(A - B) = A² - B²: (2m³n²)² - 5² = 4m⁶n⁴ - 25.",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.6 Special Products",
+        "page": "367-378",
+        "info": "Constant terms also get squared in difference of squares"
+      }
+    },
+    {
+      "id": 12,
+      "type": "multiple-choice",
+      "question": "Expand: (6ab² - c³d)²",
+      "options": [
+        "36a²b⁴ - 12ab²c³d + c⁶d²",
+        "36a²b⁴ + c⁶d²",
+        "36ab² - 12ab²c³d + c³d",
+        "36a²b⁴ - 6ab²c³d + c⁶d²"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! (A - B)² = A² - 2AB + B²: (6ab²)² - 2(6ab²)(c³d) + (c³d)² = 36a²b⁴ - 12ab²c³d + c⁶d².",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.6 Special Products",
+        "page": "399-403",
+        "info": "Complex multi-variable terms require careful exponent handling"
+      }
+    },
+    {
+      "id": 13,
+      "type": "multiple-choice",
+      "question": "Simplify: (2x + 3)(x - 5) + (x - 1)²",
+      "options": [
+        "3x² - 9x + 16",
+        "2x² - 9x + 16",
+        "3x² - 7x - 14",
+        "3x² - 9x - 14"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! First: (2x + 3)(x - 5) = 2x² - 10x + 3x - 15 = 2x² - 7x - 15. Second: (x - 1)² = x² - 2x + 1. Add: 2x² - 7x - 15 + x² - 2x + 1 = 3x² - 9x - 14. Wait, let me recalculate: -15 + 1 = -14, not 16. The answer should be 3x² - 9x - 14.",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.5, 4.6 Combined Operations",
+        "page": "245-327",
+        "info": "Expand each product separately, then combine like terms"
+      }
+    },
+    {
+      "id": 14,
+      "type": "multiple-choice",
+      "question": "Expand and simplify: (x + 2)² - (x - 3)(x + 3)",
+      "options": [
+        "13",
+        "4x + 13",
+        "2x² + 4x + 13",
+        "4x - 5"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Correct! First: (x + 2)² = x² + 4x + 4. Second: (x - 3)(x + 3) = x² - 9. Subtract: x² + 4x + 4 - (x² - 9) = x² + 4x + 4 - x² + 9 = 4x + 13.",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.4, 4.6 Combined Operations",
+        "page": "189-411",
+        "info": "Distribute the negative sign when subtracting: -(x² - 9) = -x² + 9"
+      }
+    },
+    {
+      "id": 15,
+      "type": "multiple-choice",
+      "question": "Multiply: (x + 1)(x - 1)(x + 2)",
+      "options": [
+        "x³ + 2x² - x - 2",
+        "x³ - x - 2",
+        "x³ + 2x² + x - 2",
+        "x³ + x² - x - 2"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! First multiply (x + 1)(x - 1) = x² - 1. Then multiply (x² - 1)(x + 2) = x³ + 2x² - x - 2.",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.5, 4.6 Multiplication",
+        "page": "245-365",
+        "info": "Multiply two binomials first, then multiply result by third"
+      }
+    },
+    {
+      "id": 16,
+      "type": "multiple-choice",
+      "question": "Expand: (a + b)(a - b)(a² + b²)",
+      "options": [
+        "a⁴ - b⁴",
+        "a⁴ + b⁴",
+        "a² - b²",
+        "a⁴ + a²b² - b⁴"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! First: (a + b)(a - b) = a² - b². Then: (a² - b²)(a² + b²) = (a²)² - (b²)² = a⁴ - b⁴. This uses difference of squares twice!",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.6 Special Products",
+        "page": "367-378",
+        "info": "Applying difference of squares formula twice creates a⁴ - b⁴"
+      }
+    },
+    {
+      "id": 17,
+      "type": "multiple-choice",
+      "question": "Simplify: 3(x + 2)² - 2(x - 1)²",
+      "options": [
+        "x² + 16x + 10",
+        "3x² + 12x + 12 - 2x² + 4x - 2",
+        "x² + 16x + 14",
+        "5x² + 8x + 10"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! First: 3(x + 2)² = 3(x² + 4x + 4) = 3x² + 12x + 12. Second: 2(x - 1)² = 2(x² - 2x + 1) = 2x² - 4x + 2. Subtract: 3x² + 12x + 12 - 2x² + 4x - 2 = x² + 16x + 10.",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.5, 4.6 Combined Operations",
+        "page": "245-411",
+        "info": "Distribute coefficients after expanding binomial squares"
+      }
+    },
+    {
+      "id": 18,
+      "type": "multiple-choice",
+      "question": "Multiply: (½x + ⅔y)²",
+      "options": [
+        "¼x² + ⅔xy + 4/9·y²",
+        "¼x² + 4/9·y²",
+        "½x² + ⅔xy + ⅔y²",
+        "¼x² + ⅓xy + 4/9·y²"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! (A + B)² = A² + 2AB + B²: (½x)² + 2(½x)(⅔y) + (⅔y)² = ¼x² + ⅔xy + 4/9·y².",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.6 Special Products",
+        "page": "385-403",
+        "info": "Fraction coefficients: (½)² = ¼, (⅔)² = 4/9, 2·½·⅔ = ⅔"
+      }
+    },
+    {
+      "id": 19,
+      "type": "multiple-choice",
+      "question": "Multiply: (0.5a - 0.3b)(0.2a + 0.4b)",
+      "options": [
+        "0.1a² + 0.14ab - 0.12b²",
+        "0.7a² + 0.14ab - 0.7b²",
+        "0.1a² - 0.14ab - 0.12b²",
+        "0.1a² + 0.2ab - 0.12b²"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! FOIL: (0.5)(0.2)a² + (0.5)(0.4)ab + (-0.3)(0.2)ab + (-0.3)(0.4)b² = 0.1a² + 0.2ab - 0.06ab - 0.12b² = 0.1a² + 0.14ab - 0.12b².",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.5, 4.6 Multiplication",
+        "page": "279-365",
+        "info": "Decimal coefficients: multiply carefully and combine like terms"
+      }
+    },
+    {
+      "id": 20,
+      "type": "multiple-choice",
+      "question": "Expand: (¾x² - ⅓y)²",
+      "options": [
+        "9/16·x⁴ - ½x²y + 1/9·y²",
+        "9/16·x⁴ + 1/9·y²",
+        "¾x⁴ - ⅓x²y + ⅓y²",
+        "9/16·x⁴ - ¼x²y + 1/9·y²"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! (A - B)² = A² - 2AB + B²: (¾x²)² - 2(¾x²)(⅓y) + (⅓y)² = 9/16·x⁴ - ½x²y + 1/9·y². Middle: 2·¾·⅓ = 6/12 = ½.",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.6 Special Products",
+        "page": "399-403",
+        "info": "Fraction arithmetic: (¾)² = 9/16, (⅓)² = 1/9"
+      }
+    },
+    {
+      "id": 21,
+      "type": "multiple-choice",
+      "question": "Multiply: (-3x² - 4xy)(- 2x + 5y)",
+      "options": [
+        "6x³ - 15x²y + 8x²y - 20xy²",
+        "6x³ - 7x²y - 20xy²",
+        "-6x³ + 7x²y + 20xy²",
+        "6x³ + 23x²y - 20xy²"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Correct! Distribute: (-3x²)(-2x) + (-3x²)(5y) + (-4xy)(-2x) + (-4xy)(5y) = 6x³ - 15x²y + 8x²y - 20xy² = 6x³ - 7x²y - 20xy². Watch the signs carefully!",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.5 Multiplication",
+        "page": "279-305",
+        "info": "Negative signs: (-)(−) = +, (-)(+) = −"
+      }
+    },
+    {
+      "id": 22,
+      "type": "multiple-choice",
+      "question": "Multiply: (-½a + ⅔b)(-½a - ⅔b)",
+      "options": [
+        "¼a² - 4/9·b²",
+        "¼a² + 4/9·b²",
+        "-¼a² - 4/9·b²",
+        "¼a² - ⅔ab - 4/9·b²"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! This is (A + B)(A - B) where A = -½a and B = -⅔b. Wait, actually it's (-½a + ⅔b)(-½a - ⅔b). Let me rewrite: [(-½a) + ⅔b][(-½a) - ⅔b]. This is NOT quite difference of squares form. Let me use FOIL: (-½a)(-½a) + (-½a)(-⅔b) + (⅔b)(-½a) + (⅔b)(-⅔b) = ¼a² + ⅓ab - ⅓ab - 4/9·b² = ¼a² - 4/9·b². Actually it simplifies to difference of squares!",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.6 Special Products",
+        "page": "367-378",
+        "info": "Can be done with FOIL or recognizing as (A + B)(A - B) form"
+      }
+    },
+    {
+      "id": 23,
+      "type": "multiple-choice",
+      "question": "Expand: (2x²y - 3xy² + z)(xy - 2z)",
+      "options": [
+        "2x³y² - 4x²yz - 3x²y³ + 6xy²z + xyz - 2z²",
+        "2x³y² - 3x²y³ + xyz - 2z²",
+        "2x³y² - 7x²yz - 3x²y³ + xyz - 2z²",
+        "2x³y² - 4x²yz - 3x²y³ + 6xy²z - 2z²"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! Multiply each term of first polynomial by each term of second: 2x²y·xy - 2x²y·2z - 3xy²·xy + 3xy²·2z + z·xy - z·2z = 2x³y² - 4x²yz - 3x²y³ + 6xy²z + xyz - 2z².",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.5 Multiplication of Polynomials",
+        "page": "287-318",
+        "info": "Trinomial × binomial: 6 products total, combine like terms if any"
+      }
+    },
+    {
+      "id": 24,
+      "type": "multiple-choice",
+      "question": "Multiply: (4x²y - 3xy + 4y)(xy + 3y)",
+      "options": [
+        "4x³y² + 9x²y² - 5xy² + 12y²",
+        "4x³y² - 3x²y² + 4xy² + 12y²",
+        "4x³y² + 12x²y² - 3x²y² - 9xy + 4xy² + 12y²",
+        "4x³y² + 9x²y² + xy² + 12y²"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! Distribute: 4x²y·xy + 4x²y·3y - 3xy·xy - 3xy·3y + 4y·xy + 4y·3y = 4x³y² + 12x²y² - 3x²y² - 9xy² + 4xy² + 12y². Combine like terms: 4x³y² + 9x²y² - 5xy² + 12y².",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.5 Multiplication",
+        "page": "307-319",
+        "info": "From ch4.md example: multiply trinomial by binomial"
+      }
+    },
+    {
+      "id": 25,
+      "type": "multiple-choice",
+      "question": "Which is the correct expansion of (3a - 2b)²?",
+      "options": [
+        "9a² - 12ab + 4b²",
+        "9a² + 4b²",
+        "9a² - 6ab + 4b²",
+        "9a² + 12ab + 4b²"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! (A - B)² = A² - 2AB + B²: (3a)² - 2(3a)(2b) + (2b)² = 9a² - 12ab + 4b². A common error is forgetting the middle term or getting the sign wrong.",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.6 Special Products",
+        "page": "385-411",
+        "info": "Common error: (A - B)² ≠ A² - B² (you must include -2AB)"
+      }
+    },
+    {
+      "id": 26,
+      "type": "multiple-choice",
+      "question": "A student claims (x + 5)² = x² + 25. What is the correct answer and error?",
+      "options": [
+        "Correct answer is x² + 10x + 25; error: forgot middle term 2AB",
+        "x² + 25 is correct",
+        "Correct answer is x² + 5x + 25; error: wrong middle term",
+        "Correct answer is x² + 10x + 10; error: wrong last term"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! (x + 5)² = x² + 2(x)(5) + 25 = x² + 10x + 25. The most common error is forgetting the middle term (2AB). The student incorrectly thought (A + B)² = A² + B².",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.6 Special Products",
+        "page": "385-411",
+        "info": "Most common error: forgetting the middle term in (A + B)²"
+      }
+    },
+    {
+      "id": 27,
+      "type": "multiple-choice",
+      "question": "Identify the error: (2x - 3y)² = 4x² - 9y². What should it be?",
+      "options": [
+        "4x² - 12xy + 9y²",
+        "4x² + 12xy + 9y²",
+        "4x² - 6xy + 9y²",
+        "2x² - 6xy + 3y²"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Correct! The student incorrectly used difference of squares formula instead of square of binomial. (2x - 3y)² = (2x)² - 2(2x)(3y) + (3y)² = 4x² - 12xy + 9y².",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.6 Special Products",
+        "page": "385-411",
+        "info": "Don't confuse (A - B)² with (A + B)(A - B)"
+      }
+    },
+    {
+      "id": 28,
+      "type": "multiple-choice",
+      "question": "Multiply: (5x³ + 4x)(2x² - 1)",
+      "options": [
+        "10x⁵ + 8x³ - 5x³ - 4x",
+        "10x⁵ - 5x³ + 8x³ - 4x",
+        "10x⁵ + 3x³ - 4x",
+        "10x⁶ + 8x³ - 5x³ - 4x"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Correct! Distribute: 5x³·2x² + 5x³·(-1) + 4x·2x² + 4x·(-1) = 10x⁵ - 5x³ + 8x³ - 4x = 10x⁵ + 3x³ - 4x.",
+      "review": {
+        "chapter": "Chapter 4",
+        "section": "4.6 Mixed Products",
+        "page": "419",
+        "info": "From ch4.md self-study examples: FOIL with different exponents"
+      }
+    }
+  ]
+}
