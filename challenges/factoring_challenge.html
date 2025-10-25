@@ -144,11 +144,6 @@
             </div>
 
             <div class="question-card" id="question-container"></div>
-
-            <div class="nav-buttons">
-                <button id="back-btn" class="nav-btn secondary-btn" disabled>Back</button>
-                <button id="next-btn" class="nav-btn primary-btn" disabled>Next</button>
-            </div>
         </div>
 
         <div id="results" style="display: none;">
@@ -390,7 +385,6 @@
                 '</div>';
 
             updateProgress();
-            updateNavButtons();
             answerSelected = false;
         }
 
@@ -422,27 +416,6 @@
                     finishExam();
                 }
             }, 1200);
-        }
-
-        // Navigation
-        function updateNavButtons() {
-            document.getElementById('back-btn').disabled = currentProblem === 0;
-            const answered = problems[currentProblem].userAnswer !== null;
-            document.getElementById('next-btn').disabled = !answered;
-        }
-
-        function goBack() {
-            if (currentProblem > 0) {
-                currentProblem--;
-                displayProblem();
-            }
-        }
-
-        function goNext() {
-            if (currentProblem < problems.length - 1 && problems[currentProblem].userAnswer !== null) {
-                currentProblem++;
-                displayProblem();
-            }
         }
 
         // Progress
@@ -610,9 +583,6 @@
         }
 
         // Initialize
-        document.getElementById('back-btn').addEventListener('click', goBack);
-        document.getElementById('next-btn').addEventListener('click', goNext);
-
         generateProblems();
         displayProblem();
         startTimer();
