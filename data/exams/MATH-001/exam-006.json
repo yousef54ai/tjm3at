@@ -7,7 +7,7 @@
     {
       "id": 1,
       "type": "multiple-choice",
-      "question": "Find the GCF of 18$x^5$ and 30x^2$.",
+      "question": "Find the GCF of 18$x^5$ and 30$x^2$.",
       "options": [
         "90$x^2$",
         "6$x^5$",
@@ -15,7 +15,7 @@
         "6$x^2$"
       ],
       "correctAnswer": 3,
-      "explanation": "Correct! The GCF of coefficients is 6 (GCF of 18 and 30). The GCF of variables is $x^2$ (smallest exponent). So GCF = 6x^2$.",
+      "explanation": "Correct! The GCF of coefficients is 6 (GCF of 18 and 30). The GCF of variables is $x^2$ (smallest exponent). So GCF = 6$x^2$.",
       "review": {
         "chapter": "Chapter 5",
         "section": "5.1 Introduction to Factoring",
@@ -45,15 +45,15 @@
     {
       "id": 3,
       "type": "multiple-choice",
-      "question": "Factor: 28$x^6$ + 32x^3$",
+      "question": "Factor: 28$x^6$ + 32$x^3$",
       "options": [
-        "$x^3$(28x^3$ + 32)",
-        "4x(7$x^5$ + 8x^2$)",
-        "4$x^2$(7x^4$ + 8x)",
-        "4$x^3$(7x^3$ + 8)"
+        "$x^3$(28$x^3$ + 32)",
+        "4x(7$x^5$ + 8$x^2$)",
+        "4$x^2$(7$x^4$ + 8x)",
+        "4$x^3$(7$x^3$ + 8)"
       ],
       "correctAnswer": 3,
-      "explanation": "Correct! The GCF is 4$x^3$. Factor it out: 28x^6$ + 32x^3$ = 4x^3$ · 7x^3$ + 4x^3$ · 8 = 4x^3$(7x^3$ + 8).",
+      "explanation": "Correct! The GCF is 4$x^3$. Factor it out: 28$x^6$ + 32$x^3$ = 4$x^3$ · 7$x^3$ + 4$x^3$ · 8 = 4$x^3$(7$x^3$ + 8).",
       "review": {
         "chapter": "Chapter 5",
         "section": "5.1 Introduction to Factoring",
@@ -64,15 +64,15 @@
     {
       "id": 4,
       "type": "multiple-choice",
-      "question": "Factor: 12$x^5$ - 21x^4$ + 24x^3$",
+      "question": "Factor: 12$x^5$ - 21$x^4$ + 24$x^3$",
       "options": [
-        "3$x^3$(4x^2$ - 7x + 8)",
-        "3$x^2$(4x^3$ - 7x^2$ + 8x)",
-        "3x(4$x^4$ - 7x^3$ + 8x^2$)",
-        "$x^3$(12x^2$ - 21x + 24)"
+        "3$x^3$(4$x^2$ - 7x + 8)",
+        "3$x^2$(4$x^3$ - 7$x^2$ + 8x)",
+        "3x(4$x^4$ - 7$x^3$ + 8$x^2$)",
+        "$x^3$(12$x^2$ - 21x + 24)"
       ],
       "correctAnswer": 0,
-      "explanation": "Correct! The GCF is 3$x^3$. Factoring out: 12x^5$ - 21x^4$ + 24x^3$ = 3x^3$(4x^2$ - 7x + 8).",
+      "explanation": "Correct! The GCF is 3$x^3$. Factoring out: 12$x^5$ - 21$x^4$ + 24$x^3$ = 3$x^3$(4$x^2$ - 7x + 8).",
       "review": {
         "chapter": "Chapter 5",
         "section": "5.1 Introduction to Factoring",
@@ -102,7 +102,7 @@
     {
       "id": 6,
       "type": "multiple-choice",
-      "question": "Factor by grouping: 3$x^3$ + 9x^2$ + x + 3",
+      "question": "Factor by grouping: 3$x^3$ + 9$x^2$ + x + 3",
       "options": [
         "(3$x^2$ + 1)(x + 3)",
         "(3x + 1)($x^2$ + 3)",
@@ -110,7 +110,7 @@
         "3$x^2$(x + 3) + 1"
       ],
       "correctAnswer": 0,
-      "explanation": "Correct! Group: (3$x^3$ + 9x^2$) + (x + 3) = 3x^2$(x + 3) + 1(x + 3) = (3x^2$ + 1)(x + 3). Don't forget the 1!",
+      "explanation": "Correct! Group: (3$x^3$ + 9$x^2$) + (x + 3) = 3$x^2$(x + 3) + 1(x + 3) = (3$x^2$ + 1)(x + 3). Don't forget the 1!",
       "review": {
         "chapter": "Chapter 5",
         "section": "5.1 Introduction to Factoring",
@@ -148,7 +148,7 @@
         "No, because 16 is not a perfect square"
       ],
       "correctAnswer": 2,
-      "explanation": "Correct! $x^2$ and 16 are perfect squares (x^2$ and 4²). The middle term 8x = 2·x·4, so it's a perfect square trinomial: (x + 4)².",
+      "explanation": "Correct! $x^2$ and 16 are perfect squares ($x^2$ and 4²). The middle term 8x = 2·x·4, so it's a perfect square trinomial: (x + 4)².",
       "review": {
         "chapter": "Chapter 5",
         "section": "5.2 Factoring Trinomial Squares",
@@ -197,7 +197,7 @@
     {
       "id": 11,
       "type": "multiple-choice",
-      "question": "Factor: 16$a^2$ - 24ab + 9b^2$",
+      "question": "Factor: 16$a^2$ - 24ab + 9$b^2$",
       "options": [
         "(4a - 3b)(4a + 3b)",
         "(4a - 3b)²",
@@ -205,7 +205,7 @@
         "(4a + 3b)²"
       ],
       "correctAnswer": 1,
-      "explanation": "Correct! 16$a^2$ = (4a)², 9b^2$ = (3b)², and -24ab = -2(4a)(3b). So it's (4a - 3b)².",
+      "explanation": "Correct! 16$a^2$ = (4a)², 9$b^2$ = (3b)², and -24ab = -2(4a)(3b). So it's (4a - 3b)².",
       "review": {
         "chapter": "Chapter 5",
         "section": "5.2 Factoring Trinomial Squares",
@@ -243,7 +243,7 @@
         "Cannot be factored (prime)"
       ],
       "correctAnswer": 2,
-      "explanation": "Correct! This is a difference of squares: $x^2$ - 9 = x^2$ - 3² = (x + 3)(x - 3).",
+      "explanation": "Correct! This is a difference of squares: $x^2$ - 9 = $x^2$ - 3² = (x + 3)(x - 3).",
       "review": {
         "chapter": "Chapter 5",
         "section": "5.2 Factoring Differences of Squares",
@@ -281,7 +281,7 @@
         "(y + 4w)(y - 4w)"
       ],
       "correctAnswer": 3,
-      "explanation": "Correct! $y^2$ - 16w^2$ = y^2$ - (4w)² = (y + 4w)(y - 4w).",
+      "explanation": "Correct! $y^2$ - 16w^2$ = $y^2$ - (4w)² = (y + 4w)(y - 4w).",
       "review": {
         "chapter": "Chapter 5",
         "section": "5.2 Factoring Differences of Squares",
@@ -295,12 +295,12 @@
       "question": "Factor completely: 5$x^4$ - 3125",
       "options": [
         "5(x - 5)⁴",
-        "5($x^2$ - 25)(x^2$ + 25)",
-        "(5$x^2$ - 125)(x^2$ + 25)",
+        "5($x^2$ - 25)($x^2$ + 25)",
+        "(5$x^2$ - 125)($x^2$ + 25)",
         "5(x - 5)(x + 5)($x^2$ + 25)"
       ],
       "correctAnswer": 3,
-      "explanation": "Correct! First factor GCF: 5($x^4$ - 625). Then difference of squares: 5[(x^2$)² - 25²] = 5(x^2$ - 25)(x^2$ + 25). Finally: 5(x - 5)(x + 5)(x^2$ + 25).",
+      "explanation": "Correct! First factor GCF: 5($x^4$ - 625). Then difference of squares: 5[($x^2$)² - 25²] = 5($x^2$ - 25)($x^2$ + 25). Finally: 5(x - 5)(x + 5)($x^2$ + 25).",
       "review": {
         "chapter": "Chapter 5",
         "section": "5.2 Factoring Completely",
@@ -406,7 +406,7 @@
     {
       "id": 22,
       "type": "multiple-choice",
-      "question": "Factor completely: 2$x^3$ - 24x^2$ + 72x",
+      "question": "Factor completely: 2$x^3$ - 24$x^2$ + 72x",
       "options": [
         "2x(x - 6)(x - 6)",
         "Both A and B",
@@ -444,7 +444,7 @@
     {
       "id": 24,
       "type": "multiple-choice",
-      "question": "Factor: $x^3$ + 7x^2$ + 12x",
+      "question": "Factor: $x^3$ + 7$x^2$ + 12x",
       "options": [
         "x($x^2$ + 7x + 12)",
         "x(x + 3)(x + 4)",
@@ -539,15 +539,15 @@
     {
       "id": 29,
       "type": "multiple-choice",
-      "question": "Factor completely: 4$t^3$ - 10t^2$ - 50t",
+      "question": "Factor completely: 4$t^3$ - 10$t^2$ - 50t",
       "options": [
-        "2(2$t^3$ - 5t^2$ - 25t)",
+        "2(2$t^3$ - 5$t^2$ - 25t)",
         "2t(2t + 5)(t - 5)",
         "t(4$t^2$ - 10t - 50)",
         "2t(2t - 5)(t + 5)"
       ],
       "correctAnswer": 1,
-      "explanation": "Correct! First GCF: 2t(2$t^2$ - 5t - 25). Then ac-method on 2t^2$ - 5t - 25: ac = -50, factors 5 and -10 add to -5. Split: 2t(2t^2$ + 5t - 10t - 25) = 2t[t(2t + 5) - 5(2t + 5)] = 2t(2t + 5)(t - 5).",
+      "explanation": "Correct! First GCF: 2t(2$t^2$ - 5t - 25). Then ac-method on 2$t^2$ - 5t - 25: ac = -50, factors 5 and -10 add to -5. Split: 2t(2$t^2$ + 5t - 10t - 25) = 2t[t(2t + 5) - 5(2t + 5)] = 2t(2t + 5)(t - 5).",
       "review": {
         "chapter": "Chapter 5",
         "section": "5.4 Factoring ax² + bx + c",

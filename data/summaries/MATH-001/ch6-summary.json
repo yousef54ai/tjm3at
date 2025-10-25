@@ -1,0 +1,138 @@
+{
+  "language": "en",
+  "id": "ch6-summary",
+  "chapter": "Ch6: Rational Expressions",
+  "sections": [
+    {
+      "title": "Excluded Values & Domain",
+      "items": [
+        {
+          "label": "Excluded Values",
+          "formula": "Set denominator = 0 and solve. Example: $\\frac{1}{x-3}$ is undefined when $x = 3$"
+        },
+        {
+          "label": "Key Rule",
+          "formula": "A rational expression is UNDEFINED when the denominator equals zero"
+        },
+        {
+          "label": "Constant Denominator",
+          "formula": "If denominator is a non-zero constant, expression is defined for all real numbers"
+        }
+      ]
+    },
+    {
+      "title": "Simplifying Rational Expressions",
+      "items": [
+        {
+          "label": "Simplification Rule",
+          "formula": "Factor numerator and denominator, then cancel common factors: $\\frac{ac}{bc} = \\frac{a}{b}$ where $c \\neq 0$"
+        },
+        {
+          "label": "Cannot Cancel",
+          "formula": "Can only cancel FACTORS, not terms. Cannot cancel in $\\frac{x+2}{x}$ or $\\frac{x^2+1}{x}$"
+        },
+        {
+          "label": "Sign Changes",
+          "formula": "$\\frac{a-b}{b-a} = -1$ (opposites in numerator/denominator cancel to -1)"
+        }
+      ]
+    },
+    {
+      "title": "Multiplying & Dividing",
+      "items": [
+        {
+          "label": "Multiplication",
+          "formula": "$\\frac{a}{b} \\cdot \\frac{c}{d} = \\frac{ac}{bd}$ - Multiply across, then simplify"
+        },
+        {
+          "label": "Division",
+          "formula": "$\\frac{a}{b} \\div \\frac{c}{d} = \\frac{a}{b} \\cdot \\frac{d}{c}$ - Multiply by reciprocal"
+        },
+        {
+          "label": "Strategy",
+          "formula": "Factor FIRST, then multiply/divide and cancel common factors"
+        }
+      ]
+    },
+    {
+      "title": "Adding & Subtracting",
+      "items": [
+        {
+          "label": "Same Denominator",
+          "formula": "$\\frac{a}{c} + \\frac{b}{c} = \\frac{a+b}{c}$ and $\\frac{a}{c} - \\frac{b}{c} = \\frac{a-b}{c}$"
+        },
+        {
+          "label": "Find LCD",
+          "formula": "Factor all denominators, LCD = product of all unique factors with highest powers"
+        },
+        {
+          "label": "Rewrite with LCD",
+          "formula": "Multiply each fraction by missing factors to get LCD in all denominators"
+        },
+        {
+          "label": "Combine",
+          "formula": "Once denominators match, add/subtract numerators only"
+        }
+      ]
+    },
+    {
+      "title": "Opposite Denominators (Advanced)",
+      "items": [
+        {
+          "label": "Recognizing Opposites",
+          "formula": "$(a-b)$ and $(b-a)$ are opposites: $(a-b) = -(b-a)$"
+        },
+        {
+          "label": "Handling Opposites",
+          "formula": "$\\frac{x}{a-b} + \\frac{y}{b-a} = \\frac{x}{a-b} - \\frac{y}{a-b}$ (factor out -1 from denominator)"
+        },
+        {
+          "label": "Key Tip",
+          "formula": "Change sign of numerator when flipping denominator from $(b-a)$ to $(a-b)$"
+        }
+      ]
+    },
+    {
+      "title": "Solving Rational Equations (Hardest)",
+      "items": [
+        {
+          "label": "Step 1: Find LCD",
+          "formula": "Identify LCD of all denominators in the equation"
+        },
+        {
+          "label": "Step 2: Multiply Through",
+          "formula": "Multiply EVERY term by LCD to clear all fractions"
+        },
+        {
+          "label": "Step 3: Solve",
+          "formula": "Solve the resulting polynomial equation (usually linear or quadratic)"
+        },
+        {
+          "label": "Step 4: CHECK!",
+          "formula": "Verify solution doesn't make any original denominator = 0 (extraneous solutions)"
+        },
+        {
+          "label": "Extraneous Solutions",
+          "formula": "Solutions that make denominators zero must be REJECTED"
+        }
+      ]
+    },
+    {
+      "title": "Common Pitfalls",
+      "items": [
+        {
+          "label": "Don't Cancel Terms",
+          "formula": "Only cancel common FACTORS, not addends: $\\frac{x+3}{x} \\neq \\frac{3}{1}$ ✗"
+        },
+        {
+          "label": "Don't Forget to Check",
+          "formula": "Always check solutions in original equation (excluded values)"
+        },
+        {
+          "label": "Watch Minus Signs",
+          "formula": "When subtracting fractions, distribute the minus: $\\frac{a}{c} - \\frac{b+d}{c} = \\frac{a-b-d}{c}$"
+        }
+      ]
+    }
+  ]
+}
