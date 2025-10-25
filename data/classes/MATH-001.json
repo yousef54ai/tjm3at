@@ -98,6 +98,11 @@
       "id": "ch4-summary",
       "title": "📋 Ch4: Polynomials & Exponents Summary",
       "description": "Quick reference: exponent rules, polynomial operations, special products, and scientific notation"
+    },
+    {
+      "id": "ch5-summary",
+      "title": "📋 Ch5: Factoring Summary",
+      "description": "Quick reference: GCF, grouping, special patterns, trinomials, cubes, and solving by factoring"
     }
   ]
 }

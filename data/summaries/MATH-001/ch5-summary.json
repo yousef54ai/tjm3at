@@ -1,0 +1,84 @@
+{
+  "language": "en",
+  "id": "ch5-summary",
+  "chapter": "Ch5: Factoring",
+  "sections": [
+    {
+      "title": "Basic Factoring Methods",
+      "items": [
+        {
+          "label": "GCF (Greatest Common Factor)",
+          "formula": "Factor out the largest common term: $6x^3 + 9x^2 = 3x^2(2x + 3)$"
+        },
+        {
+          "label": "Grouping (4 terms)",
+          "formula": "Group pairs and factor each: $ax + ay + bx + by = a(x+y) + b(x+y) = (a+b)(x+y)$"
+        }
+      ]
+    },
+    {
+      "title": "Special Patterns",
+      "items": [
+        {
+          "label": "Difference of Squares",
+          "formula": "$a^2 - b^2 = (a+b)(a-b)$"
+        },
+        {
+          "label": "Perfect Square Trinomial",
+          "formula": "$a^2 + 2ab + b^2 = (a+b)^2$"
+        },
+        {
+          "label": "Perfect Square Trinomial",
+          "formula": "$a^2 - 2ab + b^2 = (a-b)^2$"
+        },
+        {
+          "label": "Sum of Cubes",
+          "formula": "$a^3 + b^3 = (a+b)(a^2 - ab + b^2)$"
+        },
+        {
+          "label": "Difference of Cubes",
+          "formula": "$a^3 - b^3 = (a-b)(a^2 + ab + b^2)$"
+        }
+      ]
+    },
+    {
+      "title": "Factoring Trinomials",
+      "items": [
+        {
+          "label": "Simple Form: $x^2 + bx + c$",
+          "formula": "Find two numbers that multiply to $c$ and add to $b$: $x^2 + 5x + 6 = (x+2)(x+3)$"
+        },
+        {
+          "label": "General Form: $ax^2 + bx + c$",
+          "formula": "Factor by trial/error or AC method: $2x^2 + 7x + 3 = (2x+1)(x+3)$"
+        }
+      ]
+    },
+    {
+      "title": "Solving by Factoring",
+      "items": [
+        {
+          "label": "Zero Product Property",
+          "formula": "If $ab = 0$, then $a = 0$ or $b = 0$"
+        },
+        {
+          "label": "Steps to Solve",
+          "formula": "1. Set equation = 0, 2. Factor completely, 3. Set each factor = 0, 4. Solve for $x$"
+        }
+      ]
+    },
+    {
+      "title": "Factoring Strategy",
+      "items": [
+        {
+          "label": "Always Start with GCF",
+          "formula": "Factor out common terms first, then look for patterns"
+        },
+        {
+          "label": "Check Your Answer",
+          "formula": "Multiply factors back together to verify result"
+        }
+      ]
+    }
+  ]
+}
