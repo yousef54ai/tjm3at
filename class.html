@@ -30,6 +30,11 @@
             <h2 class="section-title" id="challenges-title">التحديات السريعة</h2>
             <div id="challenges-list" class="exams-list"></div>
         </section>
+
+        <section id="summaries-section" class="section" style="display: none;">
+            <h2 class="section-title" id="summaries-title">الملخصات</h2>
+            <div id="summaries-list" class="exams-list"></div>
+        </section>
     </div>
 
     <script>
@@ -69,10 +74,12 @@
                 const isArabic = data.language === 'ar';
                 document.getElementById('exams-title').textContent = isArabic ? 'الامتحانات' : 'Exams';
                 document.getElementById('challenges-title').textContent = isArabic ? 'التحديات السريعة' : 'Speed Challenges';
+                document.getElementById('summaries-title').textContent = isArabic ? 'الملخصات' : 'Chapter Summaries';
 
                 // Separate exams and challenges
                 const regularExams = data.exams.filter(exam => exam.type !== 'standalone');
                 const challenges = data.exams.filter(exam => exam.type === 'standalone');
+                const summaries = data.summaries || [];
 
                 // Function to get icon based on exam type
                 function getExamIcon(title, description) {
@@ -169,6 +176,51 @@
                         `;
 
                         challengesList.appendChild(item);
+                    });
+                }
+
+                // Function to get summary icon
+                function getSummaryIcon(title) {
+                    const titleLower = title.toLowerCase();
+
+                    if (titleLower.includes('ch1') || titleLower.includes('ch2')) {
+                        return '📐'; // Basic chapters
+                    } else if (titleLower.includes('ch3')) {
+                        return '📊'; // Graphing
+                    } else if (titleLower.includes('ch4')) {
+                        return '📝'; // Polynomials
+                    } else if (titleLower.includes('ch5')) {
+                        return '🧩'; // Factoring
+                    } else if (titleLower.includes('ch6')) {
+                        return '➗'; // Rational expressions
+                    } else {
+                        return '📋'; // Default summary
+                    }
+                }
+
+                // Create summary list items
+                if (summaries.length > 0) {
+                    const summariesList = document.getElementById('summaries-list');
+                    document.getElementById('summaries-section').style.display = 'block';
+
+                    summaries.forEach(summary => {
+                        const item = document.createElement('a');
+                        item.className = 'exam-item summary-item';
+                        item.href = `summary.html?class=${classId}&summary=${summary.id}`;
+
+                        const arrow = data.language === 'ar' ? '←' : '→';
+                        const icon = getSummaryIcon(summary.title);
+
+                        item.innerHTML = `
+                            <div class="exam-icon">${icon}</div>
+                            <div class="exam-item-content">
+                                <div class="exam-title">${summary.title}</div>
+                                <div class="exam-description">${summary.description}</div>
+                            </div>
+                            <div class="exam-arrow">${arrow}</div>
+                        `;
+
+                        summariesList.appendChild(item);
                     });
                 }
 

@@ -142,3 +142,20 @@
 .challenge-item .exam-arrow {
     color: var(--cyan);
 }
+
+/* Summary Items - Different styling */
+.summary-item {
+    border-left-color: var(--yellow);
+}
+
+[dir="ltr"] .summary-item {
+    border-right-color: var(--yellow);
+}
+
+.summary-item .exam-title {
+    color: var(--yellow);
+}
+
+.summary-item .exam-arrow {
+    color: var(--yellow);
+}

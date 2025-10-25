@@ -1,0 +1,91 @@
+{
+  "language": "en",
+  "id": "ch4-summary",
+  "chapter": "Ch4: Polynomials & Exponents",
+  "sections": [
+    {
+      "title": "Exponent Rules",
+      "items": [
+        {
+          "label": "Product Rule",
+          "formula": "$x^m \\cdot x^n = x^{m+n}$"
+        },
+        {
+          "label": "Quotient Rule",
+          "formula": "$\\frac{x^m}{x^n} = x^{m-n}$"
+        },
+        {
+          "label": "Power of Power",
+          "formula": "$(x^m)^n = x^{mn}$"
+        },
+        {
+          "label": "Power of Product",
+          "formula": "$(xy)^n = x^n y^n$"
+        },
+        {
+          "label": "Power of Quotient",
+          "formula": "$\\left(\\frac{x}{y}\\right)^n = \\frac{x^n}{y^n}$"
+        },
+        {
+          "label": "Negative Exponent",
+          "formula": "$x^{-n} = \\frac{1}{x^n}$"
+        },
+        {
+          "label": "Zero Exponent",
+          "formula": "$x^0 = 1$ (where $x \\neq 0$)"
+        }
+      ]
+    },
+    {
+      "title": "Polynomial Operations",
+      "items": [
+        {
+          "label": "Addition/Subtraction",
+          "formula": "Combine like terms with same variable and exponent"
+        },
+        {
+          "label": "Multiplication",
+          "formula": "Distribute each term (FOIL for binomials)"
+        },
+        {
+          "label": "Division",
+          "formula": "Divide coefficients, subtract exponents"
+        }
+      ]
+    },
+    {
+      "title": "Special Products",
+      "items": [
+        {
+          "label": "Square of Sum",
+          "formula": "$(a+b)^2 = a^2 + 2ab + b^2$"
+        },
+        {
+          "label": "Square of Difference",
+          "formula": "$(a-b)^2 = a^2 - 2ab + b^2$"
+        },
+        {
+          "label": "Difference of Squares",
+          "formula": "$(a+b)(a-b) = a^2 - b^2$"
+        },
+        {
+          "label": "FOIL Method",
+          "formula": "$(a+b)(c+d) = ac + ad + bc + bd$"
+        }
+      ]
+    },
+    {
+      "title": "Scientific Notation",
+      "items": [
+        {
+          "label": "Form",
+          "formula": "$a \\times 10^n$ where $1 \\leq |a| < 10$"
+        },
+        {
+          "label": "Operations",
+          "formula": "Multiply/divide by adding/subtracting exponents of 10"
+        }
+      ]
+    }
+  ]
+}

@@ -92,5 +92,12 @@
       "type": "standalone",
       "url": "challenges/rational_expressions_challenge.html"
     }
+  ],
+  "summaries": [
+    {
+      "id": "ch4-summary",
+      "title": "📋 Ch4: Polynomials & Exponents Summary",
+      "description": "Quick reference: exponent rules, polynomial operations, special products, and scientific notation"
+    }
   ]
 }
