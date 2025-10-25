@@ -9,12 +9,12 @@
       "type": "multiple-choice",
       "question": "Find the GCF of 18x⁵ and 30x².",
       "options": [
-        "6x²",
-        "6x⁵",
         "90x²",
-        "90x⁵"
+        "6x⁵",
+        "90x⁵",
+        "6x²"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "Correct! The GCF of coefficients is 6 (GCF of 18 and 30). The GCF of variables is x² (smallest exponent). So GCF = 6x².",
       "review": {
         "chapter": "Chapter 5",
@@ -29,9 +29,9 @@
       "question": "Find the GCF of 16p⁶q⁴ and 28p³q³.",
       "options": [
         "4p³q³",
-        "4p⁶q⁴",
+        "2p³q³",
         "112p³q³",
-        "2p³q³"
+        "4p⁶q⁴"
       ],
       "correctAnswer": 0,
       "explanation": "Correct! GCF of 16 and 28 is 4. Smallest exponent of p is 3, smallest exponent of q is 3. GCF = 4p³q³.",
@@ -47,12 +47,12 @@
       "type": "multiple-choice",
       "question": "Factor: 28x⁶ + 32x³",
       "options": [
-        "4x³(7x³ + 8)",
-        "4x(7x⁵ + 8x²)",
         "x³(28x³ + 32)",
-        "4x²(7x⁴ + 8x)"
+        "4x(7x⁵ + 8x²)",
+        "4x²(7x⁴ + 8x)",
+        "4x³(7x³ + 8)"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "Correct! The GCF is 4x³. Factor it out: 28x⁶ + 32x³ = 4x³ · 7x³ + 4x³ · 8 = 4x³(7x³ + 8).",
       "review": {
         "chapter": "Chapter 5",
@@ -67,9 +67,9 @@
       "question": "Factor: 12x⁵ - 21x⁴ + 24x³",
       "options": [
         "3x³(4x² - 7x + 8)",
+        "3x²(4x³ - 7x² + 8x)",
         "3x(4x⁴ - 7x³ + 8x²)",
-        "x³(12x² - 21x + 24)",
-        "3x²(4x³ - 7x² + 8x)"
+        "x³(12x² - 21x + 24)"
       ],
       "correctAnswer": 0,
       "explanation": "Correct! The GCF is 3x³. Factoring out: 12x⁵ - 21x⁴ + 24x³ = 3x³(4x² - 7x + 8).",
@@ -85,12 +85,12 @@
       "type": "multiple-choice",
       "question": "Factor by grouping: x² + 2x + 4x + 8",
       "options": [
-        "(x + 2)(x + 4)",
         "(x + 4)(x + 2)",
+        "(x + 2)(x + 4)",
         "(x² + 4)(x + 2)",
         "x(x + 2) + 4(x + 2)"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 1,
       "explanation": "Correct! Group terms: (x² + 2x) + (4x + 8) = x(x + 2) + 4(x + 2) = (x + 2)(x + 4). Note: options A and B are equivalent.",
       "review": {
         "chapter": "Chapter 5",
@@ -105,8 +105,8 @@
       "question": "Factor by grouping: 3x³ + 9x² + x + 3",
       "options": [
         "(3x² + 1)(x + 3)",
-        "(x + 3)(3x² + 1)",
         "(3x + 1)(x² + 3)",
+        "(x + 3)(3x² + 1)",
         "3x²(x + 3) + 1"
       ],
       "correctAnswer": 0,
@@ -123,12 +123,12 @@
       "type": "multiple-choice",
       "question": "Factor by grouping: 2x² + 4x + 5x + 10",
       "options": [
+        "(x + 5)(2x + 2)",
         "(2x + 5)(x + 2)",
-        "(x + 2)(2x + 5)",
         "(2x² + 5)(x + 2)",
-        "(x + 5)(2x + 2)"
+        "(x + 2)(2x + 5)"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 1,
       "explanation": "Correct! Group: (2x² + 4x) + (5x + 10) = 2x(x + 2) + 5(x + 2) = (2x + 5)(x + 2). Options A and B are equivalent.",
       "review": {
         "chapter": "Chapter 5",
@@ -142,12 +142,12 @@
       "type": "multiple-choice",
       "question": "Is x² + 8x + 16 a perfect-square trinomial?",
       "options": [
-        "Yes, because it equals (x + 4)²",
+        "Yes, but only if x is positive",
         "No, because 8x is not twice the product of x and 4",
-        "No, because 16 is not a perfect square",
-        "Yes, but only if x is positive"
+        "Yes, because it equals (x + 4)²",
+        "No, because 16 is not a perfect square"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "Correct! x² and 16 are perfect squares (x² and 4²). The middle term 8x = 2·x·4, so it's a perfect square trinomial: (x + 4)².",
       "review": {
         "chapter": "Chapter 5",
@@ -161,12 +161,12 @@
       "type": "multiple-choice",
       "question": "Is 25x² - 20x + 4 a perfect-square trinomial?",
       "options": [
-        "Yes, it equals (5x - 2)²",
+        "No, 4 is being subtracted",
         "No, the middle term doesn't match",
-        "No, 25x² is not a perfect square",
-        "No, 4 is being subtracted"
+        "Yes, it equals (5x - 2)²",
+        "No, 25x² is not a perfect square"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "Correct! 25x² = (5x)² and 4 = 2². The middle term -20x = -2·5x·2. So it's (5x - 2)².",
       "review": {
         "chapter": "Chapter 5",
@@ -180,12 +180,12 @@
       "type": "multiple-choice",
       "question": "Factor: x² + 8x + 16",
       "options": [
-        "(x + 4)²",
         "(x + 8)(x + 2)",
-        "(x + 4)(x + 4)",
-        "Both A and C"
+        "(x + 4)²",
+        "Both A and C",
+        "(x + 4)(x + 4)"
       ],
-      "correctAnswer": 3,
+      "correctAnswer": 2,
       "explanation": "Correct! Both A and C are the same: (x + 4)² = (x + 4)(x + 4). This is a perfect square trinomial.",
       "review": {
         "chapter": "Chapter 5",
@@ -199,12 +199,12 @@
       "type": "multiple-choice",
       "question": "Factor: 16a² - 24ab + 9b²",
       "options": [
+        "(4a - 3b)(4a + 3b)",
         "(4a - 3b)²",
-        "(4a + 3b)²",
         "(16a - 9b)(a - b)",
-        "(4a - 3b)(4a + 3b)"
+        "(4a + 3b)²"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 1,
       "explanation": "Correct! 16a² = (4a)², 9b² = (3b)², and -24ab = -2(4a)(3b). So it's (4a - 3b)².",
       "review": {
         "chapter": "Chapter 5",
@@ -218,12 +218,12 @@
       "type": "multiple-choice",
       "question": "Factor: 4x² - 28x + 49",
       "options": [
-        "(2x - 7)²",
-        "(2x - 7)(2x + 7)",
         "(4x - 7)(x - 7)",
-        "(2x + 7)²"
+        "(2x + 7)²",
+        "(2x - 7)²",
+        "(2x - 7)(2x + 7)"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "Correct! 4x² = (2x)², 49 = 7², and -28x = -2(2x)(7). So it's (2x - 7)².",
       "review": {
         "chapter": "Chapter 5",
@@ -237,12 +237,12 @@
       "type": "multiple-choice",
       "question": "Factor: x² - 9",
       "options": [
-        "(x + 3)(x - 3)",
         "(x - 3)²",
         "(x - 9)(x + 1)",
+        "(x + 3)(x - 3)",
         "Cannot be factored (prime)"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "Correct! This is a difference of squares: x² - 9 = x² - 3² = (x + 3)(x - 3).",
       "review": {
         "chapter": "Chapter 5",
@@ -256,12 +256,12 @@
       "type": "multiple-choice",
       "question": "Factor: 9x² - 25",
       "options": [
-        "(3x - 5)(3x + 5)",
-        "(3x - 5)²",
         "(9x - 5)(x + 5)",
+        "(3x - 5)²",
+        "(3x - 5)(3x + 5)",
         "(3x + 5)²"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "Correct! 9x² - 25 = (3x)² - 5² = (3x - 5)(3x + 5).",
       "review": {
         "chapter": "Chapter 5",
@@ -275,12 +275,12 @@
       "type": "multiple-choice",
       "question": "Factor: y² - 16w²",
       "options": [
-        "(y + 4w)(y - 4w)",
         "(y - 4w)²",
+        "(y + w)(y - 16w)",
         "(y - 16w)(y + w)",
-        "(y + w)(y - 16w)"
+        "(y + 4w)(y - 4w)"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "Correct! y² - 16w² = y² - (4w)² = (y + 4w)(y - 4w).",
       "review": {
         "chapter": "Chapter 5",
@@ -294,12 +294,12 @@
       "type": "multiple-choice",
       "question": "Factor completely: 5x⁴ - 3125",
       "options": [
-        "5(x - 5)(x + 5)(x² + 25)",
-        "5(x² - 25)(x² + 25)",
         "5(x - 5)⁴",
-        "(5x² - 125)(x² + 25)"
+        "5(x² - 25)(x² + 25)",
+        "(5x² - 125)(x² + 25)",
+        "5(x - 5)(x + 5)(x² + 25)"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "Correct! First factor GCF: 5(x⁴ - 625). Then difference of squares: 5[(x²)² - 25²] = 5(x² - 25)(x² + 25). Finally: 5(x - 5)(x + 5)(x² + 25).",
       "review": {
         "chapter": "Chapter 5",
@@ -313,12 +313,12 @@
       "type": "multiple-choice",
       "question": "Which of the following is prime (cannot be factored)?",
       "options": [
-        "x² + 25",
         "x² - 25",
+        "25 - x²",
         "x² + 10x + 25",
-        "25 - x²"
+        "x² + 25"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "Correct! x² + 25 is a SUM of squares, which cannot be factored. Only DIFFERENCE of squares can be factored: A² - B² = (A+B)(A-B).",
       "review": {
         "chapter": "Chapter 5",
@@ -333,9 +333,9 @@
       "question": "Factor: y² - 8y + 15",
       "options": [
         "(y - 3)(y - 5)",
-        "(y + 3)(y + 5)",
+        "(y - 15)(y + 1)",
         "(y - 8)(y + 15)",
-        "(y - 15)(y + 1)"
+        "(y + 3)(y + 5)"
       ],
       "correctAnswer": 0,
       "explanation": "Correct! We need two negative numbers that multiply to +15 and add to -8. Those are -3 and -5: (y - 3)(y - 5).",
@@ -351,12 +351,12 @@
       "type": "multiple-choice",
       "question": "Factor: x² - 5x - 24",
       "options": [
-        "(x + 3)(x - 8)",
         "(x - 3)(x + 8)",
         "(x - 5)(x - 24)",
-        "(x + 4)(x - 6)"
+        "(x + 4)(x - 6)",
+        "(x + 3)(x - 8)"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "Correct! We need one positive and one negative that multiply to -24 and add to -5. That's +3 and -8: (x + 3)(x - 8).",
       "review": {
         "chapter": "Chapter 5",
@@ -371,8 +371,8 @@
       "question": "Factor: t² + 4t - 32",
       "options": [
         "(t + 8)(t - 4)",
-        "(t - 8)(t + 4)",
         "(t + 4)(t - 32)",
+        "(t - 8)(t + 4)",
         "(t - 2)(t + 16)"
       ],
       "correctAnswer": 0,
@@ -408,12 +408,12 @@
       "type": "multiple-choice",
       "question": "Factor completely: 2x³ - 24x² + 72x",
       "options": [
-        "2x(x - 6)²",
         "2x(x - 6)(x - 6)",
         "Both A and B",
-        "2x(x² - 12x + 36)"
+        "2x(x² - 12x + 36)",
+        "2x(x - 6)²"
       ],
-      "correctAnswer": 2,
+      "correctAnswer": 1,
       "explanation": "Correct! First factor GCF: 2x(x² - 12x + 36). Then factor trinomial: 2x(x - 6)(x - 6) = 2x(x - 6)². Both forms are correct!",
       "review": {
         "chapter": "Chapter 5",
@@ -429,8 +429,8 @@
       "options": [
         "x² - x + 7",
         "x² - x - 6",
-        "x² + 6x + 9",
-        "x² - 9"
+        "x² - 9",
+        "x² + 6x + 9"
       ],
       "correctAnswer": 0,
       "explanation": "Correct! x² - x + 7 is prime. There are no two integers that multiply to +7 and add to -1.",
@@ -446,12 +446,12 @@
       "type": "multiple-choice",
       "question": "Factor: x³ + 7x² + 12x",
       "options": [
+        "x(x² + 7x + 12)",
         "x(x + 3)(x + 4)",
         "x(x + 6)(x + 2)",
-        "(x² + 3)(x + 4)",
-        "x(x² + 7x + 12)"
+        "(x² + 3)(x + 4)"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 1,
       "explanation": "Correct! First factor GCF: x(x² + 7x + 12). Then factor trinomial: x(x + 3)(x + 4).",
       "review": {
         "chapter": "Chapter 5",
@@ -467,8 +467,8 @@
       "options": [
         "-24",
         "24",
-        "-10",
-        "10"
+        "10",
+        "-10"
       ],
       "correctAnswer": 0,
       "explanation": "Correct! a = 4, c = -6, so ac = 4 × (-6) = -24.",
@@ -484,12 +484,12 @@
       "type": "multiple-choice",
       "question": "Factor using ac-method: 4x² - 5x - 6",
       "options": [
-        "(x - 2)(4x + 3)",
-        "(4x - 3)(x + 2)",
         "(2x - 3)(2x + 2)",
-        "(4x - 6)(x + 1)"
+        "(4x - 6)(x + 1)",
+        "(x - 2)(4x + 3)",
+        "(4x - 3)(x + 2)"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "Correct! ac = -24, we need factors that multiply to -24 and add to -5: that's 3 and -8. Split: 4x² - 8x + 3x - 6 = 4x(x - 2) + 3(x - 2) = (x - 2)(4x + 3).",
       "review": {
         "chapter": "Chapter 5",
@@ -504,9 +504,9 @@
       "question": "Factor: 2x² - x - 3",
       "options": [
         "(2x - 3)(x + 1)",
+        "(x - 3)(2x + 1)",
         "(2x + 3)(x - 1)",
-        "(2x - 1)(x + 3)",
-        "(x - 3)(2x + 1)"
+        "(2x - 1)(x + 3)"
       ],
       "correctAnswer": 0,
       "explanation": "Correct! ac = -6, need factors that add to -1: that's 2 and -3. Split: 2x² + 2x - 3x - 3 = 2x(x + 1) - 3(x + 1) = (2x - 3)(x + 1).",
@@ -522,12 +522,12 @@
       "type": "multiple-choice",
       "question": "Factor: 3x² - 14x - 5",
       "options": [
-        "(3x + 1)(x - 5)",
         "(3x - 1)(x + 5)",
         "(3x - 5)(x + 1)",
-        "(x - 5)(3x + 1)"
+        "(x - 5)(3x + 1)",
+        "(3x + 1)(x - 5)"
       ],
-      "correctAnswer": 3,
+      "correctAnswer": 2,
       "explanation": "Correct! ac = -15, need factors that add to -14: that's 1 and -15. Split: 3x² + x - 15x - 5 = x(3x + 1) - 5(3x + 1) = (x - 5)(3x + 1). Options A and D are equivalent.",
       "review": {
         "chapter": "Chapter 5",
@@ -541,12 +541,12 @@
       "type": "multiple-choice",
       "question": "Factor completely: 4t³ - 10t² - 50t",
       "options": [
+        "2(2t³ - 5t² - 25t)",
         "2t(2t + 5)(t - 5)",
-        "2t(2t - 5)(t + 5)",
         "t(4t² - 10t - 50)",
-        "2(2t³ - 5t² - 25t)"
+        "2t(2t - 5)(t + 5)"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 1,
       "explanation": "Correct! First GCF: 2t(2t² - 5t - 25). Then ac-method on 2t² - 5t - 25: ac = -50, factors 5 and -10 add to -5. Split: 2t(2t² + 5t - 10t - 25) = 2t[t(2t + 5) - 5(2t + 5)] = 2t(2t + 5)(t - 5).",
       "review": {
         "chapter": "Chapter 5",
@@ -560,12 +560,12 @@
       "type": "multiple-choice",
       "question": "Solve: (x + 4)(x - 3) = 0",
       "options": [
-        "x = -4 or x = 3",
-        "x = 4 or x = -3",
+        "x = 4 or x = 3",
         "x = -4 or x = -3",
-        "x = 4 or x = 3"
+        "x = -4 or x = 3",
+        "x = 4 or x = -3"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "Correct! Using the zero product principle: x + 4 = 0 OR x - 3 = 0. So x = -4 or x = 3.",
       "review": {
         "chapter": "Chapter 5",
@@ -579,12 +579,12 @@
       "type": "multiple-choice",
       "question": "Solve: x² + 9x + 14 = 0",
       "options": [
-        "x = -7 or x = -2",
-        "x = 7 or x = 2",
         "x = -7 or x = 2",
-        "x = 7 or x = -2"
+        "x = 7 or x = 2",
+        "x = 7 or x = -2",
+        "x = -7 or x = -2"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "Correct! Factor: (x + 7)(x + 2) = 0. Then x + 7 = 0 or x + 2 = 0, so x = -7 or x = -2.",
       "review": {
         "chapter": "Chapter 5",
@@ -598,12 +598,12 @@
       "type": "multiple-choice",
       "question": "Solve: y² + 4y = 0",
       "options": [
-        "y = 0 or y = -4",
         "y = 0 or y = 4",
         "y = -4 only",
-        "y = 4 only"
+        "y = 4 only",
+        "y = 0 or y = -4"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "Correct! Factor: y(y + 4) = 0. Then y = 0 or y + 4 = 0, so y = 0 or y = -4.",
       "review": {
         "chapter": "Chapter 5",
@@ -617,12 +617,12 @@
       "type": "multiple-choice",
       "question": "Solve: x² - 12x = -36",
       "options": [
-        "x = 6",
-        "x = -6",
+        "x = 12 or x = 3",
         "x = 6 or x = -6",
-        "x = 12 or x = 3"
+        "x = -6",
+        "x = 6"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "Correct! First get 0 on one side: x² - 12x + 36 = 0. Factor: (x - 6)(x - 6) = 0. So x = 6 (only one solution).",
       "review": {
         "chapter": "Chapter 5",
@@ -636,12 +636,12 @@
       "type": "multiple-choice",
       "question": "Solve: 9x² = 49",
       "options": [
+        "x = 3/7 or x = -3/7",
         "x = 7/3 or x = -7/3",
         "x = 7/3 only",
-        "x = 49/9 or x = -49/9",
-        "x = 3/7 or x = -3/7"
+        "x = 49/9 or x = -49/9"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 1,
       "explanation": "Correct! Rearrange: 9x² - 49 = 0. Factor difference of squares: (3x - 7)(3x + 7) = 0. So 3x = 7 or 3x = -7, giving x = 7/3 or x = -7/3.",
       "review": {
         "chapter": "Chapter 5",
@@ -655,12 +655,12 @@
       "type": "multiple-choice",
       "question": "Solve: x² + 4x - 5 = 0",
       "options": [
-        "x = 1 or x = -5",
         "x = -1 or x = 5",
-        "x = 5 or x = -1",
-        "x = -4 or x = 1"
+        "x = -4 or x = 1",
+        "x = 1 or x = -5",
+        "x = 5 or x = -1"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "Correct! Factor: (x + 5)(x - 1) = 0. So x + 5 = 0 or x - 1 = 0, giving x = -5 or x = 1.",
       "review": {
         "chapter": "Chapter 5",

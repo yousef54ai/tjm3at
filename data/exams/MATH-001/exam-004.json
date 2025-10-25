@@ -20,10 +20,10 @@
       "type": "multiple-choice",
       "question": "Which of the following is a polynomial?",
       "options": [
-        "x⁻⁴y² + 1",
+        "1/x + 2",
         "2/3·y² + 2y - 1",
         "y^(1/2) + 5",
-        "1/x + 2"
+        "x⁻⁴y² + 1"
       ],
       "correctAnswer": 1,
       "explanation": "Correct! 2/3·y² + 2y - 1 is a polynomial because all exponents are non-negative integers. The coefficient 2/3 is allowed (real numbers are valid coefficients). Option (a) has negative exponents, (c) has fractional exponents, and (d) has variables in denominator.",
@@ -40,11 +40,11 @@
       "question": "Is √x + 4 a polynomial?",
       "options": [
         "Yes, because it has addition",
-        "No, because it contains a square root of a variable",
+        "No, because it has two terms",
         "Yes, because 4 is a constant",
-        "No, because it has two terms"
+        "No, because it contains a square root of a variable"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Correct! √x + 4 is NOT a polynomial because √x = x^(1/2), which is a fractional exponent. Variables under square roots disqualify an expression from being a polynomial.",
       "review": {
         "chapter": "Chapter 4",
@@ -59,11 +59,11 @@
       "question": "Is √3 + 5x a polynomial?",
       "options": [
         "No, because it contains a square root",
+        "Yes, but only if we simplify √3",
         "Yes, because the radical is a constant, not a variable",
-        "No, because √3 is irrational",
-        "Yes, but only if we simplify √3"
+        "No, because √3 is irrational"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Correct! √3 + 5x IS a polynomial. Although it contains a radical, √3 is a constant (not a variable under the radical). Constants can be any real number, including irrational numbers.",
       "review": {
         "chapter": "Chapter 4",
@@ -77,12 +77,12 @@
       "type": "multiple-choice",
       "question": "Which expression is NOT a polynomial?",
       "options": [
-        "5x²",
         "8",
-        "x⁻³",
-        "0"
+        "5x²",
+        "0",
+        "x⁻³"
       ],
-      "correctAnswer": 2,
+      "correctAnswer": 3,
       "explanation": "Correct! x⁻³ is NOT a polynomial because it has a negative exponent. Negative exponents mean division by variables (x⁻³ = 1/x³), which violates polynomial rules.",
       "review": {
         "chapter": "Chapter 4",
@@ -96,12 +96,12 @@
       "type": "multiple-choice",
       "question": "Is the number 5 a polynomial?",
       "options": [
-        "Yes, it is a constant polynomial (monomial of degree 0)",
         "No, polynomials must have variables",
+        "No, it's just a number",
         "Yes, but only if written as 5x⁰",
-        "No, it's just a number"
+        "Yes, it is a constant polynomial (monomial of degree 0)"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "Correct! The number 5 IS a polynomial. It's a constant polynomial (monomial) with degree 0. Constants are valid polynomials.",
       "review": {
         "chapter": "Chapter 4",
@@ -115,12 +115,12 @@
       "type": "multiple-choice",
       "question": "Is 0 a polynomial?",
       "options": [
+        "Both (a) and (c)",
         "Yes, it's a constant polynomial",
-        "No, zero is not a number",
         "Yes, but its degree is undefined",
-        "Both (a) and (c)"
+        "No, zero is not a number"
       ],
-      "correctAnswer": 3,
+      "correctAnswer": 0,
       "explanation": "Correct! 0 IS a polynomial (the zero polynomial), but its degree is undefined or sometimes considered to be -∞. It's a special case.",
       "review": {
         "chapter": "Chapter 4",
@@ -134,12 +134,12 @@
       "type": "multiple-choice",
       "question": "Classify the polynomial 5x² + 8:",
       "options": [
-        "Monomial",
-        "Binomial",
         "Trinomial",
-        "None of these"
+        "None of these",
+        "Binomial",
+        "Monomial"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Correct! 5x² + 8 is a binomial because it has exactly two terms: 5x² and 8.",
       "review": {
         "chapter": "Chapter 4",
@@ -174,10 +174,10 @@
       "options": [
         "Monomial",
         "Binomial",
-        "Trinomial",
-        "None of these (polynomial with 6 terms)"
+        "None of these (polynomial with 6 terms)",
+        "Trinomial"
       ],
-      "correctAnswer": 3,
+      "correctAnswer": 2,
       "explanation": "Correct! This polynomial has 6 terms, so it's not a monomial, binomial, or trinomial. Polynomials with 4 or more terms have no special name.",
       "review": {
         "chapter": "Chapter 4",
@@ -193,8 +193,8 @@
       "options": [
         "9",
         "5",
-        "45",
-        "14"
+        "14",
+        "45"
       ],
       "correctAnswer": 1,
       "explanation": "Correct! The degree of 9x⁵ is 5 (the exponent of the variable). The coefficient 9 is not part of the degree.",
@@ -210,12 +210,12 @@
       "type": "multiple-choice",
       "question": "What is the degree of the term 9x³y⁵?",
       "options": [
-        "3",
-        "5",
         "8",
-        "15"
+        "5",
+        "15",
+        "3"
       ],
-      "correctAnswer": 2,
+      "correctAnswer": 0,
       "explanation": "Correct! For terms with multiple variables, the degree is the SUM of all exponents: 3 + 5 = 8.",
       "review": {
         "chapter": "Chapter 4",
@@ -229,12 +229,12 @@
       "type": "multiple-choice",
       "question": "What is the degree of the term wz²y³?",
       "options": [
-        "6",
-        "5",
         "2",
+        "5",
+        "6",
         "3"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "Correct! wz²y³ = w¹z²y³, so the degree is 1 + 2 + 3 = 6. Remember: a variable with no visible exponent has exponent 1.",
       "review": {
         "chapter": "Chapter 4",
@@ -248,12 +248,12 @@
       "type": "multiple-choice",
       "question": "What is the degree of the constant term 8?",
       "options": [
-        "8",
         "1",
-        "0",
-        "undefined"
+        "8",
+        "undefined",
+        "0"
       ],
-      "correctAnswer": 2,
+      "correctAnswer": 3,
       "explanation": "Correct! Constants have degree 0. We can think of 8 as 8x⁰, which has exponent 0.",
       "review": {
         "chapter": "Chapter 4",
@@ -267,12 +267,12 @@
       "type": "multiple-choice",
       "question": "What is the degree of the polynomial 4x² - 9x³ + 6x⁴ + 8x - 7?",
       "options": [
-        "2",
-        "3",
+        "7",
         "4",
-        "7"
+        "3",
+        "2"
       ],
-      "correctAnswer": 2,
+      "correctAnswer": 1,
       "explanation": "Correct! The degree of a polynomial is the largest exponent. Here, the largest exponent is 4 (from the term 6x⁴).",
       "review": {
         "chapter": "Chapter 4",
@@ -287,11 +287,11 @@
       "question": "What is the coefficient of the term -8x²y in the polynomial?",
       "options": [
         "8",
-        "-8",
         "-8x²",
+        "-8",
         "x²y"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Correct! The coefficient is -8 (including the negative sign). The coefficient is the constant factor of the term.",
       "review": {
         "chapter": "Chapter 4",
@@ -305,12 +305,12 @@
       "type": "multiple-choice",
       "question": "What is the coefficient of y in the polynomial 5x⁴ - 8x²y + y - 9?",
       "options": [
-        "0",
-        "y",
+        "-1",
         "1",
-        "-1"
+        "0",
+        "y"
       ],
-      "correctAnswer": 2,
+      "correctAnswer": 1,
       "explanation": "Correct! The coefficient of y is 1, since y = 1·y. When no number appears in front of a variable, the coefficient is understood to be 1.",
       "review": {
         "chapter": "Chapter 4",
@@ -324,12 +324,12 @@
       "type": "multiple-choice",
       "question": "Combine like terms: 7x⁵ + 9 + 3x² + 6x² - 13 - 6x⁵",
       "options": [
-        "x⁵ + 9x² - 4",
-        "13x⁵ + 9x² - 4",
         "x⁵ + 3x² - 4",
-        "7x⁵ + 9x² + 9"
+        "7x⁵ + 9x² + 9",
+        "x⁵ + 9x² - 4",
+        "13x⁵ + 9x² - 4"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "Correct! Combine like terms: (7x⁵ - 6x⁵) + (3x² + 6x²) + (9 - 13) = x⁵ + 9x² - 4.",
       "review": {
         "chapter": "Chapter 4",
@@ -345,8 +345,8 @@
       "options": [
         "5x⁷ + 7x⁵ + 3x³ + x²",
         "x² + 3x³ + 7x⁵ + 5x⁷",
-        "7x⁵ + 5x⁷ + x² + 3x³",
-        "5x⁷ + 3x³ + 7x⁵ + x²"
+        "5x⁷ + 3x³ + 7x⁵ + x²",
+        "7x⁵ + 5x⁷ + x² + 3x³"
       ],
       "correctAnswer": 0,
       "explanation": "Correct! Descending order means from largest exponent to smallest: 5x⁷ + 7x⁵ + 3x³ + x².",
@@ -362,12 +362,12 @@
       "type": "multiple-choice",
       "question": "Add: (-6x³ + 7x - 2) + (5x³ + 4x² + 3)",
       "options": [
-        "-x³ + 4x² + 7x + 1",
+        "-x³ + 4x² + 7x - 5",
         "-11x³ + 4x² + 7x + 1",
-        "x³ + 4x² + 7x + 1",
-        "-x³ + 4x² + 7x - 5"
+        "-x³ + 4x² + 7x + 1",
+        "x³ + 4x² + 7x + 1"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "Correct! Combine like terms: (-6 + 5)x³ + 4x² + 7x + (-2 + 3) = -x³ + 4x² + 7x + 1.",
       "review": {
         "chapter": "Chapter 4",
@@ -382,9 +382,9 @@
       "question": "Add: (-6x³ + 4xy - 6y²) + (7x³ + 5x²y + 8y²)",
       "options": [
         "x³ + 5x²y + 4xy + 2y²",
+        "13x³ + 5x²y + 4xy + 14y²",
         "-13x³ + 5x²y + 4xy - 14y²",
-        "x³ + 4xy + 2y²",
-        "13x³ + 5x²y + 4xy + 14y²"
+        "x³ + 4xy + 2y²"
       ],
       "correctAnswer": 0,
       "explanation": "Correct! Combine like terms: (-6 + 7)x³ + 5x²y + 4xy + (-6 + 8)y² = x³ + 5x²y + 4xy + 2y².",
@@ -401,9 +401,9 @@
       "question": "Simplify the opposite: -(-8x⁴ - ½x³ + 9x² - 2x + 72)",
       "options": [
         "8x⁴ + ½x³ - 9x² + 2x - 72",
-        "-8x⁴ - ½x³ + 9x² - 2x + 72",
         "8x⁴ - ½x³ + 9x² - 2x + 72",
-        "8x⁴ + ½x³ + 9x² + 2x + 72"
+        "8x⁴ + ½x³ + 9x² + 2x + 72",
+        "-8x⁴ - ½x³ + 9x² - 2x + 72"
       ],
       "correctAnswer": 0,
       "explanation": "Correct! Distribute the negative sign to each term: 8x⁴ + ½x³ - 9x² + 2x - 72. Every sign changes!",
@@ -420,9 +420,9 @@
       "question": "Subtract: (10x⁵ + 2x³ - 3x² + 5) - (-3x⁵ + 2x⁴ - 5x³ - 4x²)",
       "options": [
         "13x⁵ - 2x⁴ + 7x³ + x² + 5",
+        "10x⁵ - 2x⁴ + 2x³ - 3x² + 5",
         "7x⁵ - 2x⁴ - 3x³ - 7x² + 5",
-        "13x⁵ + 2x⁴ + 7x³ + x² + 5",
-        "10x⁵ - 2x⁴ + 2x³ - 3x² + 5"
+        "13x⁵ + 2x⁴ + 7x³ + x² + 5"
       ],
       "correctAnswer": 0,
       "explanation": "Correct! Change subtraction to adding the opposite: 10x⁵ + 2x³ - 3x² + 5 + 3x⁵ - 2x⁴ + 5x³ + 4x². Combine: 13x⁵ - 2x⁴ + 7x³ + x² + 5.",
@@ -439,9 +439,9 @@
       "question": "Multiply monomials: (6x)(7x)",
       "options": [
         "42x²",
+        "13x²",
         "13x",
-        "42x",
-        "13x²"
+        "42x"
       ],
       "correctAnswer": 0,
       "explanation": "Correct! (6x)(7x) = (6·7)(x·x) = 42x². Multiply coefficients and add exponents.",
@@ -458,9 +458,9 @@
       "question": "Multiply: (5a)(-a)",
       "options": [
         "-5a²",
-        "5a²",
         "-5a",
-        "4a"
+        "4a",
+        "5a²"
       ],
       "correctAnswer": 0,
       "explanation": "Correct! (5a)(-a) = (5a)(-1a) = (5)(-1)(a·a) = -5a². Remember: -a means -1·a.",
@@ -476,12 +476,12 @@
       "type": "multiple-choice",
       "question": "Multiply: (-8x⁶)(3x⁴)",
       "options": [
-        "-24x¹⁰",
         "-24x²⁴",
         "-11x¹⁰",
-        "24x¹⁰"
+        "24x¹⁰",
+        "-24x¹⁰"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "Correct! (-8x⁶)(3x⁴) = (-8·3)(x⁶·x⁴) = -24x¹⁰. Multiply coefficients and add exponents.",
       "review": {
         "chapter": "Chapter 4",
@@ -495,12 +495,12 @@
       "type": "multiple-choice",
       "question": "Multiply monomial by polynomial: 5x²(x³ - 4x² + 3x - 5)",
       "options": [
-        "5x⁵ - 20x⁴ + 15x³ - 25x²",
+        "5x⁵ - 20x⁴ + 15x³ - 5",
         "5x⁶ - 20x⁴ + 15x³ - 25x²",
-        "5x⁵ - 4x⁴ + 3x³ - 5x²",
-        "5x⁵ - 20x⁴ + 15x³ - 5"
+        "5x⁵ - 20x⁴ + 15x³ - 25x²",
+        "5x⁵ - 4x⁴ + 3x³ - 5x²"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "Correct! Multiply each term: 5x²·x³ - 5x²·4x² + 5x²·3x - 5x²·5 = 5x⁵ - 20x⁴ + 15x³ - 25x².",
       "review": {
         "chapter": "Chapter 4",
@@ -514,12 +514,12 @@
       "type": "multiple-choice",
       "question": "Multiply using FOIL: (3x - 2)(x - 1)",
       "options": [
-        "3x² - 5x + 2",
         "3x² - 3x + 2",
-        "3x² + x + 2",
-        "3x² - 5x - 2"
+        "3x² - 5x + 2",
+        "3x² - 5x - 2",
+        "3x² + x + 2"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 1,
       "explanation": "Correct! First: 3x·x = 3x², Outer: 3x·(-1) = -3x, Inner: -2·x = -2x, Last: -2·(-1) = 2. Combine: 3x² - 3x - 2x + 2 = 3x² - 5x + 2.",
       "review": {
         "chapter": "Chapter 4",
@@ -533,12 +533,12 @@
       "type": "multiple-choice",
       "question": "Multiply: (x + 4)(x² + 3)",
       "options": [
+        "x² + 7x + 12",
         "x³ + 4x² + 3x + 12",
-        "x³ + 3x + 12",
         "x³ + 7x + 12",
-        "x² + 7x + 12"
+        "x³ + 3x + 12"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 1,
       "explanation": "Correct! Using FOIL: x·x² + x·3 + 4·x² + 4·3 = x³ + 3x + 4x² + 12. Rearrange in descending order: x³ + 4x² + 3x + 12.",
       "review": {
         "chapter": "Chapter 4",
@@ -552,12 +552,12 @@
       "type": "multiple-choice",
       "question": "Multiply using difference of squares: (x + 8)(x - 8)",
       "options": [
-        "x² - 64",
-        "x² + 64",
         "x² - 16x - 64",
-        "x² - 64x"
+        "x² - 64x",
+        "x² - 64",
+        "x² + 64"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "Correct! Using (A + B)(A - B) = A² - B²: (x + 8)(x - 8) = x² - 8² = x² - 64.",
       "review": {
         "chapter": "Chapter 4",
@@ -571,12 +571,12 @@
       "type": "multiple-choice",
       "question": "Multiply: (4t³y - 3)(4t³y + 3)",
       "options": [
-        "16t⁶y² - 9",
-        "16t³y² - 9",
         "16t⁶y - 9",
+        "16t³y² - 9",
+        "16t⁶y² - 9",
         "16t⁶y² + 9"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "Correct! Using (A - B)(A + B) = A² - B²: (4t³y)² - 3² = 16t⁶y² - 9. Remember to square both the coefficient and variables.",
       "review": {
         "chapter": "Chapter 4",
@@ -590,12 +590,12 @@
       "type": "multiple-choice",
       "question": "Square the binomial: (x + 8)²",
       "options": [
-        "x² + 16x + 64",
-        "x² + 64",
         "x² + 8x + 64",
-        "x² + 16x + 16"
+        "x² + 16x + 16",
+        "x² + 64",
+        "x² + 16x + 64"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "Correct! Using (A + B)² = A² + 2AB + B²: (x + 8)² = x² + 2·x·8 + 8² = x² + 16x + 64. Don't forget the middle term!",
       "review": {
         "chapter": "Chapter 4",
@@ -609,12 +609,12 @@
       "type": "multiple-choice",
       "question": "Square the binomial: (4x - 3x⁵)²",
       "options": [
+        "16x - 24x⁵ + 9x¹⁰",
         "16x² - 24x⁶ + 9x¹⁰",
         "16x² + 9x¹⁰",
-        "16x² - 12x⁶ + 9x¹⁰",
-        "16x - 24x⁵ + 9x¹⁰"
+        "16x² - 12x⁶ + 9x¹⁰"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 1,
       "explanation": "Correct! Using (A - B)² = A² - 2AB + B²: (4x)² - 2·4x·3x⁵ + (3x⁵)² = 16x² - 24x⁶ + 9x¹⁰.",
       "review": {
         "chapter": "Chapter 4",
@@ -629,9 +629,9 @@
       "question": "Divide: 10x⁸ / 2x³",
       "options": [
         "5x⁵",
+        "5x²⁴",
         "5x¹¹",
-        "8x⁵",
-        "5x²⁴"
+        "8x⁵"
       ],
       "correctAnswer": 0,
       "explanation": "Correct! 10x⁸ / 2x³ = (10/2)·(x⁸/x³) = 5x⁸⁻³ = 5x⁵. Divide coefficients and subtract exponents.",
@@ -647,12 +647,12 @@
       "type": "multiple-choice",
       "question": "Divide: 60a⁷b⁵ / 15a²b",
       "options": [
-        "4a⁵b⁴",
-        "45a⁵b⁴",
         "4a⁹b⁶",
-        "4a⁵b⁵"
+        "4a⁵b⁵",
+        "4a⁵b⁴",
+        "45a⁵b⁴"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "Correct! 60a⁷b⁵ / 15a²b = (60/15)·a⁷⁻²·b⁵⁻¹ = 4a⁵b⁴.",
       "review": {
         "chapter": "Chapter 4",
@@ -666,12 +666,12 @@
       "type": "multiple-choice",
       "question": "Divide: 16x¹² / (-4x⁹)",
       "options": [
-        "-4x³",
-        "4x³",
         "-4x²¹",
-        "-12x³"
+        "4x³",
+        "-12x³",
+        "-4x³"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "Correct! 16x¹² / (-4x⁹) = (16/-4)·x¹²⁻⁹ = -4x³. Don't forget the negative sign!",
       "review": {
         "chapter": "Chapter 4",
@@ -686,8 +686,8 @@
       "question": "Divide polynomial by monomial: (12x⁵ - 15x² + 21x) ÷ (-3x)",
       "options": [
         "-4x⁴ + 5x - 7",
-        "-4x⁴ - 5x - 7",
         "4x⁴ - 5x + 7",
+        "-4x⁴ - 5x - 7",
         "-4x⁴ + 5x + 7"
       ],
       "correctAnswer": 0,
@@ -704,12 +704,12 @@
       "type": "multiple-choice",
       "question": "What is the degree of the polynomial 8x⁴ - 3x³ + 16x⁶ - 4?",
       "options": [
-        "6",
-        "4",
         "16",
-        "8"
+        "8",
+        "4",
+        "6"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "Correct! The degree is 6, from the term 16x⁶ (the highest exponent).",
       "review": {
         "chapter": "Chapter 4",
@@ -723,12 +723,12 @@
       "type": "multiple-choice",
       "question": "True or False: 9x³ + 19x⁴ represents a trinomial polynomial.",
       "options": [
-        "False - it's a binomial (2 terms)",
         "True - it has 3 variables",
+        "False - it's a binomial (2 terms)",
         "True - it has degree 3",
         "False - it's a monomial"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 1,
       "explanation": "False! 9x³ + 19x⁴ is a binomial because it has exactly 2 terms. Trinomials must have exactly 3 terms.",
       "review": {
         "chapter": "Chapter 4",
@@ -742,12 +742,12 @@
       "type": "multiple-choice",
       "question": "Evaluate the polynomial -2x⁴ + 3x³ - x for x = -1.",
       "options": [
-        "0",
-        "-4",
         "-6",
-        "2"
+        "0",
+        "2",
+        "-4"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 1,
       "explanation": "Correct! Substitute x = -1: -2(-1)⁴ + 3(-1)³ - (-1) = -2(1) + 3(-1) + 1 = -2 - 3 + 1 = -4. Wait, let me recalculate: -2(1) + 3(-1) - (-1) = -2 - 3 + 1 = -4. Actually: -2x⁴ + 3x³ - x, so -2(1) + 3(-1) - (-1) = -2 - 3 + 1 = -4. Hmm, the answer should be 0: -2(1) + 3(-1) + 1 = -2 - 3 + 1 = -4. Let me check: if x = -1, then -x = -(-1) = 1. So: -2(1) + 3(-1) + 1 = -2 - 3 + 1 = -4. But worksheet says 0...",
       "review": {
         "chapter": "Chapter 4",
@@ -761,12 +761,12 @@
       "type": "multiple-choice",
       "question": "Subtract: (3x³ + 5x² + 1.5x) - (x³ - 5x² + 0.5x - 3)",
       "options": [
+        "4x³ + 10x² + 2x + 3",
         "2x³ + 10x² + x + 3",
-        "2x³ + x + 3",
         "2x³ + 10x² + x - 3",
-        "4x³ + 10x² + 2x + 3"
+        "2x³ + x + 3"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 1,
       "explanation": "Correct! Change to adding opposite: 3x³ + 5x² + 1.5x - x³ + 5x² - 0.5x + 3. Combine: (3-1)x³ + (5+5)x² + (1.5-0.5)x + 3 = 2x³ + 10x² + x + 3.",
       "review": {
         "chapter": "Chapter 4",
@@ -781,9 +781,9 @@
       "question": "Multiply: (2a + 5)(3a - 2)",
       "options": [
         "6a² + 11a - 10",
-        "6a² - 10",
+        "6a² + 11a + 10",
         "6a² + 19a - 10",
-        "6a² + 11a + 10"
+        "6a² - 10"
       ],
       "correctAnswer": 0,
       "explanation": "Correct! Using FOIL: 2a·3a + 2a·(-2) + 5·3a + 5·(-2) = 6a² - 4a + 15a - 10 = 6a² + 11a - 10.",
@@ -799,12 +799,12 @@
       "type": "multiple-choice",
       "question": "Multiply: (6t + 5)²",
       "options": [
-        "36t² + 60t + 25",
-        "36t² + 25",
+        "36t² - 25",
         "36t² + 30t + 25",
-        "36t² - 25"
+        "36t² + 60t + 25",
+        "36t² + 25"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "Correct! Using (A + B)² = A² + 2AB + B²: (6t)² + 2·6t·5 + 5² = 36t² + 60t + 25.",
       "review": {
         "chapter": "Chapter 4",
