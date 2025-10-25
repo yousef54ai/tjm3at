@@ -48,6 +48,82 @@
             font-size: var(--fs-sm);
             margin-bottom: var(--spacing-sm);
         }
+
+        .options-container {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-sm);
+            margin: var(--spacing-lg) 0;
+        }
+
+        .option-btn {
+            background-color: var(--bg-primary);
+            border: 2px solid var(--text-primary);
+            padding: var(--spacing-md);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: var(--fs-lg);
+            display: flex;
+            align-items: center;
+            color: var(--text-bright);
+            text-align: left;
+        }
+
+        [dir="rtl"] .option-btn {
+            text-align: right;
+        }
+
+        .option-btn:hover:not(:disabled) {
+            border-color: var(--cyan);
+            background-color: var(--bg-secondary);
+        }
+
+        .option-btn:disabled {
+            cursor: not-allowed;
+        }
+
+        .option-btn.correct {
+            background-color: rgba(133, 153, 0, 0.2);
+            border-color: var(--green);
+        }
+
+        .option-btn.incorrect {
+            background-color: rgba(220, 50, 47, 0.2);
+            border-color: var(--red);
+        }
+
+        .option-letter {
+            background-color: var(--purple);
+            color: var(--bg-primary);
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            margin-left: var(--spacing-sm);
+            flex-shrink: 0;
+        }
+
+        [dir="ltr"] .option-letter {
+            margin-left: 0;
+            margin-right: var(--spacing-sm);
+        }
+
+        .option-btn.correct .option-letter {
+            background-color: var(--green);
+        }
+
+        .option-btn.incorrect .option-letter {
+            background-color: var(--red);
+        }
+
+        .option-text {
+            flex: 1;
+            color: var(--text-bright);
+        }
     </style>
 </head>
 <body>
