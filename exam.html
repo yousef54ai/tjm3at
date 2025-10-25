@@ -234,8 +234,15 @@
             });
 
             // Render LaTeX after content is loaded
-            if (window.MathJax) {
+            if (window.MathJax && window.MathJax.typesetPromise) {
                 MathJax.typesetPromise().catch((err) => console.log('MathJax typeset failed: ' + err.message));
+            } else if (window.MathJax) {
+                // Fallback for when MathJax is loading
+                setTimeout(() => {
+                    if (window.MathJax && window.MathJax.typesetPromise) {
+                        MathJax.typesetPromise().catch((err) => console.log('MathJax typeset failed: ' + err.message));
+                    }
+                }, 500);
             }
         }
 
@@ -289,8 +296,14 @@
             feedback.querySelector('.feedback-text').textContent = question.explanation;
 
             // Render LaTeX in feedback
-            if (window.MathJax) {
+            if (window.MathJax && window.MathJax.typesetPromise) {
                 MathJax.typesetPromise([feedback]).catch((err) => console.log('MathJax typeset failed: ' + err.message));
+            } else if (window.MathJax) {
+                setTimeout(() => {
+                    if (window.MathJax && window.MathJax.typesetPromise) {
+                        MathJax.typesetPromise([feedback]).catch((err) => console.log('MathJax typeset failed: ' + err.message));
+                    }
+                }, 500);
             }
 
             // Update progress
