@@ -74,6 +74,27 @@
                 const regularExams = data.exams.filter(exam => exam.type !== 'standalone');
                 const challenges = data.exams.filter(exam => exam.type === 'standalone');
 
+                // Function to get icon based on exam type
+                function getExamIcon(title, description) {
+                    const titleLower = title.toLowerCase();
+                    const descLower = description.toLowerCase();
+
+                    // Check for exam type in title/description
+                    if (titleLower.includes('comprehensive') || descLower.includes('comprehensive')) {
+                        return '📚'; // Comprehensive review
+                    } else if (titleLower.includes('advanced') || descLower.includes('advanced')) {
+                        return '🎯'; // Advanced challenge
+                    } else if (titleLower.includes('mastery') || descLower.includes('mastery')) {
+                        return '🏆'; // Mastery
+                    } else if (titleLower.includes('essential') || titleLower.includes('أساسية')) {
+                        return '📐'; // Basics/Essential
+                    } else if (titleLower.includes('graphing')) {
+                        return '📊'; // Graphing
+                    } else {
+                        return '📝'; // Default exam
+                    }
+                }
+
                 // Sort alphabetically by title
                 regularExams.sort((a, b) => a.title.localeCompare(b.title));
                 challenges.sort((a, b) => a.title.localeCompare(b.title));
@@ -89,8 +110,10 @@
                         item.href = `exam.html?class=${classId}&exam=${exam.id}`;
 
                         const arrow = data.language === 'ar' ? '←' : '→';
+                        const icon = getExamIcon(exam.title, exam.description);
 
                         item.innerHTML = `
+                            <div class="exam-icon">${icon}</div>
                             <div class="exam-item-content">
                                 <div class="exam-title">${exam.title}</div>
                                 <div class="exam-description">${exam.description}</div>
@@ -100,6 +123,27 @@
 
                         examsList.appendChild(item);
                     });
+                }
+
+                // Function to get challenge icon
+                function getChallengeIcon(title) {
+                    const titleLower = title.toLowerCase();
+
+                    if (titleLower.includes('ضرب') || titleLower.includes('multiplication')) {
+                        return '✖️'; // Multiplication
+                    } else if (titleLower.includes('تحليل') || titleLower.includes('factoring')) {
+                        return '🧩'; // Factoring
+                    } else if (titleLower.includes('أسس') || titleLower.includes('exponent')) {
+                        return '⚡'; // Exponents
+                    } else if (titleLower.includes('كثيرات') || titleLower.includes('polynomial')) {
+                        return '🔢'; // Polynomials
+                    } else if (titleLower.includes('نسبية') || titleLower.includes('rational')) {
+                        return '➗'; // Rational expressions
+                    } else if (titleLower.includes('mixed') || titleLower.includes('مختلطة')) {
+                        return '🎯'; // Mixed operations
+                    } else {
+                        return '⚡'; // Default speed challenge
+                    }
                 }
 
                 // Create challenge list items
@@ -113,8 +157,10 @@
                         item.href = exam.url;
 
                         const arrow = data.language === 'ar' ? '←' : '→';
+                        const icon = getChallengeIcon(exam.title);
 
                         item.innerHTML = `
+                            <div class="exam-icon">${icon}</div>
                             <div class="exam-item-content">
                                 <div class="exam-title">${exam.title}</div>
                                 <div class="exam-description">${exam.description}</div>

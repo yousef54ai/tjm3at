@@ -79,6 +79,13 @@
     gap: var(--spacing-md);
 }
 
+.exam-icon {
+    font-size: var(--fs-2xl);
+    flex-shrink: 0;
+    width: 2.5rem;
+    text-align: center;
+}
+
 .exam-item:hover {
     background-color: rgba(131, 148, 150, 0.05);
     transform: translateX(-4px);
